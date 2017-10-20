@@ -28,7 +28,7 @@
 
 ### 回溯法：
 
-  * [EightQueen 八皇后](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/backtracking/algorithm/EightQueen.java)
+  * [EightQueen 八皇后](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/backtracking/algorithm/EightQueen.java)
   
 ### 模拟算法：
 
