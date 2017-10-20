@@ -1,67 +1,67 @@
-#与大家分享我学习算法的一些经历。这个项目不定期更新。
+与大家分享我学习算法的一些经历。这个项目不定期更新。
+-
+### 动态规划：
 
-###动态规划：
+  * [CireculationMaxSubSum 循环最大字段和]()
+  
+  * EditDistance 编辑距离问题
 
-CireculationMaxSubSum         循环最大字段和
+  * GroupPostiveInt 正整数分组
 
-EditDistance                  编辑距离问题
+  * KnapsackProblem 01背包问题
 
-GroupPostiveInt               正整数分组
+  * MutiKnapsackProblem 多重背包问题
 
-KnapsackProblem               01背包问题
+  * LongestIncreasingSubsequence 最长单增子序列
 
-MutiKnapsackProblem           多重背包问题
+  * MatrixOptimalWay 矩阵取数问题
 
-LongestIncreasingSubsequence  最长单增子序列
+  * MaxCommSubSequence 最大公共子序列
 
-MatrixOptimalWay              矩阵取数问题
+  * MaxSubMatrixSum 最大子矩阵和问题
 
-MaxCommSubSequence            最大公共子序列
+  * MaxSubSectionSum 最大子段和问题
 
-MaxSubMatrixSum               最大子矩阵和问题
+### 贪心算法：
 
-MaxSubSectionSum              最大子段和问题
+  * DugoutCanone 独木舟
 
-贪心算法：
+### 模拟算法：
 
-DugoutCanone                  独木舟
+  * DrinkAndBorrow 喝酒借酒
 
-模拟算法：
+  * RobotWalk 机器人行走
 
-DrinkAndBorrow                喝酒借酒
+  * ThrowDishes 扔盘子
 
-RobotWalk                     机器人行走
+### 排序：
 
-ThrowDishes                   扔盘子
+  * BubbleSort 冒泡排序
 
-排序：
+  * InsertSort 插入排序
 
-BubbleSort                    冒泡排序
+  * SelectSort 选择排序
 
-InsertSort                    插入排序
+  * QuickSort 快速排序
 
-SelectSort                    选择排序
+### 树相关：
 
-QuickSort                     快速排序
+### 图相关：
 
-树相关：
+### 多线程：
 
-图相关：
+  * ProducerAndConsumer 生产者消费者
 
-多线程：
+### 其他算法：
 
-ProducerAndConsumer         生产者消费者
+  * BinarySearch 二分查找
 
-未分类：
+  * CountsOfNum 一的个数
 
-BinarySearch                二分查找
+  * FibonacciSequence 斐波那契（非递归）
 
-CountsOfNum                 一的个数
+  * FullPermutation 全排列
 
-FibonacciSequence           斐波那契（非递归）
+  * MoveZeros 移动0
 
-FullPermutation             全排列
-
-MoveZeros                   移动0
-
-RedPacketGen                红包生成
+  * RedPacketGen 红包生成
