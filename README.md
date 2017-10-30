@@ -49,7 +49,8 @@
   * [QuickSort 快速排序](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/sort/QuickSort.java)
   
 ### 表相关
-  * [LinkedList 单向链表](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/tables/LinkedList.cpp)
+  
+  * [LinkedList 单向链表](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/tables/LinkedList.cpp)
 
 ### 树相关：
 
