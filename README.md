@@ -53,7 +53,7 @@
 
 ### 树相关：
 
-  * [BinarySearch 二分查找](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/BinarySearch.java)
+  * [BinarySearch 二分查找](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/trees/BinarySearch.java)
 
 ### 图相关：
 
