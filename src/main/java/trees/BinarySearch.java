@@ -1,4 +1,4 @@
-package main.java;
+package main.java.trees;
 
 import java.util.Random;
 
