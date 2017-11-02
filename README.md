@@ -21,6 +21,8 @@
   * [MaxSubMatrixSum 最大子矩阵和问题](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/dynamic/programming/MaxSubMatrixSum.java)
 
   * [MaxSubSectionSum 最大子段和问题](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/dynamic/programming/MaxSubSectionSum.java)
+  
+  * [DoubleMatrixOptimalWay 双路矩阵取数问题](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/dynamic/programming/DoubleMatrixOptimalWay.java)
 
 ### 贪心算法：
 
