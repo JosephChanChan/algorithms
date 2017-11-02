@@ -47,10 +47,13 @@
   * [SelectSort 选择排序](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/sort/SelectSort.java)
 
   * [QuickSort 快速排序](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/sort/QuickSort.java)
+  
+### 表相关：
+* [LinkedList 单向链表](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/tables/LinkedList.cpp)
 
 ### 树相关：
 
-  * [BinarySearch 二分查找](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/BinarySearch.java)
+  * [BinarySearch 二分查找](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/trees/BinarySearch.java)
 
 ### 图相关：
 
