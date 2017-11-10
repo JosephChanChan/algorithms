@@ -1,5 +1,6 @@
-与大家分享我学习算法的一些经历。这个项目不定期更新。
--
+### 与大家分享我学习算法的一些经历。这个项目不定期更新。
+--------------------------------------------------------
+
 ### 动态规划：
 
   * [CireculationMaxSubSum 循环最大字段和](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/dynamic/programming/CireculationMaxSubSum.java)
@@ -21,6 +22,8 @@
   * [MaxSubMatrixSum 最大子矩阵和问题](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/dynamic/programming/MaxSubMatrixSum.java)
 
   * [MaxSubSectionSum 最大子段和问题](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/dynamic/programming/MaxSubSectionSum.java)
+  
+  * [DoubleMatrixOptimalWay 双路矩阵取数问题](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/dynamic/programming/DoubleMatrixOptimalWay.java)
 
 ### 贪心算法：
 
