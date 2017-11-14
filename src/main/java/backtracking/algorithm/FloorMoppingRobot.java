@@ -15,28 +15,35 @@ package main.java.backtracking.algorithm;
     3
 
     求这个机器人移动12 次时，有多少种移动路径？
+
+    算法：
+        每一步理论上有4个方向可走，加条件限制后需要判断：
+            1，不能走上一步相反的方向
+            2，不能走已走过的坐标
+        一层循环模拟机器人走的方向，过程加判断条件，递归下一步。
+        当下一步走完后，回溯当前步，换另外的方向继续递归。
  */
 public class FloorMoppingRobot {
 
-//    static int[][] arr = new int[25][25];
-    static int[][] arr = new int[7][7];
+    static int[][] arr = new int[25][25];
+//    static int[][] arr = new int[7][7];
     static int count = 0;
 
     public static void main(String[] args) {
-//        recursionBack(1,0,12,12);
-        recursionBack(1,0,3,3);
+        recursionBack(1,0,12,12);
+//        recursionBack(1,0,3,3);
 
         System.out.println("移动12次后，可行路径为 = "+count);
     }
-
+//360876    324932
     private static void recursionBack(int step,int direction,int x,int y){
-        if(step > 3){
+        if(step > 12){
             //打印
-            show();
+//            show();
             //检查是否冲突
-            if(notConflict()) {
+//            if(notConflict()) {
                 count++;
-            }
+//            }
             return;
         }
 
@@ -103,9 +110,9 @@ public class FloorMoppingRobot {
     }
 
     private static boolean notConflict(){
-        int sum = 6;
-        for (int i=0; i<7; i++){
-            for (int j=0; j<7; j++){
+        int sum = 78;
+        for (int i=0; i<25; i++){
+            for (int j=0; j<25; j++){
                 if(arr[i][j] > 0){
                     sum -= arr[i][j];
                 }
