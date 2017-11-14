@@ -33,6 +33,9 @@
 
   * [EightQueen 八皇后](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/backtracking/algorithm/EightQueen.java)
   
+  * [FloorMoppingRobot 优秀的扫地机器人](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/backtracking/algorithm/FloorMoppingRobot.java)
+  
+  
 ### 模拟算法：
 
   * [DrinkAndBorrow 喝酒借酒](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/simulation/algorithm/DrinkAndBorrow.java)
