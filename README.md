@@ -76,8 +76,6 @@
 
   * [FibonacciSequence 斐波那契(非递归)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/FibonacciSequence.java)
 
-  * [FullPermutation 全排列](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/FullPermutation.java)
-
   * [MoveZeros 移动0](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/MoveZeros.java)
 
   * [RedPacketGen 红包生成](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/RedPacketGen.java)
