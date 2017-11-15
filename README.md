@@ -33,6 +33,10 @@
 
   * [EightQueen 八皇后](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/backtracking/algorithm/EightQueen.java)
   
+  * [FloorMoppingRobot 优秀的扫地机器人](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/backtracking/algorithm/FloorMoppingRobot.java)
+  
+  * [FullPermutation 全排列](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/backtracking/algorithm/FloorMoppingRobot.java)
+  
 ### 模拟算法：
 
   * [DrinkAndBorrow 喝酒借酒](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/simulation/algorithm/DrinkAndBorrow.java)
@@ -71,8 +75,6 @@
   * [CountsOfNum 一的个数](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/CountsOfNum.java)
 
   * [FibonacciSequence 斐波那契(非递归)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/FibonacciSequence.java)
-
-  * [FullPermutation 全排列](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/FullPermutation.java)
 
   * [MoveZeros 移动0](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/MoveZeros.java)
 
