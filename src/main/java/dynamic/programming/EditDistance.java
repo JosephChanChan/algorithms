@@ -37,7 +37,7 @@ import java.io.*;
  最优子结构： 对于S[i] != T[j] 选上面3种情况最少的情况。
  递推公式:   f(i,j) = min{ f(i-1,j-1)+same(i,j) , f(i,j-1)+1 , f(i-1,j)+1 }
 
- @see http://blog.csdn.net/qq_34552886/article/details/72556242
+ @see_http://blog.csdn.net/qq_34552886/article/details/72556242
  */
 public class EditDistance {
 
