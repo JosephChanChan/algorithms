@@ -65,6 +65,10 @@
 ### 图相关：
 
   * [BFSAlgorithm 广度优先搜索](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/graphs/BFSAlgorithm.java)
+  
+### 串相关：
+
+  * [KMPAlgorithm KMP算法](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/string/KMPAlgorithm.java)
 
 ### 多线程：
 
