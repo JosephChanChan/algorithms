@@ -24,6 +24,8 @@
   * [MaxSubSectionSum 最大子段和问题](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/dynamic/programming/MaxSubSectionSum.java)
   
   * [DoubleMatrixOptimalWay 双路矩阵取数问题](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/dynamic/programming/DoubleMatrixOptimalWay.java)
+  
+  * [LongestIncreasingSubsequence2 最长单增子序列2](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/dynamic/programming/LongestIncreasingSubsequence2.java)
 
 ### 贪心算法：
 
