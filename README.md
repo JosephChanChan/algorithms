@@ -37,7 +37,7 @@
   
   * [FloorMoppingRobot 优秀的扫地机器人](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/backtracking/algorithm/FloorMoppingRobot.java)
   
-  * [FullPermutation 全排列](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/backtracking/algorithm/FloorMoppingRobot.java)
+  * [FullPermutation 全排列](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/backtracking/algorithm/FullPermutation.java)
   
 ### 模拟算法：
 
