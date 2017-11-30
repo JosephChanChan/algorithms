@@ -33,55 +33,56 @@ import java.util.Map;
         dp(0) = 1 （空集）
     以上是对于前i个数中没有相同数的算法。如果存在重复的数呢？
     a[j]=a[i] j<i。那么计算dp(i)时就会算多了1次，因为a[i]可以代替a[j]。被重复计算了多少的子序列个数？
-    如果和a[i]相等的数为a[j]，因为dp(i)所有子序列中包含了dp(j)，题目要求相同的子序列只算1次，
-    所以重复计算了dp(j)个子序列
-    dp(i) = dp(i-1)*2 - dp(j)
+    a[i]可以替代a[j]，所以dp(j)时 序列中前j项构成的子序列集合中以a[j]结尾的都可以被a[i]替代，
+    那么dp(i)时，因为dp(i)包含dp(j)，所以以a[j]结尾的子序列会被重复计算，有多少a[j]结尾的子序列？
+    考虑dp(j-1) 如果我们把 a[j] 接到dp(j-1)的序列中去那就是以a[j]结尾了，所以有dp(j-1)个数。
+    dp(i) = dp(i-1)*2 - dp(j-1)
 
     时间复杂度 O(n) 空间复杂度 O(max{a[i]})+O(n) 或 O(n)(哈希表存储下标)
  */
 public class SubSequenceNumber {
 
     static int[] arr = null;
-    static int[] counts = null;
-    //存放重复出现的数的下标 key=数 value=下标
-    static Map<Integer,Integer> indexs = new HashMap<>();
+    static long[] dp = null;
     public static void main(String[] args) {
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in),1<<16);
         int n = 0;
         try {
             n = Integer.parseInt(reader.readLine());
-            arr = new int[n];
-            counts = new int[n];
-            counts[0] = 1;
-            for (int i = 0; i < n; i++) {
+            arr = new int[n+1];
+            dp = new long[n+1];
+            //第0个 存一个空集
+            dp[0] = 1;
+            for (int i = 1; i <= n; i++) {
                 arr[i] = Integer.parseInt(reader.readLine());
             }
-            indexs.put(arr[0],0);
         } catch (IOException e) {
             e.printStackTrace();
         }
 
+        //输出a的不同子序列的数量Mod 10^9 + 7。
+        final long m = (long)Math.pow(10,9)+7;
+
+        //存放重复出现的数的下标 key=数 value=下标
+        Map<Integer,Integer> indexs = new HashMap<>();
+
         /*
             dp(i) = dp(j)*2
-            a[j]=a[i]   dp(i) = dp(i-1)*2 - dp(j)
+            a[j]=a[i]   dp(i) = dp(i-1)*2 - dp(j-1)
         */
-        int j = 0;
         for (int i=1; i<arr.length; i++){
             //a[i]是否在之前出现过
             if(indexs.containsKey(arr[i])){
-                j = indexs.get(arr[i]);
-                counts[i] = counts[i-1]*2 - counts[j];
+                dp[i] = (dp[i-1]*2 - dp[indexs.get(arr[i])-1] + m) % m;
             }
             else {
-                counts[i] = counts[i-1]*2;
+                dp[i] = dp[i-1]*2 % m;
             }
-            //抹除上一次a[i]出现的位置，只记录最近的位置
             indexs.put(arr[i],i);
         }
 
-        //输出a的不同子序列的数量Mod 10^9 + 7。
-        int m = (int)Math.pow(10,9);
-        System.out.println(counts[n-1]%m+7);
+        //减除一个空集
+        System.out.println(dp[n]-1);
     }
 
 }
