@@ -26,6 +26,8 @@
   * [DoubleMatrixOptimalWay 双路矩阵取数问题](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/dynamic/programming/DoubleMatrixOptimalWay.java)
   
   * [LongestIncreasingSubsequence2 最长单增子序列2](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/dynamic/programming/LongestIncreasingSubsequence2.java)
+  
+  * [SubSequenceNumber 子序列个数](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/dynamic/programming/SubSequenceNumber.java)
 
 ### 贪心算法：
 
@@ -37,7 +39,7 @@
   
   * [FloorMoppingRobot 优秀的扫地机器人](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/backtracking/algorithm/FloorMoppingRobot.java)
   
-  * [FullPermutation 全排列](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/backtracking/algorithm/FloorMoppingRobot.java)
+  * [FullPermutation 全排列](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/backtracking/algorithm/FullPermutation.java)
   
 ### 模拟算法：
 
