@@ -77,6 +77,8 @@
 ### 多线程：
 
   * [ProducerAndConsumer 生产者消费者](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/multithreads/ProducerAndConsumer.java)
+  
+  * [CountDownLatchDemo 闭锁简单演示](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/multithreads/CountDownLatchDemo.java)
 
 ### 其他算法：
 
@@ -87,3 +89,5 @@
   * [MoveZeros 移动0](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/MoveZeros.java)
 
   * [RedPacketGen 红包生成](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/RedPacketGen.java)
+  
+  * [TowerOfHanoi 汉诺塔问题](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/TowerOfHanoi.java)
