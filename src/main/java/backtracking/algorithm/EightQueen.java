@@ -28,21 +28,22 @@ public class EightQueen {
 
     static int[] rowsQuen = new int[20];
     static int count = 0;
-    static int column = 8;
+    static int columns = 8;
+    static int rows = 8;
 
     public static void search(int row){
-        if(row==column){
+        if(row == rows){
             count++;
             printDiagram();
             return;
         }
-        for(int i=0; i<column; i++){
+        for(int i=0; i<columns; i++){
             rowsQuen[row] = i;
             boolean can = true;
             for(int k=0; k<row; k++){
-                if(rowsQuen[row]==rowsQuen[k]
-                        || row-k==rowsQuen[row]-rowsQuen[k]
-                        || row-k==rowsQuen[k]-rowsQuen[row]){
+                if(rowsQuen[row] == rowsQuen[k]
+                        || row-k == rowsQuen[row] - rowsQuen[k]
+                        || row-k == rowsQuen[k] - rowsQuen[row]){
                     can = false;
                     break;
                 }
@@ -55,8 +56,8 @@ public class EightQueen {
 
     public static void printDiagram(){
         System.out.println();
-        for(int i=0; i<column; i++){
-            for(int j=0; j<column; j++){
+        for(int i=0; i<columns; i++){
+            for(int j=0; j<columns; j++){
                 if(rowsQuen[i]==j){
                     System.out.print("1 ");
                 }else
