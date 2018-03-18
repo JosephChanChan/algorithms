@@ -1,10 +1,14 @@
 package main.java.trees;
 
+import main.java.sort.CheckSortedArr;
+import main.java.sort.QuickSort;
+
 import java.util.Random;
 
 public class BinarySearch {
 
-    static int[] arr = new int[50];
+//    static int[] arr = new int[50];
+    static Integer[] arr = new Integer[50];
 
     public static void main(String[] args){
 //        int[] a = {0,1,2,3,4,5,6,7,8,9};
@@ -14,16 +18,7 @@ public class BinarySearch {
             arr[i] = random.nextInt(50);
         }
 
-        int temp;
-        for(int i=0; i<arr.length-1; i++){
-            for(int j=0; j<arr.length-i-1; j++){
-                if(arr[j]>arr[j+1]){
-                    temp = arr[j];
-                    arr[j] = arr[j+1];
-                    arr[j+1] = temp;
-                }
-            }
-        }
+        QuickSort.doQuickSort(arr,0,arr.length-1);
 
         Integer key = getKey(15, arr);
         System.out.println(key);
@@ -38,7 +33,7 @@ public class BinarySearch {
         }
     }
 
-    public static Integer getKey(int key,int[] a){
+    public static Integer getKey(int key,Integer[] a){
         int min=0,max=a.length-1,mid=max/2;
         while(min<=max){
             mid = (max-min)/2+min;

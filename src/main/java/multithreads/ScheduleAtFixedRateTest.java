@@ -1,7 +1,4 @@
-package com.junyi.order.test;
-
-import com.junyi.framework.util.DateFormatType;
-import com.junyi.framework.util.DateUtil;
+package main.java.multithreads;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -17,9 +14,10 @@ public class ScheduleAtFixedRateTest {
 
     static int count = 0;
     static ScheduledExecutorService scheduledExecutorService = Executors.newScheduledThreadPool(10);
+    static SimpleDateFormat dateFormat = new SimpleDateFormat("HH:mm:ss");
 
     public static void main(String[] args) {
-        System.out.println("The Test begin at "+DateUtil.format(new Date(), DateFormatType.HH_MM_SS));
+        System.out.println("The Test begin at " +dateFormat.format(new Date()));
         for (int i=1; i<=3; i++){
             Worker worker = new Worker("任务"+i);
             try {
@@ -65,7 +63,7 @@ public class ScheduleAtFixedRateTest {
 
         @Override
         public void run() {
-            System.out.println("Thread "+Thread.currentThread().getName()+" start the "+this.name+" !!! at "+ DateUtil.format(new Date(), DateFormatType.HH_MM_SS));
+            System.out.println("Thread "+Thread.currentThread().getName()+" start the "+this.name+" !!! at "+ dateFormat.format(new Date()));
             //模拟工作
             try {
                 if (this.name.contains("任务1")){
@@ -81,7 +79,7 @@ public class ScheduleAtFixedRateTest {
             if (count == 3){
 //                throw new RuntimeException("强制异常");
             }
-            System.out.println("Thread "+Thread.currentThread().getName()+" finished the "+this.name+" !!! at "+DateUtil.format(new Date(), DateFormatType.HH_MM_SS));
+            System.out.println("Thread "+Thread.currentThread().getName()+" finished the "+this.name+" !!! at "+ dateFormat.format(new Date()));
         }
 
         public String getName() {

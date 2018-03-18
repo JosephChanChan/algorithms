@@ -27,9 +27,14 @@ public class BubbleSort {
             }
         }
 
-        boolean b = CheckSortedArr.checkAsc(tests);
-        if(!b) System.out.println("排序有误!");
-        else System.out.println("排序正确");
+        int flag = CheckSortedArr.checkIntAsc(tests);
+
+        if(flag != -1) {
+            System.out.println("排序有误!");
+        }
+        else {
+            System.out.println("排序正确");
+        }
 
         for(int i : tests){
             System.out.print(i+" ");

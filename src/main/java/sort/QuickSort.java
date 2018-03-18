@@ -8,42 +8,63 @@ import java.util.Random;
 public class QuickSort {
 
 //    static int[] arr = {5,8,3,7,1,6,4,9,2};
-    static int[] arr = new int[100];
+//    static Integer[] arr = new Integer[100];
 
     public static void main(String[] args){
-        Random random = new Random();
+        /*Random random = new Random();
         for(int j=0; j<100; j++){
             arr[j] = random.nextInt(100);
         }
 
         doQuickSort(arr,0,arr.length-1);
 
-        boolean b = CheckSortedArr.checkAsc(arr);
-        if(!b) System.out.println("排序有误!");
-        else System.out.println("排序正确");
+        int flag = CheckSortedArr.checkAsc(arr);
+
+        if(flag != -1) {
+            System.out.println("排序有误!");
+        }
+        else {
+            System.out.println("排序正确");
+        }
 
         for(int i : arr){
             System.out.print(i+" ");
+        }*/
+        Integer[] a = {5,8,3,7,1,6,4,9,2,10};
+//        doQuickSort(a,0,9);
+
+        int flag = CheckSortedArr.checkAsc(a);
+        if (flag != -1){
+            System.out.println("数组排序有误! "+flag);
+        }
+        else {
+            System.out.println("数组排序成功!");
+        }
+        for (Integer integer : a){
+            System.out.print(integer + " ");
         }
     }
 
-    public static void doQuickSort(int[] arr,int left,int right){
+    public static <T extends Comparable<? super T>> void doQuickSort(T[] arr,int left,int right){
         if(left >= right){
             return;
         }
-        int base = arr[left];
-        int i = quickSort(base, left, right);
+
+        T base = arr[left];
+
+        int i = quickSort(arr, base, left, right);
+
         doQuickSort(arr,left,i-1);
         doQuickSort(arr,i+1,right);
     }
 
-    public static int quickSort(int base,int left,int right){
+    private static <T extends Comparable<? super T>> int quickSort(T[] arr, T base, int left, int right){
         while (left < right){
-            while (left < right && arr[right] >= base){
+            while (left < right && arr[right].compareTo(base) >= 0){
                 right--;
             }
             arr[left] = arr[right];
-            while (left < right && arr[left] <= base){
+            while (left < right && arr[left].compareTo(base) <= 0){
                 left++;
             }
             arr[right] = arr[left];
