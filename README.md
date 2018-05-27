@@ -65,6 +65,9 @@
 ### 树相关：
 
   * [BinarySearch 二分查找](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/trees/BinarySearch.java)
+  
+  * [BinaryHeap 二叉堆(优先队列)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/trees/BinaryHeap.java)
+  
 
 ### 图相关：
 
