@@ -123,9 +123,53 @@ public class AVLTree {
                 LR -> leftRotateThenRightRotate
                 RL -> rightRotateThenLeftRotate
              */
+
+            // firstly check is left tree or right tree
+            int leftTreeHeight = calculateHeight(avlNode.left);
+            int rightTreeHeight = calculateHeight(avlNode.right);
+
+            int leftSideHeight ;
+            int rightSideHeight;
+
+            if (leftTreeHeight > rightTreeHeight){
+                // confirm further left or right
+                leftSideHeight = calculateHeight(avlNode.left.left);
+                rightSideHeight = calculateHeight(avlNode.left.right);
+                if (leftSideHeight > rightSideHeight){
+                    // LL mode just do rightRotate can fixing it
+
+                }
+                else {
+                    // LR mode do leftRotateThenRightRotate
+                }
+            }
+            else {
+                leftSideHeight = calculateHeight(avlNode.right.left);
+                rightSideHeight = calculateHeight(avlNode.right.right);
+                if (leftSideHeight > rightSideHeight){
+                    // RL mode do rightRotateThenLeftRotate
+                }
+                else {
+                    // RR mode do leftRotate
+                }
+            }
+
+
         }
 
         return avlNode;
+    }
+    
+    private AVLNode rightRotate(AVLNode avlNode){
+        AVLNode k1 = avlNode.left;
+        avlNode.right = k1.right;
+        k1.right = avlNode;
+
+        // two node height must recalculate
+        avlNode.height = Math.max(calculateHeight(avlNode.left), calculateHeight(avlNode.right)) + 1;
+        k1.height = Math.max(calculateHeight(k1.left), avlNode.height) + 1;
+
+        return k1;
     }
 
     private AVLNode findMin(AVLNode avlNode){
@@ -170,7 +214,7 @@ public class AVLTree {
     /** calculate the specific node's height */
     private int calculateHeight(AVLNode avlNode){
         if (null == avlNode){
-            return 0;
+            return -1;
         }
         return avlNode.height;
     }
