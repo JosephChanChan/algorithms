@@ -3,7 +3,7 @@ package main.java.trees;
 /**
  * AVLTree 平衡二叉搜索树
  * 提供了 Demo 级一般的实现. 主要研究该数据结构的优势, 时间复杂度和空间复杂度.
- * 最重要的旋转算法, 查找, 插入, 删除.
+ * 最重要的平衡算法及对应的旋转算法, 查找, 插入, 删除.
  *
  * Created by Joseph at 2018/5/27 0027 19:23.
  */
@@ -159,7 +159,7 @@ public class AVLTree {
 
         return avlNode;
     }
-    
+
     private AVLNode rightRotate(AVLNode avlNode){
         AVLNode k1 = avlNode.left;
         avlNode.right = k1.right;
