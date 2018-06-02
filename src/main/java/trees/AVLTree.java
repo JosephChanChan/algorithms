@@ -137,7 +137,7 @@ public class AVLTree {
                 rightSideHeight = calculateHeight(avlNode.left.right);
                 if (leftSideHeight > rightSideHeight){
                     // LL mode just do rightRotate can fixing it
-
+                    avlNode = rightRotate(avlNode);
                 }
                 else {
                     // LR mode do leftRotateThenRightRotate
@@ -151,6 +151,7 @@ public class AVLTree {
                 }
                 else {
                     // RR mode do leftRotate
+                    avlNode = leftRotate(avlNode);
                 }
             }
 
@@ -168,6 +169,18 @@ public class AVLTree {
         // two node height must recalculate
         avlNode.height = Math.max(calculateHeight(avlNode.left), calculateHeight(avlNode.right)) + 1;
         k1.height = Math.max(calculateHeight(k1.left), avlNode.height) + 1;
+
+        return k1;
+    }
+
+    private AVLNode leftRotate(AVLNode avlNode){
+        AVLNode k1 = avlNode.right;
+        avlNode.right = k1.left;
+        k1.left = avlNode;
+
+        // two node height must recalculate
+        avlNode.height = Math.max(calculateHeight(avlNode.left), calculateHeight(avlNode.right)) + 1;
+        k1.height = Math.max(calculateHeight(k1.right), avlNode.height) + 1;
 
         return k1;
     }
