@@ -1,5 +1,8 @@
 package main.java.trees;
 
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  * AVLTree 平衡二叉搜索树
  * 提供了 Demo 级一般的实现. 主要研究该数据结构的优势, 时间复杂度和空间复杂度.
@@ -50,10 +53,26 @@ public class AVLTree {
         return exists;
     }
 
-    public <T extends Comparable> T[] preorderTraversal(AVLNode root){
-        return null;
+    public <T extends Comparable> List<T> preorderTraversal(){
+        if (root == null){
+            return null;
+        }
+        return preorderTraversal(root, new ArrayList<>());
     }
 
+    public <T extends Comparable> List<T> inorderTraversal(){
+        if (root == null){
+            return null;
+        }
+        return inorderTraversal(root, new ArrayList<>());
+    }
+
+    public <T extends Comparable> List<T> postorderTraversal(){
+        if (root == null){
+            return null;
+        }
+        return postorderTraversal(root, new ArrayList<>());
+    }
 
     /* -------------------------------------------- 内部函数 Start -------------------------------------------------*/
 
@@ -275,6 +294,66 @@ public class AVLTree {
             return -1;
         }
         return avlNode.height;
+    }
+
+    /**
+     * preorder traversal
+     *
+     * @param root root
+     * @param elementList elementList
+     * @param <T> T
+     * @return the list represent the tree's preorder traversal
+     */
+    private <T extends Comparable> List<T> preorderTraversal(AVLNode root, List<T> elementList){
+        // base case
+        if (null == root){
+            return elementList;
+        }
+        // the order for preorder traversal is root left right
+        elementList.add((T) root.element);
+        preorderTraversal(root.left, elementList);
+        preorderTraversal(root.right, elementList);
+        return elementList;
+    }
+
+    /**
+     * inorder traversal
+     *
+     * @param root root
+     * @param elementList elementList
+     * @param <T> T
+     * @return the list represent the tree's inorder traversal
+     */
+    private <T extends Comparable> List<T> inorderTraversal(AVLNode root, List<T> elementList){
+        // base case
+        if (null == root){
+            return elementList;
+        }
+        // the order for inorder traversal is left root right
+        inorderTraversal(root.left, elementList);
+        elementList.add((T) root.element);
+        inorderTraversal(root.right, elementList);
+        return elementList;
+    }
+
+    /**
+     * postorder traversal
+     *
+     * @param root root
+     * @param elementList elementList
+     * @param <T> T
+     * @return the list represent the tree's postorder traversal
+     */
+    private <T extends Comparable> List<T> postorderTraversal(AVLNode root, List<T> elementList){
+        // base case
+        if (null == root){
+            return elementList;
+        }
+        // the order for postorder traversal is left right root
+        postorderTraversal(root.left, elementList);
+        postorderTraversal(root.right, elementList);
+        elementList.add((T) root.element);
+        return elementList;
     }
 
     /* -------------------------------------------- 内部函数 End -------------------------------------------------*/
