@@ -7,8 +7,7 @@ import java.util.Random;
  */
 public class QuickSort {
 
-//    static int[] arr = {5,8,3,7,1,6,4,9,2};
-//    static Integer[] arr = new Integer[100];
+    static Integer[] arr = {5,8,3,7,1,6,4,9,2};
 
     public static void main(String[] args){
         /*Random random = new Random();
@@ -30,17 +29,16 @@ public class QuickSort {
         for(int i : arr){
             System.out.print(i+" ");
         }*/
-        Integer[] a = {5,8,3,7,1,6,4,9,2,10};
-//        doQuickSort(a,0,9);
+        doQuickSort(arr,0, arr.length-1);
 
-        int flag = CheckSortedArr.checkAsc(a);
+        int flag = CheckSortedArr.checkAsc(arr);
         if (flag != -1){
             System.out.println("数组排序有误! "+flag);
         }
         else {
             System.out.println("数组排序成功!");
         }
-        for (Integer integer : a){
+        for (Integer integer : arr){
             System.out.print(integer + " ");
         }
     }

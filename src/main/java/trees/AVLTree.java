@@ -14,16 +14,53 @@ public class AVLTree {
     /** tolerable difference height between left tree and right tree */
     private static final int MAX_DIFF_HEIGHT = 1;
 
+    /** The element number of tree */
+    private static int size = 0;
 
     public <T extends Comparable> void insert(T beInsert){
         if (null != beInsert){
             root = insert(beInsert, root);
+            size++;
         }
     }
+
+    public <T extends Comparable> void remove(T removed){
+        if (
+                null != removed &&
+                null != root
+           )
+        {
+            root = remove(removed, root);
+            size--;
+        }
+    }
+
+    public <T extends Comparable> boolean contains(T beSearch, AVLNode avlNode){
+        boolean exists ;
+        int result = beSearch.compareTo(avlNode.element);
+        if ( result < 0 ){
+            exists = contains(beSearch, avlNode.left);
+        }
+        else if ( result > 0 ){
+            exists = contains(beSearch, avlNode.right);
+        }
+        else {
+            exists = true;
+        }
+        return exists;
+    }
+
+    public <T extends Comparable> T[] preorderTraversal(AVLNode root){
+        return null;
+    }
+
+
+    /* -------------------------------------------- 内部函数 Start -------------------------------------------------*/
 
     /**
      * Insert a T into the tree.
      * Return a sub tree node when every recursion.
+     * The operation cost O(logN) time complexity.
      *
      * @param beInsert T
      * @param avlNode tree node
@@ -46,64 +83,76 @@ public class AVLTree {
         }
 
         // calculate height of node
-        avlNode.height = Math.abs(calculateHeight(avlNode.left) - calculateHeight(avlNode.right)) + 1;
+        avlNode.height = Math.max(calculateHeight(avlNode.left), calculateHeight(avlNode.right)) + 1;
 
         // UnBalance maybe occur after insert, do balance fixing it
         return balance(avlNode);
     }
 
-    public <T extends Comparable> void remove(T removed){
-        if (
-                null != removed &&
-                null != root
-           )
-        {
-            root = remove(removed, root);
-        }
-    }
+    /**
+     * Remove specific T at the tree. Return a balanced sub tree.
+     * The operation cost O(logN) time complexity.
+     *
+     * @param removed the element
+     * @param avlNode node at Tree
+     * @param <T> T
+     * @return a balanced sub tree
+     */
     private <T extends Comparable> AVLNode remove(T removed, AVLNode avlNode){
-        if (null != avlNode){
-            int result = removed.compareTo(avlNode.element);
-            if ( result < 0 ){
-                avlNode.left = remove(removed, avlNode.left);
+        if (null == avlNode){
+            return null;
+        }
+
+        int result = removed.compareTo(avlNode.element);
+        if ( result < 0 ){
+            avlNode.left = remove(removed, avlNode.left);
+        }
+        else if ( result > 0 ){
+            avlNode.right = remove(removed, avlNode.right);
+        }
+        else {
+            // got the node. lets remove it
+
+            if (null == avlNode.left && null == avlNode.right){
+                /*
+                    the node only have one reference that are parent left or right
+                    this relationship will be cut off. the node will have collected by GC.
+                 */
+                return null;
             }
-            else if ( result > 0 ){
-                avlNode.right = remove(removed, avlNode.right);
+            // only have left
+            else if (null == avlNode.right){
+                avlNode = avlNode.left;
             }
+            // only have right
+            else if (null == avlNode.left){
+                avlNode = avlNode.right;
+            }
+            // have left and right
             else {
-                // got the node. lets remove it
-
-                if (null == avlNode.left && null == avlNode.right){
-                    avlNode = null;
-                }
-                // only have left
-                else if (null == avlNode.right){
-                    avlNode = avlNode.left;
-                }
-                // only have right
-                else if (null == avlNode.left){
-                    avlNode = avlNode.right;
-                }
-                // have left and right
-                else {
-                    /*
-                        we should find a node which greater than all left child
-                        and less than all right child. that is most depth left of firstly right child.
-                        After the removed was instead of minimum, we must remove the minimum.
-                        A recursion process would be called which are same as before.
-                     */
-                    AVLNode minimum = findMin(avlNode.right);
-                    avlNode.element = minimum.element;
-                    avlNode.right = remove(minimum.element, avlNode.right);
-                }
-
-                // UnBalance maybe occur after remove, do balance fixing it
-                return balance(avlNode);
+                /*
+                    we should find a node which greater than all left child
+                    and less than all right child. that is most depth left of firstly right child.
+                    After the removed was instead of minimum, we must remove the minimum.
+                    A recursion process would be called which are same as before.
+                 */
+                AVLNode minimum = findMin(avlNode.right);
+                avlNode.element = minimum.element;
+                avlNode.right = remove(minimum.element, avlNode.right);
             }
         }
-        return avlNode;
+
+        // UnBalance maybe occur after remove, do balance fixing it
+        return balance(avlNode);
     }
 
+    /**
+     * The algorithm for balance the tree.
+     * Left Rotate and right rotate is two base operation whose combination can handle 4 unbalance case.
+     *
+     * @param avlNode a node be balance
+     * @return a balanced sub tree
+     */
     private AVLNode balance(AVLNode avlNode){
         // check if unbalance is occur
         int diff = Math.abs(calculateHeight(avlNode.left) - calculateHeight(avlNode.right));
@@ -141,6 +190,12 @@ public class AVLTree {
                 }
                 else {
                     // LR mode do leftRotateThenRightRotate
+                    /*
+                        1, firstly left rotate left node of avlNode.
+                        2, secondly right rotate avlNode
+                     */
+                    avlNode.left = leftRotate(avlNode.left);
+                    avlNode = rightRotate(avlNode);
                 }
             }
             else {
@@ -148,14 +203,14 @@ public class AVLTree {
                 rightSideHeight = calculateHeight(avlNode.right.right);
                 if (leftSideHeight > rightSideHeight){
                     // RL mode do rightRotateThenLeftRotate
+                    avlNode.right = rightRotate(avlNode.right);
+                    avlNode = leftRotate(avlNode);
                 }
                 else {
                     // RR mode do leftRotate
                     avlNode = leftRotate(avlNode);
                 }
             }
-
-
         }
 
         return avlNode;
@@ -163,10 +218,15 @@ public class AVLTree {
 
     private AVLNode rightRotate(AVLNode avlNode){
         AVLNode k1 = avlNode.left;
-        avlNode.right = k1.right;
+        avlNode.left = k1.right;
         k1.right = avlNode;
 
-        // two node height must recalculate
+        /*
+            two node height must recalculate
+            The height of node depends on it's sub tree, it is nothing with it's parent node.
+            K1 and avlNode are the node whose sub tree has been moved.
+            we only need adjust them height.
+         */
         avlNode.height = Math.max(calculateHeight(avlNode.left), calculateHeight(avlNode.right)) + 1;
         k1.height = Math.max(calculateHeight(k1.left), avlNode.height) + 1;
 
@@ -209,21 +269,6 @@ public class AVLTree {
         return maximum;
     }
 
-    public <T extends Comparable> boolean contains(T beSearch, AVLNode avlNode){
-        boolean exists ;
-        int result = beSearch.compareTo(avlNode.element);
-        if ( result < 0 ){
-            exists = contains(beSearch, avlNode.left);
-        }
-        else if ( result > 0 ){
-            exists = contains(beSearch, avlNode.right);
-        }
-        else {
-            exists = true;
-        }
-        return exists;
-    }
-
     /** calculate the specific node's height */
     private int calculateHeight(AVLNode avlNode){
         if (null == avlNode){
@@ -232,10 +277,8 @@ public class AVLTree {
         return avlNode.height;
     }
 
+    /* -------------------------------------------- 内部函数 End -------------------------------------------------*/
 
-
-    public static void main(String[] args) {
-    }
 
 
     /** AVLTree Node */
