@@ -65,7 +65,9 @@
 ### 树相关：
 
   * [AVLTree 平衡二叉搜索树](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/trees/AVLTree.java)
-
+  
+  * [AVLTreeTest 平衡二叉树测试用例](https://github.com/JosephChanChan/algorithms/blob/6a9a1269f54383ac5cfa9315b99e4032b0847c02/src/main/java/trees/AVLTreeTest.java)
+  
   * [BinarySearch 二分查找](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/trees/BinarySearch.java)
   
   * [BinaryHeap 二叉堆(优先队列)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/trees/BinaryHeap.java)
