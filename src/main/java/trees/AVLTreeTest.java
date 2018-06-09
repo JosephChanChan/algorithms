@@ -2,8 +2,7 @@ package main.java.trees;
 
 import main.java.sort.CheckSortedArr;
 
-import java.util.List;
-import java.util.Random;
+import java.util.*;
 
 /**
  * Created by Joseph at 2018/6/3 0003 15:13.
@@ -11,7 +10,9 @@ import java.util.Random;
 public class AVLTreeTest {
 
     public static void main(String[] args) {
-        test5();
+        for (int i = 0; i < 100; i++){
+            test5();
+        }
     }
 
     /**
@@ -138,12 +139,24 @@ public class AVLTreeTest {
         }
     }
 
+    /**
+     * Insert random one million elements to construct a AVLTree.
+     * then random remove half million elements.
+     * it include repetition elements default.
+     * just cancel annotation in code if you want without repetition elements.
+     */
     private static void test5(){
-        int hundredThousand = 100000;
-        int[] randomArr = new int[hundredThousand];
+        int oneMillion = 1000000;
+        int[] randomArr = new int[oneMillion];
         Random random = new Random();
-        for (int i = 0; i < hundredThousand; i++){
-            randomArr[i] = random.nextInt(100000);
+//        Set<Integer> set = new TreeSet<>();
+        int count = oneMillion;
+        for (int i = 0; i < count; ){
+            int temp = random.nextInt(10000000);
+//            if (!set.contains(temp)){
+//                set.add(temp);
+                randomArr[--count] = temp;
+//            }
         }
 
         AVLTree avlTree = new AVLTree();
@@ -152,41 +165,99 @@ public class AVLTreeTest {
         }
 
         List<Comparable> comparables = avlTree.inorderTraversal();
-
         // Use Tool to check the array is ascending sequence
         int index = CheckSortedArr.checkAsc(comparables.toArray(new Comparable[comparables.size()]));
         if (-1 == index){
             System.out.println(" \r\n ascending sequence \r\n");
         }
         else {
-            System.out.println(index);
+            throw new RuntimeException(" error tree index " + index);
         }
 
-        // Executing 50000 time random remove
-        for (int k = 0; k < (hundredThousand >> 1); k++){
-            int ranIndex = random.nextInt(randomArr.length-1);
-            int beRemoved = randomArr[ranIndex];
-//            try {
+        // Executing 500000 time random remove
+//        set = new TreeSet<>();
+        List<Integer> record = new ArrayList<>();
+        for (int k = 0; k < (oneMillion >> 1); k++){
+//            int beRemoved = getInt(random, randomArr, set);
+//            record.add(beRemoved);
+            int beRemoved = randomArr[random.nextInt(randomArr.length-1)];
+            try {
                 avlTree.remove(beRemoved);
-//            }
-//            catch (Exception ex){
-//                System.out.println(ex.getMessage());
-//                System.out.println(" error occur when time = "+k);
-//                System.out.println(" value is " + beRemoved);
-//            }
+            }
+            catch (Exception ex){
+                System.out.println(" 删除的元素顺序 : ");
+                for (int i = 0; i < record.size(); i++){
+                    System.out.print(record.get(i) + " ");
+                }
+                System.out.println();
+                System.out.println(ex.getMessage());
+                System.out.println(" error occur when time = "+k+1);
+                System.out.println(" value is " + beRemoved);
+                throw ex;
+            }
         }
 
         comparables = avlTree.inorderTraversal();
 
-        // Use Tool to check the array is ascending sequence
         // After random remove
         index = CheckSortedArr.checkAsc(comparables.toArray(new Comparable[comparables.size()]));
         if (-1 == index){
             System.out.println(" \r\n After random remove, ascending sequence \r\n");
         }
         else {
-            System.out.println(index);
+            throw new RuntimeException(" Error Tree index is " + index);
         }
+    }
+    private static int getInt(Random random, int[] randomArr, Set<Integer> set){
+        int beRemoved ;
+        while (true){
+            int ranIndex = random.nextInt(randomArr.length-1);
+            beRemoved = randomArr[ranIndex];
+            if (!set.contains(beRemoved)){
+                set.add(beRemoved);
+                break;
+            }
+        }
+        return beRemoved;
+    }
+
+    /**
+     * Fix a bug which is about height of node didn't calculate after insert or remove.
+     * This test can show the situation of bug.
+     * This method has no useful cause the bug had been fixed.
+     * Remain it as a souvenir.
+     */
+    @Deprecated
+    private static void fix(){
+        int[] elemArr = {50,28,65,25,41,60,75,20,59,88};
+
+        AVLTree avlTree = new AVLTree();
+        for (int i = 0; i < elemArr.length; i++){
+            avlTree.insert(elemArr[i]);
+        }
+
+        List<Comparable> comparables = avlTree.postorderTraversal();
+        for (int i = 0; i < comparables.size(); i++){
+            System.out.print(comparables.get(i) + " ");
+        }
+        System.out.println();
+
+        int[] removed = {25,41,50,88,75};
+
+        for (int j = 0; j < removed.length; j++){
+            int beRemoved = removed[j];
+            try {
+                avlTree.remove(beRemoved);
+            }
+            catch (Exception ex){
+                System.out.println();
+                System.out.println(ex.getMessage());
+                System.out.println(" error occur when time = "+ (j+1));
+                System.out.println(" value is " + beRemoved);
+                throw ex;
+            }
+        }
+
     }
 
 }

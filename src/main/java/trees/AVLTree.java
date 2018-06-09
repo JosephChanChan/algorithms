@@ -137,7 +137,7 @@ public class AVLTree {
                     the node only have one reference that are parent left or right
                     this relationship will be cut off. the node will have collected by GC.
                  */
-                return null;
+                avlNode = null;
             }
             // only have left
             else if (null == avlNode.right){
@@ -173,6 +173,9 @@ public class AVLTree {
      * @return a balanced sub tree
      */
     private AVLNode balance(AVLNode avlNode){
+        if (null == avlNode){
+            return avlNode;
+        }
         // check if unbalance is occur
         int diff = Math.abs(calculateHeight(avlNode.left) - calculateHeight(avlNode.right));
         if (diff > MAX_DIFF_HEIGHT){
@@ -232,6 +235,13 @@ public class AVLTree {
             }
         }
 
+        /*
+            Why calculate height of avlNode again even if it has been calculated in rotate algorithm ?
+            Preventing the balance situation after insert or remove that needn't rotate.
+            But the height of node was changed actually.
+            So that need recalculate here.
+         */
+        avlNode.height = Math.max(calculateHeight(avlNode.left), calculateHeight(avlNode.right)) + 1;
         return avlNode;
     }
 
