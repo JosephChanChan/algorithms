@@ -11,7 +11,14 @@ package main.java.string;
  *  将 j 指针尽量回退到一个有效位置
  *
  * 关于next数组求解算法可看:
- *   @see_https://www.cnblogs.com/tangzhengyue/p/4315393.html
+ *   https://www.cnblogs.com/tangzhengyue/p/4315393.html
+ *   如果觉得 next 数组这种方法很难理解.
+ *   还有 最大相同前缀和后缀表 这种比较好计算的方法。
+ *
+ *   next数组有 2 个版本, 一个是 失配字符前的字符串中最大长度的相同前缀和后缀.
+ *   另一个是 基于上述 最大相同前缀和后缀长度表 将这些数值整体向右移一位 得出 next数组.
+ *   未来回顾到这里或许会不懂, 看这篇文章详细介绍 KMP 算法.
+ *   https://blog.csdn.net/v_july_v/article/details/7041827
  */
 public class KMPAlgorithm {
 
