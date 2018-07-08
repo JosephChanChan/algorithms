@@ -6,8 +6,11 @@ import java.io.IOException;
 
 /**
  * Created by Joseph on 2017/6/10.
+ *
  *  广度优先搜索
- *  读一个文本文件，包含了一个矩阵，该矩阵是图的转化
+ *  读一个文本文件，包含了一个矩阵，该矩阵是图的转化(该文件在本地文件中, 表现形式为邻接矩阵, 请 Google 或 bing 了解)
+ *  构造好邻接矩阵后, 便可以运行程序.
+ *  该程序阅读不友好, 有空改善下.
  */
 public class BFSAlgorithm {
 
