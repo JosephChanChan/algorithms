@@ -29,15 +29,17 @@ public class QuickSort {
         for(int i : arr){
             System.out.print(i+" ");
         }*/
-        doQuickSort(arr,0, arr.length-1);
 
-        int flag = CheckSortedArr.checkIntAsc(arr);
+        doQuickSortDesc(arr,0, arr.length-1);
+
+        /*int flag = CheckSortedArr.checkIntAsc(arr);
         if (flag != -1){
             System.out.println("数组排序有误! "+flag);
         }
         else {
             System.out.println("数组排序成功!");
-        }
+        }*/
+
         for (Integer integer : arr){
             System.out.print(integer + " ");
         }
@@ -63,6 +65,34 @@ public class QuickSort {
             }
             arr[left] = arr[right];
             while (left < right && arr[left] <= base){
+                left++;
+            }
+            arr[right] = arr[left];
+        }
+        arr[left] = base;
+        return left;
+    }
+
+    /** 针对基本数据类型 int 服务. 降序排序 */
+    public static void doQuickSortDesc(int[] arr, int left, int right){
+        if(left >= right){
+            return;
+        }
+
+        int base = arr[left];
+
+        int i = quickSortDesc(arr, base, left, right);
+
+        doQuickSortDesc(arr,left,i-1);
+        doQuickSortDesc(arr,i+1,right);
+    }
+    private static int quickSortDesc(int[] arr, int base, int left, int right){
+        while (left < right){
+            while (left < right && arr[right] <= base){
+                right--;
+            }
+            arr[left] = arr[right];
+            while (left < right && arr[left] >= base){
                 left++;
             }
             arr[right] = arr[left];
