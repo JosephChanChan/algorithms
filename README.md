@@ -32,6 +32,8 @@
 ### 贪心算法：
 
   * [DugoutCanone 独木舟](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/greedy/algorithm/DugoutCanone.java)
+  
+  * [PerfectString 完美字符串](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/greedy/algorithm/PerfectString.java)
 
 ### 回溯法：
 
