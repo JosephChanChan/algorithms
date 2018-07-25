@@ -32,7 +32,7 @@ import java.util.List;
      第2 - N + 1行，每行3个整数，Wi，Pi和Ci分别是物品重量、价值和数量。(1 <= Wi, Pi <= 10000， 1 <= Ci <= 200)
  *
  */
-public class MutiKnapsackProblem {
+public class MultiKnapsackProblem {
 
     static int num = 0, wei= 0;
     static int[] wi = null, vi = null, ci = null;

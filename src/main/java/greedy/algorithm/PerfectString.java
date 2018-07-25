@@ -67,7 +67,7 @@ public class PerfectString {
             valueCountArray[character] = value;
         }
 
-        sort.QuickSort.doQuickSort(valueCountArray, 0, valueCountArray.length-1);
+        sort.QuickSort.doQuickSortDesc(valueCountArray, 0, valueCountArray.length-1);
 
         int score = 26, sum = 0;
 
