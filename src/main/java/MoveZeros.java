@@ -1,5 +1,3 @@
-package main.java;
-
 /**
  * Created by Joseph on 2017/6/11.
  *  给定一个n的数组，其中包含一些0，将0全部移动到数组后面，要求时间复杂度 O(n)

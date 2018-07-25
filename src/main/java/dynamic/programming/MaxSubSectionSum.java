@@ -1,4 +1,4 @@
-package main.java.dynamic.programming;
+package dynamic.programming;
 
 import java.util.Random;
 

@@ -1,4 +1,4 @@
-package main.java.backtracking.algorithm;
+package backtracking.algorithm;
 
 /**
  * Created by Joseph on 2017/11/10.

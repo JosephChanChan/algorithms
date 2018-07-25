@@ -1,4 +1,4 @@
-package main.java.simulation.algorithm;
+package simulation.algorithm;
 
 import java.io.*;
 

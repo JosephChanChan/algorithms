@@ -1,4 +1,4 @@
-package main.java.graphs;
+package graphs;
 
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;

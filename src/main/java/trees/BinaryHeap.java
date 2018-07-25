@@ -1,6 +1,6 @@
-package main.java.trees;
+package trees;
 
-import main.java.sort.CheckSortedArr;
+import sort.CheckSortedArr;
 
 import java.util.Random;
 

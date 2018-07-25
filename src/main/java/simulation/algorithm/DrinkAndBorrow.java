@@ -1,4 +1,4 @@
-package main.java.simulation.algorithm;
+package simulation.algorithm;
 
 /**
  * Created by Administrator on 2017/10/14 0014.

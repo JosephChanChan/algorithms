@@ -1,4 +1,4 @@
-package main.java.multithreads;
+package multithreads;
 
 /**
  * Created by Joseph on 2017/7/3.

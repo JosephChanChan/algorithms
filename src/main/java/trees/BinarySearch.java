@@ -1,7 +1,7 @@
-package main.java.trees;
+package trees;
 
-import main.java.sort.CheckSortedArr;
-import main.java.sort.QuickSort;
+import sort.CheckSortedArr;
+import sort.QuickSort;
 
 import java.util.Random;
 
