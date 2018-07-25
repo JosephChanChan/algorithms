@@ -7,7 +7,7 @@ import java.util.Random;
  */
 public class QuickSort {
 
-    static Integer[] arr = {5,8,3,7,1,6,4,9,2};
+    static int[] arr = {5,8,3,7,1,6,4,9,2};
 
     public static void main(String[] args){
         /*Random random = new Random();
@@ -31,7 +31,7 @@ public class QuickSort {
         }*/
         doQuickSort(arr,0, arr.length-1);
 
-        int flag = CheckSortedArr.checkAsc(arr);
+        int flag = CheckSortedArr.checkIntAsc(arr);
         if (flag != -1){
             System.out.println("数组排序有误! "+flag);
         }
@@ -43,6 +43,35 @@ public class QuickSort {
         }
     }
 
+    /** 针对基本数据类型 int 服务 */
+    public static void doQuickSort(int[] arr, int left, int right){
+        if(left >= right){
+            return;
+        }
+
+        int base = arr[left];
+
+        int i = quickSort(arr, base, left, right);
+
+        doQuickSort(arr,left,i-1);
+        doQuickSort(arr,i+1,right);
+    }
+    private static int quickSort(int[] arr, int base, int left, int right){
+        while (left < right){
+            while (left < right && arr[right] >= base){
+                right--;
+            }
+            arr[left] = arr[right];
+            while (left < right && arr[left] <= base){
+                left++;
+            }
+            arr[right] = arr[left];
+        }
+        arr[left] = base;
+        return left;
+    }
+
+    /** 针对实现 Comparable 可排序接口的泛型服务 */
     public static <T extends Comparable<? super T>> void doQuickSort(T[] arr,int left,int right){
         if(left >= right){
             return;
@@ -55,7 +84,6 @@ public class QuickSort {
         doQuickSort(arr,left,i-1);
         doQuickSort(arr,i+1,right);
     }
-
     private static <T extends Comparable<? super T>> int quickSort(T[] arr, T base, int left, int right){
         while (left < right){
             while (left < right && arr[right].compareTo(base) >= 0){
