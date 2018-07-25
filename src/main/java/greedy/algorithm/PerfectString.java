@@ -56,7 +56,7 @@ public class PerfectString {
             每个字符按Ascii字符集转成逻辑编码, 逻辑编码作为下标存在数组里.
             因为字符都是 A~Z, Ascii由一个字节表示, 所以逻辑编码值不会超过127.
          */
-        Integer[] valueCountArray = new Integer[127];
+        int[] valueCountArray = new int[127];
 
         perfectString = perfectString.toUpperCase();
         char[] charArray = perfectString.toCharArray();
