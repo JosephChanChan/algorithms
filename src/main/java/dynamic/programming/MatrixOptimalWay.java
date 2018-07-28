@@ -3,7 +3,6 @@ package dynamic.programming;
 import java.io.*;
 
 /**
- * Created by Joseph on 2017/7/13.
  *  给定一个m行n列的矩阵，矩阵每个元素是一个正整数，你现在在左上角（第一行第一列），
  *  你需要走到右下角（第m行，第n列），每次只能朝右或者下走到相邻的位置，不能走出矩阵。走过的数的总和作为你的得分，求最大的得分。
  *
@@ -12,6 +11,8 @@ import java.io.*;
  *
  *  这道题的解法和贪心很像，不仔细思考会被绕进去。
  *  贪心算法解这道题，是每一步都只算当前的最优情况，动态规划算的是到达x,y点之前的全部情况，在之前的情况中选择最优的。
+ *
+ *  Created by Joseph on 2017/7/13.
  */
 public class MatrixOptimalWay {
 

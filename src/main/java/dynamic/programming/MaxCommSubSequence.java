@@ -3,7 +3,6 @@ package dynamic.programming;
 import java.io.*;
 
 /**
- * Created by Joseph on 2017/7/14.
  *  最大公共子序列
  *  序列A｛1 3 5 4 2 6 8 7｝
  *  序列B｛1 4 8 6 7 5｝
@@ -20,6 +19,8 @@ import java.io.*;
  *          如果 t!=Ax 则L(x,y) = L(x-1,y)
  *          如果 t!=By 则L(x,y) = L(x,y-1)
  *          所以 L(x,y) = max{L(x-1,y),L(x,y-1)}
+ *
+ * Created by Joseph on 2017/7/14.
  */
 
 

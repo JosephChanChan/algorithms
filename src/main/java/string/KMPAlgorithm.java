@@ -1,8 +1,6 @@
 package string;
 
 /**
- * Created by Joseph on 2017/11/14.
- *
  * KMP算法:
  *  当2个字符串匹配时，穷举法步骤是两个指针 i, j 分别指向原串和模式串，当 2 个字符相同时指针分别往后移动，但若出现字符不匹配时，
  *  i 指针回到原来的 i+1 位置，j 指针则回到模式串的第 0 位置，继续匹配，这样做的效率太低，O(n*m)
@@ -19,6 +17,8 @@ package string;
  *   另一个是 基于上述 最大相同前缀和后缀长度表 将这些数值整体向右移一位 得出 next数组.
  *   未来回顾到这里或许会不懂, 看这篇文章详细介绍 KMP 算法.
  *   https://blog.csdn.net/v_july_v/article/details/7041827
+ *
+ *   Created by Joseph on 2017/11/14.
  */
 public class KMPAlgorithm {
 

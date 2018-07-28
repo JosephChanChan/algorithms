@@ -7,11 +7,11 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * Created by Joseph on 2017/11/17.
  *  还是找到一个最大的单增子序列，不过这次时间复杂度要求 O(n * logn)
  *  //5 1 6 8 2 4 5 10
- *  算法原理:
- *      @see_https://www.cnblogs.com/nbalive2001/p/4773131.html
+ *  算法原理: https://www.cnblogs.com/nbalive2001/p/4773131.html
+ *
+ *  Created by Joseph on 2017/11/17.
  */
 public class LongestIncreasingSubsequence2 {
 

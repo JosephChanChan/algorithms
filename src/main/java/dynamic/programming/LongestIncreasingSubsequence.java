@@ -3,7 +3,6 @@ package dynamic.programming;
 import java.io.*;
 
 /**
- * Created by Joseph on 2017/8/17.
  *  给定一个数列，从中删掉任意若干项剩余的序列叫做它的一个子序列，求它的最长的子序列，满足子序列中的元素是单调递增的。
  *  例如给定序列{1,6,3,5,4},答案是3，因为{1,3,4}和{1,3,5}就是长度最长的两个单增子序列。
  *  假设 l(i) 是序列中前i位最长的单增子序列长度。
@@ -11,6 +10,7 @@ import java.io.*;
  *  l(i) = l(j) + 1。
  *  根据条件要求最长的单增子序列，要使 l(i)最大，则求最大的l(j)，所以 l(i) = max{l(j)}+1
  *
+ *  Created by Joseph on 2017/8/17.
  */
 public class LongestIncreasingSubsequence {
 
