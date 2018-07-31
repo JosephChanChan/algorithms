@@ -3,7 +3,6 @@ package dynamic.programming;
 import java.io.*;
 
 /**
- * Created by Joseph on 2017/8/18.
  *  有n件物品，第i件物品(I = 1,2,3…n)的价值是vi, 重量是wi,我们有一个能承重为m的背包，我们选择一些物品放入背包，
  *  显然放入背包的总重量不超过m。我们要求选择物品的总价值最大，请问如何选择？这里我们假设所有出现的数都是正整数。
  *  状态：
@@ -28,6 +27,8 @@ import java.io.*;
  *  优化，经过分析，当前状态只与上一个状态有关，i和i-1，其中i-1包含了 1~i-1的所有情况，只记录一行即可。
  *  空间复杂度优化成 O(m)。
  *  还有，对于第i件物品，如果j<Wi，则为不选情况，所以只需要枚举 j>=Wi情况即可。
+ *
+ *  Created by Joseph on 2017/8/18.
  */
 
 public class KnapsackProblem {
