@@ -36,6 +36,8 @@
   * [PerfectString 完美字符串](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/greedy/algorithm/PerfectString.java)
   
   * [ActivePlan 活动安排](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/greedy/algorithm/ActivePlan.java)
+  
+  * [ActivePlan2 活动安排2 (C++实现)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/greedy/algorithm/ActivePlan2.cpp)
 
 ### 回溯法：
 
@@ -64,7 +66,7 @@
   * [QuickSort 快速排序](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/sort/QuickSort.java)
   
 ### 表相关：
-* [LinkedList 单向链表](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/tables/LinkedList.cpp)
+* [LinkedList 单向链表 (C实现)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/tables/LinkedList.cpp)
 
 ### 树相关：
 
