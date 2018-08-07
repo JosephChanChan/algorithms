@@ -26,7 +26,7 @@ import java.io.*;
  *
  *  Created by Joseph on 2017/8/19.
  */
-public class GroupPostiveInt {
+public class GroupPositiveInt {
 
     static int[] a = null;
     static Node[][] val = null;
