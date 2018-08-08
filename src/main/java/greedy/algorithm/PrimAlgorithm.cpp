@@ -1,0 +1,130 @@
+/*
+	Question Description:
+		N个点M条边的无向连通图，每条边有一个权值，求该图的最小生成树。
+
+		输入
+		第1行：2个数N,M中间用空格分隔，N为点的数量，M为边的数量。（2 <= N <= 1000, 1 <= M <= 50000)
+		第2 - M + 1行：每行3个数S E W，分别表示M条边的2个顶点及权值。(1 <= S, E <= N，1 <= W <= 10000)
+
+		输出
+		输出最小生成树的所有边的权值之和。
+
+		Input:
+		9 14
+		1 2 4
+		2 3 8
+		3 4 7
+		4 5 9
+		5 6 10
+		6 7 2
+		7 8 1
+		8 9 7
+		2 8 11
+		3 9 2
+		7 9 6
+		3 6 4
+		4 6 14
+		1 8 8
+
+		Output:
+		37
+	
+	Analysis:
+		最小生成树的Prim算法也是贪心算法的一大经典应用。Prim算法的特点是时刻维护一棵树，算法不断加边，加的过程始终是一棵树。
+		Prim算法过程：
+		一条边一条边地加， 维护一棵树。
+		初始 E ＝ ｛｝空集合， V = ｛任意节点｝
+		循环（n – 1）次，每次选择一条边（v1,v2）， 满足：v1属于V , v2不属于V。且（v1,v2）权值最小。
+		E = E + （v1,v2）
+		V = V + v2
+		最终E中的边是一棵最小生成树， V包含了全部节点。
+
+		Prim算法的证明：
+		假设Prim算法得到一棵树P，有一棵最小生成树T。假设P和T不同，我们假设Prim算法进行到第(K – 1)步时选择的边都在T中，
+		这时Prim算法的树是P’, 第K步时,Prim算法选择了一条边e = (u, v)不在T中。假设u在P’中，而v不在。
+		因为T是树，所以T中必然有一条u到v的路径，我们考虑这条路径上第一个点u在P’中，最后一个点v不在P’中，
+		则路径上一定有一条边f = (x,y)，x在P’中，而且y不在P’中。
+		我们考虑f和e的边权w(f)与w(e)的关系：
+		若w(f) > w(e)，在T中用e换掉f （T中加上e去掉f)，得到一个权值和更小的生成树，与T是最小生成树矛盾。
+		若w(f) < w(e), Prim算法在第K步时应该考虑加边f，而不是e,矛盾。
+		因此只有w(f) = w(e),我们在T中用e换掉f，这样Prim算法在前K步选择的边在T中了，有限步之后把T变成P,而树权值和不变， 从而Prim算法是正确的。
+
+		明白了Prim算法生成图的最小生成树原理后，该怎么实现这个算法？
+		贪心策略有了，每一次从一个顶点出发访问未访问过的顶点时，选择权值最小的路径访问。
+		根据输入数据，建立图的邻接矩阵，将所有顶点入一个队列。遍历邻接矩阵，选择权值最小的顶点假设为P访问，将该P从队列删除。
+		从P出发重新选择。循环至某顶点全部路径将会访问到重复顶点为止。从队列取出未访问的顶点重新开始。
+		直到队列为空，算法结束。
+
+	Created by Joseph on 2018/8/07.
+*/
+#include <stdio.h>
+#include <iostream>
+#include <string>
+#include <queue>
+using namespace std;
+
+struct Node
+{
+	bool connected;//		是否连通 
+	bool visited;//				是否访问过
+	int weight;//					权值
+};
+
+int main()
+{
+	int nodeCount, lineCount ;
+	cin >> nodeCount;
+	cin >> lineCount;
+
+	// 顶点队列
+	queue<int> que;
+
+	// 二级指针。内容是指针数组，数组里的指针又指向Node一维数组
+	Node **nodeArray = new Node*[nodeCount + 1];
+
+	for (size_t i = 1; i <= nodeCount; i++)
+	{
+		Node *arr = new Node[nodeCount + 1];
+		for (size_t k = 1; k <= nodeCount; k++)
+		{
+			Node temp = {false, false, 0};
+			arr[k] = temp;
+		}
+		nodeArray[i] = arr;
+
+		que.push(i);
+	}
+
+	// 建立邻接矩阵
+	for (size_t i = 0; i < lineCount; i++)
+	{
+		int peak1, peak2, weight;
+		cin >> peak1;
+		cin >> peak2;
+		cin >> weight;
+
+		Node *arr = nodeArray[peak1];
+		Node node = arr[peak2];
+		node.connected = true;
+		node.weight = weight;
+
+		Node *arr2 = nodeArray[peak2];
+		Node node2 = arr2[peak1];
+		node2.connected = true;
+		node2.weight = weight;
+	}
+
+	for (size_t i = 1; i <= nodeCount; i++)
+	{
+		Node *arr = nodeArray[i];
+		for (size_t k = 1; k <= nodeCount; k++)
+		{
+			Node temp = arr[k];
+			cout << temp.connected << "   " << temp.visited << "    " << temp.weight << "\r\n";
+		}
+	}
+
+	system("pause");
+
+	return 0;
+}
