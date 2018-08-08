@@ -38,7 +38,10 @@
   * [ActivePlan 活动安排](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/greedy/algorithm/ActivePlan.java)
   
   * [ActivePlan2 活动安排2 (C++实现)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/greedy/algorithm/ActivePlan2.cpp)
-
+  
+  * [MissionOrder 任务执行顺序 (C++实现)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/greedy/algorithm/MissionOrder.cpp)
+  
+  
 ### 回溯法：
 
   * [EightQueen 八皇后](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/backtracking/algorithm/EightQueen.java)
