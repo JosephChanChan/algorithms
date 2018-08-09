@@ -60,12 +60,13 @@
 #include <stdio.h>
 #include <iostream>
 #include <string>
-#include <queue>
+#include <list>
+#include <set>
 using namespace std;
 
 struct Node
 {
-	bool connected;//		是否连通 
+	bool connected;//		是否连通
 	bool visited;//				是否访问过
 	int weight;//					权值
 };
@@ -77,7 +78,10 @@ int main()
 	cin >> lineCount;
 
 	// 顶点队列
-	queue<int> que;
+	list<int> que(nodeCount);
+
+	// 记录下访问过的节点
+	set<int> visitedNode;
 
 	// 二级指针。内容是指针数组，数组里的指针又指向Node一维数组
 	Node **nodeArray = new Node*[nodeCount + 1];
@@ -92,10 +96,13 @@ int main()
 		}
 		nodeArray[i] = arr;
 
-		que.push(i);
+		que.push_back(i);
 	}
 
 	// 建立邻接矩阵
+	Node *arr, *arr2;
+	Node *node, *node2;
+	int p_index ;
 	for (size_t i = 0; i < lineCount; i++)
 	{
 		int peak1, peak2, weight;
@@ -103,26 +110,91 @@ int main()
 		cin >> peak2;
 		cin >> weight;
 
-		Node *arr = nodeArray[peak1];
-		Node node = arr[peak2];
-		node.connected = true;
-		node.weight = weight;
+		arr = nodeArray[peak1];
+		node = &arr[peak2];
+		node->connected = true;
+		node->weight = weight;
 
-		Node *arr2 = nodeArray[peak2];
-		Node node2 = arr2[peak1];
-		node2.connected = true;
-		node2.weight = weight;
+		if (0 == i)
+		{
+			p_index = peak1;
+		}
+
+		arr2 = nodeArray[peak2];
+		node2 = &arr2[peak1];
+		node2->connected = true;
+		node2->weight = weight;
 	}
 
-	for (size_t i = 1; i <= nodeCount; i++)
+	// 选择过的边的权值和
+	int weight_sum = 0;
+
+	/*
+		遍历邻接矩阵，随机选择一个顶点设为P访问，将该P从队列删除，选择权值最小的边访问下一个顶点设为P
+		从P出发重新选择。循环至某顶点全部路径将会访问到重复顶点为止。从队列取出未访问的顶点重新开始。
+		直到队列为空，算法结束。
+	*/
+	while (true)
+	{
+		Node *p_arr = nodeArray[p_index];
+
+		visitedNode.insert(p_index);
+
+		// 从待访问队列移除 p 顶点
+		std::list<int>::iterator iter;
+		for (iter = que.begin(); iter != que.end(); ++iter)
+		{
+			if (*iter == p_index)
+			{
+				iter = que.erase(iter);
+			}
+		}
+
+		// 遍历该顶点，看与哪个顶点连通，且选择权值最小的边
+		int min_node_index ;
+		bool has_selected = false;
+		int minWeight = 10001;// 权值会小于 10000
+		for (size_t i = 1; i <= nodeCount; i++)
+		{
+			if (p_arr[i].connected && 0 == visitedNode.count(i))
+			{
+				if (p_arr[i].weight < minWeight)
+				{
+					minWeight = p_arr[i].weight;
+					min_node_index = i;
+					has_selected = true;
+				}
+			}
+		}
+
+		if (has_selected)
+		{
+			weight_sum += minWeight;
+			p_index = min_node_index;
+		}
+		else if (!que.empty())
+		{
+			p_index = que.front();
+			//que.remove(p_index);
+		}
+		else
+		{
+			break;
+		}
+	}
+
+	cout << weight_sum;
+
+	/*for (size_t i = 1; i <= nodeCount; i++)
 	{
 		Node *arr = nodeArray[i];
 		for (size_t k = 1; k <= nodeCount; k++)
 		{
 			Node temp = arr[k];
-			cout << temp.connected << "   " << temp.visited << "    " << temp.weight << "\r\n";
+			cout << temp.connected << "   " << temp.visited << "    " << temp.weight << "   ";
 		}
-	}
+		cout << "\r\n";
+	}*/
 
 	system("pause");
 
