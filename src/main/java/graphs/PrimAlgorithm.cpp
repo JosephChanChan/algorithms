@@ -1,13 +1,13 @@
 /*
 	Question Description:
-		N����M���ߵ�������ͨͼ��ÿ������һ��Ȩֵ�����ͼ����С��������
+		N个点M条边的无向连通图，每条边有一个权值，求该图的最小生成树。
 
-		����
-		��1�У�2����N,M�м��ÿո�ָ���NΪ���������MΪ�ߵ���������2 <= N <= 1000, 1 <= M <= 50000)
-		��2 - M + 1�У�ÿ��3����S E W���ֱ��ʾM���ߵ�2�����㼰Ȩֵ��(1 <= S, E <= N��1 <= W <= 10000)
+		输入
+		第1行：2个数N,M中间用空格分隔，N为点的数量，M为边的数量。（2 <= N <= 1000, 1 <= M <= 50000)
+		第2 - M + 1行：每行3个数S E W，分别表示M条边的2个顶点及权值。(1 <= S, E <= N，1 <= W <= 10000)
 
-		���
-		�����С�����������бߵ�Ȩֵ֮�͡�
+		输出
+		输出最小生成树的所有边的权值之和。
 
 		Input:
 		9 14
@@ -30,29 +30,30 @@
 		37
 	
 	Analysis:
-		��С��������Prim�㷨Ҳ��̰���㷨��һ�󾭵�Ӧ�á�Prim�㷨���ص���ʱ��ά��һ�������㷨���ϼӱߣ��ӵĹ���ʼ����һ������
-		Prim�㷨���̣�
-		һ����һ���ߵؼӣ� ά��һ������
-		��ʼ E �� �����ռ��ϣ� V = ������ڵ��
-		ѭ����n �C 1���Σ�ÿ��ѡ��һ���ߣ�v1,v2���� ���㣺v1����V , v2������V���ң�v1,v2��Ȩֵ��С��
-		E = E + ��v1,v2��
+		最小生成树的Prim算法也是贪心算法的一大经典应用。Prim算法的特点是时刻维护一棵树，算法不断加边，加的过程始终是一棵树。
+		Prim算法过程：
+		一条边一条边地加， 维护一棵树。
+		初始 E ＝ ｛｝空集合， V = ｛任意节点｝
+		循环（n – 1）次，每次选择一条边（v1,v2）， 满足：v1属于V , v2不属于V。且（v1,v2）权值最小。
+		E = E + （v1,v2）
 		V = V + v2
-		����E�еı���һ����С�������� V������ȫ���ڵ㡣
+		最终E中的边是一棵最小生成树， V包含了全部节点。
 
-		Prim�㷨��֤����
-		����Prim�㷨�õ�һ����P����һ����С������T������P��T��ͬ�����Ǽ���Prim�㷨���е���(K �C 1)��ʱѡ��ı߶���T�У�
-		��ʱPrim�㷨������P��, ��K��ʱ,Prim�㷨ѡ����һ����e = (u, v)����T�С�����u��P���У���v���ڡ�
-		��ΪT����������T�б�Ȼ��һ��u��v��·�������ǿ�������·���ϵ�һ����u��P���У����һ����v����P���У�
-		��·����һ����һ����f = (x,y)��x��P���У�����y����P���С�
-		���ǿ���f��e�ı�Ȩw(f)��w(e)�Ĺ�ϵ��
-		��w(f) > w(e)����T����e����f ��T�м���eȥ��f)���õ�һ��Ȩֵ�͸�С������������T����С������ì�ܡ�
-		��w(f) < w(e), Prim�㷨�ڵ�K��ʱӦ�ÿ��Ǽӱ�f��������e,ì�ܡ�
-		���ֻ��w(f) = w(e),������T����e����f������Prim�㷨��ǰK��ѡ��ı���T���ˣ����޲�֮���T���P,����Ȩֵ�Ͳ��䣬 �Ӷ�Prim�㷨����ȷ�ġ�
+		Prim算法的证明：
+		假设Prim算法得到一棵树P，有一棵最小生成树T。假设P和T不同，我们假设Prim算法进行到第(K – 1)步时选择的边都在T中，
+		这时Prim算法的树是P’, 第K步时,Prim算法选择了一条边e = (u, v)不在T中。假设u在P’中，而v不在。
+		因为T是树，所以T中必然有一条u到v的路径，我们考虑这条路径上第一个点u在P’中，最后一个点v不在P’中，
+		则路径上一定有一条边f = (x,y)，x在P’中，而且y不在P’中。
+		我们考虑f和e的边权w(f)与w(e)的关系：
+		若w(f) > w(e)，在T中用e换掉f （T中加上e去掉f)，得到一个权值和更小的生成树，与T是最小生成树矛盾。
+		若w(f) < w(e), Prim算法在第K步时应该考虑加边f，而不是e,矛盾。
+		因此只有w(f) = w(e),我们在T中用e换掉f，这样Prim算法在前K步选择的边在T中了，有限步之后把T变成P,而树权值和不变， 从而Prim算法是正确的。
 
-		������Prim�㷨����ͼ����С������ԭ���󣬸���ôʵ������㷨��
-		��V[]Ϊ���ʹ��Ķ��㼯�ϣ�ѡ����ͨ��v1 v2����������v1 v2�ı�Ȩֵ��С��v1����V�У�v2������V��
-		ֱ��V�з��ʹ����ж��㣬�㷨������
-
+		明白了Prim算法生成图的最小生成树原理后，该怎么实现这个算法？
+		设V[]为访问过的顶点集合，选择连通的v1 v2访问且满足v1 v2的边权值最小，v1属于V中，v2不属于V。
+		直到V中访问过所有顶点，算法结束。
+		
+		PS:算法是正确的，但是时间复杂度比较高，在OJ平台中超时... 有空回来优化.
 	Created by Joseph on 2018/8/07.
 */
 #include <stdio.h>
@@ -65,8 +66,8 @@ using namespace std;
 
 struct Node
 {
-	bool connected;//		�Ƿ���ͨ
-	int weight;//					Ȩֵ
+	bool connected;//		是否连通
+	int weight;//					权值
 };
 
 int main()
@@ -75,10 +76,10 @@ int main()
 	cin >> nodeCount;
 	cin >> lineCount;
 
-	// ��¼�·��ʹ��Ľڵ�
+	// 记录下访问过的节点
 	set<int> visitedNode;
 
-	// ����ָ�롣������ָ�����飬�������ָ����ָ��Nodeһά����
+	// 二级指针。内容是指针数组，数组里的指针又指向Node一维数组
 	Node **nodeArray = new Node*[nodeCount + 1];
 
 	//time_t t_3 = time(nullptr);
@@ -94,7 +95,7 @@ int main()
 		nodeArray[i] = arr;
 	}
 
-	// �����ڽӾ���
+	// 建立邻接矩阵
 	Node *arr, *arr2;
 	Node *node, *node2;
 	int p_index ;
@@ -122,19 +123,19 @@ int main()
 		node2->weight = weight;
 	}
 
-	// ѡ����ıߵ�Ȩֵ��
+	// 选择过的边的权值和
 	int weight_sum = 0;
 
 	//time_t t_1 = time(nullptr);
 
 	/*
-		��V[]Ϊ���ʹ��Ķ��㼯�ϣ�ѡ����ͨ��v1 v2����������v1 v2�ı�Ȩֵ��С��v1����V�У�v2������V��
-		ֱ��V�з��ʹ����ж��㣬�㷨������
-		ÿһ�ε���V��ö�ٳ�����V�ж���ıߣ��ų���·�ıߣ���ѡ��Ȩֵ��С�ıߡ�
+		设V[]为访问过的顶点集合，选择连通的v1 v2访问且满足v1 v2的边权值最小，v1属于V中，v2不属于V。
+		直到V中访问过所有顶点，算法结束。
+		每一次迭代V，枚举出所有V中顶点的边（排除回路的边），选择权值最小的边。
 	*/
 	while (true)
 	{
-		int minum_peak = 0, minimum_weight = 10001;	// Ȩֵ��� 10000;
+		int minum_peak = 0, minimum_weight = 10001;	// 权值最大 10000;
 
 		std::set<int>::iterator ite;
 		for (ite = visitedNode.begin(); ite != visitedNode.end(); ite++)
