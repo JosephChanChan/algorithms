@@ -50,10 +50,8 @@
 		因此只有w(f) = w(e),我们在T中用e换掉f，这样Prim算法在前K步选择的边在T中了，有限步之后把T变成P,而树权值和不变， 从而Prim算法是正确的。
 
 		明白了Prim算法生成图的最小生成树原理后，该怎么实现这个算法？
-		贪心策略有了，每一次从一个顶点出发访问未访问过的顶点时，选择权值最小的路径访问。
-		根据输入数据，建立图的邻接矩阵，将所有顶点入一个队列。遍历邻接矩阵，选择权值最小的顶点假设为P访问，将该P从队列删除。
-		从P出发重新选择。循环至某顶点全部路径将会访问到重复顶点为止。从队列取出未访问的顶点重新开始。
-		直到队列为空，算法结束。
+		设V[]为访问过的顶点集合，选择连通的v1 v2访问且满足v1 v2的边权值最小，v1属于V中，v2不属于V。
+		直到V中访问过所有顶点，算法结束。
 
 	Created by Joseph on 2018/8/07.
 */
@@ -62,12 +60,12 @@
 #include <string>
 #include <list>
 #include <set>
+#include <ctime>
 using namespace std;
 
 struct Node
 {
 	bool connected;//		是否连通
-	bool visited;//				是否访问过
 	int weight;//					权值
 };
 
@@ -77,26 +75,23 @@ int main()
 	cin >> nodeCount;
 	cin >> lineCount;
 
-	// 顶点队列
-	list<int> que(nodeCount);
-
 	// 记录下访问过的节点
 	set<int> visitedNode;
 
 	// 二级指针。内容是指针数组，数组里的指针又指向Node一维数组
 	Node **nodeArray = new Node*[nodeCount + 1];
 
+	//time_t t_3 = time(nullptr);
+
 	for (size_t i = 1; i <= nodeCount; i++)
 	{
 		Node *arr = new Node[nodeCount + 1];
 		for (size_t k = 1; k <= nodeCount; k++)
 		{
-			Node temp = {false, false, 0};
+			Node temp = {false, 0};
 			arr[k] = temp;
 		}
 		nodeArray[i] = arr;
-
-		que.push_back(i);
 	}
 
 	// 建立邻接矩阵
@@ -117,7 +112,8 @@ int main()
 
 		if (0 == i)
 		{
-			p_index = peak1;
+			// p_index = peak1;
+			visitedNode.insert(peak1);
 		}
 
 		arr2 = nodeArray[peak2];
@@ -129,59 +125,49 @@ int main()
 	// 选择过的边的权值和
 	int weight_sum = 0;
 
+	//time_t t_1 = time(nullptr);
+
 	/*
-		遍历邻接矩阵，随机选择一个顶点设为P访问，将该P从队列删除，选择权值最小的边访问下一个顶点设为P
-		从P出发重新选择。循环至某顶点全部路径将会访问到重复顶点为止。从队列取出未访问的顶点重新开始。
-		直到队列为空，算法结束。
+		设V[]为访问过的顶点集合，选择连通的v1 v2访问且满足v1 v2的边权值最小，v1属于V中，v2不属于V。
+		直到V中访问过所有顶点，算法结束。
+		每一次迭代V，枚举出所有V中顶点的边（排除回路的边），选择权值最小的边。
 	*/
 	while (true)
 	{
-		Node *p_arr = nodeArray[p_index];
+		int minum_peak = 0, minimum_weight = 10001;	// 权值最大 10000;
 
-		visitedNode.insert(p_index);
-
-		// 从待访问队列移除 p 顶点
-		std::list<int>::iterator iter;
-		for (iter = que.begin(); iter != que.end(); ++iter)
+		std::set<int>::iterator ite;
+		for (ite = visitedNode.begin(); ite != visitedNode.end(); ite++)
 		{
-			if (*iter == p_index)
+			Node *arr = nodeArray[*ite];
+			for (int peak = 1; peak <= nodeCount; peak++)
 			{
-				iter = que.erase(iter);
-			}
-		}
-
-		// 遍历该顶点，看与哪个顶点连通，且选择权值最小的边
-		int min_node_index ;
-		bool has_selected = false;
-		int minWeight = 10001;// 权值会小于 10000
-		for (size_t i = 1; i <= nodeCount; i++)
-		{
-			if (p_arr[i].connected && 0 == visitedNode.count(i))
-			{
-				if (p_arr[i].weight < minWeight)
+				if (arr[peak].connected && 0 == visitedNode.count(peak))
 				{
-					minWeight = p_arr[i].weight;
-					min_node_index = i;
-					has_selected = true;
+					if (arr[peak].weight < minimum_weight)
+					{
+						minimum_weight = arr[peak].weight;
+						minum_peak = peak;
+					}
 				}
 			}
 		}
 
-		if (has_selected)
+		if (minimum_weight < 10001)
 		{
-			weight_sum += minWeight;
-			p_index = min_node_index;
-		}
-		else if (!que.empty())
-		{
-			p_index = que.front();
-			//que.remove(p_index);
+			visitedNode.insert(minum_peak);
+			weight_sum += minimum_weight;
 		}
 		else
 		{
 			break;
 		}
 	}
+
+	//time_t t_2 = time(nullptr);
+
+	//cout << t_2 - t_3 << endl;
+	//cout << t_2 - t_1 << endl;
 
 	cout << weight_sum;
 
