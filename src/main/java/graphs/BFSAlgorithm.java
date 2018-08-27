@@ -18,12 +18,12 @@ public class BFSAlgorithm {
 
     static int[][] matrix = new int[MATRIX_MAX][MATRIX_MAX];
     private static int[] queue = new int[MATRIX_MAX];
-    static int[] visted = new int[MATRIX_MAX];
+    static int[] visited = new int[MATRIX_MAX];
 
     public static void main(String[] args) throws FileNotFoundException {
 
         FileInputStream inputStream = new FileInputStream("F:\\matrix.txt");
-        int i = 0,j = 0,k = 0;
+        int i = 0, j = 0, k = 0;
         try {
             while ((i=inputStream.read())!=-1){
                 if((char)i=='0' || (char)i=='1'){
@@ -52,15 +52,15 @@ public class BFSAlgorithm {
         while(head != tail){
             int t = queue[head++];
             System.out.println(t+1);
-            visted[t] = 1;
+            visited[t] = 1;
             //查找该节点的临节点
             for(int i=0; i<MATRIX_MAX; i++){
                 if((char)matrix[t][i] == '1'){
                     //如果没被访问
-                    if(visted[i] == 0){
+                    if(visited[i] == 0){
                         //入队
                         queue[tail++] = i;
-                        visted[i] = 1;
+                        visited[i] = 1;
                     }
                 }
             }
