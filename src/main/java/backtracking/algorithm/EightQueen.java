@@ -5,7 +5,7 @@ package backtracking.algorithm;
  * 经典的八皇后问题，即在一个8*8的棋盘上放8个皇后，使得这8个皇后无法互相攻击
  * (任意2个皇后不能处于同一行，同一列或是对角线上)，输出所有可能的摆放情况。
  * 这是道很好的回溯算法题，并且结合递归。
- * 算法不是我想的，是网上的，惭愧，算法渣。
+ *
  * <p>
  * 思路：
  * 8皇后是个经典的问题，如果使用暴力法，每个格子都去考虑放皇后与否，一共有264 种可能。
@@ -20,6 +20,11 @@ package backtracking.algorithm;
  * 由于已经不会同行了，所以不用考虑这一点。 同列：c[r]==c[j]; 同对角线有两种可能，即主对角线方向和副对角线方向。
  * 主对角线方向满足，行之差等于列之差：r-j==c[r]-c[j]; 副对角线方向满足， 行之差等于列之差的相反数：r-j==c[j]-c[r]。 只有满足了当前皇后和前面所有的皇后都不会互相攻击的时候，才能进入下一级递归。
  * <p>
+ *
+ * 时间复杂度:
+ *  该算法形式上采用了递归+回溯实现，本质还是对棋盘上每一个位置枚举，
+ *  递归8行，每行尝试8列，所以与穷举算法的时间复杂度大体上应是一致的。
+ *
  * Created by Administrator on 2017/4/14 0014.
  */
 public class EightQueen {
@@ -36,7 +41,7 @@ public class EightQueen {
             return;
         }
         for (int i = 0; i < columns; i++) {
-            rowsQueen[row] = i;
+            rowsQueen[row] = i;// 这一步相当于回溯, 该行将会有一个 new column
             boolean can = true;
             for (int k = 0; k < row; k++) {
                 if (rowsQueen[row] == rowsQueen[k]

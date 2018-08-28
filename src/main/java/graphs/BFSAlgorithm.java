@@ -21,8 +21,7 @@ public class BFSAlgorithm {
     static int[] visited = new int[MATRIX_MAX];
 
     public static void main(String[] args) throws FileNotFoundException {
-
-        FileInputStream inputStream = new FileInputStream("F:\\matrix.txt");
+        /*FileInputStream inputStream = new FileInputStream("F:\\matrix.txt");
         int i = 0, j = 0, k = 0;
         try {
             while ((i=inputStream.read())!=-1){
@@ -43,7 +42,12 @@ public class BFSAlgorithm {
             bfsSearch(0);
         } catch (IOException e) {
             e.printStackTrace();
-        }
+        }*/
+
+        int h = 123;
+        int i = 1;
+        System.out.println(i << 16);
+        System.out.println(h >>> 16);
     }
 
     private static void bfsSearch(int start){
