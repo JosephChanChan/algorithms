@@ -68,6 +68,8 @@
 
   * [QuickSort 快速排序](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/sort/QuickSort.java)
   
+  * [MergeSort 归并排序](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/sort/MergeSort.java)
+  
 ### 表相关：
 * [LinkedList 单向链表 (C实现)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/tables/LinkedList.cpp)
 
