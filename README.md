@@ -88,7 +88,7 @@
   
   * [PrimAlgorithm Prim算法 最小生成树 (C++实现)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/graphs/PrimAlgorithm.cpp)
   
-### 串相关：
+### 字符串相关：
 
   * [KMPAlgorithm KMP算法](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/string/KMPAlgorithm.java)
 
