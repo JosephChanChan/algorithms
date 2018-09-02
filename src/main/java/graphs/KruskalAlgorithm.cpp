@@ -31,8 +31,11 @@ Output:
 
 Analysis:
 	这次介绍的是另一种最小生成树算法，也是贪心算法一种，自然的贪心策略又要证明正确性（每次看贪心策略的证明感觉都有点烧脑...）
-	Kruskal算法。贪心策略：将所有边按权值大小升序排序，然后依次处理每条边，若边的2头顶点不在同一个集合中，加入这条边，否则放弃。
+	Kruskal算法。
+	贪心策略：将所有边按权值大小升序排序，然后依次处理每条边，若边的2头顶点不在同一个集合中，加入这条边，否则放弃。
 	直到算法选择出 N - 1 条边，则这些边构成最小生成树，否则原图不连通。
+
+	以下的证明中会尽量说的详细，并且应该会比网上其它证明要易懂。
 
 	贪心策略证明：
 		设由Kruskal算法得出的一个最小生成树 K。
@@ -67,5 +70,116 @@ Created by Joseph on 2018/9/02.
 #include <iostream>
 using namespace std;
 
+/* 边的结构体 */
+typedef struct
+{
+	int a;				// A顶点
+	int b;				// B顶点
+	int weight;	// 边的权值
+} Road;
 
+/* 快排序 */
+int doQuickSort(Road  roadArray[], int left, int right)
+{
+	Road base = roadArray[left];
 
+	while (left < right)
+	{
+		while (left < right && base.weight <= roadArray[right].weight)
+		{
+			right--;
+		}
+
+		roadArray[left] = roadArray[right];
+
+		while (left < right && base.weight >= roadArray[left].weight)
+		{
+			left++;
+		}
+
+		roadArray[right] = roadArray[left];
+	}
+
+	roadArray[left] = base;
+	return left;
+}
+void quickSort(Road roadArray[], int left, int right)
+{
+	if (left < right)
+	{
+		int base = doQuickSort(roadArray, left, right);
+
+		// sort left side
+		quickSort(roadArray, left, base - 1);
+		// sort right side
+		quickSort(roadArray, base + 1, right);
+	}
+}
+
+/* 从指定的边开始搜寻其根 */
+int getRoot(int peak_array[], int road)
+{
+	while (true)
+	{
+		int f = peak_array[road];
+		if (f != road)
+		{
+			road = f;
+		}
+		else
+		{
+			return f;
+		}
+	}
+}
+
+int main()
+{
+	int peak_count, road_count;
+	cin >> peak_count >> road_count;
+
+	Road road_array[50000];// 边的数组，输入最大50000
+
+	for (size_t i = 0; i < road_count; i++)
+	{
+		cin >> road_array[i].a >> road_array[i].b >> road_array[i].weight;
+	}
+
+	quickSort(road_array, 0, road_count - 1);
+
+	/*
+		并查集是一种数据结构，不了解的先去学一下。
+		在这里，每个顶点就是数组下标，值就是该顶点的根
+	*/
+	int peak_array[1001];// 顶点数组，作为并查集
+
+	// 初始化并查集，每个顶点的根是自己
+	for (size_t i = 1; i <= peak_count; i++)
+	{
+		peak_array[i] = i;
+	}
+
+	int sum_weight = 0;
+
+	// 依次从权值升序选择边，构成最小生成树
+	for (size_t i = 0; i < road_count; i++)
+	{
+		Road road = road_array[i];
+
+		// 查看2个顶点的根是否相等，相等则表示在同个集合中
+		int t1 = getRoot(peak_array, road.a);
+		int t2 = getRoot(peak_array, road.b);
+
+		if (t1 != t2)
+		{
+			sum_weight += road.weight;
+			// 将 b 顶点的根挂到 a 顶点下去
+			peak_array[t2] = road.a;
+		}
+	}
+
+	cout << sum_weight << endl;
+
+	system("pause");
+	return 0;
+}

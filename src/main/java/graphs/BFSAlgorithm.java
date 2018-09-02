@@ -5,12 +5,12 @@ import java.io.FileNotFoundException;
 import java.io.IOException;
 
 /**
- *  广度优先搜索
- *  读一个文本文件，包含了一个矩阵，该矩阵是图的转化(该文件在本地文件中, 表现形式为邻接矩阵, 请 Google 或 bing 了解)
- *  构造好邻接矩阵后, 便可以运行程序.
- *  该程序阅读不友好, 有空改善下.
- *
- *  Created by Joseph on 2017/6/10.
+ * 广度优先搜索
+ * 读一个文本文件，包含了一个矩阵，该矩阵是图的转化(该文件在本地文件中, 表现形式为邻接矩阵, 请 Google 或 bing 了解)
+ * 构造好邻接矩阵后, 便可以运行程序.
+ * 该程序阅读不友好, 有空改善下.
+ * <p>
+ * Created by Joseph on 2017/6/10.
  */
 public class BFSAlgorithm {
 
@@ -50,18 +50,18 @@ public class BFSAlgorithm {
         System.out.println(h >>> 16);
     }
 
-    private static void bfsSearch(int start){
-        int head=0,tail=0;
-        queue[tail++]=start;
-        while(head != tail){
+    private static void bfsSearch(int start) {
+        int head = 0, tail = 0;
+        queue[tail++] = start;
+        while (head != tail) {
             int t = queue[head++];
-            System.out.println(t+1);
+            System.out.println(t + 1);
             visited[t] = 1;
             //查找该节点的临节点
-            for(int i=0; i<MATRIX_MAX; i++){
-                if((char)matrix[t][i] == '1'){
+            for (int i = 0; i < MATRIX_MAX; i++) {
+                if ((char) matrix[t][i] == '1') {
                     //如果没被访问
-                    if(visited[i] == 0){
+                    if (visited[i] == 0) {
                         //入队
                         queue[tail++] = i;
                         visited[i] = 1;
