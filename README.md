@@ -88,9 +88,9 @@
 
   * [BFSAlgorithm 广度优先搜索](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/graphs/BFSAlgorithm.java)
   
-  * [PrimAlgorithm Prim算法 最小生成树 (C++实现)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/graphs/PrimAlgorithm.cpp)
+  * [PrimAlgorithm 最小生成树 (C++实现)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/graphs/PrimAlgorithm.cpp)
 
-* [KruskalAlgorithm Kruskal算法 最小生成树 (C++实现)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/graphs/KruskalAlgorithm.cpp)
+* [KruskalAlgorithm 最小生成树 (C++实现)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/graphs/KruskalAlgorithm.cpp)
   
 ### 字符串相关：
 
