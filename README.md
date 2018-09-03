@@ -41,6 +41,7 @@
   
   * [MissionOrder 任务执行顺序 (C++实现)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/greedy/algorithm/MissionOrder.cpp)
   
+  * [WoodIncisionProblem 老头砍木头](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/greedy/algorithm/WoodIncisionProblem.java)
   
 ### 回溯法：
 
