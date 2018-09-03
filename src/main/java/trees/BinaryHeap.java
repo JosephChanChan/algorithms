@@ -41,6 +41,14 @@ public class BinaryHeap {
         }
     }
 
+    /**
+     * 在堆中寻找合适位置插入给定的元素。
+     * 如果插入前堆已经到了数组临界值，将会先进行扩容。
+     * 扩容长度是原数组的 2 倍长。扩容操作花费 O(N) 时间。
+     * 插入操作花费 O(logN) 时间。
+     *
+     * @param nodeValue the element be insert
+     */
     public void insert(int nodeValue){
         if ( currentSize >= nodeArray.length-1 ){
             expandHeap();
@@ -50,10 +58,24 @@ public class BinaryHeap {
         nodeArray[hole] = nodeValue;
     }
 
+    /**
+     * 删除堆的最小元，并返回最小元
+     *
+     * @return minimum element of heap
+     */
     public Integer deleteMin(){
         int min = nodeArray[1];
         percolateDown(1);
         return min;
+    }
+
+    /**
+     * 返回堆的元素数量
+     *
+     * @return the size of heap
+     */
+    public int heapSize(){
+        return currentSize;
     }
 
     /**
