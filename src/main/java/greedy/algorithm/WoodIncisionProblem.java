@@ -1,3 +1,5 @@
+package greedy.algorithm;
+
 import trees.BinaryHeap;
 
 import java.io.*;
