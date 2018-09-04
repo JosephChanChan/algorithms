@@ -1,5 +1,12 @@
 package greedy.algorithm;
 
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.util.PriorityQueue;
+import java.util.Set;
+import java.util.TreeSet;
+
 /**
  * Question Description:
  *  你来到一个迷宫前。该迷宫由若干个房间组成，每个房间都有一些黄金，第一次进入这个房间，你就可以得到这些黄金。
@@ -26,8 +33,8 @@ package greedy.algorithm;
  * 2）如果V不属于P，则L(V)是从S到V的满足下面限制的最短通路的长度：V是通路中唯一一个不属于P的顶点。
  *
  * 我们可以用归纳法证明Dijkstra算法中的P符合上述定义的集合：
- * 1）当P中元素个数为1时，P对应算法中的第一步，P={S},显然满足。
- * 2）假设P中元素个数为K时，P满足上述定义，下面看算法的的第三步，
+ * 1）当P中元素个数为1时，P={S},显然满足。
+ * 2）假设P中元素个数为K时，P满足上述定义，
  *    先找出不在P中且带有最小标记的顶点U，标记为L(U), 可以证明从S到U的最短通路中除U外不包含不属于P的元素。
  * 设立命题：从 S 到 U 的最短通路中除 U 外还有其他不属于P的元素。
  * 因为若存在除 U 外其他顶点，则最短通路为 S P1 P2...Pn Q1 Q2...Qn U (P1,P2..Pn属于P,Q1,Q2,...Qn不属于P),
@@ -39,11 +46,142 @@ package greedy.algorithm;
  * 对 1）S P1 P2...Pn U V = L(U)+W(U,V)
  *    2）S P1 P2..Pn V = L(V)
  * 显然二者中的最小给出了从S到V的最短通路且满足除V外所有顶点都在P'中的长度。
- * 从而算法第三步给出的 P' 含 K+1 个元素且满足 1), 2)。
+ * 从而 P' 含 K+1 个元素且满足 1), 2)。
  * 又归纳，命题得证！
  *
  * created by Joseph
  * at 2018/9/3 18:08
  */
 public class FleeMaze {
+
+    static int peakCount = 0, roadCount = 0, start = 0, end = 0, lessWeight = 0, maxGold = 0;
+    static int[] peakGold,                  // 每个顶点存储的黄金数
+                 minimumRoadWeight ;        // 原点到每个顶点的最短连通路径长
+    static int[][] peakArray ;              // 顶点邻接矩阵
+
+    static Set<Integer> visitedPeak = new TreeSet<>();                      // 到访过的顶点
+    static PriorityQueue<RoadToPeak> priorityQueue = new PriorityQueue();
+
+    public static void main(String[] args) {
+        BufferedReader reader = new BufferedReader(new InputStreamReader(System.in),1 << 16);
+
+        try {
+            String temp = reader.readLine();
+            String[] params = temp.split(" ");
+            peakCount = Integer.parseInt(params[0]);
+            roadCount = Integer.parseInt(params[1]);
+            start = Integer.parseInt(params[2]) + 1;
+            end = Integer.parseInt(params[3]) + 1;
+
+            temp = reader.readLine();
+            params = temp.split(" ");
+            peakGold = new int[peakCount + 1];
+            for (int i = 0; i < peakCount; i++){
+                peakGold[i + 1] = Integer.parseInt(params[i]);
+            }
+
+            // 跳过第0位，让顶点从1开始编号
+            peakArray = new int[peakCount + 1][peakCount + 1];
+            minimumRoadWeight = new int[peakCount + 1];
+
+            int peakA, peakB, weight ;
+            for (int j = 0; j < roadCount; j++){
+                temp = reader.readLine();
+                params = temp.split(" ");
+
+                peakA = Integer.parseInt(params[0]) + 1;// 跳过第0编号
+                peakB = Integer.parseInt(params[1]) + 1;// 跳过第0编号
+                weight = Integer.parseInt(params[2]);
+
+                // A、B顶点连通，边权值是 weight
+                peakArray[peakA][peakB] = weight;
+                peakArray[peakB][peakA] = weight;
+            }
+
+            dijkstraAlgorithm();
+
+            System.out.println(minimumRoadWeight[end] + " " + maxGold);
+        }
+        catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    private static void dijkstraAlgorithm(){
+        searchRoad(start, 0);
+
+        int currentPeak = start;
+        visitedPeak.add(currentPeak);
+        maxGold += peakGold[currentPeak];
+        while (visitedPeak.size() < peakCount){
+            RoadToPeak minimumRoad = priorityQueue.poll();
+            int destination = minimumRoad.getDestination();
+            if (visitedPeak.contains(destination)){
+                continue;
+            }
+            visitedPeak.add(destination);
+            minimumRoadWeight[destination] = minimumRoad.getWeight();
+            searchRoad(minimumRoad.getDestination(), minimumRoadWeight[destination]);
+            currentPeak = destination;
+            maxGold += peakGold[currentPeak];
+        }
+    }
+
+    /**
+     * 从指定顶点搜索未到访的连通顶点，将边加入优先队列
+     *
+     * @param original 指定顶点
+     * @param previousWeight 此前积累的路径权值
+     */
+    private static void searchRoad(int original, int previousWeight){
+        RoadToPeak roadToPeak ;
+        for (int i = 1; i <= peakCount; i++){
+            if (
+                    peakArray[original][i] > 0 &&
+                    !visitedPeak.contains(i)
+               )
+            {
+                roadToPeak = new RoadToPeak();
+                roadToPeak.setWeight(peakArray[original][i] + previousWeight);
+                roadToPeak.setDestination(i);
+                priorityQueue.add(roadToPeak);
+            }
+        }
+    }
+
+    static class RoadToPeak implements Comparable {
+
+        int weight;         // 权值
+        int destination;    // 边连通的目标顶点
+
+        @Override
+        public int compareTo(Object o) {
+            int weight = ((RoadToPeak) o).getWeight();
+            if (weight > this.weight){
+                return -1;
+            }
+            else if (weight < this.weight){
+                return 1;
+            }
+            else {
+                return 0;
+            }
+        }
+
+        public int getWeight() {
+            return weight;
+        }
+
+        public void setWeight(int weight) {
+            this.weight = weight;
+        }
+
+        public int getDestination() {
+            return destination;
+        }
+
+        public void setDestination(int destination) {
+            this.destination = destination;
+        }
+    }
 }
