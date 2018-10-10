@@ -11,7 +11,7 @@
 
   * [KnapsackProblem 01背包问题](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/dynamic/programming/KnapsackProblem.java)
 
-  * [MutiKnapsackProblem 多重背包问题](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/dynamic/programming/MutiKnapsackProblem.java)
+  * [MutiKnapsackProblem 多重背包问题](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/dynamic/programming/MultiKnapsackProblem.java)
 
   * [LongestIncreasingSubsequence 最长单增子序列](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/dynamic/programming/LongestIncreasingSubsequence.java)
 
