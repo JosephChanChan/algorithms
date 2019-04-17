@@ -1,4 +1,4 @@
-package data.structure;
+package tables;
 
 /**
  * 单向循环链表
