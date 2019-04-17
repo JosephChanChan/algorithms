@@ -11,7 +11,7 @@
 
   * [KnapsackProblem 01背包问题](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/dynamic/programming/KnapsackProblem.java)
 
-  * [MutiKnapsackProblem 多重背包问题](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/dynamic/programming/MutiKnapsackProblem.java)
+  * [MutiKnapsackProblem 多重背包问题](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/dynamic/programming/MultiKnapsackProblem.java)
 
   * [LongestIncreasingSubsequence 最长单增子序列](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/dynamic/programming/LongestIncreasingSubsequence.java)
 
@@ -41,7 +41,9 @@
   
   * [MissionOrder 任务执行顺序 (C++实现)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/greedy/algorithm/MissionOrder.cpp)
   
-  * [WoodIncisionProblem 老头砍木头](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/greedy/algorithm/WoodIncisionProblem.java)
+  * [WoodIncisionProblem 老头砍木头(Huffman算法)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/greedy/algorithm/WoodIncisionProblem.java)
+  
+  * [FleeMaze 逃离迷宫(Dijkstra算法)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/greedy/algorithm/FleeMaze.java)
   
 ### 回溯法：
 
