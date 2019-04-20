@@ -76,6 +76,8 @@
 ### 表相关：
 * [LinkedList 单向链表 (C实现)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/tables/LinkedList.cpp)
 
+* [SingleCircularLinkedList 单向循环链表 ](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/tables/SingleCircularLinkedList.java)
+
 ### 树相关：
 
   * [AVLTree 平衡二叉搜索树](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/trees/AVLTree.java)
