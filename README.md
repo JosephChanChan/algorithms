@@ -76,7 +76,7 @@
 ### 表相关：
 * [LinkedList 单向链表 (C实现)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/tables/LinkedList.cpp)
 
-* [SingleCircularLinkedList 单向循环链表 ](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/tables/SingleCircularLinkedList.java)
+* [SingleCircularLinkedList 单向循环链表 ](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/tables/SingleTrackCircularLinkedList.java)
 
 ### 树相关：
 
