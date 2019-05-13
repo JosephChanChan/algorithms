@@ -1,3 +1,5 @@
+import tables.SingleTrackCircularLinkedList;
+
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Scanner;
@@ -16,16 +18,28 @@ import java.util.Scanner;
  */
 public class JosephLoop {
 
-    static int n, k, m;
+    static int personCount, startIndex, killIndex;
 
     public static void main(String[] args){
         Scanner scanner = new Scanner(System.in);
 
-        n = scanner.nextInt();
-        k = scanner.nextInt() - 1;
-        m = scanner.nextInt();
+        personCount = scanner.nextInt();
+        startIndex = scanner.nextInt() - 1;
+        killIndex = scanner.nextInt();
 
+        SingleTrackCircularLinkedList linkedList = new SingleTrackCircularLinkedList();
+        for (int i = 1; i <= personCount; i++) {
+            linkedList.add(i);
+        }
 
+        for (int k = 0; k < personCount; k++) {
+            // 根据规则报数，从开始报数的那个人也算1位，
+            // 单向循环链表 getFromToIndex() 函数是不包括开始位置的计数的，所以减一
+
+            
+            System.out.println();
+
+        }
 
     }
 

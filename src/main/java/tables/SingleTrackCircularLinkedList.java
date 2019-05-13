@@ -29,26 +29,28 @@ public class SingleTrackCircularLinkedList <T> {
             Node<T> newNode = new Node<>(tail, t, null);
             linkToLast(newNode);
         }
+        count++;
     }
 
-    public Node<T> get (int index) {
+    public T get (int index) {
         assertRange(index);
         Node<T> candidate = head;
         for (int i = 1; i <= index && null != candidate.next; i++) {
             candidate = candidate.next;
         }
-        return candidate;
+        return candidate.element;
     }
 
     /**
-     * 从指定位置开始移动 n 步获得节点
+     * 从指定位置开始移动 n 步获得节点。
+     * 如果到链表尾部，会循环到头部继续遍历，直至移动完毕。
      * Notice: Thread unsafe
      *
-     * @param start 指定的开始位置
+     * @param start 指定的开始位置，注意计数时不包括此位置
      * @param stepSize 移动步数
-     * @return 节点
+     * @return 节点数据
      */
-    public Node<T> getFromToIndex (int start, int stepSize) {
+    public T getFromToIndex (int start, int stepSize) {
         assertRange(start);
 
         Node<T> point = head;
@@ -69,19 +71,25 @@ public class SingleTrackCircularLinkedList <T> {
             stepSize--;
         }
 
-        return point;
+        return point.element;
     }
-    
-    public T remove (Node<T> removed) {
+
+    /**
+     * 删除链表中首次遇到的符合给定类型的参数节点。与 {@link java.util.LinkedList#remove} 类似。
+     *
+     * @param removed 被删除元素
+     * @return 被删除元素
+     */
+    public T remove (T removed) {
         T element = null;
-        if (removed == head) {
+        if (removed == head.element) {
             unlink(head);
             element = head.element;
         }
         else {
             Node<T> current = head.next;
             while (null != current) {
-                if (current == removed) {
+                if (current.element == removed) {
                     unlink(current);
                     element = current.element;
                     break;
@@ -90,6 +98,22 @@ public class SingleTrackCircularLinkedList <T> {
             }
         }
         return element;
+    }
+
+    public T remove (int removeIndex) {
+        T element = null;
+
+        return element;
+    }
+
+    public static void main(String[] args) {
+        SingleTrackCircularLinkedList<Integer> linkedList = new SingleTrackCircularLinkedList<>();
+        linkedList.add(5);
+        linkedList.add(4);
+        linkedList.add(3);
+        linkedList.add(2);
+        linkedList.add(1);
+        Integer integer = linkedList.get(0);
     }
 
 
@@ -119,7 +143,7 @@ public class SingleTrackCircularLinkedList <T> {
     }
 
 
-    private class Node <T> {
+    private static class Node <T> {
         Node<T> next;
         Node<T> previous;
         T element;
