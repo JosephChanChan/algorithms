@@ -1,6 +1,7 @@
 package tables;
 
 import java.util.List;
+import java.util.concurrent.atomic.AtomicInteger;
 
 /**
  * 单向循环链表，一直遍历到尾部，超出尾部则循环到头部继续遍历。
@@ -10,7 +11,10 @@ import java.util.List;
  */
 public class SingleTrackCircularLinkedList <T> {
 
-    private volatile int count = 0;
+    private AtomicInteger count = new AtomicInteger(0);
+
+    // volatile 不能保证对 count 写操作时是原子性的，在并发环境中仍可能造成线程安全问题。
+    /*private volatile int count = 0;*/
 
     private Node<T> head, tail;
 
@@ -29,16 +33,37 @@ public class SingleTrackCircularLinkedList <T> {
             Node<T> newNode = new Node<>(tail, t, null);
             linkToLast(newNode);
         }
-        count++;
+        count.incrementAndGet();
     }
 
     public T get (int index) {
-        assertRange(index);
-        Node<T> candidate = head;
-        for (int i = 1; i <= index && null != candidate.next; i++) {
-            candidate = candidate.next;
+        return getNode(index).element;
+    }
+
+    /**
+     * 在链表中搜索第一个匹配上的目标元素，并且返回目标元素在当前链表中的位置。
+     * 需注意如果链表中不存在目标元素则会返回 -1。
+     *
+     * @param target 目标元素
+     * @return 第一个匹配上的目标元素的位置或 -1.
+     */
+    public int getIndex (T target) {
+        assertNonNull(target);
+        int index = -1, point = 0;
+        Node<T> item = head;
+        while (null != item) {
+            if (
+                    target == item.element ||
+                    target.equals(item.element)
+               )
+            {
+                index = point;
+                break;
+            }
+            item = item.next;
+            point++;
         }
-        return candidate.element;
+        return index;
     }
 
     /**
@@ -75,6 +100,20 @@ public class SingleTrackCircularLinkedList <T> {
     }
 
     /**
+     * 根据给定的元素值搜索链表中第一个匹配上的节点，
+     * 然后再移动到此节点的下一个节点（有可能会循环到头部），返回下一个节点的下标值。
+     *
+     * @param current 当前元素值
+     * @return 当前元素值的下一个节点下标，可能会循环到头部。
+     */
+    public int getNextIndex (T current) {
+        int currentIndex = getIndex(current);
+        Node<T> currentNode = getNode(currentIndex);
+        Node<T> next = tail == currentNode ? head : currentNode.next;
+        return getIndex(next);
+    }
+
+    /**
      * 删除链表中首次遇到的符合给定类型的参数节点。与 {@link java.util.LinkedList#remove} 类似。
      *
      * @param removed 被删除元素
@@ -100,11 +139,11 @@ public class SingleTrackCircularLinkedList <T> {
         return element;
     }
 
-    public T remove (int removeIndex) {
+    /*public T remove (int removeIndex) {
         T element = null;
 
         return element;
-    }
+    }*/
 
     public static void main(String[] args) {
         SingleTrackCircularLinkedList<Integer> linkedList = new SingleTrackCircularLinkedList<>();
@@ -122,8 +161,14 @@ public class SingleTrackCircularLinkedList <T> {
     /* ------------------------------------------------- internal method ------------------------------------------------*/
 
     private void assertRange (int index) {
-        if (index < 0 || index > (count - 1)) {
+        if (index < 0 || index > (count.intValue() - 1)) {
             throw new RuntimeException("the index exceed the range of list !");
+        }
+    }
+
+    private void assertNonNull (T target) {
+        if (null == target) {
+            throw new RuntimeException("Target Element must not be null !");
         }
     }
 
@@ -140,8 +185,21 @@ public class SingleTrackCircularLinkedList <T> {
         node.previous = null;
         node.next = null;
         node.element = null;
+        count.decrementAndGet();
     }
 
+    private Node<T> getNode (int index) {
+        assertRange(index);
+        Node<T> candidate = head;
+        for (int i = 1; i <= index && null != candidate.next; i++) {
+            candidate = candidate.next;
+        }
+        return candidate;
+    }
+
+    private int getIndex (Node<T> currentNode) {
+        return 0;
+    }
 
     private static class Node <T> {
         Node<T> next;

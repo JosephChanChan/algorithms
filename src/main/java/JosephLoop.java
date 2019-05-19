@@ -27,7 +27,7 @@ public class JosephLoop {
         startIndex = scanner.nextInt() - 1;
         killIndex = scanner.nextInt();
 
-        SingleTrackCircularLinkedList linkedList = new SingleTrackCircularLinkedList();
+        SingleTrackCircularLinkedList<Integer> linkedList = new SingleTrackCircularLinkedList<>();
         for (int i = 1; i <= personCount; i++) {
             linkedList.add(i);
         }
@@ -35,10 +35,10 @@ public class JosephLoop {
         for (int k = 0; k < personCount; k++) {
             // 根据规则报数，从开始报数的那个人也算1位，
             // 单向循环链表 getFromToIndex() 函数是不包括开始位置的计数的，所以减一
-
-            
-            System.out.println();
-
+            Integer beEliminated = linkedList.getFromToIndex(startIndex, killIndex - 1);
+            startIndex = linkedList.getIndex(beEliminated);
+            System.out.println("The eliminated element is " + beEliminated +" in round " + k);
+            linkedList.remove(beEliminated);
         }
 
     }
