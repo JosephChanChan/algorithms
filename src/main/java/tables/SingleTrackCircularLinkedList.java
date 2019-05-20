@@ -24,7 +24,13 @@ public class SingleTrackCircularLinkedList <T> {
     public SingleTrackCircularLinkedList (List<T> list) {
     }
 
+    /**
+     * 把元素添加进链表中，尾插法的实现。
+     *
+     * @param t 元素
+     */
     public void add (T t) {
+        assertNonNull(t);
         if (null == head) {
             head = new Node<>(null, t, null);
             tail = head;
@@ -36,6 +42,12 @@ public class SingleTrackCircularLinkedList <T> {
         count.incrementAndGet();
     }
 
+    /**
+     * 通过下标获取链表中的元素。
+     *
+     * @param index 下标
+     * @return 元素
+     */
     public T get (int index) {
         return getNode(index).element;
     }
@@ -107,8 +119,7 @@ public class SingleTrackCircularLinkedList <T> {
      * @return 当前元素值的下一个节点下标，可能会循环到头部。
      */
     public int getNextIndex (T current) {
-        int currentIndex = getIndex(current);
-        Node<T> currentNode = getNode(currentIndex);
+        Node<T> currentNode = getNode(current);
         Node<T> next = tail == currentNode ? head : currentNode.next;
         return getIndex(next);
     }
@@ -145,7 +156,7 @@ public class SingleTrackCircularLinkedList <T> {
         return element;
     }*/
 
-    public static void main(String[] args) {
+    /*public static void main(String[] args) {
         SingleTrackCircularLinkedList<Integer> linkedList = new SingleTrackCircularLinkedList<>();
         linkedList.add(5);
         linkedList.add(4);
@@ -153,7 +164,7 @@ public class SingleTrackCircularLinkedList <T> {
         linkedList.add(2);
         linkedList.add(1);
         Integer integer = linkedList.get(0);
-    }
+    }*/
 
 
 
@@ -197,8 +208,35 @@ public class SingleTrackCircularLinkedList <T> {
         return candidate;
     }
 
-    private int getIndex (Node<T> currentNode) {
-        return 0;
+    private Node<T> getNode (T targetElement) {
+        assertNonNull(targetElement);
+        Node<T> currentNode = head;
+        T currentElement ;
+        while (null != currentNode) {
+            currentElement = currentNode.element;
+            if (
+                    currentElement == targetElement ||
+                    currentElement.equals(targetElement)
+               )
+            {
+                return currentNode;
+            }
+            currentNode = currentNode.next;
+        }
+        return null;
+    }
+
+    private int getIndex (Node<T> targetNode) {
+        int index = 0;
+        Node<T> currentNode = head;
+        while (null != currentNode) {
+            if (currentNode == targetNode) {
+                return index;
+            }
+            ++index;
+            currentNode = currentNode.next;
+        }
+        return -1;
     }
 
     private static class Node <T> {
