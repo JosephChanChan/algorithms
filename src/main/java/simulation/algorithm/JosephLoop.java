@@ -1,3 +1,5 @@
+package simulation.algorithm;
+
 import tables.SingleTrackCircularLinkedList;
 
 import java.util.Scanner;
