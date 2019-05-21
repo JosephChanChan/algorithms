@@ -1,7 +1,5 @@
 import tables.SingleTrackCircularLinkedList;
 
-import java.util.LinkedList;
-import java.util.List;
 import java.util.Scanner;
 
 /**
@@ -19,6 +17,7 @@ import java.util.Scanner;
 public class JosephLoop {
 
     static int personCount, startIndex, killIndex;
+    static int[] loop ;
 
     public static void main(String[] args){
         Scanner scanner = new Scanner(System.in);
@@ -27,24 +26,57 @@ public class JosephLoop {
         startIndex = scanner.nextInt() - 1;
         killIndex = scanner.nextInt();
 
-        SingleTrackCircularLinkedList<Integer> linkedList = new SingleTrackCircularLinkedList<>();
+        loop = new int[personCount];
         for (int i = 1; i <= personCount; i++) {
-            linkedList.add(i);
+            /*
+                [1] [2] [3] ... [10]
+                 0   1   2        9
+             */
+            loop[i - 1] = i;
         }
 
-        for (int k = 0; k < personCount; k++) {
+        // 一共要淘汰 N-1 个人
+        for (int k = 0; k < personCount - 1; k++) {
             // 根据规则报数，从开始报数的那个人也算1位，
-            // 单向循环链表 getFromToIndex() 函数是不包括开始位置的计数的，所以减一
-            Integer beEliminated = linkedList.getFromToIndex(startIndex, killIndex - 1);
-            startIndex = linkedList.getIndex(beEliminated);
-            System.out.println("The eliminated element is " + beEliminated +" in round " + k);
-            linkedList.remove(beEliminated);
+            int eliminatedIndex = beginRoll();
+            System.out.println("The eliminated element is " + loop[eliminatedIndex] +" in round " + (k + 1));
+            loop[eliminatedIndex] = 0;
+            /*System.out.println("The next element index is " + startIndex);*/
         }
 
+        System.out.println("Survivor is " + loop[startIndex]);
     }
 
+    private static int beginRoll () {
+        int point = startIndex, timeToOut ;
+        // 从 start 移步 k 位到下一个被淘汰的人的位置返回下标
+        for (int i = killIndex; i > 0; ) {
+            // 被淘汰的人会被置为 0，大于 0 代表此位置有人
+            if (loop[point] > 0) {
+                i--;
+            }
+            if (i > 0) {
+                // 如果当前指针已经是环的尾部了，再往后走就需要回到环的开头
+                point = turn2HeadIfNecessary(point);
+            }
+        }
+        timeToOut = point;
 
+        // 找到此轮被淘汰的人后，需要找到下一个开始的人
+        point = turn2HeadIfNecessary(point);
+        while (true) {
+            if (loop[point] > 0) {
+                startIndex = point;
+                break;
+            }
+            point = turn2HeadIfNecessary(point);
+        }
+        return timeToOut;
+    }
 
+    private static int turn2HeadIfNecessary(int point) {
+        return  ++point == loop.length ? 0 : point;
+    }
 
 
 }
