@@ -60,6 +60,8 @@
   * [RobotWalk 机器人行走](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/simulation/algorithm/RobotWalk.java)
 
   * [ThrowDishes 扔盘子](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/simulation/algorithm/ThrowDishes.java)
+  
+  * [JosephLoop 约瑟夫环](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/simulation/algorithm/JosephLoop.java)
 
 ### 排序：
 
