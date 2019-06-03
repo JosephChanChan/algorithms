@@ -1,3 +1,10 @@
+import kits.GetNetworkAddress;
+
+import java.math.BigInteger;
+import java.net.SocketException;
+import java.net.UnknownHostException;
+import java.util.HashSet;
+import java.util.Set;
 import java.util.concurrent.locks.ReentrantLock;
 
 /**
@@ -70,6 +77,31 @@ public class SnowFlakeId {
             currentTime = System.currentTimeMillis();
         }
         return currentTime;
+    }
+
+    public static void main(String[] args) throws SocketException, UnknownHostException {
+        long num = "abcdefg".hashCode();
+        System.out.println(num);
+        String binaryString = Long.toBinaryString(num);
+        System.out.println(binaryString);
+        num = num & machineMask;
+        String binaryString1 = Long.toBinaryString(num);
+        System.out.println(binaryString1);
+        num = num << machineOffset;
+        String binaryString2 = Long.toBinaryString(num);
+        System.out.println(binaryString2);
+        String mac = GetNetworkAddress.getAddress("mac");
+        System.out.println(mac + " and it's hashcode is " + mac.hashCode());
+        Set<Long> ids = new HashSet<>();
+        for (int i = 0; i < 10000000; i++) {
+            long snowFlakeId = nextSnowFlakeId(mac.hashCode());
+            boolean add = ids.add(snowFlakeId);
+            if (!add) {
+                System.out.println("Wrong! snowFlakeId already exists!");
+                break;
+            }
+            System.out.println(snowFlakeId);
+        }
     }
 
     /*private static long getMachineNum() throws SocketException, UnknownHostException {
