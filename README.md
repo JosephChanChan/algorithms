@@ -125,3 +125,4 @@
   
   * [SnowFlakeId 雪花算法(分布式环境生成有序且唯一的ID)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/SnowFlakeId.java)
   
+  * [SnowFlakeIdTest 雪花算法测试用例](https://github.com/JosephChanChan/algorithms/blob/master/src/main/test/SnowFlakeIdTest.java)
