@@ -15,8 +15,8 @@ import java.util.concurrent.locks.ReentrantLock;
  */
 public class SnowFlakeId {
 
-    private volatile static int sequence = 1;
-    private volatile static long lastTimeStamp ;
+    private static int sequence = 1;
+    private static long lastTimeStamp ;
     private static long startUpTimeStamp ;
 
     private final static int machineOffset = 10;
@@ -51,8 +51,7 @@ public class SnowFlakeId {
             // 如果当前是同一毫秒内并发请求
             if (currentTimeStamp == lastTimeStamp) {
                 // 超过12位长度的序列号，等待下一毫秒
-                int temp = ++sequence;
-                if ((temp >> sequenceOffset) > 0) {
+                if ((++sequence >> sequenceOffset) > 0) {
                     sequence = 1;
                     currentTimeStamp = wait2NextMillis();
                 }
