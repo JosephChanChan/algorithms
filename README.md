@@ -28,7 +28,9 @@
   * [LongestIncreasingSubsequence2 最长单增子序列2](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/dynamic/programming/LongestIncreasingSubsequence2.java)
   
   * [SubSequenceNumber 子序列个数](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/dynamic/programming/SubSequenceNumber.java)
-
+  
+  * [SeekLover 寻找恋人](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/dynamic/programming/SeekLover.java)
+  
 ### 贪心算法：
 
   * [DugoutCanone 独木舟](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/greedy/algorithm/DugoutCanone.java)
