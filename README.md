@@ -31,6 +31,8 @@
   
   * [SeekLover 寻找恋人](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/dynamic/programming/SeekLover.java)
   
+  * [HouseRobber 屋匪(leetcode 198)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/dynamic/programming/HouseRobber.java)
+  
 ### 贪心算法：
 
   * [DugoutCanone 独木舟](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/greedy/algorithm/DugoutCanone.java)
