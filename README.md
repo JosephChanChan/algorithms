@@ -32,6 +32,9 @@
   * [SeekLover 寻找恋人](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/dynamic/programming/SeekLover.java)
   
   * [HouseRobber 屋匪(leetcode 198)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/dynamic/programming/HouseRobber.java)
+
+  * [BuyAndSellStock 炒股入门(leetcode 121)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/dynamic/programming/BuyAndSellStock.java)
+
   
 ### 贪心算法：
 
