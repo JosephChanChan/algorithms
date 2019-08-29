@@ -9,11 +9,11 @@ package dynamic.programming;
  *    算法思路:
  *    令f[i]表示以位置 i 为终点的所有子区间中和最大的一个(必须包含a[i])
  *  子问题:如i为终点的最大子区间包含了位置i-1,则以i-1为终点的最大子区间必然包括在其中
- *  如果b[i-1] >0, 那么显然b[i] = b[i-1] + a[i]，用之前最大的一个加上a[i]即可，因为a[i]必须包含
- *  如果b[i-1]<=0,那么b[i] = a[i] ,因为既然最大，前面的负数必然不能使你更大
+ *  如果f[i-1] >0, 那么显然f[i] = f[i-1] + a[i]，用之前最大的一个加上a[i]即可，因为a[i]必须包含
+ *  如果f[i-1]<=0,那么f[i] = a[i] ,因为既然最大，前面的负数必然不能使你更大
  *
- *  所以推出 递推公式   设 b(i)为数组中以i为终点的最大子段和，那么对于前面的元素关系为b(i-1)>0 则b(i)=b(i-1)+a[i] 否则 b(i)=a[i]
- *  b(i) = max{b(i-1)+a[i],a[i]}
+ *  所以推出 递推公式   设 f(i)为数组中以i为终点的最大子段和，那么对于前面的元素关系为f(i-1)>0 则f(i)=f(i-1)+a[i] 否则 f(i)=a[i]
+ *  f(i) = max{f(i-1)+a[i],a[i]}
  *
  *  Created by Joseph on 2017/7/12.
  */
@@ -21,16 +21,10 @@ public class MaxSubSectionSum {
 
     public static void main(String[] args){
         int[] arr = {9,-14,-5,6,-12,13,-2,9,4,13};
-//        int[] arr = new int[10];
-//        Random random = new Random();
         for(int j=0; j<10; j++){
-//            int i = random.nextInt(20);
-//            int k = random.nextInt(20);
-//            arr[j] = i-k;
             System.out.print(arr[j]+",");
         }
 
-//        combination(arr);
         dynamicAl(arr);
     }
 

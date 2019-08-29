@@ -34,9 +34,14 @@ package dynamic.programming;
  * 最大子序列和：
  * 设f(i)是以i为结尾的所有子序列中，和最大的那一个子序列，称作最优子序列，这个子序列必须包含至少一个元素。
  * （以i为结尾是必须包含i）
- * 这个最优子序列有2种情况。1：只包含i一个元素。2：包含了i和i前面的多个元素。
- * 这2种情况选择出最优的一种，就是 f(i) = max{a[i], f(i-1)+a[i]}
+ * 首先要先认识到，肯定存在一个最优的子序列，这个最优子序列的终点假设是 k，则 k 在[1,n]之间。
+ * 如果遍历 1~n 就是将每个子序列的最大和都计算了一遍。最后只需要将最大的那个 f(i) 记录下来就可以。
+ * 计算 f(i)，f(i) 与 f(i-1) 的关系。f(i) 的设定是必须包含i，所以只需考虑f(i-1)，
+ * 如果 f(i-1) 以i-1为终点的所有子序列和都是负数，那加上前面积累的负数只会更小。所以只取i就行。
+ * 所以可以推导出：f(i) = max{a[i], f(i-1)+a[i]}
  *
+ * 时间复杂度：O(2n)
+ * 空间复杂度: O(1)
  */
 public class BuyAndSellStock {
 
@@ -48,47 +53,41 @@ public class BuyAndSellStock {
     }
 
     private int maxProfit(int[] prices) {
+        // 初始序列只有小于2天的价格，无法交易
+        if (prices.length < 2) {
+            return 0;
+        }
         prices = differenceSequence(prices);
         return calcMaxSubSequence(prices);
     }
 
+    // 计算差分序列
     private int calcMaxSubSequence(int[] prices) {
-        int max = 0;
+        // -6    4    -2   3    -2
+        // f(i) = max{a[i], f(i-1)+a[i]}
+        // 差分序列全是负数时，返回0
+        int max = 0, i1 = 0;
         for (int i = 0; i < prices.length; i++) {
-            if (prices[i] > max + prices[i]) {
-                max = prices[i];
+            if (prices[i] > prices[i] + i1) {
+                i1 = prices[i];
             }
             else {
-                max = max + prices[i];
+                i1 = prices[i] + i1;
+            }
+            if (i1 > max) {
+                max = i1;
             }
         }
         return max;
     }
 
+    // 生成差分序列
     private int[] differenceSequence(int[] original) {
-        if (original.length == 1) {
-            return original;
-        }
         int[] difference = new int[original.length - 1];
         for (int i = 0; i < original.length - 1; i++) {
             difference[i] = original[i + 1] - original[i];
         }
         return difference;
     }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 }
