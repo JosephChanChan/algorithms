@@ -87,6 +87,9 @@
 
 * [SingleCircularLinkedList 单向循环链表 ](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/tables/SingleTrackCircularLinkedList.java)
 
+* [SwapNodesSingleLinked 交换节点(leetcode 24)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/tables/SwapNodesSingleLinked.java)
+
+
 ### 树相关：
 
   * [AVLTree 平衡二叉搜索树](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/trees/AVLTree.java)
