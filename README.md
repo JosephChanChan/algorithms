@@ -52,7 +52,7 @@
   
   * [FleeMaze 逃离迷宫(Dijkstra算法)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/greedy/algorithm/FleeMaze.java)
   
-### 回溯法：
+### 递归回溯法：
 
   * [EightQueen 八皇后](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/backtracking/algorithm/EightQueen.java)
   
@@ -60,6 +60,12 @@
   
   * [FullPermutation 全排列](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/backtracking/algorithm/FullPermutation.java)
   
+  
+  ### 递归法：
+  
+  * [PascalTriangle 杨辉三角(leetcode 119)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/recursion/PascalTriangle.java)
+  
+ 
 ### 模拟算法：
 
   * [DrinkAndBorrow 喝酒借酒](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/simulation/algorithm/DrinkAndBorrow.java)
