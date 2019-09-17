@@ -65,6 +65,8 @@
   
   * [PascalTriangle 杨辉三角(leetcode 119)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/recursion/PascalTriangle.java)
   
+  * [ReverseList 反转单向链表(leetcode 206)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/recursion/ReverseList.java)
+  
  
 ### 模拟算法：
 
