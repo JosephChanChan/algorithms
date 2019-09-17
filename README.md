@@ -67,6 +67,8 @@
   
   * [ReverseList 反转单向链表(leetcode 206)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/recursion/ReverseList.java)
   
+  * [TowerOfHanoi 汉诺塔问题](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/recursion/TowerOfHanoi.java)
+  
  
 ### 模拟算法：
 
@@ -140,8 +142,6 @@
   * [MoveZeros 移动0](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/MoveZeros.java)
 
   * [RedPacketGen 红包生成](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/RedPacketGen.java)
-  
-  * [recursion.TowerOfHanoi 汉诺塔问题](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/TowerOfHanoi.java)
   
   * [SnowFlakeId 雪花算法(分布式环境生成有序且唯一的ID)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/SnowFlakeId.java)
   
