@@ -73,6 +73,8 @@
   
   * [ClimbStairs 爬楼梯(leetcode 70)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/recursion/ClimbStairs.java)
   
+  * [PowOfNum 幂运算(leetcode 50)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/recursion/PowOfNum.java)
+  
  
 ### 模拟算法：
 
