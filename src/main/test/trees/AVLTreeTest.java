@@ -164,7 +164,7 @@ public class AVLTreeTest {
         }
 
         List<Comparable> comparables = avlTree.inorderTraversal();
-        // Use Tool to check the array is ascending sequence
+        // Using Tool to check the array is ascending sequence
         int index = CheckSortedArr.checkAsc(comparables.toArray(new Comparable[comparables.size()]));
         if (-1 == index){
             System.out.println(" \r\n ascending sequence \r\n");
@@ -221,7 +221,7 @@ public class AVLTreeTest {
     }
 
     /**
-     * Fix a bug which is about height of node didn't calculate after insert or remove.
+     * Fix a bug which is about that height of node didn't calculates after inserting or removing.
      * This test can show the situation of bug.
      * This method has no useful cause the bug had been fixed.
      * Remain it as a souvenir.
