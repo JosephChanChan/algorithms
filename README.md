@@ -73,6 +73,8 @@
   
   * [ClimbStairs 爬楼梯(leetcode 70)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/recursion/ClimbStairs.java)
   
+  * [PowOfNum 幂运算(leetcode 50)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/recursion/PowOfNum.java)
+  
  
 ### 模拟算法：
 
@@ -113,6 +115,9 @@
   * [BinarySearch 二分查找](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/trees/BinarySearch.java)
   
   * [BinaryHeap 二叉堆(优先队列)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/trees/BinaryHeap.java)
+  
+  * [MaxDepth4Tree 树深度(leetcode 104)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/trees/MaxDepth4Tree.java)
+  
   
 
 ### 图相关：
