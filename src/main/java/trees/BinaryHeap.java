@@ -15,13 +15,13 @@ import java.util.Random;
 public class BinaryHeap {
 
     /** 堆实际存储元素的数组 */
-    private static Integer[] nodeArray;
+    private Integer[] nodeArray;
 
     /** 堆中当前元素数量 */
-    private static int currentSize = 0;
+    private int currentSize = 0;
 
     /** 默认堆数组初始化量 */
-    private static final int DEFAULT_CAPACITY = 100;
+    private final int DEFAULT_CAPACITY = 100;
 
     public BinaryHeap(){
         nodeArray = new Integer[ (DEFAULT_CAPACITY << 1) + 1 ];
@@ -275,11 +275,11 @@ public class BinaryHeap {
         System.out.println("检测数组正序 : ");
         System.out.println(CheckSortedArr.checkAsc(sortedArray));
 
-        System.out.println("原始队列长度: " + nodeArray.length);
+        System.out.println("原始队列长度: " + binaryHeap.nodeArray.length);
         System.out.println("测试扩容, 在填满队列后继续插入10个元素 ");
 
         // 差值
-        int diff = nodeArray.length - currentSize;
+        int diff = binaryHeap.nodeArray.length - binaryHeap.currentSize;
         diff += 10;
         while ( diff-- > 0 ){
             int r = random.nextInt(100);
@@ -287,9 +287,9 @@ public class BinaryHeap {
         }
 
         System.out.println("扩容后序列 : ");
-        sortedArray = new Integer[currentSize];
+        sortedArray = new Integer[binaryHeap.currentSize];
         int i = 0;
-        while (currentSize > 0){
+        while (binaryHeap.currentSize > 0){
             sortedArray[i] = binaryHeap.deleteMin();
             System.out.print(sortedArray[i++] + " ");
         }
