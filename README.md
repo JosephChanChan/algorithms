@@ -77,6 +77,8 @@
   
   * [MergeSortedList 合并有序双链表(leetcode 21)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/recursion/MergeSortedList.java)
   
+  * [KthSymbol 第K个符号问题(leetcode 779)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/recursion/KthSymbol.java)
+  
  
 ### 模拟算法：
 
