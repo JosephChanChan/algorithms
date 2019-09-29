@@ -75,6 +75,8 @@
   
   * [PowOfNum 幂运算(leetcode 50)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/recursion/PowOfNum.java)
   
+  * [MergeSortedList 合并有序双链表(leetcode 21)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/recursion/MergeSortedList.java)
+  
  
 ### 模拟算法：
 
