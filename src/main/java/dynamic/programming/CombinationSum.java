@@ -2,10 +2,7 @@ package dynamic.programming;
 
 import sort.QuickSort;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.HashSet;
-import java.util.List;
+import java.util.*;
 
 /**
  * @author Joseph
@@ -36,17 +33,46 @@ import java.util.List;
  *   [3,5]
  * ]
  *
+ * Analysis:
+ * 其实这题在leetcode上是回溯标签的题，但是我印象中有一道找钱的dp题和这个题目类似，就想或许能用dp解决。
+ * 给定一个正整数数组，用数组中的数字(可以重复选同一个数字)做加法运算凑出一个给定的目标数字。
+ * 设 f(i) 为用给定数字凑成的方案数。举例：2,3,5，t=8
+ * f(i)这个状态是如何从上一个状态走过来的？
+ * f(i)的上一个状态显然不是简单的 f(i-1)，f(8)表示凑成8块钱的方案数和f(7)没什么关系，
+ * 因为 7 + [2,3,5] 显然不等于8，所以f(8)的上一个状态和f(6) f(5) f(3)有关。
+ * f(6)表示有i个方案可以凑成6块钱，那么再加2块钱就可以凑成8快，同理f(5) f(3)
+ * 那么就得到状态转移方程：
+ *      f(i) = f(i-c[i1]) + ... + f(i-c[in])
+ * 其中 c[i1] 表示给定的正整数数组的第一个元素，一直到 c[in]
+ * 边界：
+ *      f(i) = 0, i < 0
+ *      f(i) = 1, i = 0
+ * ok，dp的算法有了，但是这个算法有问题，会重复计算方案数，例如你用Example1 计算下 f(5)会发现有2个加法方案：
+ * 2+3 和 3+2 这2个属于不同的排列但是同一个组合，按照题目要求需要排除。
+ * 感觉这应该才是题目的难点，去重统计。
+ * 我的算法很笨，没有想到好方法，只能找到每一个状态的所有加法链去重统计。
+ * 最后在leetcode上ac了，但是比 95% 的提交都要慢... 应该就是去重没做好，或者dp的方程不是最优的。
  *
- *
+ * 时间复杂度：O(target * candidates.length)
+ * 空间复杂度：O(target)
  */
 public class CombinationSum {
 
     public static void main(String[] args) {
-        String test = "223";
-        String[] split = test.split("");
-        System.out.println(split.length);
+        /*int[] candidates = new int[]{2,3,6,7};
+        int target = 8;*/
+        int[] candidates = new int[]{3,12,9,11,6,7,8,5,4};
+        int target = 15;
+        CombinationSum combinationSum = new CombinationSum();
+        List<List<Integer>> lists = combinationSum.combinationSum(candidates, target);
+        System.out.println("have project case: " + lists.size());
+        for (List<Integer> list : lists) {
+            for (Integer integer : list) {
+                System.out.print(integer + " ");
+            }
+            System.out.println();
+        }
     }
-
 
     /*
         f(t) = f(t-c[i1]) + ... + f(t-c[in])
@@ -55,18 +81,12 @@ public class CombinationSum {
         f(t) = 1, t = 0;
      */
 
-    private HashSet<Integer> borderInt = new HashSet<>();
-
     private HashMap<Integer, CombinationPlan> memory ;
 
     public List<List<Integer>> combinationSum(int[] candidates, int target) {
         if (target == 0) return new ArrayList<>();
 
         memory = new HashMap<>(candidates.length);
-
-        for (int candidate : candidates) {
-            borderInt.add(candidate);
-        }
 
         for (int i = 1; i <= target; i++) {
 
@@ -77,8 +97,6 @@ public class CombinationSum {
             combinationPlan.setElementList(elementList);
 
             for (int j = 0; j < candidates.length; j++) {
-                // 2 3 6 7
-
                 int prevI = i - candidates[j];
 
                 // 负数不计算
@@ -98,7 +116,7 @@ public class CombinationSum {
                 HashSet<String> prevAdditionList = prevPlan.getAdditionList();
                 for (String list : prevAdditionList) {
                     // 接上本次的数字后，排序，再放入容齐中去重，统计出第i个数字的加法方案
-                    list += candidates[j];
+                    list += "+" +candidates[j];
                     String newList = sortList(list);
                     // 如果加法链之前不存在
                     if (additionList.add(newList)) {
@@ -114,7 +132,7 @@ public class CombinationSum {
     }
 
     private List<Integer> convert(String newList) {
-        String[] split = newList.split("");
+        String[] split = newList.split("\\+");
         List<Integer> list = new ArrayList<>();
         for (String item : split) {
             list.add(Integer.parseInt(item));
@@ -123,9 +141,10 @@ public class CombinationSum {
     }
 
     private String sortList(String list) {
-        String[] split = list.split("");
+        String[] split = list.split("\\+");
         Integer[] convert = convert(split);
-        QuickSort.doQuickSort(convert, 0, convert.length - 1);
+        Arrays.sort(convert);
+        /*QuickSort.doQuickSort(convert, 0, convert.length - 1);*/
         return convert(convert);
     }
 
@@ -140,30 +159,14 @@ public class CombinationSum {
     private String convert(Integer[] split) {
         String array = "";
         for (int i = 0; i < split.length; i++) {
-            array += split[i];
+            array += +split[i] + "+";
         }
-        return array;
+        return array.substring(0, array.lastIndexOf("+"));
     }
-
-    private int calc(int n) {
-        if (n < 0) return 0;
-        if (n == 0) return 1;
-        CombinationPlan combinationPlan = memory.get(n);
-        return combinationPlan.getAdditionList().size();
-    }
-
-
-
 
     private class CombinationPlan {
         private HashSet<String> additionList;//                 升序的加法链
         private List<List<Integer>> elementList;//              升序的元素
-
-
-        public int haveValue() {
-            if (null == elementList) return 0;
-            return elementList.size();
-        }
 
         public HashSet<String> getAdditionList() {
             return additionList;
@@ -181,12 +184,6 @@ public class CombinationSum {
             this.elementList = elementList;
         }
     }
-
-
-
-
-
-
 
 
 
