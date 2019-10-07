@@ -34,6 +34,8 @@
   * [HouseRobber 屋匪(leetcode 198)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/dynamic/programming/HouseRobber.java)
 
   * [BuyAndSellStock 炒股入门(leetcode 121)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/dynamic/programming/BuyAndSellStock.java)
+  
+  * [CombinationSum 数字组合方案(leetcode 39)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/dynamic/programming/CombinationSum.java)
 
   
 ### 贪心算法：
