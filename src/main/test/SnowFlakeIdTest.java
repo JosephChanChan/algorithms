@@ -1,5 +1,4 @@
 import java.io.*;
-import java.text.SimpleDateFormat;
 import java.util.*;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.CountDownLatch;
@@ -7,7 +6,7 @@ import java.util.concurrent.locks.ReentrantReadWriteLock;
 
 /**
  * @author Joseph
- * @date_time: 2019/6/4 10:31
+ * @since 2019/6/4 10:31
  */
 public class SnowFlakeIdTest {
 

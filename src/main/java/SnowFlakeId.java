@@ -11,7 +11,7 @@ import java.util.concurrent.locks.ReentrantLock;
  * 雪花算法，总长 64 位，1位保留位 + 41位时间戳 + 10位机器码 + 12位序列号。
  *
  * @author Joseph
- * @date_time 2019/5/31 14:30
+ * @since  2019/5/31 14:30
  */
 public class SnowFlakeId {
 
