@@ -123,7 +123,8 @@
   * [BinaryHeap 二叉堆(优先队列)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/trees/BinaryHeap.java)
   
   * [MaxDepth4Tree 树深度(leetcode 104)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/trees/MaxDepth4Tree.java)
-  
+
+  * [Num2TreeSum 数组树的和](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/trees/Num2TreeSum.java)
   
 
 ### 图相关：
