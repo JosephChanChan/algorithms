@@ -113,6 +113,9 @@
 
 * [SwapNodesSingleLinked 交换节点(leetcode 24)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/tables/SwapNodesSingleLinked.java)
 
+* [BitMap 位图算法](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/tables/BitMap.java)
+
+* [BitMapTest 位图测试用例](https://github.com/JosephChanChan/algorithms/blob/master/src/main/test/BitMapTest.java)
 
 ### 树相关：
 
