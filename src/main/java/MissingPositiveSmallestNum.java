@@ -1,5 +1,3 @@
-import java.util.ArrayList;
-import java.util.List;
 
 /**
  * Question Description:
@@ -16,29 +14,24 @@ import java.util.List;
  *
  * Time complexity is required and the task should be finished in O(n) or O(n * logn).
  *
+ * Analysis:
+ *  using a trick like bitmap algorithm.
+ *  Time complexity: O(n)
+ *  Space complexity: O(max(nums[i]))
+ *
  * @author Joseph
  * @since 2020-01-08 21:26
  */
-public class SmallestNum {
+public class MissingPositiveSmallestNum {
 
     public static void main(String[] args) {
-        /*int[] nums = {1,2,0};
-        SmallestNum smallestNum = new SmallestNum();
-        smallestNum.solution(nums);*/
-
-        String value = "red";
-        switch (value) {
-            case "red" :
-                System.out.println(1);
-                break;
-            case "ye":
-                System.out.println(2);
-
-        }
+        int[] nums = {1,2,0};
+        MissingPositiveSmallestNum smallestNum = new MissingPositiveSmallestNum();
+        int solution = smallestNum.solution(nums);
+        System.out.println(solution);
     }
 
     public int solution(int[] nums) {
-        nums = null;
         int max = 0;
         boolean positive = false;
 
