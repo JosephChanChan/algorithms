@@ -1,5 +1,6 @@
 import tables.BitMap;
 
+import java.util.BitSet;
 import java.util.HashMap;
 import java.util.Iterator;
 import java.util.Map;
@@ -12,7 +13,7 @@ public class BitMapTest {
 
 
     public static void main(String[] args) {
-        int[] arr = {
+        /*int[] arr = {
                 9, 6, 5, 4, 18, 76, 28, 99, 72, 27,
                 99, 64, 28, 39, 71, 28, 47, 28, 85, 94
         };
@@ -40,7 +41,12 @@ public class BitMapTest {
         while (iterator.hasNext()) {
             Map.Entry<Integer, Integer> entry = iterator.next();
             System.out.println(entry.getKey() + " ::: " + entry.getValue());
-        }
+        }*/
+        BitSet bitSet = new BitSet();
+        bitSet.set(12);
+        System.out.println(bitSet.get(12));
+        bitSet.set(100000000);
+        System.out.println(bitSet.get(100000000));
     }
 
 
