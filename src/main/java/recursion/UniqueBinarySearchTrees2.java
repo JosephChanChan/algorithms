@@ -31,14 +31,15 @@ import java.util.List;
  *
  * Analysis:
  *  递归分治，借助二叉树特性，可推出公式：
- *   f(i) 为以 i 为根结点的所有左右子树的情况
- *   f(i) = f(1...i-1) + f(i+1...n), {1 <= i <= n}
+ *   f(l,r) 表示为以区间 l~r 之间的每一个 a[i] 为根结点的所有子树情况。
+ *   f(l,r) = f(l,i-1) + f(i+1,r), {l <= i <= r}
+ *   注意这不是递推公式
  *
  *  边界：
- *   f(i) = null, {i < 1, i > n}
- *   i 最小为1。
+ *   f(l,r) = a[l], l == r
  *
- *
+ *  时间复杂度：O(n^2)
+ *  空间复杂度：不知道
  */
 public class UniqueBinarySearchTrees2 {
 
