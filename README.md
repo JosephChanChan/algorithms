@@ -83,7 +83,7 @@
   
   * [KthSymbol 第K个符号问题(leetcode 779)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/recursion/KthSymbol.java)
   
-  * [UniqueBinarySearchTrees2 所有的唯一二叉树(leetcode 95)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/recursion/UniqueBinarySearchTrees2.java)
+  * [UniqueBinarySearchTrees2 所有的唯一二叉树(leetcode 98)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/recursion/UniqueBinarySearchTrees2.java)
   
  
 ### 模拟算法：
