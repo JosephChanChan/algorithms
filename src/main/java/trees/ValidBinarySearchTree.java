@@ -34,6 +34,8 @@ package trees;
  *  2、conquer 对当前节点的左右子树深搜判断是否合法，合法的话继续以左右子节点为根做深搜。
  *  3、combine 合并左右子树结果做判断。
  *
+ *  leetcode 上有更好的解法，时间复杂度是 O(n)
+ *
  *  时间复杂度：O(N^2)
  *  空间复杂度：O(1)
  */
@@ -70,7 +72,7 @@ public class ValidBinarySearchTree {
             // 深搜左子树
             leftValid = depthCheck(node, node.left, true);
         }
-        if (null != node.right) {
+        if (leftValid && null != node.right) {
             // 深搜右子树
             rightValid = depthCheck(node, node.right, false);
         }
