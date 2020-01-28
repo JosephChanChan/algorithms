@@ -133,6 +133,8 @@
 
   * [Num2TreeSum 数组树的和](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/trees/Num2TreeSum.java)
   
+  * [ValidBinarySearchTree 校验BST(leetcode 98)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/trees/ValidBinarySearchTree.java)
+  
 
 ### 图相关：
 
