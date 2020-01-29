@@ -54,7 +54,7 @@
   
   * [FleeMaze 逃离迷宫(Dijkstra算法)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/greedy/algorithm/FleeMaze.java)
   
-### 递归回溯法：
+### 回溯法：
 
   * [EightQueen 八皇后](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/backtracking/algorithm/EightQueen.java)
   
@@ -85,10 +85,12 @@
   
   * [UniqueBinarySearchTrees2 所有的唯一二叉树(leetcode 95)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/recursion/UniqueBinarySearchTrees2.java)
   
+  * [Search2DMatrix 搜索二维矩阵(leetcode 74)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/recursion/Search2DMatrix.java)
+  
   * [Search2DMatrix2 搜索二维矩阵(leetcode 240)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/recursion/Search2DMatrix2.java)
   
  
-### 模拟算法：
+### 模拟法：
 
   * [DrinkAndBorrow 喝酒借酒](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/simulation/algorithm/DrinkAndBorrow.java)
 
