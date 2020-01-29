@@ -44,7 +44,8 @@ public class QuickSort {
             System.out.print(i+" ");
         }*/
 
-        doQuickSortDesc(arr,0, arr.length-1);
+        /*doQuickSortDesc(arr,0, arr.length-1);*/
+        doQuickSort(arr, 0, arr.length - 1);
 
         /*int flag = CheckSortedArr.checkIntAsc(arr);
         if (flag != -1){
@@ -61,16 +62,14 @@ public class QuickSort {
 
     /** 针对基本数据类型 int 服务 */
     public static void doQuickSort(int[] arr, int left, int right){
-        if(left >= right){
-            return;
-        }
+        if(left >= right) return;
 
         int base = arr[left];
 
         int i = quickSort(arr, base, left, right);
 
-        doQuickSort(arr,left,i-1);
-        doQuickSort(arr,i+1,right);
+        doQuickSort(arr, left,i - 1);
+        doQuickSort(arr, i + 1, right);
     }
     private static int quickSort(int[] arr, int base, int left, int right){
         while (left < right){

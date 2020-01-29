@@ -39,7 +39,7 @@ import java.util.List;
  *   f(l,r) = a[l], l == r
  *
  *  时间复杂度：O(n^2)
- *  空间复杂度：不知道
+ *  空间复杂度：O(n)
  */
 public class UniqueBinarySearchTrees2 {
 
