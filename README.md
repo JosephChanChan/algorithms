@@ -85,6 +85,8 @@
   
   * [UniqueBinarySearchTrees2 所有的唯一二叉树(leetcode 95)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/recursion/UniqueBinarySearchTrees2.java)
   
+  * [Search2DMatrix2 搜索二维矩阵(leetcode 240)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/recursion/Search2DMatrix2.java)
+  
  
 ### 模拟算法：
 
