@@ -1,7 +1,5 @@
 package backtracking.algorithm;
 
-import org.omg.CORBA.INTERNAL;
-
 import java.util.*;
 
 /**
@@ -104,7 +102,6 @@ public class CalculateBill {
                 link.remove(iValue);
             }
         }
-
     }
 
 
