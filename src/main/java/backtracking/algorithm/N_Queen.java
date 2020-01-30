@@ -4,7 +4,7 @@ package backtracking.algorithm;
  * leetcode 52 hard（这题应该没有hard难度或者属于hard中的水题）
  *
  * 递归回溯解法：
- * 经典的八皇后问题，即在一个8*8的棋盘上放8个皇后，使得这8个皇后无法互相攻击
+ * 经典的N皇后问题，即在一个N*N的棋盘上放N个皇后，使得这N个皇后无法互相攻击
  * (任意2个皇后不能处于同一行，同一列或是对角线上)，输出所有可能的摆放情况。
  * 这是道很好的回溯算法题，并且结合递归。
  *
@@ -15,13 +15,13 @@ package backtracking.algorithm;
  *
  * Created by Administrator on 2017/4/14 0014.
  */
-public class EightQueen {
+public class N_Queen {
 
     static int[] rowsQueen;
     static int count = 0, rows, columns;
 
     public static void main(String[] args) {
-        rowsQueen = new int[4];
+        rowsQueen = new int[8];
         rows = rowsQueen.length;
         columns = rowsQueen.length;
         search(0);
