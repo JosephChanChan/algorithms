@@ -56,13 +56,15 @@
   
 ### 回溯法：
 
-  * [EightQueen 八皇后](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/backtracking/algorithm/EightQueen.java)
+  * [N_Queen N皇后(leetcode 52)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/backtracking/algorithm/N_Queen.java)
   
   * [FloorMoppingRobot 优秀的扫地机器人](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/backtracking/algorithm/FloorMoppingRobot.java)
   
   * [FullPermutation 全排列](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/backtracking/algorithm/FullPermutation.java)
 
   * [CalculateBill 检查账单](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/backtracking/algorithm/CalculateBill.java)
+  
+  * [SudokuSolver 数独专家(leetcode 37)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/backtracking/algorithm/SudokuSolver.java)
   
   
   ### 递归法：
