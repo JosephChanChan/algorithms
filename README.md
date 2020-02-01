@@ -66,6 +66,8 @@
   
   * [SudokuSolver 数独专家(leetcode 37)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/backtracking/algorithm/SudokuSolver.java)
   
+  * [Combinations 组合数方案(leetcode 77)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/backtracking/algorithm/Combinations.java)
+  
   
   ### 递归法：
   
