@@ -68,6 +68,8 @@
   
   * [Combinations 组合数方案(leetcode 77)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/backtracking/algorithm/Combinations.java)
   
+  * [GenerateParentheses 括号匹配(leetcode 22)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/backtracking/algorithm/GenerateParentheses.java)
+  
   
   ### 递归法：
   
@@ -142,6 +144,8 @@
   * [Num2TreeSum 数组树的和](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/trees/Num2TreeSum.java)
   
   * [ValidBinarySearchTree 校验BST(leetcode 98)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/trees/ValidBinarySearchTree.java)
+  
+  * [SameTree 校验二叉树(leetcode 100)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/trees/SameTree.java)
   
 
 ### 图相关：
