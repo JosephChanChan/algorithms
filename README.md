@@ -129,6 +129,8 @@
 
 * [BitMapTest 位图测试用例](https://github.com/JosephChanChan/algorithms/blob/master/src/main/test/BitMapTest.java)
 
+* [RearrangeLinkedList (计科408某题)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/tables/RearrangeLinkedList.java)
+
 ### 树相关：
 
   * [AVLTree 平衡二叉搜索树](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/trees/AVLTree.java)
