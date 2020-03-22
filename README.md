@@ -131,7 +131,7 @@
 
 * [RearrangeLinkedList (计科408某题)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/tables/RearrangeLinkedList.java)
 
-* [MinimumIncrement2MakeArrayUnique ()](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/tables/RearrangeLinkedList.java)
+* [MinimumIncrement2MakeArrayUnique (leetcode 945)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/tables/RearrangeLinkedList.java)
 
 ### 树相关：
 
