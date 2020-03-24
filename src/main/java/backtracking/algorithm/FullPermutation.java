@@ -6,13 +6,12 @@ package backtracking.algorithm;
  * 给定某个序列 S[Si Si+1 Si+2 ... Sn] 输出其序列的每一种排列.
  * 本算法采用递归实现. 所以会出现重复排列情况.
  *
- *
  * Created by Joseph on 2017/6/18.
  */
 public class FullPermutation {
 
-    static int[] arr = {1,2,3};
-    static int count = 0;
+    private static int[] arr = {1,2,3};
+    private static int count = 0;
 
     public static void main(String[] args){
         permutation(arr, 0, arr.length);
@@ -21,8 +20,8 @@ public class FullPermutation {
 
     private static void permutation(int[] arr, int i, int k){
         if (i == k - 1){
-            for (int l = 0; l < arr.length; l++){
-                System.out.print(arr[l]+" ");
+            for (int value : arr) {
+                System.out.print(value + " ");
             }
             System.out.println();
             count++;
