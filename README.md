@@ -70,6 +70,7 @@
   
   * [GenerateParentheses 括号匹配(leetcode 22)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/backtracking/algorithm/GenerateParentheses.java)
   
+  * [Permutation 全排列(leetcode 46)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/backtracking/algorithm/Permutation.java)
   
   ### 递归法：
   
