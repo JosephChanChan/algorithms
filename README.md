@@ -36,6 +36,8 @@
   * [BuyAndSellStock 炒股入门(leetcode 121)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/dynamic/programming/BuyAndSellStock.java)
   
   * [CombinationSum 数字组合方案(leetcode 39)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/dynamic/programming/CombinationSum.java)
+  
+  * [VarietyOfFibonacci 斐波那契变种](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/dynamic/programming/VarietyOfFibonacci.java)
 
   
 ### 贪心算法：
@@ -136,6 +138,10 @@
 
 * [MinimumIncrement2MakeArrayUnique (leetcode 945)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/tables/RearrangeLinkedList.java)
 
+* [CircularLinkedList (leetcode 141)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/tables/CircularLinkedList.java)
+
+* [KthNodeFromEnd (剑指Offer 22)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/tables/KthNodeFromEnd.java)
+
 ### 树相关：
 
   * [AVLTree 平衡二叉搜索树](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/trees/AVLTree.java)
@@ -157,6 +163,8 @@
   * [BinaryTreeInorderTraversal 树的中序遍历(递归与迭代)(leetcode 94)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/trees/BinaryTreeInorderTraversal.java)
   
   * [BinaryTreeLevelOrderTraversal 树的层级遍历(递归与迭代)(leetcode 102)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/trees/BinaryTreeLevelOrderTraversal.java)
+  
+  * [RestructureBinaryTree 重建二叉树(剑指Offer 22)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/trees/RestructureBinaryTree.java)
   
 
 ### 图相关：
