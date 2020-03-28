@@ -72,6 +72,8 @@
   
   * [Permutation 全排列(leetcode 46)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/backtracking/algorithm/Permutation.java)
   
+  * [LetterCombinationsPhoneNumber 字母组合(leetcode 17)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/backtracking/algorithm/LetterCombinationsPhoneNumber.java)
+  
   ### 递归法：
   
   * [PascalTriangle 杨辉三角(leetcode 119)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/recursion/PascalTriangle.java)
