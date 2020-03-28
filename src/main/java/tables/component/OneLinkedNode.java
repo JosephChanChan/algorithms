@@ -6,14 +6,14 @@ package tables.component;
  *
  * 公用的单向链表节点
  */
-public class OneLinkedNode<T> extends Node<T> {
+public class OneLinkedNode extends ListNode {
 
 
-    public OneLinkedNode(T data) {
+    public OneLinkedNode(int data) {
         super(data);
     }
 
-    public OneLinkedNode(T data, OneLinkedNode<T> next) {
+    public OneLinkedNode(int data, OneLinkedNode next) {
         super(data, next);
     }
 

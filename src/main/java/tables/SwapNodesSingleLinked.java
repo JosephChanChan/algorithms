@@ -1,6 +1,6 @@
 package tables;
 
-import tables.component.Node;
+import tables.component.ListNode;
 import tables.component.OneLinkedNode;
 
 /**
@@ -27,11 +27,11 @@ import tables.component.OneLinkedNode;
 public class SwapNodesSingleLinked {
 
     public static void main(String[] args) {
-        Node<Integer> node1 = new OneLinkedNode<>(1);
-        Node<Integer> node2 = new OneLinkedNode<>(2);
-        Node<Integer> node3 = new OneLinkedNode<>(3);
-        Node<Integer> node4 = new OneLinkedNode<>(4);
-        Node<Integer> node5 = new OneLinkedNode<>(5);
+        ListNode node1 = new OneLinkedNode(1);
+        ListNode node2 = new OneLinkedNode(2);
+        ListNode node3 = new OneLinkedNode(3);
+        ListNode node4 = new OneLinkedNode(4);
+        ListNode node5 = new OneLinkedNode(5);
         node1.setNext(node2);
         node2.setNext(node3);
         node3.setNext(node4);
@@ -39,7 +39,7 @@ public class SwapNodesSingleLinked {
         node5.setNext(null);
 
         SwapNodesSingleLinked swapNodesSingleLinked = new SwapNodesSingleLinked();
-        Node<Integer> node = swapNodesSingleLinked.swapPairs(node1);
+        ListNode node = swapNodesSingleLinked.swapPairs(node1);
 
         while (null != node) {
             System.out.print(node.getData()+" ");
@@ -47,19 +47,19 @@ public class SwapNodesSingleLinked {
         }
     }
 
-    private Node<Integer> swapPairs(Node<Integer> head) {
+    private ListNode swapPairs(ListNode head) {
         return recursiveSwap(head);
     }
 
-    private Node<Integer> recursiveSwap(Node<Integer> node) {
+    private ListNode recursiveSwap(ListNode node) {
         if (null == node) {
             return node;
         }
-        Node<Integer> next = node.getNext();
+        ListNode next = node.getNext();
         if (null == next) {
             return node;
         }
-        Node<Integer> nextPair = next.getNext();
+        ListNode nextPair = next.getNext();
         next.setNext(node);
         node.setNext(recursiveSwap(nextPair));
         return next;

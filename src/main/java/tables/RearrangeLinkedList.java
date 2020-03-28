@@ -1,6 +1,6 @@
 package tables;
 
-import tables.component.Node;
+import tables.component.ListNode;
 import tables.component.OneLinkedNode;
 
 /**
@@ -21,12 +21,12 @@ import tables.component.OneLinkedNode;
 public class RearrangeLinkedList {
 
     public static void main(String[] args) {
-        Node<Integer> one = new OneLinkedNode<>(1);
-        Node<Integer> two = new OneLinkedNode<>(2);
-        Node<Integer> three = new OneLinkedNode<>(3);
-        Node<Integer> flour = new OneLinkedNode<>(4);
-        Node<Integer> five = new OneLinkedNode<>(5);
-        Node<Integer> six = new OneLinkedNode<>(6);
+        ListNode one = new OneLinkedNode(1);
+        ListNode two = new OneLinkedNode(2);
+        ListNode three = new OneLinkedNode(3);
+        ListNode flour = new OneLinkedNode(4);
+        ListNode five = new OneLinkedNode(5);
+        ListNode six = new OneLinkedNode(6);
         one.setNext(two);
         two.setNext(three);
         three.setNext(flour);
@@ -39,7 +39,7 @@ public class RearrangeLinkedList {
         rearrangeLinkedList.print(one);
     }
 
-    private void print(Node<Integer> head) {
+    private void print(ListNode head) {
         while (null != head) {
             System.out.println(head.getData());
             head = head.getNext();
@@ -47,9 +47,9 @@ public class RearrangeLinkedList {
     }
 
     /* 时间复杂度 O(n^2) */
-    private void rearrange(Node<Integer> head, Node<Integer> tail, int left, int right) {
+    private void rearrange(ListNode head, ListNode tail, int left, int right) {
         if (head.getData() < tail.getData()) {
-            Node<Integer> temp = head.getNext();
+            ListNode temp = head.getNext();
             head.setNext(tail);
             tail.setNext(temp);
             head = temp;
@@ -59,8 +59,8 @@ public class RearrangeLinkedList {
                 tail.setNext(null);
         }
     }
-    private Node<Integer> foundTail(Node<Integer> head, int step) {
-        Node<Integer> tail = head;
+    private ListNode foundTail(ListNode head, int step) {
+        ListNode tail = head;
         while (step > 0 && null != tail) {
             tail = tail.getNext();
             step--;
@@ -69,12 +69,12 @@ public class RearrangeLinkedList {
     }
 
     /* 时间复杂度 O(n) */
-    private void rearrange(Node<Integer> node) {
+    private void rearrange(ListNode listNode) {
         // 双指针，链表后半段逆转排列，再合并
-        Node<Integer> left = node;
+        ListNode left = listNode;
 
         // 快慢指针
-        Node<Integer> slow = left, fast = slow.getNext();
+        ListNode slow = left, fast = slow.getNext();
         while (null != fast.getNext()) {
             slow = slow.getNext();
             fast = fast.getNext();
@@ -83,11 +83,11 @@ public class RearrangeLinkedList {
         }
 
         // 逆转链表后半段，主要就是双指针
-        Node<Integer> right = slow.getNext();
+        ListNode right = slow.getNext();
         slow.setNext(null);
-        Node<Integer> p = right, q = right.getNext();
+        ListNode p = right, q = right.getNext();
         while (null != q) {
-            Node<Integer> n = q.getNext();
+            ListNode n = q.getNext();
             q.setNext(p);
             p = q;
             q = n;
@@ -97,8 +97,8 @@ public class RearrangeLinkedList {
 
         // 合并链表
         while (null != left && null != right) {
-            Node<Integer> nextL = left.getNext();
-            Node<Integer> nextR = right.getNext();
+            ListNode nextL = left.getNext();
+            ListNode nextR = right.getNext();
             left.setNext(right);
             right.setNext(nextL);
             left = nextL;

@@ -1,6 +1,6 @@
 package recursion;
 
-import tables.component.Node;
+import tables.component.ListNode;
 import tables.component.OneLinkedNode;
 
 /**
@@ -21,18 +21,18 @@ public class ReverseList {
 
     public static void main(String[] args) {
         ReverseList reverseList = new ReverseList();
-        Node<Integer> one = new OneLinkedNode<>(1);
-        Node<Integer> two = new OneLinkedNode<>(2);
-        Node<Integer> three = new OneLinkedNode<>(3);
-        Node<Integer> four = new OneLinkedNode<>(4);
-        Node<Integer> five = new OneLinkedNode<>(5);
+        ListNode one = new OneLinkedNode(1);
+        ListNode two = new OneLinkedNode(2);
+        ListNode three = new OneLinkedNode(3);
+        ListNode four = new OneLinkedNode(4);
+        ListNode five = new OneLinkedNode(5);
         one.setNext(two);
         two.setNext(three);
         three.setNext(four);
         four.setNext(five);
         five.setNext(null);
 
-        Node<Integer> listNode = reverseList.reverseList(one);
+        ListNode listNode = reverseList.reverseList(one);
         while (null != listNode.getNext()) {
             System.out.println(listNode.getData());
             listNode = listNode.getNext();
@@ -40,11 +40,11 @@ public class ReverseList {
         System.out.println(listNode.getData());
     }
 
-    public Node<Integer> reverseList(Node<Integer> head) {
+    public ListNode reverseList(ListNode head) {
         if (null == head) {
             return null;
         }
-        Node<Integer> original = head;
+        ListNode original = head;
         while (null != original.getNext()) {
             original = original.getNext();
         }
@@ -52,7 +52,7 @@ public class ReverseList {
         return original;
     }
 
-    private void reverseNode(Node<Integer> currentNode, Node<Integer> formerNode) {
+    private void reverseNode(ListNode currentNode, ListNode formerNode) {
         if (null != currentNode.getNext()) {
             reverseNode(currentNode.getNext(), currentNode);
         }
