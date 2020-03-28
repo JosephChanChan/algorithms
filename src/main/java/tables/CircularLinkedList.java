@@ -1,5 +1,7 @@
 package tables;
 
+import tables.component.ListNode;
+
 /**
  * @author Joseph
  * @since 2020-03-28 14:17
@@ -31,14 +33,5 @@ public class CircularLinkedList {
         return false;
     }
 
-
-    class ListNode {
-      int val;
-      ListNode next;
-      ListNode(int x) {
-          val = x;
-          next = null;
-      }
-    }
 
 }

@@ -4,47 +4,43 @@ package tables.component;
  * @author Joseph
  * @since 2020-03-28 14:38
  */
-public abstract class Node<T> {
+public abstract class ListNode {
 
-    private T data;
+    public int data;
 
-    private Node<T> next;
+    public ListNode next;
 
 
 
     /* Constructor */
+    public ListNode() {}
 
-    public Node() {}
-
-    public Node(T data) {
+    public ListNode(int data) {
         this.data = data;
     }
 
-    public Node(T data, Node<T> next) {
+    public ListNode(int data, ListNode next) {
         this.data = data;
         this.next = next;
     }
 
-
     @Override
     public int hashCode() {
-        if (null == data)
+        if (data == 0)
             return super.hashCode();
-        return data.hashCode() ^ (data.hashCode() >>> 16) | this.hashCode();
+        return (data << 5 + 1) | super.hashCode();
     }
 
     @Override
     @SuppressWarnings("unchecked")
     public boolean equals(Object obj) {
         if (null == obj) return false;
-        if (!(obj instanceof Node)) return false;
+        if (!(obj instanceof ListNode)) return false;
 
-        Node<T> other = (Node<T>) obj;
+        ListNode other = (ListNode) obj;
         if (this == other)
             return true;
-        if (data == other.getData() ||
-            null != data && null != other.getData() &&
-            data.equals(other.getData()))
+        if (data == other.data)
             return true;
 
         return super.equals(obj);
@@ -54,20 +50,19 @@ public abstract class Node<T> {
 
     /* Setter And Getter */
 
-    public T getData() {
+    public int getData() {
         return data;
     }
 
-    public void setData(T data) {
+    public void setData(int data) {
         this.data = data;
     }
 
-    public Node<T> getNext() {
+    public ListNode getNext() {
         return next;
     }
 
-    public void setNext(Node<T> next) {
+    public void setNext(ListNode next) {
         this.next = next;
     }
-
 }
