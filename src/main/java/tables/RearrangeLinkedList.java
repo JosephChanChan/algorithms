@@ -1,5 +1,8 @@
 package tables;
 
+import tables.component.Node;
+import tables.component.OneLinkedNode;
+
 /**
  * @author Joseph
  * @since 2020-03-20 22:51
@@ -18,12 +21,12 @@ package tables;
 public class RearrangeLinkedList {
 
     public static void main(String[] args) {
-        Node one = new Node(1);
-        Node two = new Node(2);
-        Node three = new Node(3);
-        Node flour = new Node(4);
-        Node five = new Node(5);
-        Node six = new Node(6);
+        Node<Integer> one = new OneLinkedNode<>(1);
+        Node<Integer> two = new OneLinkedNode<>(2);
+        Node<Integer> three = new OneLinkedNode<>(3);
+        Node<Integer> flour = new OneLinkedNode<>(4);
+        Node<Integer> five = new OneLinkedNode<>(5);
+        Node<Integer> six = new OneLinkedNode<>(6);
         one.setNext(two);
         two.setNext(three);
         three.setNext(flour);
@@ -36,101 +39,71 @@ public class RearrangeLinkedList {
         rearrangeLinkedList.print(one);
     }
 
-    private void print(Node head) {
+    private void print(Node<Integer> head) {
         while (null != head) {
-            System.out.println(head.data);
-            head = head.next;
+            System.out.println(head.getData());
+            head = head.getNext();
         }
     }
 
     /* 时间复杂度 O(n^2) */
-    private void rearrange(Node head, Node tail, int left, int right) {
-        if (head.data < tail.data) {
-            Node temp = head.next;
-            head.next = tail;
-            tail.next = temp;
+    private void rearrange(Node<Integer> head, Node<Integer> tail, int left, int right) {
+        if (head.getData() < tail.getData()) {
+            Node<Integer> temp = head.getNext();
+            head.setNext(tail);
+            tail.setNext(temp);
             head = temp;
             tail = foundTail(head, --right - ++left);
             rearrange(head, tail, left, right);
             if (head == tail)
-                tail.next = null;
+                tail.setNext(null);
         }
     }
-    private Node foundTail(Node head, int step) {
-        Node tail = head;
+    private Node<Integer> foundTail(Node<Integer> head, int step) {
+        Node<Integer> tail = head;
         while (step > 0 && null != tail) {
-            tail = tail.next;
+            tail = tail.getNext();
             step--;
         }
         return tail;
     }
 
     /* 时间复杂度 O(n) */
-    private void rearrange(Node node) {
+    private void rearrange(Node<Integer> node) {
         // 双指针，链表后半段逆转排列，再合并
-        Node left = node;
+        Node<Integer> left = node;
 
         // 快慢指针
-        Node slow = left, fast = slow.next;
-        while (null != fast.next) {
-            slow = slow.next;
-            fast = fast.next;
-            if (null != fast.next)
-                fast = fast.next;
+        Node<Integer> slow = left, fast = slow.getNext();
+        while (null != fast.getNext()) {
+            slow = slow.getNext();
+            fast = fast.getNext();
+            if (null != fast.getNext())
+                fast = fast.getNext();
         }
 
         // 逆转链表后半段，主要就是双指针
-        Node right = slow.next;
-        slow.next = null;
-        Node p = right, q = right.next;
+        Node<Integer> right = slow.getNext();
+        slow.setNext(null);
+        Node<Integer> p = right, q = right.getNext();
         while (null != q) {
-            Node n = q.next;
-            q.next = p;
+            Node<Integer> n = q.getNext();
+            q.setNext(p);
             p = q;
             q = n;
         }
-        right.next = null;
+        right.setNext(null);
         right = p;
 
         // 合并链表
         while (null != left && null != right) {
-            Node nextL = left.next;
-            Node nextR = right.next;
-            left.next = right;
-            right.next = nextL;
+            Node<Integer> nextL = left.getNext();
+            Node<Integer> nextR = right.getNext();
+            left.setNext(right);
+            right.setNext(nextL);
             left = nextL;
             right = nextR;
         }
     }
-
-
-    private static class Node {
-        int data;
-        Node next;
-
-        public Node(int data) {
-            this.data = data;
-        }
-
-        public Node(int data, Node next) {
-            this.data = data;
-            this.next = next;
-        }
-
-        public int getData() {
-            return data;
-        }
-
-        public void setData(int data) {
-            this.data = data;
-        }
-
-        public Node getNext() {
-            return next;
-        }
-
-        public void setNext(Node next) {
-            this.next = next;
-        }
-    }
+    
 }

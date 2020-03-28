@@ -1,5 +1,8 @@
 package tables;
 
+import tables.component.Node;
+import tables.component.OneLinkedNode;
+
 /**
  * @author Joseph
  * @since 2019/8/31 21:03
@@ -24,46 +27,43 @@ package tables;
 public class SwapNodesSingleLinked {
 
     public static void main(String[] args) {
-        ListNode node1 = new ListNode(1);
-        ListNode node2 = new ListNode(2);
-        ListNode node3 = new ListNode(3);
-        ListNode node4 = new ListNode(4);
-        ListNode node5 = new ListNode(5);
-        node1.next = node2;
-        node2.next= node3;
-        node3.next = node4;
-        node4.next = node5;
+        Node<Integer> node1 = new OneLinkedNode<>(1);
+        Node<Integer> node2 = new OneLinkedNode<>(2);
+        Node<Integer> node3 = new OneLinkedNode<>(3);
+        Node<Integer> node4 = new OneLinkedNode<>(4);
+        Node<Integer> node5 = new OneLinkedNode<>(5);
+        node1.setNext(node2);
+        node2.setNext(node3);
+        node3.setNext(node4);
+        node4.setNext(node5);
+        node5.setNext(null);
 
         SwapNodesSingleLinked swapNodesSingleLinked = new SwapNodesSingleLinked();
-        ListNode node = swapNodesSingleLinked.swapPairs(node1);
+        Node<Integer> node = swapNodesSingleLinked.swapPairs(node1);
 
         while (null != node) {
-            System.out.print(node.val+" ");
-            node = node.next;
+            System.out.print(node.getData()+" ");
+            node = node.getNext();
         }
     }
 
-    private ListNode swapPairs(ListNode head) {
+    private Node<Integer> swapPairs(Node<Integer> head) {
         return recursiveSwap(head);
     }
 
-    private ListNode recursiveSwap(ListNode node) {
+    private Node<Integer> recursiveSwap(Node<Integer> node) {
         if (null == node) {
             return node;
         }
-        ListNode next = node.next;
+        Node<Integer> next = node.getNext();
         if (null == next) {
             return node;
         }
-        ListNode nextPair = next.next;
-        next.next = node;
-        node.next = recursiveSwap(nextPair);
+        Node<Integer> nextPair = next.getNext();
+        next.setNext(node);
+        node.setNext(recursiveSwap(nextPair));
         return next;
     }
 
-    private static class ListNode {
-        int val;
-        ListNode next;
-        ListNode(int x) { val = x; }
-    }
+    
 }
