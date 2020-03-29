@@ -26,7 +26,7 @@ import java.io.*;
 
 public class MaxCommSubSequence {
 
-    public static void main(String[] args){
+    public static void main(String[] args) throws IOException {
         char[] a = null;
         char[] b = null;
         Node[][] nodes = null;
@@ -34,60 +34,55 @@ public class MaxCommSubSequence {
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in),1<<16);
         BufferedWriter writer = new BufferedWriter(new OutputStreamWriter(System.out),1<<16);
 
-        try {
-            String s1 = reader.readLine();
-            String s2 = reader.readLine();
-            a = s1.toCharArray();
-            b = s2.toCharArray();
+        String s1 = reader.readLine();
+        String s2 = reader.readLine();
+        a = s1.toCharArray();
+        b = s2.toCharArray();
 
-            nodes = new Node[a.length+1][b.length+1];
-            Node node = null;
-            for(int x=0; x<=a.length; x++){
-                for(int y=0; y<=b.length; y++){
-                    node = new Node();
-                    nodes[x][y] = node;
-                    if(x==0 || y==0){
-                        nodes[x][y].setValue(0);
-                        continue;
-                    }
-                    if(a[x-1]==b[y-1]){
-                        //L(x,y) = L(x-1,y-1) + a[x]
-                        node.setValue(nodes[x-1][y-1].getValue()+1);
-                        node.setX(a[x-1]);
-                        node.setY(b[y-1]);
-                        node.setPrev(nodes[x-1][y-1]);
-                    }else {
-                        // A[x] != B[y]  L(x,y) = max{L(x-1,y),L(x,y-1)}
-                        node.setX(a[x-1]);
-                        node.setY(b[y-1]);
-                        if(nodes[x-1][y].getValue() >= nodes[x][y-1].getValue()){
-                            node.setPrev(nodes[x-1][y]);
-                            node.setValue(nodes[x-1][y].getValue());
-                        }else{
-                            node.setPrev(nodes[x][y-1]);
-                            node.setValue(nodes[x][y-1].getValue());
-                        }
-                    }
-
-//                    System.out.println(node.getX()+" "+node.getY()+" "+node.getValue()+" "+node.getPrev());
+        nodes = new Node[a.length+1][b.length+1];
+        Node node = null;
+        for(int x=0; x<=a.length; x++){
+            for(int y=0; y<=b.length; y++){
+                node = new Node();
+                nodes[x][y] = node;
+                if(x==0 || y==0){
+                    nodes[x][y].setValue(0);
+                    continue;
                 }
-            }
-
-            Node terminal = nodes[a.length][b.length];
-            StringBuilder builder = new StringBuilder();
-            while (null != terminal){
-                if(terminal.getX()==terminal.getY() && terminal.getValue()>0){
-//                    System.out.println("长度= "+terminal.getValue()+" 元素="+terminal.getX());
-                    builder.append(terminal.getX());
+                if(a[x-1]==b[y-1]){
+                    //L(x,y) = L(x-1,y-1) + a[x]
+                    node.setValue(nodes[x-1][y-1].getValue()+1);
+                    node.setX(a[x-1]);
+                    node.setY(b[y-1]);
+                    node.setPrev(nodes[x-1][y-1]);
+                }else {
+                    // A[x] != B[y]  L(x,y) = max{L(x-1,y),L(x,y-1)}
+                    node.setX(a[x-1]);
+                    node.setY(b[y-1]);
+                    if(nodes[x-1][y].getValue() >= nodes[x][y-1].getValue()){
+                        node.setPrev(nodes[x-1][y]);
+                        node.setValue(nodes[x-1][y].getValue());
+                    }else{
+                        node.setPrev(nodes[x][y-1]);
+                        node.setValue(nodes[x][y-1].getValue());
+                    }
                 }
-                terminal = terminal.getPrev();
+//              System.out.println(node.getX()+" "+node.getY()+" "+node.getValue()+" "+node.getPrev());
             }
-
-            writer.write(builder.reverse().toString());
-            writer.flush();
-        } catch (IOException e) {
-            e.printStackTrace();
         }
+
+        Node terminal = nodes[a.length][b.length];
+        StringBuilder builder = new StringBuilder();
+        while (null != terminal){
+            if(terminal.getX()==terminal.getY() && terminal.getValue()>0){
+//                    System.out.println("长度= "+terminal.getValue()+" 元素="+terminal.getX());
+                builder.append(terminal.getX());
+            }
+            terminal = terminal.getPrev();
+        }
+
+        writer.write(builder.reverse().toString());
+        writer.flush();
 
     }
 

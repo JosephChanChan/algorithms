@@ -22,54 +22,50 @@ import java.io.*;
  */
 public class LongestIncreasingSequence {
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in), 1 << 16);
         BufferedWriter writer = new BufferedWriter(new OutputStreamWriter(System.out), 1 << 16);
         int count, n, maxL = 0, f = 0;
         int[] arr ;
         int[][] val ;
-        try {
-            n = Integer.parseInt(reader.readLine());
-            arr = new int[n];
-            for (int i = 0; i < n; i++) {
-                arr[i] = Integer.parseInt(reader.readLine());
-            }
+        n = Integer.parseInt(reader.readLine());
+        arr = new int[n];
+        for (int i = 0; i < n; i++) {
+            arr[i] = Integer.parseInt(reader.readLine());
+        }
 
-            val = new int[n][2];
-            val[0][0] = 1;      // 第0列记录第i位的最长单增子序列的长度
-            val[0][1] = -1;     // 第1列记录第i位的最长单增子序列中前一位aj的位置，可以借此得到具体的最长单增子序列
+        val = new int[n][2];
+        val[0][0] = 1;      // 第0列记录第i位的最长单增子序列的长度
+        val[0][1] = -1;     // 第1列记录第i位的最长单增子序列中前一位aj的位置，可以借此得到具体的最长单增子序列
 
-            /*
-                dp(i) = max{dp(n)} + 1 {n | n < i 且 An < Ai}
-             */
-            for (int i = 1; i < n; i++) {
-                int max = 0, aj = -1;
-                for (int j = 0; j < i; j++) {
-                    if (val[j][0] > max && arr[j] < arr[i]) {
-                        max = val[j][0];
-                        aj = j;
-                    }
-                }
-                val[i][0] = max + 1;
-                val[i][1] = aj;
-                if (val[i][0] > maxL) {
-                    maxL = val[i][0];
-                    f = i;
+        /*
+            dp(i) = max{dp(n)} + 1 {n | n < i 且 An < Ai}
+         */
+        for (int i = 1; i < n; i++) {
+            int max = 0, aj = -1;
+            for (int j = 0; j < i; j++) {
+                if (val[j][0] > max && arr[j] < arr[i]) {
+                    max = val[j][0];
+                    aj = j;
                 }
             }
+            val[i][0] = max + 1;
+            val[i][1] = aj;
+            if (val[i][0] > maxL) {
+                maxL = val[i][0];
+                f = i;
+            }
+        }
 
-            int k = 0, v = f;
+        int k = 0, v = f;
 //            System.out.print(arr[f]+" ");
 //            while ((k=val[f][1]) != -1){
 //                System.out.print(arr[k]+" ");
 //                f = k;
 //            }
 
-            count = val[v][0];
-            writer.write(count + "\r\n");
-            writer.flush();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+        count = val[v][0];
+        writer.write(count + "\r\n");
+        writer.flush();
     }
 }

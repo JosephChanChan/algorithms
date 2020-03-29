@@ -45,20 +45,16 @@ public class SubSequenceNumber {
 
     static int[] arr = null;
     static long[] dp = null;
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in),1<<16);
         int n = 0;
-        try {
-            n = Integer.parseInt(reader.readLine());
-            arr = new int[n+1];
-            dp = new long[n+1];
-            //第0个 存一个空集
-            dp[0] = 1;
-            for (int i = 1; i <= n; i++) {
-                arr[i] = Integer.parseInt(reader.readLine());
-            }
-        } catch (IOException e) {
-            e.printStackTrace();
+        n = Integer.parseInt(reader.readLine());
+        arr = new int[n+1];
+        dp = new long[n+1];
+        //第0个 存一个空集
+        dp[0] = 1;
+        for (int i = 1; i <= n; i++) {
+            arr[i] = Integer.parseInt(reader.readLine());
         }
 
         //输出a的不同子序列的数量Mod 10^9 + 7。

@@ -30,47 +30,46 @@ public class GroupPositiveInt {
 
     static int[] a = null;
     static Node[][] val = null;
-    public static void main(String[] args){
+    public static void main(String[] args) throws IOException {
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in),1<<16);
         BufferedWriter writer = new BufferedWriter(new OutputStreamWriter(System.out), 1 << 16);
         int n=0,m=0,sum=0,k=0,y=0;
-        try {
-            n = Integer.parseInt(reader.readLine());
-            a = new int[n];
-            for(int i=0; i<n; i++){
-                a[i] = Integer.parseInt(reader.readLine());
-                sum += a[i];
-            }
+        n = Integer.parseInt(reader.readLine());
+        a = new int[n];
+        for(int i=0; i<n; i++){
+            a[i] = Integer.parseInt(reader.readLine());
+            sum += a[i];
+        }
 
-            k = sum >> 1;
-            val = new Node[n][k];
+        k = sum >> 1;
+        val = new Node[n][k];
 
-            Node node = null;
-            Node track = null;
-            for(int i=0; i<n; i++){
-                for(int j=1; j<=k; j++){
-                    node = new Node();
-                    if(j<a[i]){
-                        //n>=1，j<ai，f(i,j) = f(i-1,j)
+        Node node = null;
+        Node track = null;
+        for(int i=0; i<n; i++){
+            for(int j=1; j<=k; j++){
+                node = new Node();
+                if(j<a[i]){
+                    //n>=1，j<ai，f(i,j) = f(i-1,j)
+                    node.setVal(getVi(i-1,j));
+                    node.setSelfJoin(false);
+                }else{
+                    //n>=1，j>=ai，f(i,j) = max{ f(i-1,j) , f(i-1,j-ai)+ai }
+                    if(getVi(i-1,j) >= getVi(i-1,j-a[i])+a[i]){
                         node.setVal(getVi(i-1,j));
                         node.setSelfJoin(false);
+                        node.setPrevious(getNode(i-1,j));
                     }else{
-                        //n>=1，j>=ai，f(i,j) = max{ f(i-1,j) , f(i-1,j-ai)+ai }
-                        if(getVi(i-1,j) >= getVi(i-1,j-a[i])+a[i]){
-                            node.setVal(getVi(i-1,j));
-                            node.setSelfJoin(false);
-                            node.setPrevious(getNode(i-1,j));
-                        }else{
-                            node.setVal(getVi(i-1,j-a[i])+a[i]);
-                            node.setSelfJoin(true);
-                            node.setSelf(a[i]);
-                            node.setPrevious(getNode(i-1,j-a[i]));
-                            track = node;
-                        }
+                        node.setVal(getVi(i-1,j-a[i])+a[i]);
+                        node.setSelfJoin(true);
+                        node.setSelf(a[i]);
+                        node.setPrevious(getNode(i-1,j-a[i]));
+                        track = node;
                     }
-                    val[i][j-1] = node;
                 }
+                val[i][j-1] = node;
             }
+        }
 
 //            for(int i=0; i<n; i++){
 //                for(int j=0; j<k; j++){
@@ -86,11 +85,8 @@ public class GroupPositiveInt {
 //            }
 //            System.out.println();
 
-            writer.write((sum-(val[n-1][k-1].getVal()))-val[n-1][k-1].getVal()+"\r\n");
-            writer.flush();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+        writer.write((sum-(val[n-1][k-1].getVal()))-val[n-1][k-1].getVal()+"\r\n");
+        writer.flush();
     }
 
     private static int getVi(int i,int j){

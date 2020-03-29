@@ -17,18 +17,14 @@ public class LongestIncreasingSubsequence2 {
 
     static List<Integer> b = new ArrayList<>();
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in), 1 << 16);
         int n;
         int[] arr = null;
-        try {
-            n = Integer.parseInt(reader.readLine());
-            arr = new int[n];
-            for (int i = 0; i < n; i++) {
-                arr[i] = Integer.parseInt(reader.readLine());
-            }
-        } catch (IOException e) {
-            e.printStackTrace();
+        n = Integer.parseInt(reader.readLine());
+        arr = new int[n];
+        for (int i = 0; i < n; i++) {
+            arr[i] = Integer.parseInt(reader.readLine());
         }
 
         //代表第1位负无穷

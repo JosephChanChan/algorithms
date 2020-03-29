@@ -35,45 +35,44 @@ public class KnapsackProblem {
 
     static int[][] WiVi = null;
     static int[][] val = null;
-    public static void main(String[] args){
+    public static void main(String[] args) throws IOException {
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in),1<<16);
         BufferedWriter writer = new BufferedWriter(new OutputStreamWriter(System.out), 1 << 16);
         int n=0,m=0;
-        try {
-            String[] split = reader.readLine().split(" ");
-            n = Integer.parseInt(split[0]);
-            m = Integer.parseInt(split[1]);
-            WiVi = new int[n][2];
-            val = new int[n][m];
-            for(int i=0; i<n; i++){
-                split = reader.readLine().split(" ");
-                WiVi[i][0] = Integer.parseInt(split[0]);
-                WiVi[i][1] = Integer.parseInt(split[1]);
-            }
+        String[] split = reader.readLine().split(" ");
+        n = Integer.parseInt(split[0]);
+        m = Integer.parseInt(split[1]);
+        WiVi = new int[n][2];
+        val = new int[n][m];
+        for(int i=0; i<n; i++){
+            split = reader.readLine().split(" ");
+            WiVi[i][0] = Integer.parseInt(split[0]);
+            WiVi[i][1] = Integer.parseInt(split[1]);
+        }
 
-            /**
-             *      n=0，f(0,j)=0
-             *      j=0，f(n,0)=0
-             *      n>1,j<Wi，f(n,j)=f(i-1,j)
-             *      n>1,j>=Wi，f(i,j) = max{ f(i-1,j) , f(i-1,j-Wi) + Vi}
-             */
-            for(int i=0; i<n; i++){
-                int Wi = WiVi[i][0];
-                int Vi = WiVi[i][1];
-                for(int j=1; j<=m; j++){
-                    if(j<Wi){
-                        //n>1,j<Wi，f(n,j)=f(i-1,j)
-                        val[i][j-1] = getVi(i - 1, j);
-                    }else {
-                        //n>1,j>=Wi，f(i,j) = max{ f(i-1,j) , f(i-1,j-Wi) + Vi}
-                        if(getVi(i-1,j) > (getVi(i-1,j-Wi)+Vi)){
-                            val[i][j-1] = getVi(i-1,j);
-                        }else{
-                            val[i][j-1] = (getVi(i-1,j-Wi)+Vi);
-                        }
+        /**
+         *      n=0，f(0,j)=0
+         *      j=0，f(n,0)=0
+         *      n>1,j<Wi，f(n,j)=f(i-1,j)
+         *      n>1,j>=Wi，f(i,j) = max{ f(i-1,j) , f(i-1,j-Wi) + Vi}
+         */
+        for(int i=0; i<n; i++){
+            int Wi = WiVi[i][0];
+            int Vi = WiVi[i][1];
+            for(int j=1; j<=m; j++){
+                if(j<Wi){
+                    //n>1,j<Wi，f(n,j)=f(i-1,j)
+                    val[i][j-1] = getVi(i - 1, j);
+                }else {
+                    //n>1,j>=Wi，f(i,j) = max{ f(i-1,j) , f(i-1,j-Wi) + Vi}
+                    if(getVi(i-1,j) > (getVi(i-1,j-Wi)+Vi)){
+                        val[i][j-1] = getVi(i-1,j);
+                    }else{
+                        val[i][j-1] = (getVi(i-1,j-Wi)+Vi);
                     }
                 }
             }
+        }
 
 //            for(int i=0; i<n; i++){
 //                for(int j=0; j<m; j++){
@@ -83,11 +82,8 @@ public class KnapsackProblem {
 //            }
 
 
-            writer.write(val[n-1][m-1]+"\r\n");
-            writer.flush();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+        writer.write(val[n-1][m-1]+"\r\n");
+        writer.flush();
     }
 
     private static int getVi(int i,int j){

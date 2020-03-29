@@ -45,32 +45,31 @@ public class EditDistance {
     static char[] s = null,t=null;
     static int[][] arr = null;
 
-    public static void main(String[] args){
+    public static void main(String[] args) throws IOException {
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in),1<<16);
         BufferedWriter writer = new BufferedWriter(new OutputStreamWriter(System.out), 1 << 16);
         int i = 0,j = 0;
-        try {
-            String a = reader.readLine();
-            s = a.toCharArray();
-            String b = reader.readLine();
-            t = b.toCharArray();
-            arr = new int[s.length+1][t.length+1];
+        String a = reader.readLine();
+        s = a.toCharArray();
+        String b = reader.readLine();
+        t = b.toCharArray();
+        arr = new int[s.length+1][t.length+1];
 
-            for(; i<=s.length; i++){
-                arr[i][0] = i;
-            }
+        for(; i<=s.length; i++){
+            arr[i][0] = i;
+        }
 
-            for(; j<=t.length; j++){
-                arr[0][j] = j;
-            }
+        for(; j<=t.length; j++){
+            arr[0][j] = j;
+        }
 
-            for(i=0; i<s.length; i++){
-                for(j=0; j<t.length; j++){
-                    //f(i,j) = min{ f(i-1,j-1)+same(i,j) , f(i,j-1)+1 , f(i-1,j)+1 }
-                    int val = chooseMin(i+1, j+1);
-                    arr[i+1][j+1] = val;
-                }
+        for(i=0; i<s.length; i++){
+            for(j=0; j<t.length; j++){
+                //f(i,j) = min{ f(i-1,j-1)+same(i,j) , f(i,j-1)+1 , f(i-1,j)+1 }
+                int val = chooseMin(i+1, j+1);
+                arr[i+1][j+1] = val;
             }
+        }
 
 //            for(i=0; i<s.length+1; i++){
 //                for(j=0; j<t.length+1; j++){
@@ -80,11 +79,8 @@ public class EditDistance {
 //            }
 
 
-            writer.write(arr[s.length][t.length]+"\r\n");
-            writer.flush();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+        writer.write(arr[s.length][t.length]+"\r\n");
+        writer.flush();
 
     }
 

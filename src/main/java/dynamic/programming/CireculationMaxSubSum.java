@@ -22,31 +22,27 @@ public class CireculationMaxSubSum {
     static Node first = null;
     static Node last = null;
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in),1<<16);
-        try {
-            long sum = 0;
-            int n = Integer.parseInt(reader.readLine());
-            for(int i=0; i<n; i++){
-                long t = Long.parseLong(reader.readLine());
-                add(t);
-                sum += t;
-            }
-
-            //求普通的最大字段和
-            long genMaxSubSum = calcMaxSubSum(first);
-
-            //求最小字段和
-            long minSubSum = clacMinSubSum(first);
-
-            long value = sum - minSubSum;
-            if(value < genMaxSubSum){
-                value = genMaxSubSum;
-            }
-            System.out.println(value);
-        } catch (IOException e) {
-            e.printStackTrace();
+        long sum = 0;
+        int n = Integer.parseInt(reader.readLine());
+        for(int i=0; i<n; i++){
+            long t = Long.parseLong(reader.readLine());
+            add(t);
+            sum += t;
         }
+
+        //求普通的最大字段和
+        long genMaxSubSum = calcMaxSubSum(first);
+
+        //求最小字段和
+        long minSubSum = clacMinSubSum(first);
+
+        long value = sum - minSubSum;
+        if(value < genMaxSubSum){
+            value = genMaxSubSum;
+        }
+        System.out.println(value);
     }
 
     private static long calcMaxSubSum(Node item){

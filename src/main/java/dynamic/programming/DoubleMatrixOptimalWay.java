@@ -35,87 +35,82 @@ import java.io.*;
  */
 public class DoubleMatrixOptimalWay {
 
-    public static void main(String[] args){
+    public static void main(String[] args) throws IOException {
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in),1<<16);
-        int n = 0,m = 0;
-        int[][] arr = null;
+        int n, m ;
+        int[][] arr ;
         /*
             vals[step][x1][x2]
             存储每一步中 x1和x2 每一列的情况。例如：第5步时，x1在第2列，x2在第3列时获得的最大价值。
             即 x1在 5-2 第3行，第2列，x2在 5-3 第2行，第3列。这2个获得的最大价值
             如果列数大于步数不计算
         */
-        int[][][] vals = null;
-        try {
-            String[] split = reader.readLine().split(" ");
-            n = Integer.parseInt(split[1]); //行
-            m = Integer.parseInt(split[0]); //列
+        int[][][] vals;
+        String[] split = reader.readLine().split(" ");
+        n = Integer.parseInt(split[1]); //行
+        m = Integer.parseInt(split[0]); //列
 
-            arr = new int[n][m];
-            String[] col = null;
-            for(int i=0; i<n; i++){
-                col = reader.readLine().split(" ");
-                for(int j=0; j<col.length; j++){
-                    arr[i][j] = Integer.parseInt(col[j]);
-                }
+        arr = new int[n][m];
+        String[] col ;
+        for(int i=0; i<n; i++){
+            col = reader.readLine().split(" ");
+            for(int j=0; j<col.length; j++){
+                arr[i][j] = Integer.parseInt(col[j]);
             }
+        }
 
-            //一共n+m-2步，枚举x1,x2处于m列的情况
-            vals = new int[n+m-1][m][m];
+        //一共n+m-2步，枚举x1,x2处于m列的情况
+        vals = new int[n+m-1][m][m];
 
-            for(int s=0; s<n+m-1; s++){       //走s步时
-                for(int j=0; j<m; j++){     //x1走s步后，在第j列时
-                    for(int k=0; k<m; k++){ //x2走s步后，在第k列时
-                        //如果x1或x2处于的列数大于步数不计算
-                        if(j > s || k > s){
-                            break;
-                        } else {
-                            int y1 = s-j;
-                            int y2 = s-k;
-                            //如果x1或x2在走了s步后，计算出的所在行超出原有行，情形不成立，不计算
-                            if(y1 >= n || y2 >= n){
-                                continue;
-                            }
-                            //x1和x2所在的行，列都在合法范围内
-                            /*
-                                x1 != x2   dp[i][j][k]=max(dp[i-1][j][k],dp[i-1][j-1][k],dp[i-1][j][k-1],dp[i-1][j-1][k-1])+M[x1][y1]+M[x2][y2]
-                                x1 = x2  dp[i][j][k] = max(dp[i-1][j][k],dp[i-1][j-1][k],dp[i-1][j][k-1],dp[i-1][j-1][k-1])+M[x1][y1]
-                                max()中意思是，此时x1和x2在的位置，各自能到达x1、x2的所有位置最大价值的位置情况。
-                                如：
-                                    i-1,j,k         i-1,j-1,k       i-1,j,k-1       i-1,j-1,k-1
-                                       x2'               x2'
-                                    x1'x2                x2       (x1'x2')x2           x2'x2
-                                    x1              x1'x1             x1            x1'x1
-                             */
-                            int val;
-                            if(j == k){
-                                val = arr[y1][j];
-                            }else {
-                                int v1 = arr[y1][j];
-                                int v2 = arr[y2][k];
-                                val = v1 + v2;
-                            }
-
-                            //dp[i-1][j][k]
-                            int a = calcNeighborNode(vals, s - 1, j, k);
-                            //dp[i-1][j-1][k]
-                            int b = calcNeighborNode(vals, s - 1, j - 1, k);
-                            //dp[i-1][j][k-1]
-                            int c = calcNeighborNode(vals, s - 1, j, k - 1);
-                            //dp[i-1][j-1][k-1]
-                            int d = calcNeighborNode(vals, s - 1, j - 1, k - 1);
-
-                            int f = maxInt(a, b, c, d);
-                            vals[s][j][k] = f + val;
+        for(int s=0; s<n+m-1; s++){       //走s步时
+            for(int j=0; j<m; j++){     //x1走s步后，在第j列时
+                for(int k=0; k<m; k++){ //x2走s步后，在第k列时
+                    //如果x1或x2处于的列数大于步数不计算
+                    if(j > s || k > s){
+                        break;
+                    } else {
+                        int y1 = s-j;
+                        int y2 = s-k;
+                        //如果x1或x2在走了s步后，计算出的所在行超出原有行，情形不成立，不计算
+                        if(y1 >= n || y2 >= n){
+                            continue;
                         }
+                        //x1和x2所在的行，列都在合法范围内
+                        /*
+                            x1 != x2   dp[i][j][k]=max(dp[i-1][j][k],dp[i-1][j-1][k],dp[i-1][j][k-1],dp[i-1][j-1][k-1])+M[x1][y1]+M[x2][y2]
+                            x1 = x2  dp[i][j][k] = max(dp[i-1][j][k],dp[i-1][j-1][k],dp[i-1][j][k-1],dp[i-1][j-1][k-1])+M[x1][y1]
+                            max()中意思是，此时x1和x2在的位置，各自能到达x1、x2的所有位置最大价值的位置情况。
+                            如：
+                                i-1,j,k         i-1,j-1,k       i-1,j,k-1       i-1,j-1,k-1
+                                   x2'               x2'
+                                x1'x2                x2       (x1'x2')x2           x2'x2
+                                x1              x1'x1             x1            x1'x1
+                         */
+                        int val;
+                        if(j == k){
+                            val = arr[y1][j];
+                        }else {
+                            int v1 = arr[y1][j];
+                            int v2 = arr[y2][k];
+                            val = v1 + v2;
+                        }
+
+                        //dp[i-1][j][k]
+                        int a = calcNeighborNode(vals, s - 1, j, k);
+                        //dp[i-1][j-1][k]
+                        int b = calcNeighborNode(vals, s - 1, j - 1, k);
+                        //dp[i-1][j][k-1]
+                        int c = calcNeighborNode(vals, s - 1, j, k - 1);
+                        //dp[i-1][j-1][k-1]
+                        int d = calcNeighborNode(vals, s - 1, j - 1, k - 1);
+
+                        int f = maxInt(a, b, c, d);
+                        vals[s][j][k] = f + val;
                     }
                 }
             }
-
-            System.out.println(vals[n+m-2][m-1][m-1]);
-        } catch (IOException e) {
-            e.printStackTrace();
         }
+        System.out.println(vals[n+m-2][m-1][m-1]);
     }
 
     private static int calcNeighborNode(int[][][] vals,int s,int j,int k){
