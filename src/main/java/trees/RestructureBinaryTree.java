@@ -59,8 +59,8 @@ public class RestructureBinaryTree {
             return new TreeNode(preorder[0]);
 
         List<Integer> inList = new ArrayList<>();
-        for (int i = 0; i < inorder.length; i++) {
-            inList.add(inorder[i]);
+        for (int value : inorder) {
+            inList.add(value);
         }
 
         TreeNode root = new TreeNode(preorder[0]);
@@ -124,8 +124,6 @@ public class RestructureBinaryTree {
             }
         }
         for (right++; right < inOrder.size(); right++) {
-            if (inOrder.get(right) == root)
-                break;
             if (used.contains(inOrder.get(right)))
                 continue;
             list.add(inOrder.get(right));
