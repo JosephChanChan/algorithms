@@ -23,6 +23,11 @@ import java.io.InputStreamReader;
  * 输出
  * 复制
  * 2
+ *
+ * Analysis:
+ *  因为对动态规划的不熟练，这题还是写了3~4个钟... 在笔试中早就挂了，还是太菜
+ *  时间复杂度：O(n*m) n和m分别为2个字符串的长度
+ *  空间复杂度：O(n*m)
  */
 public class LongestCommonSubstring {
 
@@ -36,18 +41,27 @@ public class LongestCommonSubstring {
 
     public int dpCalc() throws IOException {
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in),1<<16);
-        String s = reader.readLine();
-        String t = reader.readLine();
-        return doCalc(s, t);
+        String temp = reader.readLine();
+        String[] str = temp.split(",");
+        return doCalc(str[0], str[1]);
     }
 
     private int doCalc(String s, String t) {
         /*
-            f[i][j] s中前i位和t中前j位最长的公共子串
-            if s[i]=t[j] && s[i-1]==t[j-1]
-                f[i][j]=f[i-1][j-1]+1
-            else
-                f[i][j] = max{f[i-1][j-1], f[i-1][j], f[i][j-1]}
+            f[i][j] s前i位和t前j位中以s[i]和t[j]结尾的最长公共子串
+            即s前i位和t前j位中可能存在一个最长公共子串，这个子串的结尾是s[i]=t[j]。
+            思考，前i-1位和前j-1位中可能存在一个公共子串 A1 A2 ... Ak-1，
+            如果当前Si == Tj设为Ak，那么将前面的公共子串+Ak就可以得到更长的公共子串，但是Ak-1必须和Ak连着的，
+            即Ak-1 = Si-1 = Tj-1，如果Si-1 != Tj-1 那么即使前面存在一个Ak-1的子串，也不能和Ak连着，所以f[i][j]=1。
+            如果Si != Tj，因为状态的定义，所以f[i][j]=0
+            所以得出转移方程：
+                if Si == Tj && Si-1 == Tj-1
+                    f[i][j] = f[i-1][j-1] + 1
+                else if Si == Tj && Si-1 != Tj-1
+                    f[i][j] = 1
+                else
+                    f[i][j] = 0
+
             边界  f[i][j]=0, i=j<0
          */
         char[] sArray = s.toCharArray();
@@ -64,19 +78,21 @@ public class LongestCommonSubstring {
                 if (i == 0 && j == 0) {
                     continue;
                 }
-                int max = Math.max(getPre(i - 1, j - 1), getPre(i - 1, j));
-                max = Math.max(max, getPre(i, j - 1));
-                if (sArray[i] == tArray[j]) {
-                    if (i == 0 || j == 0) {
-                        max = 1;
-                    }
-                    else if (sArray[i-1] == tArray[j-1]) {
-                        max = getPre(i - 1, j - 1) + 1;
-                    }
+                if (i == 0 || j == 0) {
+                    commonSubLength[i][j] = sArray[i] == tArray[j] ? 1 : 0;
+                    continue;
                 }
-                commonSubLength[i][j] = max;
-                if (max > totalMax) {
-                    totalMax = max;
+                if (sArray[i] == tArray[j] && sArray[i-1] == tArray[j-1]) {
+                    commonSubLength[i][j] = getPre(i-1, j-1) + 1;
+                }
+                else if (sArray[i] == tArray[j] && sArray[i-1] != tArray[j-1]) {
+                    commonSubLength[i][j] = 1;
+                }
+                else {
+                    commonSubLength[i][j] = 0;
+                }
+                if (commonSubLength[i][j] > totalMax) {
+                    totalMax = commonSubLength[i][j];
                 }
             }
         }
