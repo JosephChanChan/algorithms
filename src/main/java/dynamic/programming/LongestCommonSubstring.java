@@ -67,7 +67,12 @@ public class LongestCommonSubstring {
                 int max = Math.max(getPre(i - 1, j - 1), getPre(i - 1, j));
                 max = Math.max(max, getPre(i, j - 1));
                 if (sArray[i] == tArray[j]) {
-                    max += 1;
+                    if (i == 0 || j == 0) {
+                        max = 1;
+                    }
+                    else if (sArray[i-1] == tArray[j-1]) {
+                        max = getPre(i - 1, j - 1) + 1;
+                    }
                 }
                 commonSubLength[i][j] = max;
                 if (max > totalMax) {
