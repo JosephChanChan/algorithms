@@ -18,6 +18,8 @@
   * [MatrixOptimalWay 矩阵取数问题](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/dynamic/programming/MatrixOptimalWay.java)
 
   * [MaxCommSubSequence 最大公共子序列](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/dynamic/programming/MaxCommSubSequence.java)
+  
+  * [LongestCommonSubstring 最长公共子串](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/dynamic/programming/LongestCommonSubstring.java)
 
   * [MaxSubMatrixSum 最大子矩阵和问题](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/dynamic/programming/MaxSubMatrixSum.java)
 
