@@ -6,8 +6,8 @@ import java.util.concurrent.atomic.AtomicInteger;
 /**
  * 单向循环链表，一直遍历到尾部，超出尾部则循环到头部继续遍历。
  *
- * @author: Joseph
- * @datetime: 2019/4/20 16:11
+ * @author Joseph
+ * @since  2019/4/20 16:11
  */
 public class SingleTrackCircularLinkedList <T> {
 

@@ -6,7 +6,7 @@ package tables.component;
  */
 public abstract class ListNode {
 
-    public int data;
+    public long data;
 
     public ListNode next;
 
@@ -15,11 +15,11 @@ public abstract class ListNode {
     /* Constructor */
     public ListNode() {}
 
-    public ListNode(int data) {
+    public ListNode(long data) {
         this.data = data;
     }
 
-    public ListNode(int data, ListNode next) {
+    public ListNode(long data, ListNode next) {
         this.data = data;
         this.next = next;
     }
@@ -28,7 +28,7 @@ public abstract class ListNode {
     public int hashCode() {
         if (data == 0)
             return super.hashCode();
-        return (data << 5 + 1) | super.hashCode();
+        return (int) (data << 5 + 1) | super.hashCode();
     }
 
     @Override
@@ -50,7 +50,7 @@ public abstract class ListNode {
 
     /* Setter And Getter */
 
-    public int getData() {
+    public long getData() {
         return data;
     }
 

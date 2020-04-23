@@ -1,0 +1,37 @@
+对于Leetcode和Lintcode都提供函数，直接在函数内编写代码实现算法就可以。
+但对于传统的OJ平台需要自己实现输入和输出函数，常见的有3种形式的输入和输出。
+
+1、未知输入数据的组数
+public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        while (scanner.hasNextInt()) {
+            int a, b, c;
+            a = scanner.nextInt();
+            b = scanner.nextInt();
+            c = scanner.nextInt();
+        }
+}
+
+因为本地调试时可以在最后一组数据的末尾加空格，hasNextInt()判断最后一个输入是空格而结束
+
+2、已知输入数据的组数
+public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        int n = scanner.nextInt();
+        for (int i = 0; i < n; i++) {
+            int a, b, c;
+            a = scanner.nextInt();
+            b = scanner.nextInt();
+            c = scanner.nextInt();
+        }
+}
+
+3、输入数据只有一组
+public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        int n = scanner.nextInt();
+        int a, b, c;
+        a = scanner.nextInt();
+        b = scanner.nextInt();
+        c = scanner.nextInt();
+}

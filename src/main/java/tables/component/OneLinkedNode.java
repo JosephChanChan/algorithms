@@ -9,11 +9,11 @@ package tables.component;
 public class OneLinkedNode extends ListNode {
 
 
-    public OneLinkedNode(int data) {
+    public OneLinkedNode(long data) {
         super(data);
     }
 
-    public OneLinkedNode(int data, OneLinkedNode next) {
+    public OneLinkedNode(long data, OneLinkedNode next) {
         super(data, next);
     }
 
