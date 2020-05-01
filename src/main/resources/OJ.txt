@@ -12,7 +12,8 @@ public static void main(String[] args) {
         }
 }
 
-因为本地调试时可以在最后一组数据的末尾加空格，hasNextInt()判断最后一个输入是空格而结束
+因为本地调试时可以在最后一组数据的末尾加空格和#，hasNextInt()判断最后一个输入是空格而结束
+类似 1 2 3 4 #
 
 2、已知输入数据的组数
 public static void main(String[] args) {
