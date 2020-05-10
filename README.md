@@ -1,7 +1,65 @@
 ### 与大家分享我学习算法的一些经历。这个项目不定期更新。
 --------------------------------------------------------
+  
+### 表相关：
+* [LinkedList 单向链表 (C实现)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/tables/LinkedList.cpp)
 
-### 动态规划：
+* [SingleCircularLinkedList 单向循环链表 ](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/tables/SingleTrackCircularLinkedList.java)
+
+* [SwapNodesSingleLinked 交换节点(leetcode 24)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/tables/SwapNodesSingleLinked.java)
+
+* [BitMap 位图算法](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/tables/BitMap.java)
+
+* [BitMapTest 位图测试用例](https://github.com/JosephChanChan/algorithms/blob/master/src/main/varietyOfFibonacci/BitMapTest.java)
+
+* [RearrangeLinkedList (计科408某题)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/tables/RearrangeLinkedList.java)
+
+* [MinimumIncrement2MakeArrayUnique (leetcode 945)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/tables/RearrangeLinkedList.java)
+
+* [CircularLinkedList (leetcode 141)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/tables/CircularLinkedList.java)
+
+* [KthNodeFromEnd (剑指Offer 22)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/tables/KthNodeFromEnd.java)
+
+### 树相关：
+
+  * [AVLTree 平衡二叉搜索树](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/trees/AVLTree.java)
+  
+  * [AVLTreeTest 平衡二叉树测试用例](https://github.com/JosephChanChan/algorithms/blob/6a9a1269f54383ac5cfa9315b99e4032b0847c02/src/main/java/trees/AVLTreeTest.java)
+  
+  * [BinarySearch 二分查找](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/trees/BinarySearch.java)
+  
+  * [BinaryHeap 二叉堆(优先队列)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/trees/BinaryHeap.java)
+  
+  * [MaxDepth4Tree 树深度(leetcode 104)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/trees/MaxDepth4Tree.java)
+
+  * [Num2TreeSum 数组树的和](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/trees/Num2TreeSum.java)
+  
+  * [ValidBinarySearchTree 校验BST(leetcode 98)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/trees/ValidBinarySearchTree.java)
+  
+  * [SameTree 校验二叉树(leetcode 100)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/trees/SameTree.java)
+  
+  * [BinaryTreeInorderTraversal 树的中序遍历(递归与迭代)(leetcode 94)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/trees/BinaryTreeInorderTraversal.java)
+  
+  * [BinaryTreeLevelOrderTraversal 树的层级遍历(递归与迭代)(leetcode 102)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/trees/BinaryTreeLevelOrderTraversal.java)
+  
+  * [RestructureBinaryTree 重建二叉树(剑指Offer 7)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/trees/RestructureBinaryTree.java)
+  
+
+### 图相关：
+
+  * [BFSAlgorithm 广度优先搜索](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/graphs/BFSAlgorithm.java)
+  
+  * [PrimAlgorithm 最小生成树 (C++实现)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/graphs/PrimAlgorithm.cpp)
+
+* [KruskalAlgorithm 最小生成树 (C++实现)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/graphs/KruskalAlgorithm.cpp)
+  
+### 字符串相关：
+
+  * [KMPAlgorithm KMP算法](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/string/KMPAlgorithm.java)
+  
+  * [ReverseString 反转字符串(递归+双指针)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/string/ReverseString.java)
+  
+  ### 动态规划：
 
   * [CireculationMaxSubSum 循环最大字段和](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/dynamic/programming/CireculationMaxSubSum.java)
   
@@ -124,64 +182,6 @@
   * [QuickSort 快速排序](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/sort/QuickSort.java)
   
   * [MergeSort 归并排序](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/sort/MergeSort.java)
-  
-### 表相关：
-* [LinkedList 单向链表 (C实现)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/tables/LinkedList.cpp)
-
-* [SingleCircularLinkedList 单向循环链表 ](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/tables/SingleTrackCircularLinkedList.java)
-
-* [SwapNodesSingleLinked 交换节点(leetcode 24)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/tables/SwapNodesSingleLinked.java)
-
-* [BitMap 位图算法](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/tables/BitMap.java)
-
-* [BitMapTest 位图测试用例](https://github.com/JosephChanChan/algorithms/blob/master/src/main/varietyOfFibonacci/BitMapTest.java)
-
-* [RearrangeLinkedList (计科408某题)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/tables/RearrangeLinkedList.java)
-
-* [MinimumIncrement2MakeArrayUnique (leetcode 945)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/tables/RearrangeLinkedList.java)
-
-* [CircularLinkedList (leetcode 141)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/tables/CircularLinkedList.java)
-
-* [KthNodeFromEnd (剑指Offer 22)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/tables/KthNodeFromEnd.java)
-
-### 树相关：
-
-  * [AVLTree 平衡二叉搜索树](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/trees/AVLTree.java)
-  
-  * [AVLTreeTest 平衡二叉树测试用例](https://github.com/JosephChanChan/algorithms/blob/6a9a1269f54383ac5cfa9315b99e4032b0847c02/src/main/java/trees/AVLTreeTest.java)
-  
-  * [BinarySearch 二分查找](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/trees/BinarySearch.java)
-  
-  * [BinaryHeap 二叉堆(优先队列)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/trees/BinaryHeap.java)
-  
-  * [MaxDepth4Tree 树深度(leetcode 104)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/trees/MaxDepth4Tree.java)
-
-  * [Num2TreeSum 数组树的和](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/trees/Num2TreeSum.java)
-  
-  * [ValidBinarySearchTree 校验BST(leetcode 98)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/trees/ValidBinarySearchTree.java)
-  
-  * [SameTree 校验二叉树(leetcode 100)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/trees/SameTree.java)
-  
-  * [BinaryTreeInorderTraversal 树的中序遍历(递归与迭代)(leetcode 94)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/trees/BinaryTreeInorderTraversal.java)
-  
-  * [BinaryTreeLevelOrderTraversal 树的层级遍历(递归与迭代)(leetcode 102)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/trees/BinaryTreeLevelOrderTraversal.java)
-  
-  * [RestructureBinaryTree 重建二叉树(剑指Offer 7)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/trees/RestructureBinaryTree.java)
-  
-
-### 图相关：
-
-  * [BFSAlgorithm 广度优先搜索](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/graphs/BFSAlgorithm.java)
-  
-  * [PrimAlgorithm 最小生成树 (C++实现)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/graphs/PrimAlgorithm.cpp)
-
-* [KruskalAlgorithm 最小生成树 (C++实现)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/graphs/KruskalAlgorithm.cpp)
-  
-### 字符串相关：
-
-  * [KMPAlgorithm KMP算法](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/string/KMPAlgorithm.java)
-  
-  * [ReverseString 反转字符串(递归+双指针)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/string/ReverseString.java)
 
 ### 多线程：
 
