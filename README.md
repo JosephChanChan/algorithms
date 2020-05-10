@@ -191,11 +191,9 @@
   
   * [ScheduledThreadPoolExecutor的scheduleAtFixedRate方法探究](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/multithreads/ScheduleAtFixedRateTest.java)
 
-### 其他算法：
+### 积累：
 
   * [CountsOfNum 一的个数](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/CountsOfNum.java)
-
-  * [FibonacciSequence 斐波那契(非递归)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/FibonacciSequence.java)
 
   * [MoveZeros 移动0](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/MoveZeros.java)
 
