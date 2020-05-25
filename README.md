@@ -59,7 +59,7 @@
   
   * [ReverseString 反转字符串(递归+双指针)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/string/ReverseString.java)
   
-  * [PalindromePartitioning leetcode 131](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/string/PalindromePartitioning.java)
+  * [PalindromePartitioning (leetcode 131)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/string/PalindromePartitioning.java)
   
   ### 动态规划：
   
