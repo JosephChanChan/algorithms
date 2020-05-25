@@ -60,8 +60,6 @@
   * [ReverseString 反转字符串(递归+双指针)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/string/ReverseString.java)
   
   ### 动态规划：
-
-  * [CireculationMaxSubSum 循环最大字段和](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/dynamic/programming/CireculationMaxSubSum.java)
   
   * [EditDistance 编辑距离问题](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/dynamic/programming/EditDistance.java)
 
@@ -81,7 +79,9 @@
 
   * [MaxSubMatrixSum 最大子矩阵和问题](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/dynamic/programming/MaxSubMatrixSum.java)
 
-  * [MaxSubSectionSum 最大子段和问题](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/dynamic/programming/MaxSubSectionSum.java)
+  * [MaxSubSectionSum 最大子段和问题 (leetcode 53)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/dynamic/programming/MaxSubSectionSum.java)
+  
+  * [CirculationMaxSubSum 循环最大字段和 (lintcode 1724)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/dynamic/programming/CirculationMaxSubSum.java)
   
   * [DoubleMatrixOptimalWay 双路矩阵取数问题](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/dynamic/programming/DoubleMatrixOptimalWay.java)
   
@@ -96,8 +96,6 @@
   * [BuyAndSellStock 炒股入门(leetcode 121)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/dynamic/programming/BuyAndSellStock.java)
   
   * [CombinationSum 数字组合方案(leetcode 39)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/dynamic/programming/CombinationSum.java)
-  
-  * [VarietyOfFibonacci 斐波那契变种](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/dynamic/programming/VarietyOfFibonacci.java)
 
   
 ### 贪心算法：
