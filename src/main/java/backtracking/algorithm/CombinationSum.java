@@ -1,6 +1,4 @@
-package dynamic.programming;
-
-import sort.QuickSort;
+package backtracking.algorithm;
 
 import java.util.*;
 
@@ -55,13 +53,20 @@ import java.util.*;
  *
  * 时间复杂度：O(target * candidates.length)
  * 空间复杂度：O(target)
+ *
+ * 2020-05-31 有空来更新下DFS的做法
+ *  DFS，搜索每个数字开头的和为t的方案。
+ * 注意：1. 数字可重复选。2. 组合方案要唯一，如 t=7 [2,2,3]等价[2,3,2]
+ *
+ * 时间复杂度：不好估计
+ * 空间复杂度：解的个数
  */
 public class CombinationSum {
 
     public static void main(String[] args) {
         /*int[] candidates = new int[]{2,3,6,7};
         int target = 8;*/
-        int[] candidates = new int[]{3,12,9,11,6,7,8,5,4};
+        int[] candidates = new int[]{1,3,12,9,11,6,7,8,5,4};
         int target = 15;
         CombinationSum combinationSum = new CombinationSum();
         List<List<Integer>> lists = combinationSum.combinationSum(candidates, target);
@@ -75,13 +80,44 @@ public class CombinationSum {
     }
 
     /*
+        正解：DFS，搜索每个数字开头的和为t的方案。
+        注意：1. 数字可重复选。2. 组合方案要唯一，如 t=7 [2,2,3]等价[2,3,2]
+     */
+    public List<List<Integer>> combinationSum(int[] candidates, int target) {
+        List<List<Integer>> solutions = new ArrayList<>();
+        Arrays.sort(candidates);
+        dfs(candidates, target, 0, 0, new ArrayList<>(), solutions);
+        return solutions;
+    }
+
+    private void dfs(int[] candidates, int target, int index, int sum,
+                     List<Integer> solution, List<List<Integer>> solutions) {
+        if (sum == target) {
+            solutions.add(new ArrayList<>(solution));
+            return;
+        }
+
+        for (int i = index; i < candidates.length; i++) {
+            if (sum + candidates[i] > target) return;
+
+            solution.add(candidates[i]);
+            // 搜索所有以 i 开头的和为t的数字组合方案
+            dfs(candidates, target, i, sum + candidates[i], solution, solutions);
+            solution.remove(solution.size() - 1);
+        }
+    }
+
+
+
+    /*
+        以下为DP解法，DP不适合做这种求全部解的题目
         f(t) = f(t-c[i1]) + ... + f(t-c[in])
         border:
         f(t) = 0, t < 0;
         f(t) = 1, t = 0;
      */
 
-    private HashMap<Integer, CombinationPlan> memory ;
+    /*private HashMap<Integer, CombinationPlan> memory ;
 
     public List<List<Integer>> combinationSum(int[] candidates, int target) {
         if (target == 0) return new ArrayList<>();
@@ -144,7 +180,7 @@ public class CombinationSum {
         String[] split = list.split("\\+");
         Integer[] convert = convert(split);
         Arrays.sort(convert);
-        /*QuickSort.doQuickSort(convert, 0, convert.length - 1);*/
+        *//*QuickSort.doQuickSort(convert, 0, convert.length - 1);*//*
         return convert(convert);
     }
 
@@ -183,8 +219,6 @@ public class CombinationSum {
         public void setElementList(List<List<Integer>> elementList) {
             this.elementList = elementList;
         }
-    }
-
-
+    }*/
 
 }
