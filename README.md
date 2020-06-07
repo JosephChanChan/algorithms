@@ -2,23 +2,23 @@
 --------------------------------------------------------
   
 ### 表相关：
-* [LinkedList 单向链表 (C实现)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/tables/LinkedList.cpp)
+* [LinkedList 单向链表(C实现)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/tables/LinkedList.cpp)
 
-* [SingleCircularLinkedList 单向循环链表 ](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/tables/SingleTrackCircularLinkedList.java)
+* [SingleCircularLinkedList 单向循环链表](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/tables/SingleTrackCircularLinkedList.java)
 
-* [SwapNodesSingleLinked 交换节点(leetcode 24)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/tables/SwapNodesSingleLinked.java)
+* [SwapNodesSingleLinked leetcode 24](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/tables/SwapNodesSingleLinked.java)
 
 * [BitMap 位图算法](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/tables/BitMap.java)
 
 * [BitMapTest 位图测试用例](https://github.com/JosephChanChan/algorithms/blob/master/src/main/varietyOfFibonacci/BitMapTest.java)
 
-* [RearrangeLinkedList (计科408某题)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/tables/RearrangeLinkedList.java)
+* [RearrangeLinkedList 链表原地逆置](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/tables/RearrangeLinkedList.java)
 
-* [MinimumIncrement2MakeArrayUnique (leetcode 945)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/tables/RearrangeLinkedList.java)
+* [MinimumIncrement2MakeArrayUnique leetcode 945](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/tables/RearrangeLinkedList.java)
 
-* [CircularLinkedList (leetcode 141)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/tables/CircularLinkedList.java)
+* [CircularLinkedList leetcode 141](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/tables/CircularLinkedList.java)
 
-* [KthNodeFromEnd (剑指Offer 22)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/tables/KthNodeFromEnd.java)
+* [KthNodeFromEnd 剑指Offer 22](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/tables/KthNodeFromEnd.java)
 
 ### 树相关：
 
@@ -30,19 +30,19 @@
   
   * [BinaryHeap 二叉堆(优先队列)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/trees/BinaryHeap.java)
   
-  * [MaxDepth4Tree 树深度(leetcode 104)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/trees/MaxDepth4Tree.java)
+  * [MaxDepth4Tree leetcode 104](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/trees/MaxDepth4Tree.java)
 
   * [Num2TreeSum 数组树的和](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/trees/Num2TreeSum.java)
   
-  * [ValidBinarySearchTree 校验BST(leetcode 98)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/trees/ValidBinarySearchTree.java)
+  * [ValidBinarySearchTree leetcode 98](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/trees/ValidBinarySearchTree.java)
   
-  * [SameTree 校验二叉树(leetcode 100)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/trees/SameTree.java)
+  * [SameTree leetcode 100](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/trees/SameTree.java)
   
   * [BinaryTreeInorderTraversal 树的中序遍历(递归与迭代)(leetcode 94)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/trees/BinaryTreeInorderTraversal.java)
   
   * [BinaryTreeLevelOrderTraversal 树的层级遍历(递归与迭代)(leetcode 102)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/trees/BinaryTreeLevelOrderTraversal.java)
   
-  * [RestructureBinaryTree 重建二叉树(剑指Offer 7)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/trees/RestructureBinaryTree.java)
+  * [RestructureBinaryTree 剑指Offer 7](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/trees/RestructureBinaryTree.java)
   
 
 ### 图相关：
@@ -59,7 +59,7 @@
   
   * [ReverseString 反转字符串(递归+双指针)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/string/ReverseString.java)
   
-  * [PalindromePartitioning (leetcode 131)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/string/PalindromePartitioning.java)
+  * [PalindromePartitioning leetcode 131](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/string/PalindromePartitioning.java)
   
   ### 动态规划：
   
@@ -81,9 +81,9 @@
 
   * [MaxSubMatrixSum 最大子矩阵和问题](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/dynamic/programming/MaxSubMatrixSum.java)
 
-  * [MaxSubSectionSum 最大子段和问题 (leetcode 53)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/dynamic/programming/MaxSubSectionSum.java)
+  * [MaxSubSectionSum leetcode 53](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/dynamic/programming/MaxSubSectionSum.java)
   
-  * [CirculationMaxSubSum 循环最大字段和 (lintcode 1724)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/dynamic/programming/CirculationMaxSubSum.java)
+  * [CirculationMaxSubSum lintcode 1724](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/dynamic/programming/CirculationMaxSubSum.java)
   
   * [DoubleMatrixOptimalWay 双路矩阵取数问题](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/dynamic/programming/DoubleMatrixOptimalWay.java)
   
@@ -93,32 +93,30 @@
   
   * [SeekLover 寻找恋人](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/dynamic/programming/SeekLover.java)
   
-  * [HouseRobber 屋匪(leetcode 198)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/dynamic/programming/HouseRobber.java)
+  * [HouseRobber leetcode 198](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/dynamic/programming/HouseRobber.java)
 
-  * [BuyAndSellStock 炒股入门(leetcode 121)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/dynamic/programming/BuyAndSellStock.java)
-  
-  * [CombinationSum 数字组合方案(leetcode 39)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/dynamic/programming/CombinationSum.java)
+  * [BuyAndSellStock leetcode 121](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/dynamic/programming/BuyAndSellStock.java)
 
   
 ### 贪心算法：
 
-  * [DugoutCanone 独木舟](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/greedy/algorithm/DugoutCanone.java)
+  * [DugoutCanone](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/greedy/algorithm/DugoutCanone.java)
   
-  * [PerfectString 完美字符串](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/greedy/algorithm/PerfectString.java)
+  * [PerfectString](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/greedy/algorithm/PerfectString.java)
   
-  * [ActivePlan 活动安排](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/greedy/algorithm/ActivePlan.java)
+  * [ActivePlan](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/greedy/algorithm/ActivePlan.java)
   
-  * [ActivePlan2 活动安排2 (C++实现)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/greedy/algorithm/ActivePlan2.cpp)
+  * [ActivePlan2 C++实现](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/greedy/algorithm/ActivePlan2.cpp)
   
-  * [MissionOrder 任务执行顺序 (C++实现)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/greedy/algorithm/MissionOrder.cpp)
+  * [MissionOrder C++实现](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/greedy/algorithm/MissionOrder.cpp)
   
-  * [WoodIncisionProblem 老头砍木头(Huffman算法)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/greedy/algorithm/WoodIncisionProblem.java)
+  * [WoodIncisionProblem Huffman算法](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/greedy/algorithm/WoodIncisionProblem.java)
   
-  * [FleeMaze 逃离迷宫(Dijkstra算法)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/greedy/algorithm/FleeMaze.java)
+  * [FleeMaze Dijkstra算法](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/greedy/algorithm/FleeMaze.java)
   
 ### 回溯法：
 
-  * [N_Queen N皇后(leetcode 52)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/backtracking/algorithm/N_Queen.java)
+  * [N_Queen leetcode 52](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/backtracking/algorithm/N_Queen.java)
   
   * [FloorMoppingRobot 优秀的扫地机器人](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/backtracking/algorithm/FloorMoppingRobot.java)
   
@@ -126,39 +124,43 @@
 
   * [CalculateBill 检查账单](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/backtracking/algorithm/CalculateBill.java)
   
-  * [SudokuSolver 数独专家(leetcode 37)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/backtracking/algorithm/SudokuSolver.java)
+  * [SudokuSolver leetcode 37](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/backtracking/algorithm/SudokuSolver.java)
   
-  * [Combinations 组合数方案(leetcode 77)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/backtracking/algorithm/Combinations.java)
+  * [Combinations leetcode 77](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/backtracking/algorithm/Combinations.java)
   
-  * [GenerateParentheses 括号匹配(leetcode 22)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/backtracking/algorithm/GenerateParentheses.java)
+  * [CombinationSum leetcode 39](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/dynamic/programming/CombinationSum.java)
   
-  * [Permutation 全排列(leetcode 46)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/backtracking/algorithm/Permutation.java)
+  * [Combinations leetcode 77](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/backtracking/algorithm/Combinations.java)
   
-  * [LetterCombinationsPhoneNumber 字母组合(leetcode 17)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/backtracking/algorithm/LetterCombinationsPhoneNumber.java)
+  * [GenerateParentheses leetcode 22](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/backtracking/algorithm/GenerateParentheses.java)
+  
+  * [Permutation leetcode 46](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/backtracking/algorithm/Permutation.java)
+  
+  * [LetterCombinationsPhoneNumber leetcode 17](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/backtracking/algorithm/LetterCombinationsPhoneNumber.java)
   
   ### 递归法：
   
-  * [PascalTriangle 杨辉三角(leetcode 119)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/recursion/PascalTriangle.java)
+  * [PascalTriangle leetcode 119](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/recursion/PascalTriangle.java)
   
-  * [ReverseList 反转单向链表(leetcode 206)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/recursion/ReverseList.java)
+  * [ReverseList leetcode 206](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/recursion/ReverseList.java)
   
   * [TowerOfHanoi 汉诺塔问题](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/recursion/TowerOfHanoi.java)
   
-  * [FibonacciSequence2 斐波那契数列(leetcode 509)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/recursion/FibonacciSequence2.java)
+  * [FibonacciSequence2 leetcode 509](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/recursion/FibonacciSequence2.java)
   
-  * [ClimbStairs 爬楼梯(leetcode 70)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/recursion/ClimbStairs.java)
+  * [ClimbStairs leetcode 70](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/recursion/ClimbStairs.java)
   
-  * [PowOfNum 幂运算(leetcode 50)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/recursion/PowOfNum.java)
+  * [PowOfNum leetcode 50](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/recursion/PowOfNum.java)
   
-  * [MergeSortedList 合并有序双链表(leetcode 21)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/recursion/MergeSortedList.java)
+  * [MergeSortedList leetcode 21](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/recursion/MergeSortedList.java)
   
-  * [KthSymbol 第K个符号问题(leetcode 779)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/recursion/KthSymbol.java)
+  * [KthSymbol leetcode 779](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/recursion/KthSymbol.java)
   
-  * [UniqueBinarySearchTrees2 所有的唯一二叉树(leetcode 95)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/recursion/UniqueBinarySearchTrees2.java)
+  * [UniqueBinarySearchTrees2 leetcode 95](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/recursion/UniqueBinarySearchTrees2.java)
   
-  * [Search2DMatrix 搜索二维矩阵(leetcode 74)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/recursion/Search2DMatrix.java)
+  * [Search2DMatrix leetcode 74](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/recursion/Search2DMatrix.java)
   
-  * [Search2DMatrix2 搜索二维矩阵(leetcode 240)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/recursion/Search2DMatrix2.java)
+  * [Search2DMatrix2 leetcode 240](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/recursion/Search2DMatrix2.java)
   
  
 ### 模拟法：
@@ -182,14 +184,7 @@
   * [QuickSort 快速排序](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/sort/QuickSort.java)
   
   * [MergeSort 归并排序](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/sort/MergeSort.java)
-
-### 多线程：
-
-  * [ProducerAndConsumer 生产者消费者](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/multithreads/ProducerAndConsumer.java)
   
-  * [CountDownLatchDemo 闭锁简单演示](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/multithreads/CountDownLatchDemo.java)
-  
-  * [ScheduledThreadPoolExecutor的scheduleAtFixedRate方法探究](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/multithreads/ScheduleAtFixedRateTest.java)
 
 ### 积累：
 
@@ -205,5 +200,5 @@
   
   * [MissingPositiveSmallestNum 消失的最小正整数](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/MissingPositiveSmallestNum.java) 
 
-  * [MostWaterInContainer 装水最多的面积(leetcode 11)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/MostWaterInContainer.java) 
+  * [MostWaterInContainer leetcode 11](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/MostWaterInContainer.java) 
 
