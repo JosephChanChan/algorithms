@@ -8,9 +8,9 @@ package tables;
  * @author Joseph
  * @since 2020-01-12 17:15
  */
-public class BitMap {
+public class BitSet {
 
-    private byte[] bitMap ;
+    private byte[] bitSet ;
 
 
 
@@ -19,9 +19,9 @@ public class BitMap {
      *
      * @param num 数字
      */
-    public BitMap(int num) {
+    public BitSet(int num) {
         // 数组长度最大限制在 Int.max
-        bitMap = new byte[(num >> 3) + 1];
+        bitSet = new byte[(num >> 3) + 1];
     }
 
     /**
@@ -34,7 +34,7 @@ public class BitMap {
         int index = getIndex(k);
         checkRange(k, index);
 
-        bitMap[index] &= (1 << getPosition(k));
+        bitSet[index] |= (1 << getPosition(k));
     }
 
     /**
@@ -47,7 +47,7 @@ public class BitMap {
         int index = getIndex(k);
         checkRange(k, index);
 
-        bitMap[index] &= ~(1 << getPosition(k));
+        bitSet[index] &= ~(1 << getPosition(k));
     }
 
     /**
@@ -59,10 +59,9 @@ public class BitMap {
      */
     public boolean contains(int k) {
         int index = getIndex(k);
-        if (index > bitMap.length) return false;
+        if (index > bitSet.length) return false;
 
-        // 为了避免k是负数，判断不等于0
-        return (bitMap[index] | ~(1 << getPosition(k))) != 0;
+        return (bitSet[index] & (1 << getPosition(k))) > 0;
     }
 
 
@@ -80,7 +79,7 @@ public class BitMap {
     }
 
     private void checkRange(int k, int index) {
-        if (index > bitMap.length) {
+        if (index > bitSet.length) {
             throw new IllegalArgumentException("The number k are exceed the bound of bitmap!");
         }
     }
