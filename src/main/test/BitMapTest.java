@@ -1,4 +1,3 @@
-import tables.BitMap;
 
 import java.util.BitSet;
 import java.util.HashMap;
