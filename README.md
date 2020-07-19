@@ -135,7 +135,7 @@
   
   * [LetterCombinationsPhoneNumber (leetcode 17)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/backtracking/algorithm/LetterCombinationsPhoneNumber.java)
   
-  ### 递归法：
+  ### 递归/深搜：
 
   * [TowerOfHanoi 汉诺塔](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/recursion/TowerOfHanoi.java)
   
