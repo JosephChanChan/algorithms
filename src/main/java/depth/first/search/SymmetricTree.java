@@ -1,4 +1,4 @@
-package depth.search;
+package depth.first.search;
 
 import java.util.ArrayList;
 import java.util.LinkedList;
