@@ -135,7 +135,7 @@
   
   * [LetterCombinationsPhoneNumber (leetcode 17)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/backtracking/algorithm/LetterCombinationsPhoneNumber.java)
   
-  ### 递归/深搜：
+  ### 递归/深搜/宽搜：
 
   * [TowerOfHanoi 汉诺塔](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/recursion/TowerOfHanoi.java)
   
@@ -166,6 +166,14 @@
   * [ConstructBinaryTree2 (leetcode 106)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/depth.first.search/ConstructBinaryTree2.java)
   
   * [ConvertSortedArray2BST (leetcode 108)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/depth.first.search/ConvertSortedArray2BST.java)
+  
+  * [HeightOfBST (leetcode 110)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/depth.first.search/HeightOfBST.java)
+  
+  * [PathSum (leetcode 112)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/depth.first.search/PathSum.java)
+  
+  * [PathSum2 (leetcode 113)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/depth.first.search/PathSum2.java)
+  
+  * [FlattenBinaryTree2LinkedList (leetcode 114)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/depth.first.search/FlattenBinaryTree2LinkedList.java)
   
  
 ### 模拟法：
