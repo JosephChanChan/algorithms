@@ -1,8 +1,21 @@
 package depth.first.search;
 
 /**
- * @author Joseph Chan
- * @since 2020/07/23
+ * leetcode 116 medium
+ *
+ * Question Description:
+ *  参见 lc 116
+ *
+ * Analysis:
+ * 这题显然用BFS会更好解决。
+ * 对于DFS，可以这样考虑，涉及到串联同一层级的节点，两颗树间最多有四个节点，将其分别连接。
+ * 再递归四个节点中相邻的三组节点。
+ *
+ * 时间复杂度：O(n)
+ * 空间复杂度：O(logN)
+ *
+ * @author Joseph
+ * @since 2020-07-22 23:46
  */
 public class SetRightPointer2EachNode {
 
