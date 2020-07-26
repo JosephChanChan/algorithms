@@ -175,6 +175,8 @@
   
   * [FlattenBinaryTree2LinkedList (leetcode 114)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/depth.first.search/FlattenBinaryTree2LinkedList.java)
   
+  * [SetRightPointer2EachNode (leetcode 116)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/depth.first.search/SetRightPointer2EachNode.java)
+  
  
 ### 模拟法：
 
