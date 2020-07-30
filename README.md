@@ -69,7 +69,9 @@
 
   * [MutiKnapsackProblem 多重背包](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/dynamic/programming/MultiKnapsackProblem.java)
 
-  * [LongestIncreasingSubsequence 最长单增子序列](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/dynamic/programming/LongestIncreasingSubsequence.java)
+  * [LongestIncreasingSubsequence (leetcode 300)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/dynamic/programming/LongestIncreasingSubsequence.java)
+  
+  * [LongestIncreasingSubsequence2 最长单增子序列2](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/dynamic/programming/LongestIncreasingSubsequence2.java)
 
   * [UniquePaths (leetcode 62)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/dynamic/programming/UniquePaths.java)
   
@@ -78,12 +80,8 @@
   * [MaxCommSubSequence 最大公共子序列](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/dynamic/programming/MaxCommSubSequence.java)
   
   * [LongestCommonSubstring 最长公共子串](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/dynamic/programming/LongestCommonSubstring.java)
-
-  * [MaxSubMatrixSum 最大子矩阵和](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/dynamic/programming/MaxSubMatrixSum.java)
   
   * [DoubleMatrixOptimalWay 双路矩阵取数](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/dynamic/programming/DoubleMatrixOptimalWay.java)
-  
-  * [LongestIncreasingSubsequence2 最长单增子序列2](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/dynamic/programming/LongestIncreasingSubsequence2.java)
   
   * [SubSequenceNumber 子序列个数](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/dynamic/programming/SubSequenceNumber.java)
   
@@ -94,6 +92,8 @@
   * [MaxSubSectionSum (leetcode 53)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/dynamic/programming/MaxSubSectionSum.java)
   
   * [CirculationMaxSubSum (lintcode 1724)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/dynamic/programming/CirculationMaxSubSum.java)
+  
+  * [CoinChange (lintcode 322)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/dynamic/programming/CoinChange.java)
 
   
 ### 贪心算法：
