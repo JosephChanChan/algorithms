@@ -71,7 +71,9 @@
 
   * [LongestIncreasingSubsequence 最长单增子序列](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/dynamic/programming/LongestIncreasingSubsequence.java)
 
-  * [MatrixOptimalWay 矩阵取数问题](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/dynamic/programming/MatrixOptimalWay.java)
+  * [UniquePaths (leetcode 62)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/dynamic/programming/UniquePaths.java)
+  
+  * [UniquePaths2 (leetcode 63)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/dynamic/programming/UniquePaths2.java)
 
   * [MaxCommSubSequence 最大公共子序列](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/dynamic/programming/MaxCommSubSequence.java)
   
@@ -178,6 +180,8 @@
   * [SetRightPointer2EachNode (leetcode 116)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/depth.first.search/SetRightPointer2EachNode.java)
   
   * [SumRoot2LeafNumbers (leetcode 129)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/depth.first.search/SumRoot2LeafNumbers.java)
+  
+  * [SurroundedRegions (leetcode 130)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/depth.first.search/SurroundedRegions.java)
   
  
 ### 模拟法：
