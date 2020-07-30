@@ -93,7 +93,7 @@
   
   * [CirculationMaxSubSum (lintcode 1724)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/dynamic/programming/CirculationMaxSubSum.java)
   
-  * [CoinChange (lintcode 322)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/dynamic/programming/CoinChange.java)
+  * [CoinChange (leetcode 322)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/dynamic/programming/CoinChange.java)
 
   
 ### 贪心算法：
