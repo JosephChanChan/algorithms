@@ -9,7 +9,7 @@ package graphs;
  *
  * Created by Joseph on 2017/6/10.
  */
-public class BFSAlgorithm {
+public class BreathFirstSearch {
 
     private static final int MATRIX_MAX = 7;
 
