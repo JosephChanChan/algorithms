@@ -49,9 +49,9 @@
 
   * [KruskalAlgorithm 最小生成树 (C++实现)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/graphs/KruskalAlgorithm.cpp)
   
-  * [Dijkstra 寻求最短路](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/graphs/Dijkstra.cpp)
+  * [Dijkstra 寻求最短路](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/graphs/Dijkstra.java)
   
-  * [SwimmingCrossSea 漂洋过海](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/graphs/SwimmingCrossSea.cpp)
+  * [SwimmingCrossSea 漂洋过海](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/graphs/SwimmingCrossSea.java)
 
   
 ### 字符串相关：
