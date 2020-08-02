@@ -48,6 +48,10 @@
   * [PrimAlgorithm 最小生成树 (C++实现)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/graphs/PrimAlgorithm.cpp)
 
   * [KruskalAlgorithm 最小生成树 (C++实现)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/graphs/KruskalAlgorithm.cpp)
+  
+  * [Dijkstra 寻求最短路](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/graphs/Dijkstra.cpp)
+  
+  * [SwimmingCrossSea 漂洋过海](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/graphs/SwimmingCrossSea.cpp)
 
   
 ### 字符串相关：
@@ -83,8 +87,6 @@
   
   * [DoubleMatrixOptimalWay 双路矩阵取数](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/dynamic/programming/DoubleMatrixOptimalWay.java)
   
-  * [SubSequenceNumber 子序列个数](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/dynamic/programming/SubSequenceNumber.java)
-  
   * [HouseRobber (leetcode 198)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/dynamic/programming/HouseRobber.java)
 
   * [BuyAndSellStock (leetcode 121)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/dynamic/programming/BuyAndSellStock.java)
@@ -110,7 +112,7 @@
   
   * [WoodIncisionProblem Huffman算法](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/greedy/algorithm/WoodIncisionProblem.java)
   
-  * [FleeMaze Dijkstra算法](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/greedy/algorithm/FleeMaze.java)
+  * [FleeMaze 走迷宫](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/greedy/algorithm/FleeMaze.java)
   
 
 ### 回溯法：
