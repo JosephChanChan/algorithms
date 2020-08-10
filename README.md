@@ -17,6 +17,8 @@
 
 * [KthNodeFromEnd (剑指Offer 22)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/tables/KthNodeFromEnd.java)
 
+* [MinimumPermutation 字典序的最小排列](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/tables/MinimumPermutation.java)
+
 
 ### 树相关：
 
@@ -115,6 +117,8 @@
   * [WoodIncisionProblem Huffman算法](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/greedy/algorithm/WoodIncisionProblem.java)
   
   * [FleeMaze 走迷宫](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/greedy/algorithm/FleeMaze.java)
+  
+  * [MaximumEventsCanBeAttended (leetcode 1353)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/greedy/algorithm/MaximumEventsCanBeAttended.java)
   
 
 ### 回溯法：
@@ -223,6 +227,8 @@
   * [SnowFlakeId 雪花算法](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/SnowFlakeId.java)
   
   * [MissingPositiveSmallestNum 消失的最小正整数](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/MissingPositiveSmallestNum.java) 
+  
+  * [PrimeNumCountInArray 数组中最多的质数](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/PrimeNumCountInArray.java) 
 
   * [MostWaterInContainer (leetcode 11)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/MostWaterInContainer.java) 
 
