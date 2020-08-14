@@ -147,7 +147,7 @@ public class SwimmingCrossSea {
 
         @Override
         public int compareTo(Object o) {
-            return ((Road) o).weight < this.weight ? 1 : -1;
+            return ((Road) o).weight <= this.weight ? 1 : -1;
         }
     }
 }
