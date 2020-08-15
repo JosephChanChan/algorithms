@@ -62,6 +62,8 @@
 
   * [KMPAlgorithm KMP算法](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/string/KMPAlgorithm.java)
   
+  * [RabinKarp (leetcode 28)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/string/RabinKarp.java)
+  
   * [ReverseString 反转字符串](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/string/ReverseString.java)
   
   * [PalindromePartitioning (leetcode 131)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/string/PalindromePartitioning.java)
@@ -190,6 +192,10 @@
   * [SumRoot2LeafNumbers (leetcode 129)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/depth.first.search/SumRoot2LeafNumbers.java)
   
   * [SurroundedRegions (leetcode 130)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/depth.first.search/SurroundedRegions.java)
+  
+  * [Subsets (leetcode 78)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/depth.first.search/Subsets.java)
+  
+  * [Subsets2 (leetcode 90)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/depth.first.search/Subsets2.java)
   
  
 ### 模拟法：
