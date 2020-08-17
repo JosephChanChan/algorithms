@@ -67,6 +67,15 @@
   * [ReverseString 反转字符串](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/string/ReverseString.java)
   
   * [PalindromePartitioning (leetcode 131)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/string/PalindromePartitioning.java)
+
+
+### 并查集：
+
+  * [DeliverTakeOut 送外卖](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/disjoint.set/DeliverTakeOut.java)
+  
+  * [FriendCircles (leetcode 547)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/disjoint.set/FriendCircles.java)
+  
+  * [NumberOfIslands (leetcode 200)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/disjoint.set/NumberOfIslands.java)
   
 
 ### 动态规划：
@@ -121,6 +130,8 @@
   * [FleeMaze 走迷宫](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/greedy/algorithm/FleeMaze.java)
   
   * [MaximumEventsCanBeAttended (leetcode 1353)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/greedy/algorithm/MaximumEventsCanBeAttended.java)
+  
+  * [MinimumCustomService](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/greedy/algorithm/MinimumCustomService.java)
   
 
 ### 回溯法：
@@ -202,11 +213,15 @@
 
   * [DrinkAndBorrow 能喝多少瓶？](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/simulation/algorithm/DrinkAndBorrow.java)
 
-  * [RobotWalk](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/simulation/algorithm/RobotWalk.java)
+  * [RobotWalk 机器人行走](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/simulation/algorithm/RobotWalk.java)
 
-  * [ThrowDishes](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/simulation/algorithm/ThrowDishes.java)
+  * [ThrowDishes 扔盘子](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/simulation/algorithm/ThrowDishes.java)
   
-  * [JosephLoop](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/simulation/algorithm/JosephLoop.java)
+  * [JosephLoop 约瑟夫环](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/simulation/algorithm/JosephLoop.java)
+  
+  * [BulbOnOrOff 灯泡开关](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/simulation/algorithm/BulbOnOrOff.java)
+  
+  * [DolphinNums 海豚数](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/simulation/algorithm/DolphinNums.java)
 
 
 ### 排序：
