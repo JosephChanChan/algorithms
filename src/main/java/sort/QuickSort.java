@@ -61,28 +61,28 @@ public class QuickSort {
     }
 
     /** 针对基本数据类型 int 服务 */
-    public static void doQuickSort(int[] arr, int left, int right){
+    public static void doQuickSort(int[] arr, int left, int right) {
         if(left >= right) return;
-
-        int base = arr[left];
-
-        int i = quickSort(arr, base, left, right);
+        int i = quickSort(arr, left, left, right);
 
         doQuickSort(arr, left,i - 1);
         doQuickSort(arr, i + 1, right);
     }
-    private static int quickSort(int[] arr, int base, int left, int right){
+    private static int quickSort(int[] arr, int pivot, int left, int right) {
         while (left < right){
-            while (left < right && arr[right] >= base){
+            while (left < right && arr[right] >= arr[pivot]){
                 right--;
             }
-            arr[left] = arr[right];
-            while (left < right && arr[left] <= base){
+            while (left < right && arr[left] <= arr[pivot]){
                 left++;
             }
+            int temp = arr[right];
             arr[right] = arr[left];
+            arr[left] = temp;
         }
-        arr[left] = base;
+        int temp = arr[left];
+        arr[left] = arr[pivot];
+        arr[pivot] = temp;
         return left;
     }
 

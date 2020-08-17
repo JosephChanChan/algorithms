@@ -22,9 +22,7 @@ public class MergeSort {
 
     public static void main(String[] args) {
         array = mergeSort(array);
-
-        int result = CheckSortedArr.checkIntAsc(array);
-        System.out.println(result);
+        CheckSortedArr.printIntArr(array);
     }
 
     public static int[] mergeSort(int[] beSorted){
@@ -72,18 +70,12 @@ public class MergeSort {
                 sorted[pos++] = leftSorted[leftPos++];
             }
         }
-
-        if (leftPos == leftSorted.length) {
-            while (rightPos < rightSorted.length) {
-                sorted[pos++] = rightSorted[rightPos++];
-            }
+        while (leftPos < leftSorted.length) {
+            sorted[pos++] = leftSorted[leftPos++];
         }
-        else {
-            while (leftPos < leftSorted.length) {
-                sorted[pos++] = leftSorted[leftPos++];
-            }
+        while (rightPos < rightSorted.length) {
+            sorted[pos++] = rightSorted[rightPos++];
         }
-
         return sorted;
     }
 }
