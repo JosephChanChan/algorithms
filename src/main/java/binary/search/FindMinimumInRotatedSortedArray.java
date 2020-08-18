@@ -1,4 +1,4 @@
-package tables;
+package binary.search;
 
 /**
  * leetcode 153 medium
