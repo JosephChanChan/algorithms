@@ -19,6 +19,8 @@
 
 * [MinimumPermutation 字典序的最小排列](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/tables/MinimumPermutation.java)
 
+* [AvgInIntArray int数组求平均数](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/tables/AvgInIntArray.java)
+
 
 ### 树相关：
 
@@ -88,6 +90,14 @@
   
   * [Sqrt (leetcode 69)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/binary.search/Sqrt.java)
   
+  * [SearchRotatedSortedArray (leetcode 33)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/binary.search/SearchRotatedSortedArray.java)
+  
+  * [FindFirstAndLastPositionElementSortedArray (leetcode 34)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/binary.search/FindFirstAndLastPositionElementSortedArray.java)
+  
+  * [FindPeakElement (leetcode 162)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/binary.search/FindPeakElement.java)
+  
+  * [SingleElementInSortedArray (leetcode 540)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/binary.search/SingleElementInSortedArray.java)
+  
  
 ### 动态规划：
   
@@ -112,6 +122,8 @@
   * [LongestCommonSubstring 最长公共子串](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/dynamic/programming/LongestCommonSubstring.java)
   
   * [DoubleMatrixOptimalWay 双路矩阵取数](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/dynamic/programming/DoubleMatrixOptimalWay.java)
+  
+  * [BountyHunter 赏金猎人](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/dynamic/programming/BountyHunter.java)
   
   * [HouseRobber (leetcode 198)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/dynamic/programming/HouseRobber.java)
 
@@ -142,7 +154,9 @@
   
   * [MaximumEventsCanBeAttended (leetcode 1353)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/greedy/algorithm/MaximumEventsCanBeAttended.java)
   
-  * [MinimumCustomService](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/greedy/algorithm/MinimumCustomService.java)
+  * [MinimumCustomService 最小客服数](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/greedy/algorithm/MinimumCustomService.java)
+  
+  * [RentServer 租服务器](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/greedy/algorithm/RentServer.java)
   
 
 ### 回溯法：
