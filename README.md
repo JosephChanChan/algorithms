@@ -77,7 +77,18 @@
   
   * [NumberOfIslands (leetcode 200)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/disjoint.set/NumberOfIslands.java)
   
-
+  
+### 二分法：
+  
+  * [BinarySearchTemplate 二分法模板](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/binary.search/BinarySearchTemplate.java)
+  
+  * [FindMinimumInRotatedSortedArray (leetcode 153)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/binary.search/FindMinimumInRotatedSortedArray.java)
+  
+  * [FindMinimumInRotatedSortedArray2 (leetcode 154)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/binary.search/FindMinimumInRotatedSortedArray2.java)
+  
+  * [Sqrt (leetcode 69)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/binary.search/Sqrt.java)
+  
+ 
 ### 动态规划：
   
   * [EditDistance 编辑距离](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/dynamic/programming/EditDistance.java)
