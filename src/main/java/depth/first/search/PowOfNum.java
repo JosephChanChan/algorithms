@@ -1,4 +1,4 @@
-package recursion;
+package depth.first.search;
 
 /**
  * @author Joseph

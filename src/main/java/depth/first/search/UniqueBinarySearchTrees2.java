@@ -1,4 +1,4 @@
-package recursion;
+package depth.first.search;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -7,7 +7,7 @@ import java.util.List;
  * @author Joseph
  * @since 2020-01-26 12:42
  *
- * leetcode 95 medium（感觉有hard入门的难度）
+ * leetcode 95 medium（感觉偏难）
  *
  * Question Description:
  * Given an integer n, generate all structurally unique BST's (binary search trees) that store values 1 ... n.
