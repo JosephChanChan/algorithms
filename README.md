@@ -141,41 +141,41 @@
 
   ### 深度优先搜索：
 
-  * [PowOfNum (leetcode 50)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/depth.first.search/PowOfNum.java)
+  * [PowOfNum (leetcode 50)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/depth/first/search/PowOfNum.java)
   
-  * [UniqueBinarySearchTrees (leetcode 96)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/depth.first.search/UniqueBinarySearchTrees.java)
+  * [UniqueBinarySearchTrees (leetcode 96)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/depth/first/search/UniqueBinarySearchTrees.java)
  
-  * [UniqueBinarySearchTrees2 (leetcode 95)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/depth.first.search/UniqueBinarySearchTrees2.java)
+  * [UniqueBinarySearchTrees2 (leetcode 95)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/depth/first/search/UniqueBinarySearchTrees2.java)
   
-  * [Search2DMatrix (leetcode 74)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/depth.first.search/Search2DMatrix.java)
+  * [Search2DMatrix (leetcode 74)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/depth/first/search/Search2DMatrix.java)
   
-  * [Search2DMatrix2 (leetcode 240)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/depth.first.search/Search2DMatrix2.java)
+  * [Search2DMatrix2 (leetcode 240)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/depth/first/search/Search2DMatrix2.java)
   
-  * [SymmetricTree (leetcode 101)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/depth.first.search/SymmetricTree.java)
+  * [SymmetricTree (leetcode 101)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/depth/first/search/SymmetricTree.java)
   
-  * [ConstructBinaryTree (leetcode 105)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/depth.first.search/ConstructBinaryTree.java)
+  * [ConstructBinaryTree (leetcode 105)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/depth/first/search/ConstructBinaryTree.java)
   
-  * [ConstructBinaryTree2 (leetcode 106)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/depth.first.search/ConstructBinaryTree2.java)
+  * [ConstructBinaryTree2 (leetcode 106)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/depth/first/search/ConstructBinaryTree2.java)
   
-  * [ConvertSortedArray2BST (leetcode 108)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/depth.first.search/ConvertSortedArray2BST.java)
+  * [ConvertSortedArray2BST (leetcode 108)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/depth/first/search/ConvertSortedArray2BST.java)
   
-  * [HeightOfBST (leetcode 110)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/depth.first.search/HeightOfBST.java)
+  * [HeightOfBST (leetcode 110)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/depth/first/search/HeightOfBST.java)
   
-  * [PathSum (leetcode 112)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/depth.first.search/PathSum.java)
+  * [PathSum (leetcode 112)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/depth/first/search/PathSum.java)
   
-  * [PathSum2 (leetcode 113)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/depth.first.search/PathSum2.java)
+  * [PathSum2 (leetcode 113)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/depth/first/search/PathSum2.java)
   
-  * [FlattenBinaryTree2LinkedList (leetcode 114)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/depth.first.search/FlattenBinaryTree2LinkedList.java)
+  * [FlattenBinaryTree2LinkedList (leetcode 114)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/depth/first/search/FlattenBinaryTree2LinkedList.java)
   
-  * [SetRightPointer2EachNode (leetcode 116)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/depth.first.search/SetRightPointer2EachNode.java)
+  * [SetRightPointer2EachNode (leetcode 116)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/depth/first/search/SetRightPointer2EachNode.java)
   
-  * [SumRoot2LeafNumbers (leetcode 129)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/depth.first.search/SumRoot2LeafNumbers.java)
+  * [SumRoot2LeafNumbers (leetcode 129)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/depth/first/search/SumRoot2LeafNumbers.java)
   
-  * [SurroundedRegions (leetcode 130)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/depth.first.search/SurroundedRegions.java)
+  * [SurroundedRegions (leetcode 130)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/depth/first/search/SurroundedRegions.java)
   
-  * [Subsets (leetcode 78)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/depth.first.search/Subsets.java)
+  * [Subsets (leetcode 78)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/depth/first/search/Subsets.java)
   
-  * [Subsets2 (leetcode 90)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/depth.first.search/Subsets2.java)
+  * [Subsets2 (leetcode 90)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/depth/first/search/Subsets2.java)
   
   
 ### 动态规划：
