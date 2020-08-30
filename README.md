@@ -71,30 +71,30 @@
 
 ### 并查集：
 
-  * [DeliverTakeOut 送外卖](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/disjoint.set/DeliverTakeOut.java)
+  * [DeliverTakeOut 送外卖](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/disjoint/set/DeliverTakeOut.java)
   
-  * [FriendCircles (leetcode 547)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/disjoint.set/FriendCircles.java)
+  * [FriendCircles (leetcode 547)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/disjoint/set/FriendCircles.java)
   
-  * [NumberOfIslands (leetcode 200)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/disjoint.set/NumberOfIslands.java)
+  * [NumberOfIslands (leetcode 200)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/disjoint/set/NumberOfIslands.java)
   
   
 ### 二分法：
   
-  * [BinarySearchTemplate 二分法模板](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/binary.search/BinarySearchTemplate.java)
+  * [BinarySearchTemplate 二分法模板](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/binary/search/BinarySearchTemplate.java)
   
-  * [FindMinimumInRotatedSortedArray (leetcode 153)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/binary.search/FindMinimumInRotatedSortedArray.java)
+  * [FindMinimumInRotatedSortedArray (leetcode 153)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/binary/search/FindMinimumInRotatedSortedArray.java)
   
-  * [FindMinimumInRotatedSortedArray2 (leetcode 154)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/binary.search/FindMinimumInRotatedSortedArray2.java)
+  * [FindMinimumInRotatedSortedArray2 (leetcode 154)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/binary/search/FindMinimumInRotatedSortedArray2.java)
   
-  * [Sqrt (leetcode 69)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/binary.search/Sqrt.java)
+  * [Sqrt (leetcode 69)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/binary/search/Sqrt.java)
   
-  * [SearchRotatedSortedArray (leetcode 33)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/binary.search/SearchRotatedSortedArray.java)
+  * [SearchRotatedSortedArray (leetcode 33)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/binary/search/SearchRotatedSortedArray.java)
   
-  * [FindFirstAndLastPositionElementSortedArray (leetcode 34)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/binary.search/FindFirstAndLastPositionElementSortedArray.java)
+  * [FindFirstAndLastPositionElementSortedArray (leetcode 34)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/binary/search/FindFirstAndLastPositionElementSortedArray.java)
   
-  * [FindPeakElement (leetcode 162)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/binary.search/FindPeakElement.java)
+  * [FindPeakElement (leetcode 162)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/binary/search/FindPeakElement.java)
   
-  * [SingleElementInSortedArray (leetcode 540)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/binary.search/SingleElementInSortedArray.java)
+  * [SingleElementInSortedArray (leetcode 540)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/binary/search/SingleElementInSortedArray.java)
   
 
 ### 回溯法：
