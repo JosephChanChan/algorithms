@@ -46,8 +46,6 @@
   
 
 ### 图相关：
-
-  * [BFSAlgorithm 广度优先搜索](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/graphs/BFSAlgorithm.java)
   
   * [PrimAlgorithm 最小生成树 (C++实现)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/graphs/PrimAlgorithm.cpp)
 
@@ -98,7 +96,88 @@
   
   * [SingleElementInSortedArray (leetcode 540)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/binary.search/SingleElementInSortedArray.java)
   
+
+### 回溯法：
+  
+  * [FloorMoppingRobot 优秀的扫地机器人](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/backtracking/algorithm/FloorMoppingRobot.java)
+  
+  * [FullPermutation 全排列](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/backtracking/algorithm/FullPermutation.java)
+
+  * [CalculateBill 检查账单](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/backtracking/algorithm/CalculateBill.java)
+
+  * [N_Queen (leetcode 52)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/backtracking/algorithm/N_Queen.java)
+  
+  * [SudokuSolver (leetcode 37)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/backtracking/algorithm/SudokuSolver.java)
+  
+  * [Combinations (leetcode 77)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/backtracking/algorithm/Combinations.java)
+  
+  * [CombinationSum (leetcode 39)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/dynamic/programming/CombinationSum.java)
+  
+  * [Combinations (leetcode 77)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/backtracking/algorithm/Combinations.java)
+  
+  * [GenerateParentheses (leetcode 22)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/backtracking/algorithm/GenerateParentheses.java)
+  
+  * [Permutation (leetcode 46)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/backtracking/algorithm/Permutation.java)
+  
+  * [LetterCombinationsPhoneNumber (leetcode 17)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/backtracking/algorithm/LetterCombinationsPhoneNumber.java)
+  
+
+  ### 递归：
+
+  * [TowerOfHanoi 汉诺塔](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/recursion/TowerOfHanoi.java)
+
+  * [PascalTriangle (leetcode 119)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/recursion/PascalTriangle.java)
+
+  * [ReverseList (leetcode 206)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/recursion/ReverseList.java)
+
+  * [FibonacciSequence2 (leetcode 509)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/recursion/FibonacciSequence2.java)
+
+  * [ClimbStairs (leetcode 70)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/recursion/ClimbStairs.java)
+
+  * [MergeSortedList (leetcode 21)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/recursion/MergeSortedList.java)
+
+  * [KthSymbol (leetcode 779)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/recursion/KthSymbol.java)
+
+
+  ### 深度优先搜索：
+
+  * [PowOfNum (leetcode 50)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/depth/first/search/PowOfNum.java)
+  
+  * [UniqueBinarySearchTrees (leetcode 96)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/depth/first/search/UniqueBinarySearchTrees.java)
  
+  * [UniqueBinarySearchTrees2 (leetcode 95)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/depth/first/search/UniqueBinarySearchTrees2.java)
+  
+  * [Search2DMatrix (leetcode 74)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/depth/first/search/Search2DMatrix.java)
+  
+  * [Search2DMatrix2 (leetcode 240)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/depth/first/search/Search2DMatrix2.java)
+  
+  * [SymmetricTree (leetcode 101)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/depth/first/search/SymmetricTree.java)
+  
+  * [ConstructBinaryTree (leetcode 105)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/depth/first/search/ConstructBinaryTree.java)
+  
+  * [ConstructBinaryTree2 (leetcode 106)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/depth/first/search/ConstructBinaryTree2.java)
+  
+  * [ConvertSortedArray2BST (leetcode 108)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/depth/first/search/ConvertSortedArray2BST.java)
+  
+  * [HeightOfBST (leetcode 110)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/depth/first/search/HeightOfBST.java)
+  
+  * [PathSum (leetcode 112)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/depth/first/search/PathSum.java)
+  
+  * [PathSum2 (leetcode 113)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/depth/first/search/PathSum2.java)
+  
+  * [FlattenBinaryTree2LinkedList (leetcode 114)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/depth/first/search/FlattenBinaryTree2LinkedList.java)
+  
+  * [SetRightPointer2EachNode (leetcode 116)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/depth/first/search/SetRightPointer2EachNode.java)
+  
+  * [SumRoot2LeafNumbers (leetcode 129)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/depth/first/search/SumRoot2LeafNumbers.java)
+  
+  * [SurroundedRegions (leetcode 130)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/depth/first/search/SurroundedRegions.java)
+  
+  * [Subsets (leetcode 78)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/depth/first/search/Subsets.java)
+  
+  * [Subsets2 (leetcode 90)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/depth/first/search/Subsets2.java)
+  
+  
 ### 动态规划：
   
   * [EditDistance 编辑距离](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/dynamic/programming/EditDistance.java)
@@ -157,82 +236,6 @@
   * [MinimumCustomService 最小客服数](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/greedy/algorithm/MinimumCustomService.java)
   
   * [RentServer 租服务器](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/greedy/algorithm/RentServer.java)
-  
-
-### 回溯法：
-  
-  * [FloorMoppingRobot 优秀的扫地机器人](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/backtracking/algorithm/FloorMoppingRobot.java)
-  
-  * [FullPermutation 全排列](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/backtracking/algorithm/FullPermutation.java)
-
-  * [CalculateBill 检查账单](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/backtracking/algorithm/CalculateBill.java)
-
-  * [N_Queen (leetcode 52)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/backtracking/algorithm/N_Queen.java)
-  
-  * [SudokuSolver (leetcode 37)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/backtracking/algorithm/SudokuSolver.java)
-  
-  * [Combinations (leetcode 77)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/backtracking/algorithm/Combinations.java)
-  
-  * [CombinationSum (leetcode 39)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/dynamic/programming/CombinationSum.java)
-  
-  * [Combinations (leetcode 77)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/backtracking/algorithm/Combinations.java)
-  
-  * [GenerateParentheses (leetcode 22)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/backtracking/algorithm/GenerateParentheses.java)
-  
-  * [Permutation (leetcode 46)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/backtracking/algorithm/Permutation.java)
-  
-  * [LetterCombinationsPhoneNumber (leetcode 17)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/backtracking/algorithm/LetterCombinationsPhoneNumber.java)
-  
-  ### 递归/深搜/宽搜：
-
-  * [TowerOfHanoi 汉诺塔](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/recursion/TowerOfHanoi.java)
-  
-  * [PascalTriangle (leetcode 119)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/recursion/PascalTriangle.java)
-  
-  * [ReverseList (leetcode 206)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/recursion/ReverseList.java)
-  
-  * [FibonacciSequence2 (leetcode 509)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/recursion/FibonacciSequence2.java)
-  
-  * [ClimbStairs (leetcode 70)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/recursion/ClimbStairs.java)
-  
-  * [PowOfNum (leetcode 50)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/recursion/PowOfNum.java)
-  
-  * [MergeSortedList (leetcode 21)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/recursion/MergeSortedList.java)
-  
-  * [KthSymbol (leetcode 779)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/recursion/KthSymbol.java)
-  
-  * [UniqueBinarySearchTrees2 (leetcode 95)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/recursion/UniqueBinarySearchTrees2.java)
-  
-  * [Search2DMatrix (leetcode 74)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/recursion/Search2DMatrix.java)
-  
-  * [Search2DMatrix2 (leetcode 240)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/recursion/Search2DMatrix2.java)
-  
-  * [SymmetricTree (leetcode 101)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/depth.first.search/SymmetricTree.java)
-  
-  * [ConstructBinaryTree (leetcode 105)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/depth.first.search/ConstructBinaryTree.java)
-  
-  * [ConstructBinaryTree2 (leetcode 106)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/depth.first.search/ConstructBinaryTree2.java)
-  
-  * [ConvertSortedArray2BST (leetcode 108)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/depth.first.search/ConvertSortedArray2BST.java)
-  
-  * [HeightOfBST (leetcode 110)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/depth.first.search/HeightOfBST.java)
-  
-  * [PathSum (leetcode 112)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/depth.first.search/PathSum.java)
-  
-  * [PathSum2 (leetcode 113)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/depth.first.search/PathSum2.java)
-  
-  * [FlattenBinaryTree2LinkedList (leetcode 114)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/depth.first.search/FlattenBinaryTree2LinkedList.java)
-  
-  * [SetRightPointer2EachNode (leetcode 116)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/depth.first.search/SetRightPointer2EachNode.java)
-  
-  * [SumRoot2LeafNumbers (leetcode 129)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/depth.first.search/SumRoot2LeafNumbers.java)
-  
-  * [SurroundedRegions (leetcode 130)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/depth.first.search/SurroundedRegions.java)
-  
-  * [Subsets (leetcode 78)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/depth.first.search/Subsets.java)
-  
-  * [Subsets2 (leetcode 90)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/depth.first.search/Subsets2.java)
-  
  
 ### 模拟法：
 
