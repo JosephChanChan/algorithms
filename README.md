@@ -177,6 +177,10 @@
   
   * [Subsets2 (leetcode 90)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/depth/first/search/Subsets2.java)
   
+  * [DifferentWaysAddParentheses (leetcode 241)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/depth/first/search/DifferentWaysAddParentheses.java)
+  
+  * [KthLargestElementInArray (leetcode 215)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/depth/first/search/KthLargestElementInArray.java)
+  
   
 ### 动态规划：
   
