@@ -186,6 +186,14 @@
   
   * [WordLadder (leetcode 127)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/breadth/first/search/WordLadder.java)
   
+  * [WordLadder2 (leetcode 126)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/breadth/first/search/WordLadder2.java)
+  
+  * [CourseSchedule (leetcode 207)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/breadth/first/search/CourseSchedule.java)
+  
+  * [CourseSchedule2 (leetcode 210)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/breadth/first/search/CourseSchedule2.java)
+  
+  * [BinaryTreeZigzagLevelOrderTraversal (leetcode 103)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/breadth/first/search/BinaryTreeZigzagLevelOrderTraversal.java)
+  
   
 ### 动态规划：
   
