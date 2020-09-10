@@ -6,8 +6,8 @@ import java.util.*;
  * leetcode 126 hard
  *
  * Analysis:
- * 时间复杂度：
- * 空间复杂度：
+ * 时间复杂度：O(n*length*neighbors)
+ * 空间复杂度：O(n*neighbors)
  *
  * @author Joseph
  * @since 2020-09-05 23:29
@@ -36,8 +36,8 @@ public class WordLadder2 {
             Node n = q.poll();
             int cost = d.get(n.node);
             List<String> path = n.path;
-            List<String> negibhors = al.get(n.node);
-            for (String s : negibhors) {
+            List<String> neighbors = al.get(n.node);
+            for (String s : neighbors) {
                 // 计算 d[]
                 int c = d.getOrDefault(s, max);
                 if (cost + 1 <= c) {

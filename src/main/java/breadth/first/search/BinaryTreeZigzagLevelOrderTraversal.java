@@ -8,7 +8,8 @@ import java.util.List;
  * leetcode 103 medium
  *
  * Analysis:
- *
+ * 时间复杂度：O(n)
+ * 空间复杂度：O(n)
  *
  * @author Joseph
  * @since 2020-09-09 21:51
@@ -17,8 +18,8 @@ public class BinaryTreeZigzagLevelOrderTraversal {
 
     public List<List<Integer>> zigzagLevelOrder(TreeNode root) {
         /*
-            left -> right   poll head from queue and add left chid first to queue head
-            right -> left   poll tail from queue and add right chid first to queue tail
+            left -> right   poll head from queue and add left child first to queue tail
+            right -> left   poll tail from queue and add right child first to queue head
         */
         List<List<Integer>> ans = new ArrayList<>();
         LinkedList<TreeNode> q = new LinkedList<>();
