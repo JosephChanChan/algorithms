@@ -12,8 +12,13 @@ import java.util.*;
  * 用dfs记录下可达两个海的路径上的每一点，原本以为记录的点越多搜索越快，结果时间和bfs一样。
  * 只能在400+ms的量级。应该是重复记录解路径上耗费了多余时间。
  *
- * 时间复杂度：小于O((n*m)^2)
- * 空间复杂度：O(n*m)
+ * 标准解法：
+ *  其实不用搜索m*n那么多的点，对于每个点都设为起点开始搜索是否能到达大西洋/太平洋。直接从边界开始往里搜，
+ * 从太平洋边界的点开始搜索，把能到达的点都标记，大西洋同理。妙在这种方法把搜索空间缩小了，之前是把m*n个点都当做潜在解去搜索，
+ * 这其中肯定有很多无效点。现在反推从必定到的点反搜能触达的点，最坏情况是m*n个点都能触达，时间是O(m*n)
+ *
+ * 时间复杂度：O(m*n)
+ * 空间复杂度：O(m*n)
  *
  * @author Joseph
  * @since 2020-09-13 22:08
@@ -25,7 +30,81 @@ public class PacificAtlanticWaterFlow {
     boolean[][] atlantic ;
     boolean isPacific = true;
 
+    int[][] d = {{-1, 0}, {1, 0}, {0, -1}, {0, 1}};
+
     public List<List<Integer>> pacificAtlantic(int[][] matrix) {
+        List<List<Integer>> ans = new ArrayList<>();
+
+        if (matrix.length == 0) return ans;
+
+        r = matrix.length;
+        c = matrix[0].length;
+
+        pacific = new boolean[r][c];
+        atlantic = new boolean[r][c];
+
+        for (int i = 0; i < r; i++) {
+            bfs(i, 0, matrix, isPacific);
+            bfs(i, c-1, matrix, !isPacific);
+        }
+        for (int i = 0; i < c; i++) {
+            bfs(0, i, matrix, isPacific);
+            bfs(r-1, i, matrix, !isPacific);
+        }
+        for (int i = 0; i < r; i++) {
+            for (int j = 0; j < c; j++) {
+                if (pacific[i][j] && atlantic[i][j]) {
+                    List<Integer> l = new ArrayList<>(2);
+                    l.add(i); l.add(j);
+                    ans.add(l);
+                }
+            }
+        }
+        return ans;
+    }
+
+    /* AC 5ms faster than 65% */
+    private void bfs(int i, int j, int[][] m, boolean isPacific) {
+        Queue<Integer[]> q = new LinkedList<>();
+        Integer[] p = new Integer[2];
+        p[0] = i;
+        p[1] = j;
+
+        q.add(p);
+        if (isPacific) {
+            pacific[i][j] = true;
+        }
+        else {
+            atlantic[i][j] = true;
+        }
+
+        while (!q.isEmpty()) {
+            p = q.poll();
+            i = p[0];
+            j = p[1];
+            int h = m[i][j];
+
+            for (int k = 0; k < 4; k++) {
+                int y = i + d[k][0];
+                int x = j + d[k][1];
+                if (y >= 0 && y < r && x >= 0 && x < c) {
+                    if (h > m[y][x]) {
+                        continue;
+                    }
+                    if (isPacific && !pacific[y][x]) {
+                        pacific[y][x] = true;
+                        q.add(new Integer[]{y, x});
+                    }
+                    else if (!isPacific && !atlantic[y][x]) {
+                        atlantic[y][x] = true;
+                        q.add(new Integer[]{y, x});
+                    }
+                }
+            }
+        }
+    }
+
+    /*public List<List<Integer>> pacificAtlantic(int[][] matrix) {
         List<List<Integer>> ans = new ArrayList<>();
 
         if (matrix.length == 0) return ans;
@@ -50,10 +129,9 @@ public class PacificAtlanticWaterFlow {
             }
         }
         return ans;
-    }
-
+    }*/
     /* AC 403ms faster than 7% */
-    private boolean bfs(int i, int j, int[][] m, boolean pacific) {
+    /*private boolean bfs(int i, int j, int[][] m, boolean pacific) {
         Queue<Integer[]> q = new LinkedList<>();
         boolean[][] vis = new boolean[m.length][m[0].length];
         Integer[] p = new Integer[2];
@@ -80,9 +158,8 @@ public class PacificAtlanticWaterFlow {
             if (i < m.length - 1 && m[i+1][j] <= h && !vis[i+1][j]) q.add(new Integer[]{i+1, j});
         }
         return false;
-    }
+    }*/
 
-    /* AC 429ms faster than 7% */
     /*public List<List<Integer>> pacificAtlantic(int[][] matrix) {
         List<List<Integer>> ans = new ArrayList<>();
 
@@ -113,7 +190,7 @@ public class PacificAtlanticWaterFlow {
         }
         return ans;
     }*/
-
+    /* AC 429ms faster than 7% */
     private boolean dfs(int i, int j, int[][] m, boolean[][] vis,
                         boolean isPacific, List<Integer[]> path) {
         vis[i][j] = true;
