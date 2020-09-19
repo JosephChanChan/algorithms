@@ -92,6 +92,10 @@ public class PacificAtlanticWaterFlow {
                         continue;
                     }
                     if (isPacific && !pacific[y][x]) {
+                        // 这里很tricky，如果探测到一个点能访问不立即标记，而是等到从队列中拿出来再标记，会TLE！只能过到113/115个case
+                        // 如果探测到立即标记，就是标准解法的时间，5ms左右。
+                        // 可见有些题是把点从队列拿出时标记，有些是探测到时就要标记。
+                        // 要灵活思考一下！
                         pacific[y][x] = true;
                         q.add(new Integer[]{y, x});
                     }
