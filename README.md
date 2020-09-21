@@ -1,7 +1,7 @@
 ### 与大家分享我学习算法的一些经历。这个项目不定期更新。
 --------------------------------------------------------
   
-### 表相关：
+### 数组/链表：
 
 * [SwapNodesSingleLinked (leetcode 24)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/tables/SwapNodesSingleLinked.java)
 
