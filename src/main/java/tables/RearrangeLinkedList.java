@@ -4,9 +4,6 @@ import tables.component.ListNode;
 import tables.component.OneLinkedNode;
 
 /**
- * @author Joseph
- * @since 2020-03-20 22:51
- *
  * 2019年计算机考研中统考408科目其中一道大题
  *
  * 给定某个单链表 a1->a2->a3->...->an
@@ -17,6 +14,9 @@ import tables.component.OneLinkedNode;
  * O(n)的算法是最优解。
  *
  * 可见408科目还是挺难的
+ *
+ * @author Joseph
+ * @since 2020-03-20 22:51
  */
 public class RearrangeLinkedList {
 
