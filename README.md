@@ -268,10 +268,28 @@
   
   * [RentServer 租服务器](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/greedy/algorithm/RentServer.java)
   
+  
 ### 指针法：
 
-  * [ThreeSum (leetcode 15)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/pointers/algorithm/ThreeSum.java)
+  * [ThreeSum (leetcode 15)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/pointers/ThreeSum.java)
   
+  * [ThreeSumCloset (leetcode 16)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/pointers/ThreeSumCloset.java)
+  
+  * [ThreeSumWithMultiplicity (leetcode 923)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/pointers/ThreeSumWithMultiplicity.java)
+  
+  * [FourSum (leetcode 18)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/pointers/FourSum.java)
+  
+  * [MoveZeros (leetcode 283)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/pointers/MoveZeros.java)
+  
+  * [LinkedListCycle2 (leetcode 142)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/pointers/LinkedListCycle2.java)
+  
+  * [MostWaterInContainer (leetcode 11)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/pointers/MostWaterInContainer.java)
+  
+  * [SortColors (leetcode 75)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/pointers/SortColors.java)
+  
+  * [RemoveNthOfEnd (leetcode 19)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/pointers/RemoveNthOfEnd.java)
+  
+  * [MinimumSizeSubArray (leetcode 209)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/pointers/MinimumSizeSubArray.java)
   
  
 ### 模拟法：
