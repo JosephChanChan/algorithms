@@ -267,6 +267,12 @@
   * [MinimumCustomService 最小客服数](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/greedy/algorithm/MinimumCustomService.java)
   
   * [RentServer 租服务器](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/greedy/algorithm/RentServer.java)
+  
+### 指针法：
+
+  * [ThreeSum (leetcode 15)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/pointers/algorithm/ThreeSum.java)
+  
+  
  
 ### 模拟法：
 
