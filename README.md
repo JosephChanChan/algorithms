@@ -324,8 +324,6 @@
 
   * [CountsOfNum](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/CountsOfNum.java)
 
-  * [pointers.MoveZeros](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/MoveZeros.java)
-
   * [RedPacketGen 红包生成](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/RedPacketGen.java)
   
   * [SnowFlakeId 雪花算法](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/SnowFlakeId.java)
@@ -333,6 +331,4 @@
   * [MissingPositiveSmallestNum 消失的最小正整数](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/MissingPositiveSmallestNum.java) 
   
   * [PrimeNumCountInArray 数组中最多的质数](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/PrimeNumCountInArray.java) 
-
-  * [pointers.MostWaterInContainer (leetcode 11)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/MostWaterInContainer.java) 
 
