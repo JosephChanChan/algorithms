@@ -1,19 +1,29 @@
 ### 与大家分享我学习算法的一些经历。这个项目不定期更新。
 --------------------------------------------------------
   
-### 表相关：
-
-* [SingleCircularLinkedList 单向循环链表](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/tables/SingleTrackCircularLinkedList.java)
-
-* [BitMap 位图算法](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/tables/BitMap.java)
-
-* [RearrangeLinkedList 链表原地逆置](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/tables/RearrangeLinkedList.java)
+### 数组/链表：
 
 * [SwapNodesSingleLinked (leetcode 24)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/tables/SwapNodesSingleLinked.java)
 
 * [MinimumIncrement2MakeArrayUnique (leetcode 945)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/tables/RearrangeLinkedList.java)
 
 * [CircularLinkedList (leetcode 141)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/tables/CircularLinkedList.java)
+
+* [RotateList (leetcode 61)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/tables/RotateList.java)
+
+* [ReverseLinkedList (leetcode 206)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/tables/ReverseLinkedList.java)
+
+* [ReverseLinkedList2 (leetcode 92)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/tables/ReverseLinkedList2.java)
+
+* [ReverseNodesInKGroup (leetcode 25)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/tables/ReverseNodesInKGroup.java)
+
+* [MergeTwoSortedLists (leetcode 21)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/tables/MergeTwoSortedLists.java)
+
+* [SingleCircularLinkedList 单向循环链表](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/tables/SingleTrackCircularLinkedList.java)
+
+* [BitMap 位图算法](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/tables/BitMap.java)
+
+* [RearrangeLinkedList 链表原地逆置](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/tables/RearrangeLinkedList.java)
 
 * [KthNodeFromEnd (剑指Offer 22)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/tables/KthNodeFromEnd.java)
 
