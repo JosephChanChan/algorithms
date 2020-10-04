@@ -300,7 +300,7 @@
 
   * [CountsOfNum](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/CountsOfNum.java)
 
-  * [MoveZeros](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/MoveZeros.java)
+  * [pointers.MoveZeros](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/MoveZeros.java)
 
   * [RedPacketGen 红包生成](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/RedPacketGen.java)
   
@@ -310,5 +310,5 @@
   
   * [PrimeNumCountInArray 数组中最多的质数](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/PrimeNumCountInArray.java) 
 
-  * [MostWaterInContainer (leetcode 11)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/MostWaterInContainer.java) 
+  * [pointers.MostWaterInContainer (leetcode 11)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/MostWaterInContainer.java) 
 
