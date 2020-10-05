@@ -19,6 +19,10 @@
 
 * [MergeTwoSortedLists (leetcode 21)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/tables/MergeTwoSortedLists.java)
 
+* [MergeKSortedLists (leetcode 23)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/tables/MergeKSortedLists.java)
+
+* [LRUCache (leetcode 146)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/tables/LRUCache.java)
+
 * [SingleCircularLinkedList 单向循环链表](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/tables/SingleTrackCircularLinkedList.java)
 
 * [BitMap 位图算法](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/tables/BitMap.java)
@@ -51,6 +55,8 @@
   * [BinaryTreeInorderTraversal (leetcode 94)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/trees/BinaryTreeInorderTraversal.java)
   
   * [BinaryTreeLevelOrderTraversal (leetcode 102)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/trees/BinaryTreeLevelOrderTraversal.java)
+  
+  * [TopKFrequentElements (leetcode 347)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/trees/TopKFrequentElements.java)
   
   * [RestructureBinaryTree (剑指Offer 7)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/trees/RestructureBinaryTree.java)
   
