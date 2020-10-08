@@ -1,12 +1,7 @@
 package tables;
 
-import tables.component.ListNode;
-
 /**
- * @author Joseph
- * @since 2020-03-28 16:25
- *
- * 剑指Offer 22
+ * 剑指Offer 22 easy
  *
  * Question Description:
  *  输入一个链表，输出该链表中倒数第k个节点。为了符合大多数人的习惯，本题从1开始计数，即链表的尾节点是倒数第1个节点。
@@ -19,6 +14,9 @@ import tables.component.ListNode;
  *  快慢指针。先让快指针走k步，之后双指针一起走，直到快指针到达链表结尾。
  *  时间复杂度：O(n)
  *  空间复杂度：O(1)
+ *
+ * @author Joseph
+ * @since 2020-03-28 16:25
  */
 public class KthNodeFromEnd {
 
@@ -39,5 +37,12 @@ public class KthNodeFromEnd {
         return slow;
     }
 
+    public class ListNode {
+        int val;
+        ListNode next;
+        ListNode() {}
+        ListNode(int val) { this.val = val; }
+        ListNode(int val, ListNode next) { this.val = val; this.next = next; }
+    }
 
 }
