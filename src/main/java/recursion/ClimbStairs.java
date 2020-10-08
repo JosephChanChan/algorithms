@@ -4,10 +4,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 /**
- * @author Joseph
- * @since 2019-09-21 20:43
- *
- * 水题 leetcode 70 easy
+ * leetcode 70 easy & 剑指Offer 10
  *
  * Question Description:
  *  You are climbing a stair case. It takes n steps to reach to the top.
@@ -40,6 +37,9 @@ import java.util.Map;
  *
  *  时间复杂度：O(n)
  *  空间复杂度：O(n)
+ *
+ *  @author Joseph
+ *  @since 2019-09-21 20:43
  */
 public class ClimbStairs {
 

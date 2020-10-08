@@ -1,10 +1,7 @@
 package binary.search;
 
 /**
- * @author Joseph
- * @since 2020-01-28 16:38
- *
- * leetcode 240 medium
+ * leetcode 240 medium & 剑指Offer 4
  *
  * <p>
  * Question Description:
@@ -36,6 +33,9 @@ package binary.search;
  *
  * 时间复杂度：仔细分析会发现每次都淘汰大约一般元素，所以是O(log(mn))，m行数，n列数
  * 空间复杂度：递归深度*每次递归所需的空间，O(log(m) or log(n))
+ *
+ * @author Joseph
+ * @since 2020-01-28 16:38
  */
 public class Search2DMatrix2 {
 
