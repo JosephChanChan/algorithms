@@ -337,7 +337,17 @@
   
 ### 剑指Offer专题：
 
+* [RepeatNumInArray (剑指Offer 3)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/tables/RepeatNumInArray.java)
+
+* [Search2DMatrix2 (剑指Offer 4)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/binary/search/Search2DMatrix2.java)
+
+* [ReplaceSpaces (剑指Offer 5)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/string/ReplaceSpaces.java)
+
+* [ReversePrintList (剑指Offer 6)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/tables/ReversePrintList.java)
+
 * [RestructureBinaryTree (剑指Offer 7)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/trees/RestructureBinaryTree.java)
+
+* [MockQueueUsingStack (剑指Offer 9)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/MockQueueUsingStack.java)
 
 * [KthNodeFromEnd (剑指Offer 22)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/tables/KthNodeFromEnd.java)
 
