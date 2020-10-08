@@ -29,8 +29,6 @@
 
 * [RearrangeLinkedList 链表原地逆置](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/tables/RearrangeLinkedList.java)
 
-* [KthNodeFromEnd (剑指Offer 22)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/tables/KthNodeFromEnd.java)
-
 * [MinimumPermutation 字典序的最小排列](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/tables/MinimumPermutation.java)
 
 * [AvgInIntArray int数组求平均数](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/tables/AvgInIntArray.java)
@@ -57,8 +55,6 @@
   * [BinaryTreeLevelOrderTraversal (leetcode 102)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/trees/BinaryTreeLevelOrderTraversal.java)
   
   * [TopKFrequentElements (leetcode 347)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/trees/TopKFrequentElements.java)
-  
-  * [RestructureBinaryTree (剑指Offer 7)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/trees/RestructureBinaryTree.java)
   
 
 ### 图相关：
@@ -215,9 +211,7 @@
   * [ZeroOneMatrix (leetcode 542)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/breadth/first/search/ZeroOneMatrix.java)
   
   
-### 动态规划：
-  
-  * [EditDistance 编辑距离](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/dynamic/programming/EditDistance.java)
+### 动态规划:
 
   * [GroupPostiveInt 正整数分组](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/dynamic/programming/GroupPostiveInt.java)
 
@@ -225,13 +219,7 @@
 
   * [MutiKnapsackProblem 多重背包](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/dynamic/programming/MultiKnapsackProblem.java)
 
-  * [LongestIncreasingSubsequence (leetcode 300)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/dynamic/programming/LongestIncreasingSubsequence.java)
-  
   * [LongestIncreasingSubsequence2 最长单增子序列2](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/dynamic/programming/LongestIncreasingSubsequence2.java)
-
-  * [UniquePaths (leetcode 62)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/dynamic/programming/UniquePaths.java)
-  
-  * [UniquePaths2 (leetcode 63)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/dynamic/programming/UniquePaths2.java)
 
   * [MaxCommSubSequence 最大公共子序列](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/dynamic/programming/MaxCommSubSequence.java)
   
@@ -240,6 +228,10 @@
   * [DoubleMatrixOptimalWay 双路矩阵取数](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/dynamic/programming/DoubleMatrixOptimalWay.java)
   
   * [BountyHunter 赏金猎人](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/dynamic/programming/BountyHunter.java)
+  
+  * [UniquePaths (leetcode 62)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/dynamic/programming/UniquePaths.java)
+  
+  * [UniquePaths2 (leetcode 63)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/dynamic/programming/UniquePaths2.java)
   
   * [HouseRobber (leetcode 198)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/dynamic/programming/HouseRobber.java)
 
@@ -250,6 +242,10 @@
   * [CirculationMaxSubSum (lintcode 1724)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/dynamic/programming/CirculationMaxSubSum.java)
   
   * [CoinChange (leetcode 322)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/dynamic/programming/CoinChange.java)
+  
+  * [LongestIncreasingSubsequence (leetcode 300)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/dynamic/programming/LongestIncreasingSubsequence.java)
+  
+  * [LargestDivisibleSubset (leetcode 368)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/dynamic/programming/LargestDivisibleSubset.java)
 
   
 ### 贪心算法：
@@ -337,4 +333,11 @@
   * [MissingPositiveSmallestNum 消失的最小正整数](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/MissingPositiveSmallestNum.java) 
   
   * [PrimeNumCountInArray 数组中最多的质数](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/PrimeNumCountInArray.java) 
+  
+  
+### 剑指Offer专题：
+
+* [RestructureBinaryTree (剑指Offer 7)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/trees/RestructureBinaryTree.java)
+
+* [KthNodeFromEnd (剑指Offer 22)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/tables/KthNodeFromEnd.java)
 
