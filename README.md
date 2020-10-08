@@ -322,19 +322,6 @@
   * [MergeSort](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/sort/MergeSort.java)
   
 
-### 积累：
-
-  * [CountsOfNum](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/CountsOfNum.java)
-
-  * [RedPacketGen 红包生成](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/RedPacketGen.java)
-  
-  * [SnowFlakeId 雪花算法](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/SnowFlakeId.java)
-  
-  * [MissingPositiveSmallestNum 消失的最小正整数](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/MissingPositiveSmallestNum.java) 
-  
-  * [PrimeNumCountInArray 数组中最多的质数](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/PrimeNumCountInArray.java) 
-  
-  
 ### 剑指Offer专题：
 
 * [RepeatNumInArray (剑指Offer 3)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/tables/RepeatNumInArray.java)
@@ -350,4 +337,17 @@
 * [MockQueueUsingStack (剑指Offer 9)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/MockQueueUsingStack.java)
 
 * [KthNodeFromEnd (剑指Offer 22)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/tables/KthNodeFromEnd.java)
+  
+
+### 积累：
+
+  * [CountsOfNum](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/CountsOfNum.java)
+
+  * [RedPacketGen 红包生成](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/RedPacketGen.java)
+  
+  * [SnowFlakeId 雪花算法](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/SnowFlakeId.java)
+  
+  * [MissingPositiveSmallestNum 消失的最小正整数](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/MissingPositiveSmallestNum.java) 
+  
+  * [PrimeNumCountInArray 数组中最多的质数](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/PrimeNumCountInArray.java) 
 
