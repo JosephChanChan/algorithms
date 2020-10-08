@@ -44,12 +44,11 @@ import java.util.Map;
 public class ClimbStairs {
 
 
-    public static void main(String[] args) {
-        ClimbStairs climbStairs = new ClimbStairs();
-        int i = climbStairs.climbStairs(5);
-        System.out.println(i);
-    }
+    int mod = (int) 1e9 + 7;
 
+    public int numWays(int n) {
+        return climbStairs(n);
+    }
 
     private int climbStairs(int n) {
         Map<Integer, Integer> memorandum = new HashMap<>();
@@ -57,14 +56,14 @@ public class ClimbStairs {
     }
 
     private int doCalc(int num, Map<Integer, Integer> memorandum) {
-        if (num == 0) return 0;
+        if (num == 0) return 1;
         if (num == 1) return 1;
         if (num == 2) return 2;
 
         if (null != memorandum.get(num)) {
             return memorandum.get(num);
         }
-        int val = doCalc(num - 1, memorandum) + doCalc(num - 2, memorandum);
+        int val = (doCalc(num - 1, memorandum) + doCalc(num - 2, memorandum)) % mod;
         memorandum.put(num, val);
         return val;
     }
