@@ -142,7 +142,7 @@
 
   * [ReverseList (leetcode 206)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/recursion/ReverseList.java)
 
-  * [FibonacciSequence2 (leetcode 509)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/recursion/FibonacciSequence2.java)
+  * [FibonacciSequence (leetcode 509)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/recursion/FibonacciSequence.java)
 
   * [ClimbStairs (leetcode 70)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/recursion/ClimbStairs.java)
 
@@ -335,6 +335,10 @@
 * [RestructureBinaryTree (剑指Offer 7)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/trees/RestructureBinaryTree.java)
 
 * [MockQueueUsingStack (剑指Offer 9)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/MockQueueUsingStack.java)
+
+* [FibonacciSequence (剑指Offer 10-1)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/recursion/FibonacciSequence.java)
+
+* [ClimbStairs (剑指Offer 10-2)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/recursion/ClimbStairs.java)
 
 * [KthNodeFromEnd (剑指Offer 22)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/tables/KthNodeFromEnd.java)
   
