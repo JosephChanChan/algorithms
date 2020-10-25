@@ -340,6 +340,8 @@
 
 * [ClimbStairs (剑指Offer 10-2)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/recursion/ClimbStairs.java)
 
+* [FindMinimumInRotatedSortedArray2 (剑指Offer 11)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/binary/search/FindMinimumInRotatedSortedArray2.java)
+
 * [KthNodeFromEnd (剑指Offer 22)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/tables/KthNodeFromEnd.java)
   
 
