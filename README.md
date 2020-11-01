@@ -342,6 +342,10 @@
 
 * [FindMinimumInRotatedSortedArray2 (剑指Offer 11)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/binary/search/FindMinimumInRotatedSortedArray2.java)
 
+* [MatrixRoad (剑指Offer 12)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/backtracking/algorithm/MatrixRoad.java)
+
+* [RobotWalkGrid (剑指Offer 13)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/breadth/first/search/RobotWalkGrid.java)
+
 * [KthNodeFromEnd (剑指Offer 22)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/tables/KthNodeFromEnd.java)
   
 
