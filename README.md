@@ -346,8 +346,10 @@
 
 * [RobotWalkGrid (剑指Offer 13)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/breadth/first/search/RobotWalkGrid.java)
 
+* [CuttingWire (剑指Offer 14)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/dynamic/programming/CuttingWire.java)
+
 * [KthNodeFromEnd (剑指Offer 22)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/tables/KthNodeFromEnd.java)
-  
+
 
 ### 积累：
 
