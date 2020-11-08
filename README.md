@@ -348,6 +348,12 @@
 
 * [CuttingWire (剑指Offer 14)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/dynamic/programming/CuttingWire.java)
 
+* [MyPow (剑指Offer 15)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/recursion/MyPow.java)
+
+* [PrintStringN (剑指Offer 16)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/simulation/algorithm/PrintStringN.java)
+
+* [CountOneInBinary (剑指Offer 17)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/CountOneInBinary.java)
+
 * [KthNodeFromEnd (剑指Offer 22)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/tables/KthNodeFromEnd.java)
 
 
