@@ -360,7 +360,7 @@
 
 * [StringIsNumeric (剑指Offer 20)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/simulation/algorithm/StringIsNumeric.java)
 
-* [OddNumBeforeEvenNum (leetcode 21)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/pointers/OddNumBeforeEvenNum.java)
+* [OddNumBeforeEvenNum (剑指Offer 21)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/pointers/OddNumBeforeEvenNum.java)
 
 * [KthNodeFromEnd (剑指Offer 22)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/tables/KthNodeFromEnd.java)
 
