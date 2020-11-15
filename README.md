@@ -354,7 +354,7 @@
 
 * [CountOneInBinary (剑指Offer 17)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/CountOneInBinary.java)
 
-* [DeleteLinkedListNode (leetcode 18)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/pointers/DeleteLinkedListNode.java)
+* [DeleteLinkedListNode (剑指Offer 18)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/pointers/DeleteLinkedListNode.java)
 
 * [RegularExpressionMatching (剑指Offer 19)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/recursion/RegularExpressionMatching.java)
 
