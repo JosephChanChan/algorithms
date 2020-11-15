@@ -354,6 +354,14 @@
 
 * [CountOneInBinary (剑指Offer 17)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/CountOneInBinary.java)
 
+* [DeleteLinkedListNode (剑指Offer 18)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/pointers/DeleteLinkedListNode.java)
+
+* [RegularExpressionMatching (剑指Offer 19)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/recursion/RegularExpressionMatching.java)
+
+* [StringIsNumeric (剑指Offer 20)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/simulation/algorithm/StringIsNumeric.java)
+
+* [OddNumBeforeEvenNum (剑指Offer 21)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/pointers/OddNumBeforeEvenNum.java)
+
 * [KthNodeFromEnd (剑指Offer 22)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/tables/KthNodeFromEnd.java)
 
 
