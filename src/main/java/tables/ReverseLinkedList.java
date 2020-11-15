@@ -1,7 +1,7 @@
 package tables;
 
 /**
- * leetcode 206 easy
+ * 剑指Offer 24 & leetcode 206 easy
  *
  * Analysis:
  * 时间复杂度：O(n)
@@ -23,6 +23,26 @@ public class ReverseLinkedList {
             cur = t;
         }
         return prev;
+    }
+
+    // 用Dummy辅助节点
+    public ListNode reverseList2(ListNode head) {
+        ListNode dummy = new ListNode(-1);
+
+        dummy.next = head;
+        ListNode p = dummy, q = dummy.next;
+
+        while (null != q) {
+            ListNode t = q.next;
+            q.next = p;
+            p = q;
+            q = t;
+        }
+        if (null != dummy.next) {
+            dummy.next.next = q;
+            dummy.next = p;
+        }
+        return dummy.next;
     }
 
     public class ListNode {

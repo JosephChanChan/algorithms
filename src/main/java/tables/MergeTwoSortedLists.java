@@ -1,7 +1,7 @@
 package tables;
 
 /**
- * leetcode 21 easy
+ * 剑指Offer 25 easy & leetcode 21 easy
  *
  * Analysis:
  *  排队法，两个链表节点互相比较，小的在前。
