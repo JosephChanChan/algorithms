@@ -370,13 +370,13 @@
 
 * [SameSubTree (剑指Offer 26)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/depth/first/search/SameSubTree.java)
 
-* [MinStack (剑指Offer 27)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/tables/MinStack.java)
+* [MirrorTree (剑指Offer 27)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/trees/MirrorTree.java)
 
-* [MirrorTree (剑指Offer 28)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/trees/MirrorTree.java)
+* [SymmetricTree (剑指Offer 28)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/trees/SymmetricTree.java)
 
-* [SameTree (剑指Offer 29)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/trees/SameTree.java)
+* [ClockwiseMatrix (剑指Offer 29)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/simulation/algorithm/ClockwiseMatrix.java)
 
-* [SymmetricTree (剑指Offer 30)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/trees/SymmetricTree.java)
+* [MinStack (剑指Offer 30)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/tables/MinStack.java)
 
 
 ### 积累：
