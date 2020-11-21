@@ -364,6 +364,10 @@
 
 * [KthNodeFromEnd (剑指Offer 22)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/tables/KthNodeFromEnd.java)
 
+* [ReverseLinkedList (剑指Offer 24)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/tables/ReverseLinkedList.java)
+
+* [MergeTwoSortedLists (剑指Offer 25)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/tables/MergeTwoSortedLists.java)
+
 
 ### 积累：
 
