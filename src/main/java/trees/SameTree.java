@@ -4,9 +4,6 @@ import java.util.LinkedList;
 import java.util.Queue;
 
 /**
- * @author Joseph
- * @since 2020-01-31 18:13
- *
  * leetcode 100 easy
  *
  * Question Description:
@@ -37,6 +34,9 @@ import java.util.Queue;
  *
  *  时间复杂度：O(n)
  *  空间复杂度：O(n)
+ *
+ *  @author Joseph
+ *  @since 2020-01-31 18:13
  */
 public class SameTree {
 
