@@ -378,6 +378,8 @@
 
 * [MinStack (剑指Offer 30)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/tables/MinStack.java)
 
+* [ValidPopOrderedStack (剑指Offer 31)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/simulation/algorithm/ValidPopOrderedStack.java)
+
 
 ### 积累：
 
