@@ -1,13 +1,10 @@
 package simulation.algorithm;
 
-import java.util.LinkedList;
-import java.util.Queue;
-
 /**
  * 剑指Offer 29 medium
  *
  * Analysis:
- *  这次模拟的不好，下次再刷一遍
+ *  37min AC。还得再刷
  *
  *  时间复杂度：O(nm)
  *  空间复杂度：O(1)
@@ -22,54 +19,43 @@ public class ClockwiseMatrix {
             矩阵1个元素。一行元素，一列元素。
     */
 
-    int n, m, visCount ;
-    int[] ans ;
+    int r, c ;
+    int visCount = 0, directions = 0;
     boolean[][] vis ;
-    Queue<Integer[]> q = new LinkedList<>();
+    int[] ans ;
+    int[][] d = new int[][]{{0, 1}, {1, 0}, {0, -1}, {-1, 0}};
+
 
     public int[] spiralOrder(int[][] matrix) {
-        n = matrix.length;
-        if (n == 0) return new int[0];
-        m = matrix[0].length;
-        if (n == 1 && m == 1) return new int[]{matrix[0][0]};
+        r = matrix.length;
+        if (r == 0) return new int[0];
+        c = matrix[0].length;
 
-        ans = new int[n * m];
-        vis = new boolean[n][m];
-        visCount = n * m;
+        visCount = r * c;
+        vis = new boolean[r][c];
 
-        q.add(new Integer[]{0, 1});
-        q.add(new Integer[]{1, 0});
-        q.add(new Integer[]{0, -1});
-        q.add(new Integer[]{-1, 0});
+        ans = new int[visCount];
 
-        int count = 0;
         int i = 0, j = 0;
-
-        while (visCount > 0) {
-            Integer[] d = loopDir();
+        for (int k = 0; k < visCount; ) {
             while (true) {
-                if (vis[i][j]) {
-                    i += d[0]; j += d[1];
-                }
-                visCount--;
+                ans[k++] = matrix[i][j];
                 vis[i][j] = true;
-                ans[count++] = matrix[i][j];
-                if (invalid(i, j, d)) break;
-                i += d[0]; j += d[1];
+                int row = i + d[directions][0];
+                int column = j + d[directions][1];
+                if (exceed(row, column) || vis[row][column]) {
+                    directions = ++directions % 4;
+                    i += d[directions][0];
+                    j += d[directions][1];
+                    break;
+                }
+                i = row; j = column;
             }
         }
         return ans;
     }
 
-    private boolean invalid(int i, int j, Integer[] d) {
-        int r = i + d[0];
-        int c = j + d[1];
-        return r < 0 || r == n || c < 0 || c == m || vis[r][c];
-    }
-
-    private Integer[] loopDir() {
-        Integer[] d = q.poll();
-        q.offer(d);
-        return d;
+    private boolean exceed(int i, int j) {
+        return i < 0 || i >= r || j < 0 || j >= c;
     }
 }

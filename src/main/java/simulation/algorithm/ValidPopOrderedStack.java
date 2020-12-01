@@ -7,6 +7,7 @@ import java.util.Deque;
  * 剑指Offer 31 medium
  *
  * Analysis:
+ *  45min AC
  *  初始化按出栈序列，计算入栈元素并记录入栈边界。
  *  遍历出栈元素，若出栈元素：
  *    1.在入栈边界外，则(边界~此元素)中间元素全部入栈

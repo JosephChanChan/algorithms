@@ -1,13 +1,16 @@
 package breadth.first.search;
 
-import java.util.ArrayList;
-import java.util.LinkedList;
-import java.util.List;
+import java.util.*;
 
 /**
- * leetcode 103 medium
+ * leetcode 103 medium & 剑指Offer 32
  *
  * Analysis:
+ *  推荐双栈的解法，一次遍历真正的O(n)，并且思想和代码实现更简单。
+ * 双栈：左栈 & 右栈
+ * 左栈存 left -> right 的元素。遍历左栈时，从左到右添加子元素到右栈，此时最右子元素在右栈的Top。
+ * 右栈存 right -> left 的元素。遍历右栈时，从右到左添加子元素到左栈，此时最左子元素在左栈的Top。
+ *
  * 时间复杂度：O(n)
  * 空间复杂度：O(n)
  *
@@ -53,6 +56,52 @@ public class BinaryTreeZigzagLevelOrderTraversal {
         }
         ans.add(v);
         bfs(q, ans, !left);
+    }
+
+
+    // ==================================== 第二种解法 双栈 O(n) 35min AC 2ms
+
+    Stack<TreeNode> left = new Stack<>();// left -> right
+    Stack<TreeNode> right = new Stack<>();// right -> left
+    List<List<Integer>> ans = new LinkedList<>();
+
+    public List<List<Integer>> levelOrder(TreeNode root) {
+        if (null == root) return ans;
+        left.add(root);
+        bfs();
+        return ans;
+    }
+
+    private void bfs() {
+        if (left.isEmpty() && right.isEmpty()) return;
+        List<Integer> list = new LinkedList<>();
+        if (right.isEmpty()) {
+            // left -> right this level
+            while (!left.isEmpty()) {
+                TreeNode node = left.pop();
+                list.add(node.val);
+                if (null != node.left) {
+                    right.add(node.left);
+                }
+                if (null != node.right) {
+                    right.add(node.right);
+                }
+            }
+        }
+        else {
+            while (!right.isEmpty()) {
+                TreeNode node = right.pop();
+                list.add(node.val);
+                if (null != node.right) {
+                    left.add(node.right);
+                }
+                if (null != node.left) {
+                    left.add(node.left);
+                }
+            }
+        }
+        if (!list.isEmpty()) ans.add(list);
+        bfs();
     }
 
     public class TreeNode {

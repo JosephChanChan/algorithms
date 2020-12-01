@@ -1,12 +1,8 @@
 package trees;
 
-import trees.AVLTree;
-
 import java.util.*;
 
 /**
- * @author Joseph
- * @since 2019-10-31 16:30
  *
  * Question Description:
  *  对于一个由一位十进制整数构成的二叉树，如果深度不超过4，可以用一个三位十进制整数构成的数组表示，具体规则如下：
@@ -23,6 +19,8 @@ import java.util.*;
  * 时间复杂度：O(n)
  * 空间复杂度：O(n)
  *
+ * @author Joseph
+ * @since 2019-10-31 16:30
  */
 public class Num2TreeSum {
 
