@@ -380,6 +380,14 @@
 
 * [ValidPopOrderedStack (剑指Offer 31)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/simulation/algorithm/ValidPopOrderedStack.java)
 
+* [LevelOrderTraversalTree (剑指Offer 32)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/trees/LevelOrderTraversalTree.java)
+
+* [VerifyPostOrder (剑指Offer 33)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/trees/VerifyPostOrder.java)
+
+* [SumOfTreePaths (剑指Offer 34)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/trees/SumOfTreePaths.java)
+
+* [ComplexListCopy (剑指Offer 35)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/tables/ComplexListCopy.java)
+
 
 ### 积累：
 
