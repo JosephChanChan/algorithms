@@ -1,12 +1,8 @@
 package backtracking.algorithm;
 
-import java.util.ArrayList;
-import java.util.List;
+import java.util.*;
 
 /**
- * @author Joseph
- * @since 2020-03-23 23:36
- *
  * leetcode 46 medium
  *
  * Given a collection of distinct integers, return all possible permutations.
@@ -23,54 +19,51 @@ import java.util.List;
  * ]
  *
  * Analysis:
- *  递归回溯法。因为是全排列，所以没有剪枝。
- *  PS: 其实这题就是之前做过的 FullPermutation
+ *  递归回溯法。思想就是每层递归都是给当前的i位置选择一个数，例如：[1,2,3] 第一个位置可选 1，2，3 选了1后递归第二个位置。
+ *  第二个位置可选2，3，选2，第三个位置可选3。
+ *  最后回溯到第一个位置时继续枚举2，递归第二个位置，可选的数有1，3。所以得有全局记录当前已选的数避免重复选择。
+ *
  *  时间复杂度：O(A(n,n)) A(n,m)是排列公式。
- *  空间复杂度：O(A(n,n)) 因为用到额外容器保存所有的排列结果
+ *  空间复杂度：o(n)
+ *
+ * @author Joseph
+ * @since 2020-03-23 23:36
  */
 public class Permutation {
 
 
-    public static void main(String[] args) {
-        int[] nums = {1,2,3,4,5};
-        Permutation permutation = new Permutation();
-        List<List<Integer>> permute = permutation.permute(nums);
-        permute.forEach(list -> {
-            list.forEach(element -> {
-                System.out.print(element + " ");
-            });
-            System.out.println();
-        });
+    boolean[] vis ;
+    List<Integer> list = new LinkedList<>();
+    List<List<Integer>> ans = new LinkedList<>();
+
+    public List<List<Integer>> permute(int[] nums) {
+        int n = nums.length;
+        if (n == 0) return ans;
+        if (n == 1) {
+            List<Integer> l = new LinkedList<>();
+            l.add(nums[0]);
+            ans.add(l);
+            return ans;
+        }
+        vis = new boolean[n];
+        dfs(nums);
+        return ans;
     }
 
-
-    private List<List<Integer>> permute(int[] nums) {
-        List<Integer> list = new ArrayList<>();
-        List<List<Integer>> permutationList = new ArrayList<>();
-        recursion(nums, 0, list, permutationList);
-        return permutationList;
-    }
-
-    private void recursion(int[] nums, int level, List<Integer> list, List<List<Integer>> permutationList) {
-        if (level == nums.length) {
-            permutationList.add(new ArrayList<>(list));
+    private void dfs(int[] nums) {
+        if (list.size() == nums.length) {
+            ans.add(new ArrayList<>(list));
             return;
         }
-
-        for (int i = level; i < nums.length; i++) {
-            swap(nums, level, i);
-            list.add(nums[level]);
-            recursion(nums, level+1, list, permutationList);
-            swap(nums, level, i);
-            list.remove(level);
+        for (int i = 0; i < nums.length; i++) {
+            if (!vis[i]) {
+                vis[i] = true;
+                list.add(nums[i]);
+                dfs(nums);
+                vis[i] = false;
+                list.remove(list.size()-1);
+            }
         }
     }
-
-    private void swap(int[] nums, int level, int j) {
-        int temp = nums[level];
-        nums[level] = nums[j];
-        nums[j] = temp;
-    }
-
 
 }
