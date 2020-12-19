@@ -5,11 +5,10 @@ public class Main {
 
 
     public static void main(String[] args) {
-        char[] a = new char[10];
-        for (int i = 0; i < a.length; i++) {
-            a[i] = '0';
-        }
-        System.out.println((int) a[0]);
+        long i = -213L;
+        System.out.println(Long.toBinaryString(i));
+        short s = (short) i;
+        System.out.println(Integer.toBinaryString(s));
     }
 
 
