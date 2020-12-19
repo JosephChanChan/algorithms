@@ -396,6 +396,8 @@
 
 * [MoreThanHalfNums (剑指Offer 39)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/tables/MoreThanHalfNums.java)
 
+* [TopMinimumK (剑指Offer 40)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/trees/TopMinimumK.java)
+
 
 ### 积累：
 
