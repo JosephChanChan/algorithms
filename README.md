@@ -321,6 +321,8 @@
   
   * [MergeSort](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/sort/MergeSort.java)
   
+  * [HeapSort](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/sort/HeapSort.java)
+  
 
 ### 剑指Offer专题：
 
