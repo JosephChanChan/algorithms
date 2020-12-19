@@ -388,6 +388,14 @@
 
 * [ComplexListCopy (剑指Offer 35)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/tables/ComplexListCopy.java)
 
+* [BST2DoublyList (剑指Offer 36)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/trees/BST2DoublyList.java)
+
+* [SerializeTree (剑指Offer 37)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/trees/SerializeTree.java)
+
+* [Permutation2 (剑指Offer 38)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/backtracking/algorithm/Permutation2.java)
+
+* [MoreThanHalfNums (剑指Offer 39)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/tables/MoreThanHalfNums.java)
+
 
 ### 积累：
 
