@@ -1,5 +1,7 @@
 package sort;
 
+import java.util.Random;
+
 /**
  * Created by Joseph on 2017/6/28.
  */
@@ -54,5 +56,14 @@ public class CheckSortedArr {
         for (int i = 0; i < arr.length; i++){
             System.out.printf(arr[i] + " ");
         }
+    }
+
+    public static int[] buildArray(int n) {
+        int[] a = new int[n];
+        Random random = new Random();
+        for (int i = 0; i < n; i++) {
+            a[i] = random.nextInt(n);
+        }
+        return a;
     }
 }
