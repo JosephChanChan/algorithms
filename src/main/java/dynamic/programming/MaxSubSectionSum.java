@@ -1,8 +1,7 @@
 package dynamic.programming;
 
 /**
- * Question Description:
- *  参见 leetcode 53
+ * 剑指Offer 42 & leetcode 53
  *
  * Analysis:
  *    令f[i]表示以位置 i 为终点的所有子区间中和最大的一个(必须包含a[i])
@@ -17,23 +16,16 @@ package dynamic.programming;
 public class MaxSubSectionSum {
 
     public int maxSubArray(int[] nums) {
-        int sum = Integer.MIN_VALUE, temp = 0;
-        // 最大连续子段和开始和结束下标
-        int start = 0, end = 0;
-        for(int i = 0; i < nums.length; i++){
-            if (temp > 0) {
-                temp += nums[i];
-            }
-            else {
-                temp = nums[i];
-                start = i;
-            }
-            if (temp > sum) {
-                sum = temp;
-                end = i;
-            }
-        }
-        return sum;
-    }
+        if (nums.length == 0) return 0;
+        if (nums.length == 1) return nums[0];
 
+        int[] f = new int[nums.length];
+        f[0] = nums[0];
+        int max = f[0];
+        for (int i = 1; i < f.length; i++) {
+            f[i] = Math.max(f[i-1]+nums[i], nums[i]);
+            if (f[i] > max) max = f[i];
+        }
+        return max;
+    }
 }
