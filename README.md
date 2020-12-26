@@ -58,6 +58,8 @@
   
 
 ### 图相关：
+
+  * [BFSGraph 图BFS模板](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/graphs/BreathFirstSearch.java)
   
   * [PrimAlgorithm 最小生成树 (C++实现)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/graphs/PrimAlgorithm.cpp)
 
@@ -320,6 +322,8 @@
   * [QuickSort](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/sort/QuickSort.java)
   
   * [MergeSort](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/sort/MergeSort.java)
+  
+  * [HeapSort](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/sort/HeapSort.java)
   
 
 ### 剑指Offer专题：
