@@ -309,6 +309,10 @@
   * [BulbOnOrOff 灯泡开关](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/simulation/algorithm/BulbOnOrOff.java)
   
   * [DolphinNums 海豚数](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/simulation/algorithm/DolphinNums.java)
+  
+  * [BigPositiveNumAdd (leetcode 2)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/simulation/algorithm/BigPositiveNumAdd.java)
+  
+  * [BigNumAdd 含负数大数加法](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/simulation/algorithm/BigNumAdd.java)
 
 
 ### 排序：
