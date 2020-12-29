@@ -408,8 +408,6 @@
 
 * [MidNumInStream (剑指Offer 41)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/trees/MidNumInStream.java)
 
-* [MidNumInStream (剑指Offer 41)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/trees/MidNumInStream.java)
-
 * [MaxSubSectionSum (剑指Offer 42)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/dynamic/programming/MaxSubSectionSum.java)
 
 
