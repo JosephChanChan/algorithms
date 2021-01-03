@@ -423,8 +423,6 @@
 
 ### 积累：
 
-  * [CountsOfNum](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/CountsOfNum.java)
-
   * [RedPacketGen 红包生成](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/RedPacketGen.java)
   
   * [SnowFlakeId 雪花算法](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/SnowFlakeId.java)
