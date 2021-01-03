@@ -1,78 +1,56 @@
-import java.io.*;
 
 /**
- * 给定一个十进制正整数N，写下从1开始，到N的所有正数，计算出其中出现所有1的个数。
- *  例如：n = 12，包含了5个1。1,10,12共包含3个1，11包含2个1，总共5个1。
- *  以上题目可转成 1~N 中出现X数字的个数 例如 1~9998中 出现5的个数
+ * 剑指Offer 43 & lc 233 hard
  *
- *  Input
- *  输入N(1 <= N <= 10^9)
- *  Output
- *  输出包含1的个数
+ * Analysis:
+ *  数学分析题，要找每一位中出现1的可能数。
+ *  XXX Y XX
+ *  以百位为例，求Y在百位出现1的次数
+ * case 1:
+ *     高位有 000 ~ (XXX-1)种排列，低位有00~99种排列，因为低位任取都小于 XXXYXX
+ *     000100
+ *     ...
+ *     (XXX-1)199
  *
- *  规律:
- *  从 1 至 10，在它们的个位数中，任意的 X 都出现了 1 次。
- *  从 1 至 100，在它们的十位数中，任意的 X 都出现了 10 次。
- *  从 1 至 1000，在它们的千位数中，任意的 X 都出现了 100 次。
- *  依此类推，从 1 至 10i，在它们的左数第二位（右数第 i 位）中，任意的 X 都出现了 10i−1 次。
+ * case 2 以XXX开头 :
+ *     Y > 1，Y取1，XXX100 ~ XXX199，取决于低位的排列数
+ *     Y = 0，不可能取1
+ *     Y = 1，XXX100 ~ XXX1XX，取决于低位的排列数
  *
- *  算法:
- *  取第 i 位左边（高位）的数字，乘以 10i−1，得到基础值 a。
- *  取第 i 位数字，计算修正值：
- *  如果大于 X，则结果为 a+10i−1。
- *  如果小于 X，则结果为 a。
- *  如果等 X，则取第 i 位右边（低位）数字，设为 b，最后结果为 a+b+1。
+ * 依照上面的算法依次计算个位~digit位的1的个数累加
  *
- *  相应的代码非常简单，效率也非常高，时间复杂度只有 O(log10n)。
+ * 需要二刷
  *
- *  Created by Joseph on 2017/7/10.
+ * 时间复杂度：O(logN)
+ * 空间复杂度：O(n) 用了char[]
  */
 public class CountsOfNum {
 
-    public static void main(String[] args){
-        int count=0;
-        long n;
-        String num;
-        try {
-            BufferedReader reader = new BufferedReader(new InputStreamReader(System.in),1<<16);
-            BufferedWriter writer = new BufferedWriter(new OutputStreamWriter(System.out), 1 << 16);
-            num = reader.readLine();
-            n = Long.parseLong(num);
-            long x;
-            for(int i=1; n>0; i++){
-                x = n%10;
-                n = n/10;
-                //计算 10i-1 次方
-                int calc = calc(i-1);
-                int base = (int)n * calc;
-                //计算第i位
-                if(x > 1){
-                    base = base+calc;
-                }else if(x == 1){
-                    String ts = num.substring((num.length() - i)+1);
-                    long ii = Long.parseLong(ts)+1;
-                    base += ii;
-                }
+    public int countDigitOne(int n) {
+        if (n <= 0) return 0;
+        if (n < 10) return 1;
 
-                count+=base;
+        String num = String.valueOf(n);
+        char[] c = num.toCharArray();
+
+        int m = c.length, ans = 0;
+        // 从最高位算到最低位  2 3 4 5
+        //                   a  i b
+        for (int i = 0; i < m; i++) {
+            // a是高位数，高位数共有 0~a-1种排列
+            int a = n / (int) Math.pow(10.0d, m - i);
+            // b是低位数，低位数共有 10^b 种排列
+            int b = (int) Math.pow(10.0d, m - i - 1);
+            ans += a * b;
+            // 算完 0~(XXX-1)的开头排列，当前i位是1的排列数后。
+            // 算 XXX开头排列，当前位i是1的排列
+            if (c[i] - '0' > 1) {
+                ans += (int) Math.pow(10.0d, m-i-1);
             }
-
-            writer.write(count+"\r\n");
-            writer.flush();
-        } catch (IOException e) {
-            e.printStackTrace();
+            if (c[i] - '0' == 1) {
+                ans += n % (int) Math.pow(10.0d, m-i-1) + 1;
+            }
         }
-    }
-
-    private static int calc(int i){
-        int val=10;
-        if(i==1) return val;
-        else if(i==0) return 1;
-        else if(i<0) return 0;
-        while (i>1){
-            val *= val;
-            i--;
-        }
-        return val;
+        return ans;
     }
 }
