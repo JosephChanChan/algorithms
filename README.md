@@ -410,10 +410,18 @@
 
 * [MaxSubSectionSum (剑指Offer 42)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/dynamic/programming/MaxSubSectionSum.java)
 
+* [CountsOfNum (剑指Offer 43)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/CountsOfNum.java)
+
+* [NumInNumStream (剑指Offer 44)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/NumInNumStream.java)
+
+* [ConcatStringUsingNums (剑指Offer 45)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/greedy/algorithm/ConcatStringUsingNums.java)
+
+* [DecodeWays (剑指Offer 46)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/dynamic/programming/DecodeWays.java)
+
+* [MaxValuableGift (剑指Offer 47)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/dynamic/programming/MaxValuableGift.java)
+
 
 ### 积累：
-
-  * [CountsOfNum](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/CountsOfNum.java)
 
   * [RedPacketGen 红包生成](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/RedPacketGen.java)
   
