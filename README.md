@@ -420,6 +420,20 @@
 
 * [MaxValuableGift (剑指Offer 47)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/dynamic/programming/MaxValuableGift.java)
 
+* [MaxUniqueSubString (剑指Offer 48)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/two/pointers/MaxValuableGift.java)
+
+* [UglyNum (剑指Offer 49)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/UglyNum.java)
+
+* [FirstUniqueChar (剑指Offer 50)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/tables/java/FirstUniqueChar.java)
+
+* [DecreasingPairs (剑指Offer 51)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/recursion/DecreasingPairs.java)
+
+* [CommonNodeOfLists (剑指Offer 52)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/tables/CommonNodeOfLists.java)
+
+* [AbsentNumInSortedArray (剑指Offer 53a)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/binary/search/AbsentNumInSortedArray.java)
+
+* [CountOfNumInSortedArray (剑指Offer 53b)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/binary/search/CountOfNumInSortedArray.java)
+
 
 ### 积累：
 
