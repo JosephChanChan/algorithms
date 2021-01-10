@@ -424,7 +424,7 @@
 
 * [UglyNum (剑指Offer 49)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/UglyNum.java)
 
-* [FirstUniqueChar (剑指Offer 50)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/tables/java/FirstUniqueChar.java)
+* [FirstUniqueChar (剑指Offer 50)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/tables/FirstUniqueChar.java)
 
 * [DecreasingPairs (剑指Offer 51)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/recursion/DecreasingPairs.java)
 
