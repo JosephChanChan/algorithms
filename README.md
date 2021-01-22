@@ -25,7 +25,7 @@
 
 * [SingleCircularLinkedList 单向循环链表](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/tables/SingleTrackCircularLinkedList.java)
 
-* [BitMap 位图算法](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/tables/BitMap.java)
+* [BitSet 位图](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/tables/BitSet.java)
 
 * [RearrangeLinkedList 链表原地逆置](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/tables/RearrangeLinkedList.java)
 
