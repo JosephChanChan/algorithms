@@ -114,8 +114,6 @@
 ### 回溯法：
   
   * [FloorMoppingRobot 优秀的扫地机器人](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/backtracking/algorithm/FloorMoppingRobot.java)
-  
-  * [FullPermutation 全排列](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/backtracking/algorithm/FullPermutation.java)
 
   * [CalculateBill 检查账单](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/backtracking/algorithm/CalculateBill.java)
 
@@ -132,6 +130,8 @@
   * [GenerateParentheses (leetcode 22)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/backtracking/algorithm/GenerateParentheses.java)
   
   * [Permutation (leetcode 46)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/backtracking/algorithm/Permutation.java)
+  
+  * [Permutation2 (leetcode 47)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/backtracking/algorithm/Permutation2.java)
   
   * [LetterCombinationsPhoneNumber (leetcode 17)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/backtracking/algorithm/LetterCombinationsPhoneNumber.java)
   
