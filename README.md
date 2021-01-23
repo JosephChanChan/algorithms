@@ -25,7 +25,7 @@
 
 * [SingleCircularLinkedList 单向循环链表](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/tables/SingleTrackCircularLinkedList.java)
 
-* [BitMap 位图算法](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/tables/BitMap.java)
+* [BitSet 位图](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/tables/BitSet.java)
 
 * [RearrangeLinkedList 链表原地逆置](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/tables/RearrangeLinkedList.java)
 
@@ -114,8 +114,6 @@
 ### 回溯法：
   
   * [FloorMoppingRobot 优秀的扫地机器人](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/backtracking/algorithm/FloorMoppingRobot.java)
-  
-  * [FullPermutation 全排列](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/backtracking/algorithm/FullPermutation.java)
 
   * [CalculateBill 检查账单](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/backtracking/algorithm/CalculateBill.java)
 
@@ -132,6 +130,8 @@
   * [GenerateParentheses (leetcode 22)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/backtracking/algorithm/GenerateParentheses.java)
   
   * [Permutation (leetcode 46)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/backtracking/algorithm/Permutation.java)
+  
+  * [Permutation2 (leetcode 47)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/backtracking/algorithm/Permutation2.java)
   
   * [LetterCombinationsPhoneNumber (leetcode 17)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/backtracking/algorithm/LetterCombinationsPhoneNumber.java)
   
@@ -419,6 +419,20 @@
 * [DecodeWays (剑指Offer 46)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/dynamic/programming/DecodeWays.java)
 
 * [MaxValuableGift (剑指Offer 47)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/dynamic/programming/MaxValuableGift.java)
+
+* [MaxUniqueSubString (剑指Offer 48)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/two/pointers/MaxValuableGift.java)
+
+* [UglyNum (剑指Offer 49)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/UglyNum.java)
+
+* [FirstUniqueChar (剑指Offer 50)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/tables/FirstUniqueChar.java)
+
+* [DecreasingPairs (剑指Offer 51)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/recursion/DecreasingPairs.java)
+
+* [CommonNodeOfLists (剑指Offer 52)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/tables/CommonNodeOfLists.java)
+
+* [AbsentNumInSortedArray (剑指Offer 53a)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/binary/search/AbsentNumInSortedArray.java)
+
+* [CountOfNumInSortedArray (剑指Offer 53b)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/binary/search/CountOfNumInSortedArray.java)
 
 
 ### 积累：
