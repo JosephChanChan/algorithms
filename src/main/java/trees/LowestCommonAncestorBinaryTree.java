@@ -14,49 +14,27 @@ package trees;
  */
 public class LowestCommonAncestorBinaryTree {
 
+    TreeNode ans = null;
+
     public TreeNode lowestCommonAncestor(TreeNode root, TreeNode p, TreeNode q) {
-        if (root == p || root == q) return root;
-        Result r = divide(root, p, q);
-        return r.lca;
+        if (null == root) return null;
+        dAndC(root, p, q);
+        return ans;
     }
 
-    // 计算以node下是否存在p q的lca
-    private Result divide(TreeNode node, TreeNode p, TreeNode q) {
-        if (null == node) return new Result(null, false, false);
-
-        // divide
-        Result lr = divide(node.left, p, q);
-        // 加了左子树的判断剪枝右子树，总体时间上并不会更快，还是 faster than 68%
-        // if (null != lr.lca) return lr;
-        // if (node == p && lr.qPrecent || node == q && lr.pPrecent) return new Result(node, true, true);
-
-        Result rr = divide(node.right, p, q);
-
-        // merge
-        if (null != lr.lca) return lr;
-        if (null != rr.lca) return rr;
-        if ((lr.pPrecent && rr.qPrecent) || (lr.qPrecent && rr.pPrecent)) {
-            return new Result(node, true, true);
+    private int dAndC(TreeNode n, TreeNode p, TreeNode q) {
+        int count = 0;
+        if (n.val == p.val || n.val == q.val) count++;
+        if (null != n.left) {
+            count += dAndC(n.left, p, q);
         }
-        if (node == p && (lr.qPrecent || rr.qPrecent) ||
-                node == q && (lr.pPrecent || rr.pPrecent)) {
-            return new Result(node, true, true);
+        // 搜完左子树可能已经得到祖先节点了
+        if (null == ans && count == 2) ans = n;
+        if (null == ans && null != n.right) {
+            count += dAndC(n.right, p, q);
         }
-        return new Result(null,
-                node == p || lr.pPrecent || rr.pPrecent,
-                node == q || lr.qPrecent || rr.qPrecent);
+        // 搜完右子树可能已经得到祖先节点了
+        if (null == ans && count == 2) ans = n;
+        return count;
     }
-
-    class Result {
-        TreeNode lca;
-        boolean pPrecent;
-        boolean qPrecent;
-
-        public Result(TreeNode lca, boolean p, boolean q) {
-            this.lca = lca;
-            this.pPrecent = p;
-            this.qPrecent = q;
-        }
-    }
-
 }

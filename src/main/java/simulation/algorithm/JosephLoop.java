@@ -1,83 +1,87 @@
 package simulation.algorithm;
 
-import tables.SingleTrackCircularLinkedList;
-
-import java.util.Scanner;
+import java.util.*;
 
 /**
- * Problem Description:
- * 约瑟夫环（约瑟夫问题）是一个数学的应用问题：已知n个人（以编号1，2，3...n分别表示）围坐在一张圆桌周围。从编号为k的人开始报数，
- * 数到m的那个人出列；他的下一个人又从1开始报数，数到m的那个人又出列；依此规律重复下去，直到圆桌只剩下最后一人，给出这个人的原始编号。
+ * 剑指Offer 62 easy
  *
  * Analysis:
- * 很自然的想到模拟算法，规则给得很清楚，共有 n 个人，从第 1 个开始，报数到 M，淘汰，然后下一个人重新从 1 开始报数，如此循环。
- * 也就是 k + m - 1 个人会被淘汰。一共要循环 n 轮。
+ *  数学分析题。比较难
  *
- * created by Joseph
- * at 2019/4/17 19:46
+ * 有n个数，长度n的序列，m%n是第一个被淘汰的数的下标
+ * 1 2 3 4 5 6  7  8 ...... n
+ *             m%n
+ *
+ * 删除m%n的数后剩下长度 n-1的序列，并假设剩下n-1个数，继续从1报数直到第m个数删除，循环直至剩下最后一个数
+ * 这个数所在原来 n-1 个数序列中的下标是x，在这里假设最后一个数是2，并且它的下标是x。
+ * 注意这里的x是指从元素8开始一直数到元素2的长度。
+ * 8 ...... n 1 2 3 4 5 6
+ *              x
+ *
+ * 假设现在就有这么一个函数 f(n-1, m) 代表n-1个数中从1开始报数到m淘汰，循环直至剩最后一个数，得到最后一个数在原n-1长度序列中的下标。
+ * 以上面的例子 f(n-1, m)=x
+ * 现在知道了一开始长度为n的序列淘汰了m%n之后，变为n-1长的序列，并且假设最后一个数下标是x，
+ * 那么最后一个数在长度n序列中下标是多少？
+ *
+ * 那么自然从m%n开始再走长度x步，就到了最后一个数对吧，所以是
+ * f(n, m) = f(n-1, m) + m%n
+ *         = m%n + x
+ * 因为x是长度，并且m%n再走x步可能超过n的长度，超过后又要回到序列开头继续数，所以mod n
+ * f(n, m) = (m%n + x)%n
+ *         = (m+x)%n
+ *
+ * 式子的简化用到定理：
+ * 1. (a+b)%c = a%c + b%c
+ * 2. (a%c)%c = a%c
+ * 所以：(m%n + x)%n => [(m%n)%n] + x%n => m%n + x%n => (m+x)%n
+ *
+ * 边界：f(1, m)=0
+ *
+ * 时间复杂度：数学法 O(n)， 模拟 O(nm)
+ * 空间复杂度：数学法 O(1)， 模拟 O(n)
+ *
+ * @author Joseph
+ * @since 2021-01-21
  */
 public class JosephLoop {
 
-    static int personCount, startIndex, killIndex;
-    static int[] loop ;
 
-    public static void main(String[] args){
-        Scanner scanner = new Scanner(System.in);
-
-        personCount = scanner.nextInt();
-        startIndex = scanner.nextInt() - 1;
-        killIndex = scanner.nextInt();
-
-        loop = new int[personCount];
-        for (int i = 1; i <= personCount; i++) {
-            /*
-                [1] [2] [3] ... [10]
-                 0   1   2        9
-             */
-            loop[i - 1] = i;
-        }
-
-        // 一共要淘汰 N-1 个人
-        for (int k = 0; k < personCount - 1; k++) {
-            // 根据规则报数，从开始报数的那个人也算1位，
-            int eliminatedIndex = beginRoll();
-            System.out.println("The eliminated element is " + loop[eliminatedIndex] +" in round " + (k + 1));
-            loop[eliminatedIndex] = 0;
-            /*System.out.println("The next element index is " + startIndex);*/
-        }
-
-        System.out.println("Survivor is " + loop[startIndex]);
+    public int lastRemaining(int n, int m) {
+        return math(n, m);
     }
 
-    private static int beginRoll () {
-        int point = startIndex, timeToOut ;
-        // 从 start 移步 k 位到下一个被淘汰的人的位置返回下标
-        for (int i = killIndex; i > 0; ) {
-            // 被淘汰的人会被置为 0，大于 0 代表此位置有人
-            if (loop[point] > 0) {
-                i--;
-            }
-            if (i > 0) {
-                // 如果当前指针已经是环的尾部了，再往后走就需要回到环的开头
-                point = turn2HeadIfNecessary(point);
-            }
+    private int math(int n, int m) {
+        int x = 0;
+        // 从已知的f(1, m)反推回长度n的序列，要计算n-1个序列
+        for (int i = 0, len = 2; i < n-1; i++, len++) {
+            x = (m + x) % len;
         }
-        timeToOut = point;
-
-        // 找到此轮被淘汰的人后，需要找到下一个开始的人
-        point = turn2HeadIfNecessary(point);
-        while (true) {
-            if (loop[point] > 0) {
-                startIndex = point;
-                break;
-            }
-            point = turn2HeadIfNecessary(point);
-        }
-        return timeToOut;
+        return x;
     }
 
-    private static int turn2HeadIfNecessary(int point) {
-        return  ++point == loop.length ? 0 : point;
+    // TLE
+    private int simulation(int n, int m) {
+        /*
+            链表模拟loop，从头弹出，从尾入队
+        */
+        Queue<Integer> que = new LinkedList<>();
+
+        for (int i = 0; i < n; i++) {
+            que.add(i);
+        }
+
+        int count = 0, p = 1, e ;
+        while (count < n-1) {
+            e = que.poll();
+            if (p++ == m) {
+                count++;
+                p = 1;
+            }
+            else {
+                que.add(e);
+            }
+        }
+        return que.poll();
     }
 
 
