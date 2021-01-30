@@ -1,4 +1,4 @@
-package backtracking.algorithm;
+package depth.first.search;
 
 /**
  * leetcode 52 hard（这题应该没有hard难度或者属于hard中的水题）

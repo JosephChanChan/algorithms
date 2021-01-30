@@ -1,4 +1,4 @@
-package backtracking.algorithm;
+package depth.first.search;
 
 /**
  * 剑指Offer 12 medium & leetcode 79

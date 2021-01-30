@@ -1,4 +1,4 @@
-package backtracking.algorithm;
+package depth.first.search;
 
 /**
  * 现在有很多制造商都在卖扫地机器人，它非常有用，能为忙碌的我们分担家务负担。
