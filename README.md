@@ -430,9 +430,41 @@
 
 * [CommonNodeOfLists (剑指Offer 52)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/tables/CommonNodeOfLists.java)
 
-* [AbsentNumInSortedArray (剑指Offer 53a)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/binary/search/AbsentNumInSortedArray.java)
+* [AbsentNumInSortedArray (剑指Offer 53 II)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/binary/search/AbsentNumInSortedArray.java)
 
-* [CountOfNumInSortedArray (剑指Offer 53b)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/binary/search/CountOfNumInSortedArray.java)
+* [NthKTreeNode (剑指Offer 54)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/trees/NthKTreeNode.java)
+
+* [DepthOfTree (剑指Offer 55)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/trees/DepthOfTree.java)
+
+* [TwoUniqueNum (剑指Offer 56)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/TwoUniqueNum.java)
+
+* [TwoSum (剑指Offer 57)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/pointers/TwoSum.java)
+
+* [TargetOfSubArraySum (剑指Offer 57 II)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/pointers/TargetOfSubArraySum.java)
+
+* [ReverseWords (剑指Offer 58)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/pointers/ReverseWords.java)
+
+* [MaxNumInSlidingWindow (剑指Offer 59)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/tables/MaxNumInSlidingWindow.java)
+
+* [MaxNumInQueue (剑指Offer 59 II)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/tables/MaxNumInQueue.java)
+
+* [SumOfNDices (剑指Offer 60)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/dynamic/programming/SumOfNDices.java)
+
+* [IsStraightNums (剑指Offer 61)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/IsStraightNums.java)
+
+* [JosephLoop (剑指Offer 62)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/simulation/algorithm/JosephLoop.java)
+
+* [MaxProfitForStock (剑指Offer 63)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/dynamic/programming/MaxProfitForStock.java)
+
+* [AccumulatedN (剑指Offer 64)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/AccumulatedN.java)
+
+* [AddUsingBitOperation (剑指Offer 65)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/AddUsingBitOperation.java)
+
+* [ProductArray (剑指Offer 66)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/dynamic/programming/ProductArray.java)
+
+* [ConvertStringToInt (剑指Offer 67)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/string/ConvertStringToInt.java)
+
+* [LowestCommonAncestorBinaryTree (剑指Offer 68)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/trees/LowestCommonAncestorBinaryTree.java)
 
 
 ### 积累：
