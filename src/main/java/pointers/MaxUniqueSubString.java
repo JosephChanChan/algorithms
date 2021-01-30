@@ -26,25 +26,24 @@ public class MaxUniqueSubString {
     }
 
     // 8ms AC
-    private int twoPiontersAndHash(String s) {
+    public int twoPointers(String s) {
         if (null == s || s.length() == 0) return 0;
-        if (s.length() == 1) return 1;
 
-        Map<Character, Integer> hs = new HashMap<>();
-        int i = 0, j = 1, max = 1;
+        // ascii码 0~255
+        int[] hash = new int[256];
 
-        char[] c = s.toCharArray();
-        hs.put(c[0], 0);
-        char p ;
-        for ( ; j < c.length; j++) {
-            if (hs.containsKey(c[j])) {
-                int k = hs.get(c[j]);
-                for ( ; i <= k; i++) {
-                    hs.remove(c[i]);
+        int i = 0, j = 0, max = 0;
+        for ( ; i < s.length(); i++) {
+            while (j < s.length()) {
+                if (hash[s.charAt(j)] == 0) {
+                    max = Math.max(max, j-i+1);
+                    hash[s.charAt(j++)]++;
+                    continue;
                 }
+                break;
             }
-            hs.put(c[j], j);
-            if (hs.size() > max) max = hs.size();
+            // j遇到重复字符，假设重复字符在k位置上，肯定在窗口内，i向前走直到移除重复字符
+            hash[s.charAt(i)]--;
         }
         return max;
     }
