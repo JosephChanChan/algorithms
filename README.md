@@ -103,32 +103,9 @@
   * [FindPeakElement (leetcode 162)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/binary/search/FindPeakElement.java)
   
   * [SingleElementInSortedArray (leetcode 540)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/binary/search/SingleElementInSortedArray.java)
-
-
-### 回溯法：
-  
-  * [FloorMoppingRobot 优秀的扫地机器人](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/backtracking/algorithm/FloorMoppingRobot.java)
-
-  * [CalculateBill 检查账单](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/backtracking/algorithm/CalculateBill.java)
-
-  * [LetterCombinationsPhoneNumber (leetcode 17)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/backtracking/algorithm/LetterCombinationsPhoneNumber.java)
-  
-  * [GenerateParentheses (leetcode 22)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/backtracking/algorithm/GenerateParentheses.java)
-  
-  * [SudokuSolver (leetcode 37)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/backtracking/algorithm/SudokuSolver.java)
-  
-  * [CombinationSum (leetcode 39)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/dynamic/programming/CombinationSum.java)
-  
-  * [Permutation (leetcode 46)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/backtracking/algorithm/Permutation.java)
-  
-  * [Permutation2 (leetcode 47)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/backtracking/algorithm/Permutation2.java)
-  
-  * [N_Queen (leetcode 52)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/backtracking/algorithm/N_Queen.java)
-  
-  * [Combinations (leetcode 77)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/backtracking/algorithm/Combinations.java)
   
 
-  ### 递归：
+### 递归：
   
   * [MergeSortedList (leetcode 21)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/recursion/MergeSortedList.java)
 
@@ -144,16 +121,34 @@
 
 
   ### 深度优先搜索：
+  
+  * [LetterCombinationsPhoneNumber (leetcode 17)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/backtracking/algorithm/LetterCombinationsPhoneNumber.java)
+  
+  * [GenerateParentheses (leetcode 22)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/backtracking/algorithm/GenerateParentheses.java)
+  
+  * [SudokuSolver (leetcode 37)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/backtracking/algorithm/SudokuSolver.java)
+  
+  * [CombinationSum (leetcode 39)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/dynamic/programming/CombinationSum.java)
+  
+  * [Permutation (leetcode 46)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/backtracking/algorithm/Permutation.java)
+  
+  * [Permutation2 (leetcode 47)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/backtracking/algorithm/Permutation2.java)
 
   * [PowOfNum (leetcode 50)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/depth/first/search/PowOfNum.java)
+  
+  * [N_Queen (leetcode 52)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/backtracking/algorithm/N_Queen.java)
+  
+  * [Search2DMatrix (leetcode 74)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/depth/first/search/Search2DMatrix.java)
+  
+  * [Combinations (leetcode 77)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/backtracking/algorithm/Combinations.java)
+  
+  * [Subsets (leetcode 78)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/depth/first/search/Subsets.java)
+  
+  * [Subsets2 (leetcode 90)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/depth/first/search/Subsets2.java)
   
   * [UniqueBinarySearchTrees (leetcode 96)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/depth/first/search/UniqueBinarySearchTrees.java)
  
   * [UniqueBinarySearchTrees2 (leetcode 95)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/depth/first/search/UniqueBinarySearchTrees2.java)
-  
-  * [Search2DMatrix (leetcode 74)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/depth/first/search/Search2DMatrix.java)
-  
-  * [Search2DMatrix2 (leetcode 240)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/depth/first/search/Search2DMatrix2.java)
   
   * [SymmetricTree (leetcode 101)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/depth/first/search/SymmetricTree.java)
   
@@ -177,16 +172,14 @@
   
   * [SurroundedRegions (leetcode 130)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/depth/first/search/SurroundedRegions.java)
   
-  * [Subsets (leetcode 78)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/depth/first/search/Subsets.java)
+  * [KthLargestElementInArray (leetcode 215)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/depth/first/search/KthLargestElementInArray.java)
   
-  * [Subsets2 (leetcode 90)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/depth/first/search/Subsets2.java)
+  * [Search2DMatrix2 (leetcode 240)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/depth/first/search/Search2DMatrix2.java)
   
   * [DifferentWaysAddParentheses (leetcode 241)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/depth/first/search/DifferentWaysAddParentheses.java)
   
-  * [KthLargestElementInArray (leetcode 215)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/depth/first/search/KthLargestElementInArray.java)
   
-  
-  ### 宽度优先搜索：
+### 宽度优先搜索：
   
   * [BinaryTreeZigzagLevelOrderTraversal (leetcode 103)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/breadth/first/search/BinaryTreeZigzagLevelOrderTraversal.java)
   
@@ -224,22 +217,7 @@
   * [CirculationMaxSubSum (lintcode 1724)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/dynamic/programming/CirculationMaxSubSum.java)
   
   
-### 贪心算法：
-  
-  * [MissionOrder](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/greedy/algorithm/MissionOrder.cpp)
-  
-  * [WoodIncisionProblem Huffman](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/greedy/algorithm/WoodIncisionProblem.java)
-  
-  * [FleeMaze 走迷宫](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/greedy/algorithm/FleeMaze.java)
-  
-  * [MinimumCustomService 最小客服数](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/greedy/algorithm/MinimumCustomService.java)
-  
-  * [RentServer 租服务器](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/greedy/algorithm/RentServer.java)
-  
-  * [MaximumEventsCanBeAttended (leetcode 1353)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/greedy/algorithm/MaximumEventsCanBeAttended.java)
-  
-  
-### 指针法：
+### 指针/滑动窗口：
 
   * [MostWaterInContainer (leetcode 11)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/pointers/MostWaterInContainer.java)
 
@@ -266,6 +244,21 @@
   * [BookOwnerWIthBadTemper (leetcode 1052)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/pointers/BookOwnerWIthBadTemper.java)
   
   * [MaxPointsFromHeadOrTail (leetcode 1423)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/pointers/MaxPointsFromHeadOrTail.java)
+  
+  
+### 贪心法：
+  
+  * [MissionOrder](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/greedy/algorithm/MissionOrder.cpp)
+  
+  * [WoodIncisionProblem Huffman](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/greedy/algorithm/WoodIncisionProblem.java)
+  
+  * [FleeMaze 走迷宫](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/greedy/algorithm/FleeMaze.java)
+  
+  * [MinimumCustomService 最小客服数](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/greedy/algorithm/MinimumCustomService.java)
+  
+  * [RentServer 租服务器](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/greedy/algorithm/RentServer.java)
+  
+  * [MaximumEventsCanBeAttended (leetcode 1353)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/greedy/algorithm/MaximumEventsCanBeAttended.java)
   
  
 ### 模拟法：
