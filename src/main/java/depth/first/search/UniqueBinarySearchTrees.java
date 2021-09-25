@@ -4,13 +4,13 @@ package depth.first.search;
  * @author Joseph
  * @since 2020-05-10 16:43
  *
- * leetcode 96 medium
+ * lc 96 medium
  *
  * Question Description:
- *  参见 leetcode 96
+ *  参见 lc 96
  *
  * Analysis:
- *  求1~n组成的所有不同的二叉树方案数，这题跟 leetcode 95 一样思想。
+ *  求1~n组成的所有不同的二叉树方案数，这题跟 lc 95 一样思想。
  *  1 2 3 ... n 中每一个元素i都有可能做根，根据二叉树性质，左子树只可能是 1~i-1，右子树是i+1~n。
  *  设f(i)为i为根节点时的所有不同二叉树的数量。
  *  左子树是 l = sigma(1, i-1){f(k)}，同理右子树是 r = sigma(i+1, n){f(k)}

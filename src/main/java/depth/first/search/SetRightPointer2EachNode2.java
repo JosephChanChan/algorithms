@@ -5,7 +5,7 @@ import java.util.LinkedList;
 import java.util.List;
 
 /**
- * leetcode 117 medium
+ * lc 117 medium
  *
  * Question Description:
  *  参见 lc 117

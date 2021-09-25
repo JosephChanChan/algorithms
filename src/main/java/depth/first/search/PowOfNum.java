@@ -4,7 +4,7 @@ package depth.first.search;
  * @author Joseph
  * @since 2019-09-22 20:26
  *
- * leetcode 50 medium
+ * lc 50 medium
  *
  * Question Description:
  *  Implement pow(x, n), which calculates x raised to the power n (x^n).

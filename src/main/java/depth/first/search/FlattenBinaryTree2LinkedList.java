@@ -5,14 +5,14 @@ import java.util.LinkedList;
 import java.util.List;
 
 /**
- * leetcode 114 medium
+ * lc 114 medium
  *
  * Question Description:
  *  参见 lc 114
  *
  * Analysis:
  * 题目本身算法不难，遍历整颗树，构造一个链表就行。
- * 但是leetcode给的要求将树本身结构改变，而不是返回一个链表，
+ * 但是lc给的要求将树本身结构改变，而不是返回一个链表，
  * dfs走一遍构造个链表，遍历链表将每个节点构造成右子树，这样多了一层线性开销
  *
  * 时间复杂度：O(2n)

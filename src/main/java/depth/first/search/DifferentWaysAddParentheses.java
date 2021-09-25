@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * leetcode 241 medium
+ * lc 241 medium
  *
  * Analysis:
  * 分治，以每个算术符号二分，计算左边算术式子所有结果和右边算术式子所有结果再合并。

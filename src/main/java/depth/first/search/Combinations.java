@@ -6,7 +6,7 @@ import java.util.*;
  * @author Joseph
  * @since 2020-01-31 13:39
  *
- * leetcode 77 medium
+ * lc 77 medium
  *
  * Question Description:
  *  Given two integers n and k, return all possible combinations of k numbers out of 1 ... n.

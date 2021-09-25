@@ -33,13 +33,9 @@ public class RedPacketGen {
         Random random = new Random();
         Random moneyGen = new Random();
         int count = 100000;
-        double luck = 0;
-        double base = 0;
-        double sum = 0;
+        double luck, base, sum = 0;
         for(int i=0; i<count; i++){
             double rand = random.nextInt(100) * 1.0f / 100d;
-            luck = 0;
-            base = 0;
             if(rand <= fifteenReachTwentyDollars){
                 fifteenReachTwenty++;
                 base = 15;

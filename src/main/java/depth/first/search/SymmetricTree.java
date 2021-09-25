@@ -5,10 +5,10 @@ import java.util.LinkedList;
 import java.util.List;
 
 /**
- * leetcode 101 easy
+ * lc 101 easy
  *
  * Question Description:
- *  参见 leetcode 101 镜像树
+ *  参见 lc 101 镜像树
  *
  * Analysis:
  * 时间复杂度：O(n)

@@ -6,7 +6,7 @@ import java.util.*;
  * @author Joseph
  * @since 2019-10-06 22:26
  *
- * leetcode 39 medium
+ * lc 39 medium
  *
  * Question Description:
  * Given a set of candidate numbers (candidates) (without duplicates) and a target number (target),
@@ -32,7 +32,7 @@ import java.util.*;
  * ]
  *
  * Analysis:
- * 其实这题在leetcode上是回溯标签的题，但是我印象中有一道找钱的dp题和这个题目类似，就想或许能用dp解决。
+ * 其实这题在lc上是回溯标签的题，但是我印象中有一道找钱的dp题和这个题目类似，就想或许能用dp解决。
  * 给定一个正整数数组，用数组中的数字(可以重复选同一个数字)做加法运算凑出一个给定的目标数字。
  * 设 f(i) 为用给定数字凑成的方案数。举例：2,3,5，t=8
  * f(i)这个状态是如何从上一个状态走过来的？
@@ -49,7 +49,7 @@ import java.util.*;
  * 2+3 和 3+2 这2个属于不同的排列但是同一个组合，按照题目要求需要排除。
  * 感觉这应该才是题目的难点，去重统计。
  * 我的算法很笨，没有想到好方法，只能找到每一个状态的所有加法链去重统计。
- * 最后在leetcode上ac了，但是比 95% 的提交都要慢... 应该就是去重没做好，或者dp的方程不是最优的。
+ * 最后在lc上ac了，但是比 95% 的提交都要慢... 应该就是去重没做好，或者dp的方程不是最优的。
  *
  * 时间复杂度：O(target * candidates.length)
  * 空间复杂度：O(target)
@@ -62,22 +62,6 @@ import java.util.*;
  * 空间复杂度：解的个数
  */
 public class CombinationSum {
-
-    public static void main(String[] args) {
-        /*int[] candidates = new int[]{2,3,6,7};
-        int target = 8;*/
-        int[] candidates = new int[]{1,3,12,9,11,6,7,8,5,4};
-        int target = 15;
-        CombinationSum combinationSum = new CombinationSum();
-        List<List<Integer>> lists = combinationSum.combinationSum(candidates, target);
-        System.out.println("have project case: " + lists.size());
-        for (List<Integer> list : lists) {
-            for (Integer integer : list) {
-                System.out.print(integer + " ");
-            }
-            System.out.println();
-        }
-    }
 
     /*
         正解：DFS，搜索每个数字开头的和为t的方案。

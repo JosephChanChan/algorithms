@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * leetcode 78 medium
+ * lc 78 medium
  *
  * Question Description:
  *  参见 lc 78

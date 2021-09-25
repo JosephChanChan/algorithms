@@ -1,7 +1,7 @@
 package depth.first.search;
 
 /**
- * leetcode 129 medium
+ * lc 129 medium
  *
  * Question Description:
  *  参见 lc 129

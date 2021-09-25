@@ -1,12 +1,12 @@
 package depth.first.search;
 
+import java.util.ArrayList;
+import java.util.List;
+
 /**
- * leetcode 52 hard（这题应该没有hard难度或者属于hard中的水题）
+ * lc 51/52 hard
  *
- * 递归回溯解法：
- * 经典的N皇后问题，即在一个N*N的棋盘上放N个皇后，使得这N个皇后无法互相攻击
- * (任意2个皇后不能处于同一行，同一列或是对角线上)，输出所有可能的摆放情况。
- * 这是道很好的回溯算法题，并且结合递归。
+ * Analysis:
  *
  * 时间复杂度：
  *  该算法形式上采用了递归+回溯实现，本质还是对棋盘上每一个位置枚举，
@@ -17,52 +17,58 @@ package depth.first.search;
  */
 public class N_Queen {
 
-    static int[] rowsQueen;
-    static int count = 0, rows, columns;
+    List<List<String>> ans = new ArrayList();
 
-    public static void main(String[] args) {
-        rowsQueen = new int[8];
-        rows = rowsQueen.length;
-        columns = rowsQueen.length;
-        search(0);
-        System.out.println(count);
+    public List<List<String>> solveNQueens(int n) {
+        if (n == 1) {
+            List<String> l = new ArrayList();
+            l.add("Q");
+            ans.add(l);
+            return ans;
+        }
+        dfs(0, n, new ArrayList());
+        return ans;
     }
 
-    private static void search(int row) {
-        if (row == rows) {
-            count++;
-            printDiagram();
+    void dfs(int k, int n, List<String> mem) {
+        if (k == n) {
+            ans.add(new ArrayList(mem));
             return;
         }
-        for (int i = 0; i < columns; i++) {
-            rowsQueen[row] = i;// 这一步相当于回溯, 该行将会有一个 new column
-            if (canPlace(row)) {
-                search(row + 1);
+
+        StringBuilder b = genString(n);
+        for (int j = 0; j < n; j++) {
+            if (check(k, j, n, mem)) {
+                b = b.replace(j, j+1, "Q");
+                mem.add(b.toString());
+                dfs(k+1, n, mem);
+                mem.remove(mem.size()-1);
+                b = b.replace(j, j+1, ".");
             }
         }
     }
 
-    private static boolean canPlace(int row) {
-        for (int k = 0; k < row; k++) {
-            if (rowsQueen[row] == rowsQueen[k] ||
-                row - k == rowsQueen[row] - rowsQueen[k]||
-                row - k == rowsQueen[k] - rowsQueen[row])
-                return false;
+    boolean check(int i, int j, int n, List<String> mem) {
+        for (int k = 0; k < i; k++) {
+            if (mem.get(k).charAt(j) == 'Q') return false;
+        }
+        int x = j-1, y = i-1;
+        while (x >= 0 && y >= 0) {
+            if (mem.get(y).charAt(x) == 'Q') return false;
+            y--; x--;
+        }
+        x = j+1; y = i-1;
+        while (x < n && y >= 0) {
+            if (mem.get(y).charAt(x) == 'Q') return false;
+            y--; x++;
         }
         return true;
     }
 
-    private static void printDiagram() {
-        System.out.println();
-        for (int i = 0; i < columns; i++) {
-            for (int j = 0; j < columns; j++) {
-                if (rowsQueen[i] == j) {
-                    System.out.print("1 ");
-                } else
-                    System.out.print("0 ");
-            }
-            System.out.println();
-        }
+    StringBuilder genString(int n) {
+        StringBuilder b = new StringBuilder();
+        for (int i = 0; i < n; i++) b.append(".");
+        return b;
     }
 
 }

@@ -22,36 +22,40 @@
  * 这个算法可以适用1~9，直接套用此模板可分析。
  * 对于0，需要适当改动，例如：XXX Y XX，当XXX开头是0时，Y取0是没意义的。
  *
- * 需要二刷
- *
  * 时间复杂度：O(logN)
  * 空间复杂度：O(n) 用了char[]
  */
 public class CountsOfNum {
 
     public int countDigitOne(int n) {
-        if (n <= 0) return 0;
+        if (n == 0) return 0;
         if (n < 10) return 1;
+        if (n == 10) return 2;
 
+        int ans = 0, hi = 0, low = 0;
         String num = String.valueOf(n);
-        char[] c = num.toCharArray();
-
-        int m = c.length, ans = 0;
-        // 从最高位算到最低位  2 3 4 5
-        //                   a  i b
-        for (int i = 0; i < m; i++) {
-            // a是高位数，高位数共有 0~a-1种排列
-            int a = n / (int) Math.pow(10.0d, m - i);
-            // b是低位数，低位数共有 10^b 种排列
-            int b = (int) Math.pow(10.0d, m - i - 1);
-            ans += a * b;
-            // 算完 0~(XXX-1)的开头排列，当前i位是1的排列数后。
-            // 算 XXX开头排列，当前位i是1的排列
-            if (c[i] - '0' > 1) {
-                ans += (int) Math.pow(10.0d, m-i-1);
+        for (int i = num.length()-1; i >= 0; i--) {
+            // 算 00~XX-1 开头
+            // 高位有 00~xx-1 共xx种排列
+            hi = 0; low = 1;
+            if (i > 0) {
+                hi = (Integer.parseInt(num.substring(0, i)));
             }
-            if (c[i] - '0' == 1) {
-                ans += n % (int) Math.pow(10.0d, m-i-1) + 1;
+            // 低位有 000~xxx 共 10^d 种排列 d是低位位数
+            if (i < num.length()-1) {
+                low = (int) Math.pow(10, num.length()-i-1);
+            }
+            ans += (hi * low);
+
+            // XX开头且Y>1，Y取1且低位可取全部排列
+            // 如果Y是最低位，则它的高位都固定了，Y只能取1一次
+            if (num.charAt(i) > '1') {
+                ans += Math.pow(10, num.length()-i-1);
+            }
+            // XX开头且Y=1，低位只能取到 000~XXX 种排列
+            // 如果Y是最低位，则它的高位都固定了，Y只能取1一次
+            if (num.charAt(i) == '1') {
+                ans += i < num.length()-1 ? Integer.parseInt(num.substring(i+1))+1 : 1;
             }
         }
         return ans;

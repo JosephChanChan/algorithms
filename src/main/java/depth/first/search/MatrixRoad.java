@@ -1,7 +1,7 @@
 package depth.first.search;
 
 /**
- * 剑指Offer 12 medium & leetcode 79
+ * 剑指Offer 12 medium & lc 79
  *
  * Analysis:
  *  标准回溯解法

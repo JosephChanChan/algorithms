@@ -1,7 +1,7 @@
 package depth.first.search;
 
 /**
- * leetcode 116 medium
+ * lc 116 medium
  *
  * Question Description:
  *  参见 lc 116

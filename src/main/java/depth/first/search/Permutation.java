@@ -3,7 +3,7 @@ package depth.first.search;
 import java.util.*;
 
 /**
- * leetcode 46 medium
+ * lc 46 medium
  *
  * Given a collection of distinct integers, return all possible permutations.
  * Example:

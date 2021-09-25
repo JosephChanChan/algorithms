@@ -7,7 +7,7 @@ import java.util.List;
  * @author Joseph
  * @since 2020-01-30 20:33
  *
- * leetcode 37 hard
+ * lc 37 hard
  *
  * Question Description:
  *  Write a program to solve a Sudoku puzzle by filling the empty cells.
@@ -23,7 +23,7 @@ import java.util.List;
  *      The given board size is always 9x9.
  *
  * Analysis:
- *  题目就是要求解一个 9*9 的数独，具体规则可自行搜索。这里贴不了 leetcode 上的图片。
+ *  题目就是要求解一个 9*9 的数独，具体规则可自行搜索。这里贴不了 lc 上的图片。
  * 时间复杂度：上界是 O(9^step) 但是剪枝绝对小于上界。 step 是数独中留空数。
  * 空间复杂度：O(1)
  */

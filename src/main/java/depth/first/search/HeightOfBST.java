@@ -1,7 +1,7 @@
 package depth.first.search;
 
 /**
- * leetcode 110 easy
+ * lc 110 easy
  *
  * Question Description:
  *  参见 lc 110

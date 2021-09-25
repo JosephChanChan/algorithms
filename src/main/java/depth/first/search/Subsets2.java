@@ -3,7 +3,7 @@ package depth.first.search;
 import java.util.*;
 
 /**
- * leetcode 90 medium
+ * lc 90 medium
  *
  * Question Description:
  *  参见 lc 90

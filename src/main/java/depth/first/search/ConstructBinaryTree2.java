@@ -3,7 +3,7 @@ package depth.first.search;
 import java.util.LinkedList;
 
 /**
- * leetcode 105 medium
+ * lc 105 medium
  *
  * Question Description:
  *  参见 lc 106
