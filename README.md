@@ -1,4 +1,4 @@
-### 与大家分享我学习算法的一些经历。这个项目不定期更新。
+### 只是玩玩~，不激进不功利
 --------------------------------------------------------
   
 ### 数组/链表：
@@ -129,6 +129,8 @@
   * [SudokuSolver (leetcode 37)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/depth/first/search/SudokuSolver.java)
   
   * [CombinationSum (leetcode 39)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/depth/first/search/CombinationSum.java)
+
+  * [CombinationSum2 (leetcode 40)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/depth/first/search/CombinationSum2.java)
   
   * [Permutation (leetcode 46)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/depth/first/search/Permutation.java)
   
@@ -143,8 +145,12 @@
   * [Combinations (leetcode 77)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/depth/first/search/Combinations.java)
   
   * [Subsets (leetcode 78)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/depth/first/search/Subsets.java)
+
+  * [WordSearch (leetcode 79)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/depth/first/search/WordSearch.java)
   
   * [Subsets2 (leetcode 90)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/depth/first/search/Subsets2.java)
+
+  * [RestoreIPAddresses (leetcode 93)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/depth/first/search/RestoreIPAddresses.java)
   
   * [UniqueBinarySearchTrees (leetcode 96)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/depth/first/search/UniqueBinarySearchTrees.java)
  
@@ -167,16 +173,38 @@
   * [FlattenBinaryTree2LinkedList (leetcode 114)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/depth/first/search/FlattenBinaryTree2LinkedList.java)
   
   * [SetRightPointer2EachNode (leetcode 116)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/depth/first/search/SetRightPointer2EachNode.java)
+
+  * [MaxSumInBinaryTree (leetcode 124)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/depth/first/search/MaxSumInBinaryTree.java)
   
   * [SumRoot2LeafNumbers (leetcode 129)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/depth/first/search/SumRoot2LeafNumbers.java)
   
   * [SurroundedRegions (leetcode 130)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/depth/first/search/SurroundedRegions.java)
   
   * [KthLargestElementInArray (leetcode 215)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/depth/first/search/KthLargestElementInArray.java)
+
+  * [CombinationSum3 (leetcode 216)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/depth/first/search/CombinationSum3.java)
   
   * [Search2DMatrix2 (leetcode 240)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/depth/first/search/Search2DMatrix2.java)
   
   * [DifferentWaysAddParentheses (leetcode 241)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/depth/first/search/DifferentWaysAddParentheses.java)
+
+  * [FactorCombinations (leetcode 254)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/depth/first/search/FactorCombinations.java)
+
+  * [ExpressionAddOperators (leetcode 282)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/depth/first/search/ExpressionAddOperators.java)
+
+  * [RemoveInvalidParentheses (leetcode 301)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/depth/first/search/RemoveInvalidParentheses.java)
+
+  * [EvaluateDivision (leetcode 399)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/depth/first/search/EvaluateDivision.java)
+
+  * [WordSquares (leetcode 425)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/depth/first/search/WordSquares.java)
+
+  * [PathSum3 (leetcode 437)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/depth/first/search/PathSum3.java)
+  
+  * [Maze (leetcode 490)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/depth/first/search/Maze.java)
+
+  * [Maze2 (leetcode 505)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/depth/first/search/Maze2.java)
+
+  * [MinimumFactorization (leetcode 625)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/depth/first/search/MinimumFactorization.java)
   
   
 ### 宽度优先搜索：
