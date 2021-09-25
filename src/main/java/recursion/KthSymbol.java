@@ -8,7 +8,7 @@ import java.util.List;
  * @author Joseph
  * @since 2019-09-27 15:50
  *
- * leetcode 779 medium
+ * lc 779 medium
  *
  * Question Description:
  * On the first row, we write a 0. Now in every subsequent row,
@@ -68,7 +68,7 @@ public class KthSymbol {
         System.out.println(i);
     }
 
-    // leetcode 上大神的 logN 算法
+    // lc 上大神的 logN 算法
     public int kthGrammar(int n, int k) {
         if (n == 1) return 0;
         if (k % 2 == 0) {

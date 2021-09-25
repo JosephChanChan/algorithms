@@ -104,7 +104,7 @@ public class PascalTriangle {
             result.add(1);
             return result;
         }
-        // leetcode 输入从0开始算作1行，这里+1扩大数组容量
+        // lc 输入从0开始算作1行，这里+1扩大数组容量
         row = row + 1;
         Integer[] arr = new Integer[row];
         Integer[] cur = new Integer[row];

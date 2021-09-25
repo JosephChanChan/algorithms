@@ -1,7 +1,7 @@
 package recursion;
 
 /**
- * leetcode 509 easy & 剑指Offer 10 easy
+ * lc 509 easy & 剑指Offer 10 easy
  *
  * Analysis:
  * 备忘录递归自顶向下，循环自底向上

@@ -4,7 +4,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 /**
- * leetcode 70 easy & 剑指Offer 10
+ * lc 70 easy & 剑指Offer 10
  *
  * Question Description:
  *  You are climbing a stair case. It takes n steps to reach to the top.

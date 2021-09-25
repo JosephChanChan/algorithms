@@ -7,7 +7,7 @@ import tables.component.OneLinkedNode;
  * @author Joseph
  * @since 2019-09-17 20:18
  *
- * leetcode 206 easy
+ * lc 206 easy
  *
  * Question Description:
  *  翻转单方向的链表，要递归实现。

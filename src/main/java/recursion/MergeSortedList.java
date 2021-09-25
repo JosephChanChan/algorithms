@@ -4,7 +4,7 @@ package recursion;
  * @author Joseph
  * @since 2019-09-23 20:44
  *
- * leetcode 21 easy
+ * lc 21 easy
  *
  * Question Description:
  *  Merge two sorted linked lists and return it as a new list.
