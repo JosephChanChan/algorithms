@@ -109,11 +109,17 @@
   
   * [MergeSortedList (leetcode 21)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/recursion/MergeSortedList.java)
 
+  * [CountAndSay (leetcode 38)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/recursion/CountAndSay.java)
+
   * [ClimbStairs (leetcode 70)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/recursion/ClimbStairs.java)
   
   * [PascalTriangle (leetcode 119)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/recursion/PascalTriangle.java)
 
   * [ReverseList (leetcode 206)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/recursion/ReverseList.java)
+
+  * [FindAllDuplicatesInArray (leetcode 442)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/recursion/FindAllDuplicatesInArray.java)
+
+  * [FindAllNumbersDisappearedInArray (leetcode 448)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/recursion/FindAllNumbersDisappearedInArray.java)
 
   * [FibonacciSequence (leetcode 509)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/recursion/FibonacciSequence.java)
 
