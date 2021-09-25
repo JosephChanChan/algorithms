@@ -122,25 +122,25 @@
 
   ### 深度优先搜索：
   
-  * [LetterCombinationsPhoneNumber (leetcode 17)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/backtracking/algorithm/LetterCombinationsPhoneNumber.java)
+  * [LetterCombinationsPhoneNumber (leetcode 17)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/depth/first/search/LetterCombinationsPhoneNumber.java)
   
-  * [GenerateParentheses (leetcode 22)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/backtracking/algorithm/GenerateParentheses.java)
+  * [GenerateParentheses (leetcode 22)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/depth/first/search/GenerateParentheses.java)
   
-  * [SudokuSolver (leetcode 37)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/backtracking/algorithm/SudokuSolver.java)
+  * [SudokuSolver (leetcode 37)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/depth/first/search/SudokuSolver.java)
   
-  * [CombinationSum (leetcode 39)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/dynamic/programming/CombinationSum.java)
+  * [CombinationSum (leetcode 39)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/depth/first/search/CombinationSum.java)
   
-  * [Permutation (leetcode 46)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/backtracking/algorithm/Permutation.java)
+  * [Permutation (leetcode 46)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/depth/first/search/Permutation.java)
   
-  * [Permutation2 (leetcode 47)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/backtracking/algorithm/Permutation2.java)
+  * [Permutation2 (leetcode 47)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/depth/first/search/Permutation2.java)
 
   * [PowOfNum (leetcode 50)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/depth/first/search/PowOfNum.java)
   
-  * [N_Queen (leetcode 52)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/backtracking/algorithm/N_Queen.java)
+  * [N_Queen (leetcode 52)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/depth/first/search/N_Queen.java)
   
   * [Search2DMatrix (leetcode 74)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/depth/first/search/Search2DMatrix.java)
   
-  * [Combinations (leetcode 77)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/backtracking/algorithm/Combinations.java)
+  * [Combinations (leetcode 77)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/depth/first/search/Combinations.java)
   
   * [Subsets (leetcode 78)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/depth/first/search/Subsets.java)
   
