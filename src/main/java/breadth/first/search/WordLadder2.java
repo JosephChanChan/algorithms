@@ -3,10 +3,10 @@ package breadth.first.search;
 import java.util.*;
 
 /**
- * leetcode 126 hard
+ * lc 126 hard
  *
  * Analysis:
- *  bfs1是leetcode官方题解，走一遍bfs，记录下从起点到每个点的最近距离，如果p离起点有2条长度不一的路径，
+ *  bfs1是lc官方题解，走一遍bfs，记录下从起点到每个点的最近距离，如果p离起点有2条长度不一的路径，
  * 则从起点到p肯定会先从较短的路径走到p（因为bfs是层级搜索），此时记录下p的距离，当从另一条较长距离的路径到p时发现p已经有距离了，
  * 代表之前有一条更短的路径到过p，所以当前Path没必要继续向下搜索。
  *

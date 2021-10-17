@@ -3,7 +3,7 @@ package breadth.first.search;
 import java.util.*;
 
 /**
- * leetcode 127
+ * lc 127
  *
  * Analysis:
  * 抽象的将每个词看作是点，这个词通过一步距离变换可达的词看做是它的邻居，则经过BFS计算经过多少邻居可达endWord就是答案。

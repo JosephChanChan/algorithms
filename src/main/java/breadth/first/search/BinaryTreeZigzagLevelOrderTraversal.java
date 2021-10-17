@@ -3,13 +3,17 @@ package breadth.first.search;
 import java.util.*;
 
 /**
- * leetcode 103 medium & 剑指Offer 32
+ * lc 103 medium & 剑指Offer 32
  *
  * Analysis:
  *  推荐双栈的解法，一次遍历真正的O(n)，并且思想和代码实现更简单。
  * 双栈：左栈 & 右栈
  * 左栈存 left -> right 的元素。遍历左栈时，从左到右添加子元素到右栈，此时最右子元素在右栈的Top。
  * 右栈存 right -> left 的元素。遍历右栈时，从右到左添加子元素到左栈，此时最左子元素在左栈的Top。
+ *
+ * 面试忘记元素应该入哪个栈时，在纸上画两个栈，模拟入栈顺序就明白了
+ * 本层元素的左右元素入栈顺序忘了，就看下一层元素出栈顺序要求是什么，本层和它相反
+ * 下一层元素要求右边元素先出栈，本层就从左边开始入栈
  *
  * 时间复杂度：O(n)
  * 空间复杂度：O(n)
@@ -61,47 +65,45 @@ public class BinaryTreeZigzagLevelOrderTraversal {
 
     // ==================================== 第二种解法 双栈 O(n) 35min AC 2ms
 
-    Stack<TreeNode> left = new Stack<>();// left -> right
-    Stack<TreeNode> right = new Stack<>();// right -> left
-    List<List<Integer>> ans = new LinkedList<>();
+    public ArrayList<ArrayList<Integer>> twoStack(TreeNode root) {
+        ArrayList<ArrayList<Integer>> ans = new ArrayList();
 
-    public List<List<Integer>> levelOrder(TreeNode root) {
         if (null == root) return ans;
-        left.add(root);
-        bfs();
+
+        // left
+        Stack<TreeNode> a = new Stack();
+        // right
+        Stack<TreeNode> b = new Stack();
+
+        b.add(root);
+        bfs(a, b, ans);
         return ans;
     }
 
-    private void bfs() {
-        if (left.isEmpty() && right.isEmpty()) return;
-        List<Integer> list = new LinkedList<>();
-        if (right.isEmpty()) {
-            // left -> right this level
-            while (!left.isEmpty()) {
-                TreeNode node = left.pop();
-                list.add(node.val);
-                if (null != node.left) {
-                    right.add(node.left);
-                }
-                if (null != node.right) {
-                    right.add(node.right);
-                }
+    void bfs(Stack<TreeNode> a, Stack<TreeNode> b, ArrayList<ArrayList<Integer>> ans) {
+        if (a.size() > 0) {
+            ArrayList<Integer> l = new ArrayList();
+            while (!a.isEmpty()) {
+                TreeNode n = a.pop();
+                l.add(n.val);
+                if (null != n.right) b.add(n.right);
+                if (null != n.left) b.add(n.left);
             }
+            ans.add(l);
         }
         else {
-            while (!right.isEmpty()) {
-                TreeNode node = right.pop();
-                list.add(node.val);
-                if (null != node.right) {
-                    left.add(node.right);
-                }
-                if (null != node.left) {
-                    left.add(node.left);
-                }
+            ArrayList<Integer> l = new ArrayList();
+            while (!b.isEmpty()) {
+                TreeNode n = b.pop();
+                l.add(n.val);
+                if (null != n.left) a.add(n.left);
+                if (null != n.right) a.add(n.right);
             }
+            ans.add(l);
         }
-        if (!list.isEmpty()) ans.add(list);
-        bfs();
+        if (a.size() > 0 || b.size() > 0) {
+            bfs(a, b, ans);
+        }
     }
 
     public class TreeNode {

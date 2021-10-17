@@ -3,7 +3,7 @@ package breadth.first.search;
 import java.util.*;
 
 /**
- * leetcode 417 medium
+ * lc 417 medium
  *
  * Analysis:
  * 裸bfs在最坏情况下接近O((n*m)^2)，直接超时。后来想了想加了类似DP的思想记录下可以到达太平洋和大西洋的点，

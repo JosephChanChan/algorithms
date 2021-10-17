@@ -3,10 +3,15 @@ package breadth.first.search;
 import java.util.*;
 
 /**
- * leetcode 207 medium
+ * lc 207 medium
  *
  * Analysis:
- *  拓扑排序
+ *  在图论中，拓扑排序（Topological Sorting）是一个有向无环图（DAG, Directed Acyclic Graph）的所有顶点的线性序列。
+ * 且该序列必须满足下面两个条件：
+ *  1.每个顶点出现且只出现一次。
+ *  2.若存在一条从顶点 A 到顶点 B 的路径，那么在序列中顶点 A 出现在顶点 B 的前面。
+ *
+ * 一个有向无环图可能不止一个拓扑排序。非有向无环图则没有拓扑排序，意味着有环图是无法排出拓扑排序的
  *
  * 时间复杂度：O(n+m)
  * 空间复杂度：O(n)
@@ -17,11 +22,15 @@ import java.util.*;
 public class CourseSchedule {
 
     public boolean canFinish(int numCourses, int[][] prerequisites) {
-        /*
-            拓扑排序：
-                将有向无环连通图排成一个线性表使得每个点满足图中的先修条件
-                有向边的起点是终点的先修条件
+        return dfsWithColor(numCourses, prerequisites);
+    }
 
+    boolean dfsWithColor(int numCourses, int[][] prerequisites) {
+        return true;
+    }
+
+    boolean bfsWithInDegree(int numCourses, int[][] prerequisites) {
+        /*
             1.统计每个点的入度
             2.将边集转成邻接表
             3.入度0的点全部入队，遍历该点所有邻居的入度-1，入度减至0的入队

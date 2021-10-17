@@ -3,7 +3,7 @@ package breadth.first.search;
 import java.util.*;
 
 /**
- * leetcode 210 medium
+ * lc 210 medium
  *
  * Analysis:
  *  拓扑排序
