@@ -1,4 +1,4 @@
-package disjoint.set;
+package unionfind;
 
 import java.util.*;
 

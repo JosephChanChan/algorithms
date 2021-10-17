@@ -1,7 +1,7 @@
-package disjoint.set;
+package unionfind;
 
 /**
- * leetcode 547 medium
+ * lc 547 medium
  *
  * Question Description:
  *  参见 lc 547

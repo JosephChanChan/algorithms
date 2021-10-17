@@ -1,8 +1,8 @@
-package disjoint.set;
+package unionfind;
 
 
 /**
- * leetcode 200 medium
+ * lc 200 medium
  *
  * Question Description:
  *  参见 lc 200
