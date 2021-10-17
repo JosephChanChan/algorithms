@@ -332,17 +332,29 @@
   * [MinSuperString (leetcode 76)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/pointers/MinSuperString.java)
   
   * [LinkedListCycle2 (leetcode 142)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/pointers/LinkedListCycle2.java)
+
+  * [ReverseWordsInString (leetcode 151)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/pointers/ReverseWordsInString.java)
   
   * [MinimumSizeSubArray (leetcode 209)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/pointers/MinimumSizeSubArray.java)
   
   * [MoveZeros (leetcode 283)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/pointers/MoveZeros.java)
-  
+
+  * [FindAllAnagramsInString (leetcode 438)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/pointers/FindAllAnagramsInString.java)
+
+  * [ShortestUnsortedContinuousSubarray (leetcode 581)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/pointers/ShortestUnsortedContinuousSubarray.java)
+
+  * [SumOfTwoSquaresNum (leetcode 633)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/pointers/SumOfTwoSquaresNum.java)
+
   * [ThreeSumWithMultiplicity (leetcode 923)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/pointers/ThreeSumWithMultiplicity.java)
+
+  * [MaxConsecutiveOnes3 (leetcode 1004)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/pointers/MaxConsecutiveOnes3.java)
   
   * [BookOwnerWIthBadTemper (leetcode 1052)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/pointers/BookOwnerWIthBadTemper.java)
   
   * [MaxPointsFromHeadOrTail (leetcode 1423)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/pointers/MaxPointsFromHeadOrTail.java)
-  
+
+  * [LongestSubstringOfAllVowelsInOrder (leetcode 1839)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/pointers/LongestSubstringOfAllVowelsInOrder.java)
+
   
 ### 贪心法：
   
