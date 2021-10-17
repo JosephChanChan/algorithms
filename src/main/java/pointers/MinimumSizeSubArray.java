@@ -1,7 +1,7 @@
 package pointers;
 
 /**
- * leetcode 209 medium
+ * lc 209 medium
  *
  * Analysis:
  *  这个算法的确是O(n)的时间，但是在所有提交中比较靠后，去看了题解。

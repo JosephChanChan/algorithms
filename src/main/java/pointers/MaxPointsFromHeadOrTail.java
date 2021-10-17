@@ -6,7 +6,6 @@ package pointers;
  * Analysis:
  *  窗口类。跳出惯性思维，意识到只能从左右两端连续取k张，中间一定剩下取不到的。
  * 去计算中间连续取不到的n-k张，找到一个最小的连续n-k长度窗口，剩下的k张就是可取的最大窗口。
- * 需要二刷
  *
  * 时间复杂度：O(n)
  * 空间复杂度：O(n)
@@ -91,5 +90,43 @@ public class MaxPointsFromHeadOrTail {
             max = Math.max(max, sum);
         }
         return max;
+    }
+
+    // 区间DP，超出内存限制。时间 O(n^2*k) 空间 O(n^2*k)
+    public int dp(int[] cardPoints, int k) {
+        /*
+             f(i,j,k)面对区间i~j拿k次时的最大获利
+             f(i,j,k)=max{f(i+1,j,k-1)+a[i], f(i,j-1,k-1)+a[j]}
+             边界：
+             f(i,j,0)=0
+             f(i,j,k)=a[i], i==j && k > 0
+         */
+        int n = cardPoints.length;
+
+        if (k == n) {
+            int sum = 0;
+            for (int i = 0; i < n; i++) sum += cardPoints[i];
+            return sum;
+        }
+
+        int[][][] f = new int[n][n][k+1];
+
+        for (int len = 1; len <= n; len++) {
+            for (int i = 0; i <= n-len; i++) {
+                for (int p = 0; p <= k; p++) {
+                    int j = i+len-1;
+                    if (p == 0) {
+                        f[i][j][p] = 0;
+                    }
+                    else if (len == 1) {
+                        f[i][i][p] = cardPoints[i];
+                    }
+                    else {
+                        f[i][j][p] = Math.max(f[i+1][j][p-1]+cardPoints[i], f[i][j-1][p-1]+cardPoints[j]);
+                    }
+                }
+            }
+        }
+        return f[0][n-1][k];
     }
 }

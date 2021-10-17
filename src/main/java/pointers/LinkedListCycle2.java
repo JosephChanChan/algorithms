@@ -1,7 +1,7 @@
 package pointers;
 
 /**
- * leetcode 142 medium
+ * lc 142 medium
  *
  * Analysis:
  *  s,f快慢指针，s走一步，f走两步，如sf相遇代表有环，否则f遇到null代表无环。

@@ -3,7 +3,7 @@ package pointers;
 import java.util.*;
 
 /**
- * leetcode 16 medium
+ * lc 16 medium
  *
  * Analysis:
  * 1.还是双指针做法，枚举a

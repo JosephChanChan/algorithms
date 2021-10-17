@@ -1,7 +1,7 @@
 package pointers;
 
 /**
- * leetcode 283 easy
+ * lc 283 easy
  *
  * Analysis:
  *  i,j指针，j指向0，i从j开始向右遍历，i指向非0，i,j互换。i>j，i走过的数都是0，所以j++即可。

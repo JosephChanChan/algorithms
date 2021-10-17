@@ -1,7 +1,7 @@
 package pointers;
 
 /**
- * leetcode 19 medium
+ * lc 19 medium
  *
  * Analysis:
  *  三指针，其中快慢指针，快指针先走k步，之后快慢一起走，直到快指针到尾。

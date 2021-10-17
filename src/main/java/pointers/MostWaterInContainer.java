@@ -4,7 +4,7 @@ package pointers;
  * @author Joseph
  * @since 2020-03-11 18:20
  *
- * leetcode 11 medium
+ * lc 11 medium
  *
  * Given n non-negative integers a1, a2, ..., an , where each represents a point at coordinate (i, ai).
  * n vertical lines are drawn such that the two endpoints of line i is at (i, ai) and (i, 0).

@@ -3,7 +3,7 @@ package pointers;
 import java.util.*;
 
 /**
- * leetcode 18 medium
+ * lc 18 medium
  *
  * Analysis:
  * 依然是a+b+c+d=t的式子，用双指针找c,d将时间复杂度降一级到三次方。

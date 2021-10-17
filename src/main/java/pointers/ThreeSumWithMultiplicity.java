@@ -3,7 +3,7 @@ package pointers;
 import java.util.Arrays;
 
 /**
- * leetcode 923 medium
+ * lc 923 medium
  *
  * Analysis:
  *  3sum的变形，原本3sum要求去重。现在如 a+b+c=t，

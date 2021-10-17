@@ -1,7 +1,7 @@
 package pointers;
 
 /**
- * leetcode 75 medium
+ * lc 75 medium
  *
  * Analysis:
  *  onePass是最优解，也是本题的follow up要求的一次遍历。
