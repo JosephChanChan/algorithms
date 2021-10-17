@@ -77,11 +77,25 @@
 
 ### 并查集：
 
-  * [DeliverTakeOut 送外卖](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/disjoint/set/DeliverTakeOut.java)
+  * [UnionFindTemplate 并查集模板](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/unionfind/UnionFindTemplate.java)
   
-  * [NumberOfIslands (leetcode 200)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/disjoint/set/NumberOfIslands.java)
+  * [DeliverTakeOut 送外卖](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/unionfind/DeliverTakeOut.java)
+
+  * [LongestContinuousSequence (leetcode 128)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/unionfind/LongestContinuousSequence.java)
   
-  * [FriendCircles (leetcode 547)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/disjoint/set/FriendCircles.java)
+  * [NumberOfIslands (leetcode 200)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/unionfind/NumberOfIslands.java)
+
+  * [ValidTreeJudgeByGraph (leetcode 261)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/unionfind/ValidTreeJudgeByGraph.java)
+
+  * [NumberOfIslands2 (leetcode 305)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/unionfind/NumberOfIslands2.java)
+
+  * [SubConnectedGraphsInUndirectedGraph (leetcode 323)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/unionfind/SubConnectedGraphsInUndirectedGraph.java)
+  
+  * [FriendCircles (leetcode 547)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/unionfind/FriendCircles.java)
+
+  * [AccountsMerge (leetcode 721)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/unionfind/AccountsMerge.java)
+
+  * [MinEquivalentString (leetcode 1061)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/unionfind/MinEquivalentString.java)
   
   
 ### 二分法：
