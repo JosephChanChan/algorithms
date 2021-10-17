@@ -101,22 +101,66 @@
 ### 二分法：
   
   * [BinarySearchTemplate 二分法模板](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/binary/search/BinarySearchTemplate.java)
-  
+
+  * [CalcCubeRoot 计算立方根](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/binary/search/CalcCubeRoot.java)
+
   * [MedianOfTwoSortedArray (leetcode 4)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/binary/search/MedianOfTwoSortedArray.java)
-  
+
+  * [TwoIntDivision (leetcode 29)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/binary/search/TwoIntDivision.java)
+
   * [SearchRotatedSortedArray (leetcode 33)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/binary/search/SearchRotatedSortedArray.java)
   
   * [FindFirstAndLastPositionElementSortedArray (leetcode 34)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/binary/search/FindFirstAndLastPositionElementSortedArray.java)
-  
+
+  * [InsertIdxInSortedArray (leetcode 35)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/binary/search/InsertIdxInSortedArray.java)
+
   * [Sqrt (leetcode 69)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/binary/search/Sqrt.java)
-  
+
+  * [SearchRotatedSortedArray2 (leetcode 81)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/binary/search/SearchRotatedSortedArray2.java)
+
   * [FindMinimumInRotatedSortedArray (leetcode 153)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/binary/search/FindMinimumInRotatedSortedArray.java)
   
   * [FindMinimumInRotatedSortedArray2 (leetcode 154)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/binary/search/FindMinimumInRotatedSortedArray2.java)
   
   * [FindPeakElement (leetcode 162)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/binary/search/FindPeakElement.java)
-  
+
+  * [KthLargestElementInArray (leetcode 215)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/binary/search/KthLargestElementInArray.java)
+
+  * [ContainsDuplicate3 (leetcode 220)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/binary/search/ContainsDuplicate3.java)
+
+  * [HIndex (leetcode 274)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/binary/search/HIndex.java)
+
+  * [HIndex2 (leetcode 275)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/binary/search/HIndex2.java)
+
+  * [FirstBadVersion (leetcode 278)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/binary/search/FirstBadVersion.java)
+
+  * [SearchRepeatNum (leetcode 287)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/binary/search/SearchRepeatNum.java)
+
+  * [SmallestRectangleEnclosingBlackPixels (leetcode 302)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/binary/search/SmallestRectangleEnclosingBlackPixels.java)
+
+  * [GuessNumber (leetcode 374)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/binary/search/GuessNumber.java)
+
+  * [KthSmallestInMatrix (leetcode 378)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/binary/search/KthSmallestInMatrix.java)
+
   * [SingleElementInSortedArray (leetcode 540)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/binary/search/SingleElementInSortedArray.java)
+
+  * [ValidTriangleCount (leetcode 611)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/binary/search/ValidTriangleCount.java)
+
+  * [SearchInSortedArrayOfUnknownSize (leetcode 702)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/binary/search/SearchInSortedArrayOfUnknownSize.java)
+
+  * [PeakIndexInMountainArray (leetcode 852)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/binary/search/PeakIndexInMountainArray.java)
+
+  * [CapacityToShipPackagesWithinDDays (leetcode 1011)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/binary/search/CapacityToShipPackagesWithinDDays.java)
+
+  * [MakeTwoStringEqualInBudget (leetcode 1208)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/binary/search/MakeTwoStringEqualInBudget.java)
+
+  * [LongestSubArrayWithDiffLessEqualLimit (leetcode 1438)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/binary/search/LongestSubArrayWithDiffLessEqualLimit.java)
+
+  * [MinimumNumberDaysMakeMBouquets (leetcode 1482)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/binary/search/MinimumNumberDaysMakeMBouquets.java)
+
+  * [MinimumAbsoluteSumDifference (leetcode 1818)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/binary/search/MinimumAbsoluteSumDifference.java)
+
+  * [FrequencyOfMostFrequentElement (leetcode 1838)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/binary/search/FrequencyOfMostFrequentElement.java)
   
 
 ### 递归：
