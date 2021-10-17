@@ -1,7 +1,7 @@
 package pointers;
 
 /**
- * lc 5740 medium
+ * lc 1839 medium
  *
  * Analysis:
  *
