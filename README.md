@@ -224,10 +224,16 @@
   * [CourseSchedule (leetcode 207)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/breadth/first/search/CourseSchedule.java)
   
   * [CourseSchedule2 (leetcode 210)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/breadth/first/search/CourseSchedule2.java)
+
+  * [WallsAndGates (leetcode 286)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/breadth/first/search/WallsAndGates.java)
   
   * [PacificAtlanticWaterFlow (leetcode 417)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/breadth/first/search/PacificAtlanticWaterFlow.java)
   
   * [ZeroOneMatrix (leetcode 542)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/breadth/first/search/ZeroOneMatrix.java)
+
+  * [MaxAreaOfIsland (leetcode 695)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/breadth/first/search/MaxAreaOfIsland.java)
+
+  * [MinimumKnightMoves (leetcode 1197)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/breadth/first/search/MinimumKnightMoves.java)
   
   
 ### 动态规划:
