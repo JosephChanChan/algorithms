@@ -32,6 +32,25 @@
 * [AvgInIntArray int数组求平均数](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/tables/AvgInIntArray.java)
 
 
+### 栈相关：
+
+  * [TrapRainWater (leetcode 42)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/stack/TrapRainWater.java)
+
+  * [MaxRectangleAreaInHistogram (leetcode 84)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/stack/MaxRectangleAreaInHistogram.java)
+
+  * [MaxAreaOfRectangle (leetcode 85)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/stack/MaxAreaOfRectangle.java)
+
+  * [BasicCalculator (leetcode 224)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/stack/BasicCalculator.java)
+
+  * [BasicCalculator2 (leetcode 227)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/stack/BasicCalculator2.java)
+
+  * [WatchingHighBuildings (lintcode 285)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/stack/WatchingHighBuildings.java)
+  
+  * [DailyTemperatures (leetcode 739)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/stack/DailyTemperatures.java)
+
+  * [BasicCalculator3 (leetcode 772)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/stack/BasicCalculator3.java)
+
+
 ### 树相关：
 
   * [AVLTree 平衡二叉搜索树](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/trees/AVLTree.java)
