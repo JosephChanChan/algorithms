@@ -384,8 +384,14 @@
   * [DolphinNums 海豚数](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/simulation/algorithm/DolphinNums.java)
   
   * [BigNumAdd 含负数大数加法](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/simulation/algorithm/BigNumAdd.java)
-  
+
   * [BigPositiveNumAdd (leetcode 2)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/simulation/algorithm/BigPositiveNumAdd.java)
+
+  * [BigNumMultiply (leetcode 43)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/simulation/algorithm/BigNumMultiply.java)
+
+  * [SpiralMatrix (leetcode 54)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/simulation/algorithm/SpiralMatrix.java)
+
+  * [SingleCPU (leetcode 1834)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/simulation/algorithm/SingleCPU.java)
 
 
 ### 排序：
