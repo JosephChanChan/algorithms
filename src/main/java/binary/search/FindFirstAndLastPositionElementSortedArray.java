@@ -1,77 +1,58 @@
 package binary.search;
 
 /**
- * leetcode 34 medium
- *
- * Question Description:
- *  参见 lc 34
+ * lc 34 medium
  *
  * Analysis:
- *  找最左边的时候，target前的数如果还是target继续缩小范围往左边找，同理处理最右边
- *  时间复杂度：O(logN)
- *  时间复杂度：O(1)
+ *  二分找t的左右边界。找左边界时找到t后继续向左搜索。右边界同理
+ *
+ * 时间复杂度：O(logN)
+ * 空间复杂度：O(1)
  *
  * @author Joseph
  * @since 2020-08-22 20:56
  */
 public class FindFirstAndLastPositionElementSortedArray {
 
-    public static void main(String[] args) {
-        int[] nums = {1,1,2,8,8,8,8,10,10};
-        FindFirstAndLastPositionElementSortedArray test = new FindFirstAndLastPositionElementSortedArray();
-        int[] result = test.searchRange(nums, 8);
-        System.out.println(result[0] + " " + result[1]);
-    }
-
     public int[] searchRange(int[] nums, int target) {
-        if (nums.length == 0) return new int[]{-1, -1};
+        int n = nums.length;
+        if (n == 0) return new int[]{-1, -1};
+        int l = 0, r = n-1, i = -1, p = i, q = i;
 
-        int first = findFirst(nums, target);
-        int last = findLast(nums, target);
-        return new int[]{first, last};
+        p = findIdx(target, nums, 0, n-1, true);
+        q = findIdx(target, nums, 0, n-1, false);
+
+        if (p == -1 || q == -1) return new int[]{-1, -1};
+
+        return new int[]{p, q};
     }
 
-    private int findFirst(int[] nums, int target) {
-        int l = 0, r = nums.length - 1;
-        while (l + 1 < r) {
-            int m = (l + r) >> 1;
-            if (nums[m] == target) {
-                if (m == 0 || m > 0 && nums[m-1] < nums[m]) {
-                    return m;
-                }
-                r = m;
-            }
-            else if (nums[m] < target) {
-                l = m;
-            }
-            else {
-                r = m;
-            }
-        }
-        if (nums[l] == target) return l;
-        if (nums[r] == target) return r;
-        return -1;
-    }
+    int findIdx(int t, int[] a, int l, int r, boolean left) {
+        if (l > r) return -1;
 
-    private int findLast(int[] nums, int target) {
-        int l = 0, r = nums.length - 1, last = r;
+        int ans = -1;
         while (l + 1 < r) {
-            int m = (l + r) >> 1;
-            if (nums[m] == target) {
-                if (m == last || m < last && nums[m] < nums[m+1]) {
-                    return m;
-                }
-                l = m;
+            int m = (l+r) >> 1;
+            if (a[m] == t) {
+                ans = m;
+                if (left) r = m;
+                else l = m;
             }
-            else if (nums[m] < target) {
-                l = m;
-            }
-            else {
+            else if (a[m] > t) {
                 r = m;
             }
+            else {
+                l = m;
+            }
         }
-        if (nums[r] == target) return r;
-        if (nums[l] == target) return l;
-        return -1;
+        if (left) {
+            if (a[l] == t) return l;
+            if (a[r] == t) return r;
+        }
+        else {
+            if (a[r] == t) return r;
+            if (a[l] == t) return l;
+        }
+        return ans;
     }
 }

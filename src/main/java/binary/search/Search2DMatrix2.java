@@ -1,7 +1,7 @@
 package binary.search;
 
 /**
- * leetcode 240 medium & 剑指Offer 4
+ * lc 240 medium & 剑指Offer 4
  *
  * <p>
  * Question Description:

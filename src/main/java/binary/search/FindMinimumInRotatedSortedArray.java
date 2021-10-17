@@ -1,7 +1,7 @@
 package binary.search;
 
 /**
- * leetcode 153 medium
+ * lc 153 medium
  *
  * Question Description:
  *  参见 lc 153

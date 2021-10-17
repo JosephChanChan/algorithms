@@ -1,7 +1,7 @@
 package binary.search;
 
 /**
- * leetcode 540 medium
+ * lc 540 medium
  *
  * Analysis:
  * 题目提到了数组中只有一个单独的数，那么其余数都是成对出现，则共有k对+1个单独数，数组元素共有奇数个。

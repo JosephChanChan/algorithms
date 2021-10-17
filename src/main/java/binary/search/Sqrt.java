@@ -1,7 +1,7 @@
 package binary.search;
 
 /**
- * leetcode 69 easy
+ * lc 69 easy
  *
  * @author Joseph
  * @since 2020-08-18 11:02

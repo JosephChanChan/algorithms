@@ -1,91 +1,58 @@
 package binary.search;
 
 /**
- * @author Joseph
- * @since 2020-01-29 16:17
- *
- * leetcode 74 medium
- *
- * Question Description:
- *  Write an efficient algorithm that searches for a value in an m x n matrix.
- *  This matrix has the following properties:
- * Integers in each row are sorted from left to right.
- * The first integer of each row is greater than the last integer of the previous row.
- * Example 1:
- * Input:
- * matrix = [
- *   [1,   3,  5,  7],
- *   [10, 11, 16, 20],
- *   [23, 30, 34, 50]
- * ]
- * target = 3
- * Output: true
- * Example 2:
- * Input:
- * matrix = [
- *   [1,   3,  5,  7],
- *   [10, 11, 16, 20],
- *   [23, 30, 34, 50]
- * ]
- * target = 13
- * Output: false
+ * lc 74 medium
  *
  * Analysis:
- *  根据题目特性二分查找。0ms AC。
- *  这题本身不难，遍历矩阵可以 m*n 时间解决，如果面试中肯定会要求log(mn)甚至 m+n 的时间。
- *  m+n 的算法比这个还简单，就是定位到起始行最后一个元素，如果大于就找下一行，小于就倒着遍历此行。
+ * 二维二分，先选定一个维度二分。这里根据特点选行。
+ * t < matrix[m][0]代表m以及m+1后面的行都不存在t，反之亦然，可以淘汰一半行。
+ * m+n 的算法比这个还简单，就是定位到起始行最后一个元素，如果大于就找下一行，小于就倒着遍历此行。
  *
- * 时间复杂度：O(log(mn))
- * 空间复杂度：O(log(m) or log(n)) 将递归变成循环就是O(1)的空间复杂度
+ * 时间复杂度：O(log(n)+log(m))
+ * 空间复杂度：O(1)
+ *
+ * @author Joseph
+ * @since 2020-01-29 16:17
  */
 public class Search2DMatrix {
 
-    private int column = 0;
-
-    private int[][] matrix = {
-            {1,   3,  5,  7},
-            {10, 11, 16, 20},
-            {23, 30, 34, 50}
-    };
-
-    public static void main(String[] args) {
-        Search2DMatrix search2DMatrix = new Search2DMatrix();
-        boolean res = search2DMatrix.searchMatrix(search2DMatrix.matrix, 23);
-        System.out.println(res);
-    }
+    int n, m;
 
     public boolean searchMatrix(int[][] matrix, int target) {
-        if (0 == matrix.length ||
-            0 == matrix[0].length)
-            return false;
+        n = matrix.length;
+        m = matrix[0].length;
 
-        this.column = matrix[0].length;
+        if (n == 1 && m == 1) return matrix[0][0] == target;
 
-        return recursiveBinarySearch(matrix, 0, (matrix.length * column) - 1, target);
-    }
-
-    private boolean recursiveBinarySearch(int[][] matrix, int left, int right, int target) {
-        if (left == right) {
-            return locate(matrix, left) == target;
+        int p = 0, q = n-1, k ;
+        while (p + 1 < q) {
+            k = (p + q) >> 1;
+            if (matrix[k][0] == target) return true;
+            if (matrix[k][0] < target) {
+                p = k;
+            }
+            else {
+                q = k;
+            }
         }
-        if (left > right) return false;
-
-        int pivot = (left + right) >> 1;
-        int pivotValue = locate(matrix, pivot);
-
-        if (target == pivotValue) return true;
-
-        if (target > pivotValue) {
-            left = pivot + 1;
+        int row = q;
+        if (matrix[q][0] == target) return true;
+        if (target < matrix[q][0]) row = p;
+        // 在最终行找t
+        int l = 0, r = m-1;
+        while (l + 1 < r) {
+            k = (l + r) >> 1;
+            if (matrix[row][k] == target) return true;
+            if (matrix[row][k] < target) {
+                l = k;
+            }
+            else {
+                r = k;
+            }
         }
-        else {
-            right = pivot - 1;
-        }
-        return recursiveBinarySearch(matrix, left, right, target);
-    }
-
-    private int locate(int[][] matrix, int nums) {
-        return matrix[nums / column][nums % column];
+        if (matrix[row][l] == target) return true;
+        if (matrix[row][r] == target) return true;
+        return false;
     }
 
 }
