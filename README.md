@@ -169,6 +169,8 @@
 
   * [PeakIndexInMountainArray (leetcode 852)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/binary/search/PeakIndexInMountainArray.java)
 
+  * [PeakIndexInMountainArray (leetcode 875)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/binary/search/KokoEatingBananas.java)
+
   * [CapacityToShipPackagesWithinDDays (leetcode 1011)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/binary/search/CapacityToShipPackagesWithinDDays.java)
 
   * [MakeTwoStringEqualInBudget (leetcode 1208)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/binary/search/MakeTwoStringEqualInBudget.java)
