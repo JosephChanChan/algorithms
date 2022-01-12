@@ -1,4 +1,4 @@
-### 只是玩玩~，不激进不功利
+### Good Good Study & Day Day Up
 --------------------------------------------------------
   
 ### 数组/链表：
@@ -264,8 +264,6 @@
   * [SumRoot2LeafNumbers (leetcode 129)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/depth/first/search/SumRoot2LeafNumbers.java)
   
   * [SurroundedRegions (leetcode 130)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/depth/first/search/SurroundedRegions.java)
-  
-  * [KthLargestElementInArray (leetcode 215)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/depth/first/search/KthLargestElementInArray.java)
 
   * [CombinationSum3 (leetcode 216)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/depth/first/search/CombinationSum3.java)
   
@@ -383,13 +381,21 @@
   
   * [WoodIncisionProblem Huffman](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/greedy/algorithm/WoodIncisionProblem.java)
   
-  * [FleeMaze 走迷宫](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/greedy/algorithm/FleeMaze.java)
-  
   * [MinimumCustomService 最小客服数](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/greedy/algorithm/MinimumCustomService.java)
   
   * [RentServer 租服务器](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/greedy/algorithm/RentServer.java)
   
   * [MaximumEventsCanBeAttended (leetcode 1353)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/greedy/algorithm/MaximumEventsCanBeAttended.java)
+
+* [AvoidFloodInTheCity (leetcode 1488)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/greedy/algorithm/AvoidFloodInTheCity.java)
+
+* [BuyAndSellStocks2 (leetcode 122)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/greedy/algorithm/BuyAndSellStocks2.java)
+
+* [MostIceCream (leetcode 1833)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/greedy/algorithm/MostIceCream.java)
+
+* [QueueReconstructionByHeight (leetcode 406)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/greedy/algorithm/QueueReconstructionByHeight.java)
+
+* [TaskScheduler (leetcode 621)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/greedy/algorithm/TaskScheduler.java)
   
  
 ### 模拟法：
