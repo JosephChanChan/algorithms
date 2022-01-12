@@ -5,6 +5,8 @@ import sort.QuickSort;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.util.Arrays;
+import java.util.Comparator;
 
 /**
  * Question Description:
@@ -82,7 +84,7 @@ public class ActivePlan {
             贪心策略：每一次选择结束时间越早的活动且与前面活动相容的。
             为此我们需要先将活动排序
          */
-        QuickSort.doQuickSort(activeArray, 0, activeArray.length - 1);
+        Arrays.sort(activeArray, Comparator.comparingInt(o -> o.endTime));
 
         int perEndTime = Integer.MIN_VALUE;
 

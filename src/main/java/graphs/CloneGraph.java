@@ -3,7 +3,7 @@ package graphs;
 import java.util.*;
 
 /**
- * leetcode 133 medium
+ * lc 133 medium
  *
  * Question Description:
  *  参见 lc 133

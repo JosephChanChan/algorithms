@@ -5,7 +5,7 @@ import java.util.PriorityQueue;
 import java.util.Queue;
 
 /**
- * leetcode 1353 medium
+ * lc 1353 medium
  *
  * Question Description:
  *  参见 lc 1353
@@ -36,7 +36,7 @@ public class MaximumEventsCanBeAttended {
         return greedy2(events);
     }
 
-    /** leetcode题解，O(N * logN) */
+    /** lc题解，O(N * logN) */
     private int greedy2(int[][] events) {
         // 将会议按开始时间升序排序
         Arrays.sort(events, (o1, o2) -> o1[0] - o2[0]);

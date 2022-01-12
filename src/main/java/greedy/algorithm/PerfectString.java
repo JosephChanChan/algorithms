@@ -3,6 +3,9 @@ package greedy.algorithm;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.Comparator;
 
 /**
  * Question Description:
@@ -56,7 +59,7 @@ public class PerfectString {
             每个字符按Ascii字符集转成逻辑编码, 逻辑编码作为下标存在数组里.
             因为字符都是 A~Z, Ascii由一个字节表示, 所以逻辑编码值不会超过127.
          */
-        int[] valueCountArray = new int[127];
+        Integer[] valueCountArray = new Integer[127];
 
         perfectString = perfectString.toUpperCase();
         char[] charArray = perfectString.toCharArray();
@@ -67,7 +70,7 @@ public class PerfectString {
             valueCountArray[character] = value;
         }
 
-        sort.QuickSort.doQuickSortDesc(valueCountArray, 0, valueCountArray.length-1);
+        Arrays.sort(valueCountArray, Collections.reverseOrder());
 
         int score = 26, sum = 0;
 
