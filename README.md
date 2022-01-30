@@ -94,6 +94,37 @@
   * [BinaryTreeLevelOrderTraversal (leetcode 102)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/trees/BinaryTreeLevelOrderTraversal.java)
   
   * [TopKFrequentElements (leetcode 347)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/trees/TopKFrequentElements.java)
+
+  * [BinaryTreeRightSideView (leetcode 199)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/trees/BinaryTreeRightSideView.java)
+
+  * [BinaryTreeVerticalOrderTraversal (leetcode 314)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/trees/BinaryTreeVerticalOrderTraversal.java)
+
+  * [BinaryTreeVerticalOrderTraversal2 (leetcode 987)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/trees/BinaryTreeVerticalOrderTraversal2.java)
+
+  * [ConvertBST2GreaterTree (leetcode 538)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/trees/ConvertBST2GreaterTree.java)
+
+  * [DiameterOfTree (leetcode 543)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/trees/DiameterOfTree.java)
+
+  * [InvertBinaryTree (leetcode 226)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/trees/InvertBinaryTree.java)
+
+  * [LevelOrderTraversalTree2 (leetcode 107)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/trees/LevelOrderTraversalTree2.java)
+
+  * [MaxXorOfTwoNumInArray (leetcode 421)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/trees/MaxXorOfTwoNumInArray.java)
+
+  * [MergeTwoTrees (leetcode 617)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/trees/MergeTwoTrees.java)
+
+  * [MinDistanceInBST (leetcode 783)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/trees/MinDistanceInBST.java)
+
+  * [SuccessOfBST2 (leetcode 510)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/trees/SuccessOfBST2.java)
+
+  * [TimeBasedKVStore (leetcode 981)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/trees/TimeBasedKVStore.java)
+
+  * [TrieTree (leetcode 208)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/trees/TrieTree.java)
+
+  * [WordDictionary (leetcode 211)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/trees/WordDictionary.java)
+
+  * [WordSearch2 (leetcode 212)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/trees/WordSearch2.java)
+
   
 
 ### 图相关：
