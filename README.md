@@ -131,6 +131,17 @@
   * [MinEquivalentString (leetcode 1061)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/unionfind/MinEquivalentString.java)
   
   
+  
+### 扫描线：
+  
+  * [InsertIntervals (leetcode 57)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/sweep/line/InsertIntervals.java)
+
+  * [MergeIntervals (leetcode 56)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/sweep/line/MergeIntervals.java)
+
+  * [MergeIntervals2 (leetcode 253)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/sweep/line/MergeIntervals2.java)
+
+  
+  
 ### 二分法：
   
   * [BinarySearchTemplate 二分法模板](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/binary/search/BinarySearchTemplate.java)
