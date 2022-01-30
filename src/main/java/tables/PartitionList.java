@@ -1,7 +1,7 @@
 package tables;
 
 /**
- * leetcode 86 medium
+ * lc 86 medium
  *
  * Analysis:
  * 思路没什么难的，自然地想到选出所有小于x的节点，从原链表中删除，构造出一个新链表。

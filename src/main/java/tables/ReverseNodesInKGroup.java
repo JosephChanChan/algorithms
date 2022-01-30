@@ -1,7 +1,7 @@
 package tables;
 
 /**
- * leetcode 25 hard
+ * lc 25 hard
  *
  * Analysis:
  *  把思路理清晰点，分段反转，先统计总数，按k分组一共需要反转多少次。
@@ -17,39 +17,48 @@ package tables;
 public class ReverseNodesInKGroup {
 
     public ListNode reverseKGroup(ListNode head, int k) {
+        if (null == head || null == head.next) return head;
+
         ListNode dummy = new ListNode(-1);
         dummy.next = head;
-        ListNode mPrev = dummy;
 
-        int count = 0;
-        ListNode node = head, m ;
+        int c = 0;
+        ListNode node = head;
         while (null != node) {
-            count++;
+            c++;
             node = node.next;
         }
 
-        int times = count / k;
-        for (int i = 0; i < times; i++) {
-            m = mPrev.next;
-            ListNode newHead = reverse(m, k);
-            mPrev.next = newHead;
-            mPrev = m;
+        ListNode mP = dummy, m = dummy.next;
+        for (int i = 0; i < (c / k); i++) {
+            ListNode[] a = reverse(m, k);
+            // 新链表头
+            mP.next = a[1];
+            mP = m;
+            // 最后一组直接将反转的局部链表尾部指向下一个起点
+            if (i == (c/k)-1) {
+                m.next = a[0];
+            }
+            else {
+                // 下一个起点
+                m = a[0];
+            }
         }
         return dummy.next;
     }
 
-    private ListNode reverse(ListNode node, int k) {
-        ListNode prev = node, cur = node.next, t = null;
+    // 反转局部，k个一组，返回下一个起点和当前局部链表的头
+    ListNode[] reverse(ListNode node, int k) {
+        ListNode p = node, n = node.next, q ;
+        p.next = null;
         for (int i = 1; i < k; i++) {
-            t = cur.next;
-            cur.next = prev;
-            prev = cur;
-            cur = t;
+            q = null != n ? n.next : null;
+            n.next = p;
+
+            p = n;
+            n = q;
         }
-        if (node != prev) {
-            node.next = t;
-        }
-        return prev;
+        return new ListNode[]{n, p};
     }
 
     public class ListNode {

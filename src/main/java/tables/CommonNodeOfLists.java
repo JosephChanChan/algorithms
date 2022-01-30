@@ -1,7 +1,7 @@
 package tables;
 
 /**
- * 剑指Offer 52 easy
+ * 剑指Offer 52 easy & lc 160
  *
  * Analysis:
  *  当链表有交叉，一定会在某个节点相遇。

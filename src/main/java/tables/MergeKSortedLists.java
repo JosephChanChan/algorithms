@@ -3,7 +3,7 @@ package tables;
 import java.util.*;
 
 /**
- * leetcode 23 hard
+ * lc 23 hard
  *
  * Analysis:
  *  method1用min-heap排序k个链表中的元素，再输出构造新链表

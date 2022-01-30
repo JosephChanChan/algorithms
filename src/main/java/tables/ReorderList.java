@@ -1,10 +1,10 @@
 package tables;
 
 /**
- * leetcode 143 medium
+ * lc 143 medium
  *
  * Analysis:
- * 其实这个算法是在某年考研408大题里看到过，没想到考研大题和leetcode还有联系，是leetcode抄考研还是考研题目抄leetcode？
+ * 其实这个算法是在某年考研408大题里看到过，没想到考研大题和lc还有联系，是lc抄考研还是考研题目抄lc？
  *
  *  1.快慢指针找到链表中点，断开
  *  2.反转链表后半段

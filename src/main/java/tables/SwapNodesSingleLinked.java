@@ -7,7 +7,7 @@ import tables.component.OneLinkedNode;
  * @author Joseph
  * @since 2019/8/31 21:03
  *
- * leetcode 24 Medium
+ * lc 24 Medium
  *
  * Question Description:
  *  Given a linked list, swap every two adjacent nodes and return its head.

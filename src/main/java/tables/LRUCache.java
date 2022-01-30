@@ -3,7 +3,7 @@ package tables;
 import java.util.*;
 
 /**
- * leetcode 146 medium
+ * lc 146 medium
  *
  * Analysis:
  *  实际上就是考LRU的实现原理和链表知识。知道hash+list可以实现LRU，并且在30min内能写出来就行。
@@ -16,87 +16,87 @@ import java.util.*;
  */
 public class LRUCache {
 
-    private int size, capacity ;
-
-    private DoublyNode dummy, tail ;
-
-    private Map<Integer, DoublyNode> quick ;
+    int count, capacity;
+    Map<Integer, Node> map = new HashMap<>();
+    DoublyList que = new DoublyList();
 
     public LRUCache(int capacity) {
-        this.size = 0;
+        this.count = 0;
         this.capacity = capacity;
-        dummy = new DoublyNode(-1, -1, null, null);
-        tail = dummy;
-        quick = new HashMap<>((capacity & 1) == 1 ? capacity + 1 : capacity);
     }
 
-    // O(1)
     public int get(int key) {
-        DoublyNode node = quick.get(key);
-
+        if (count == 0) return -1;
+        Node node = getNode(key);
         if (null == node) return -1;
-
-        // moved it to tail
-        if (tail != node) {
-            DoublyNode prev = node.prev;
-            DoublyNode next = node.next;
-            prev.next = next;
-            next.prev = prev;
-
-            tail.next = node;
-            node.prev = tail;
-            node.next = null;
-
-            tail = node;
-        }
         return node.val;
     }
 
-    // O(1)
     public void put(int key, int value) {
-        // get and if it is exists then was moved to tail
-        DoublyNode node ;
-        if (-1 != get(key)) {
-            node = quick.get(key);
+        Node node = getNode(key);
+        if (null != node) {
             node.val = value;
             return;
         }
-
-        if (size + 1 > capacity) {
-            node = dummy.next;
-            dummy.next = node.next;
-            if (null != node.next) {
-                node.next.prev = dummy;
-            }
-            if (tail == node) {
-                tail = dummy;
-            }
-            node.next = null;
-            node.prev = null;
-            quick.remove(node.key);
-            size--;
+        if (count == capacity) {
+            evict();
         }
-
-        // add a new node to tail
-        node = new DoublyNode(key, value, null, null);
-        tail.next = node;
-        node.prev = tail;
-        tail = node;
-        quick.put(key, node);
-        size++;
+        node = new Node(key, value);
+        map.put(key, node);
+        que.addLast(node);
+        count++;
     }
 
-    private class DoublyNode {
+    void evict() {
+        Node old = que.eldest();
+        map.remove(old.key);
+        que.remove(old);
+        count--;
+    }
+
+    Node getNode(int key) {
+        // 让entry移到队尾
+        Node node = map.get(key);
+        if (null != node) {
+            que.remove(node);
+            que.addLast(node);
+        }
+        return node;
+    }
+
+    class Node {
         int key;
         int val;
-        DoublyNode prev;
-        DoublyNode next;
-
-        public DoublyNode(int key, int val, DoublyNode prev, DoublyNode next) {
+        Node prev;
+        Node next;
+        public Node(int key, int val) {
             this.key = key;
             this.val = val;
-            this.prev = prev;
-            this.next = next;
+        }
+    }
+
+    class DoublyList {
+        Node head = new Node(-1, -1);
+        Node tail = head;
+
+        public Node eldest() {
+            return head.next;
+        }
+        public void addLast(Node node) {
+            tail.next = node;
+            node.prev = tail;
+            tail = node;
+        }
+        public void remove(Node node) {
+            Node p = node.prev;
+            Node q = node.next;
+            p.next = q;
+            if (null != q) q.prev = p;
+            node.prev = null;
+            node.next = null;
+            if (tail == node) {
+                tail = p;
+            }
         }
     }
 

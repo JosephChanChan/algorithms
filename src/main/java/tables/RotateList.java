@@ -3,7 +3,7 @@ package tables;
 import java.util.*;
 
 /**
- * leetcode 61 medium
+ * lc 61 medium
  *
  * Analysis:
  *  一开始用暴力从头到尾将尾结点返回，头插到头部，一共旋转k次，显然时间为O(nk)，TLE。

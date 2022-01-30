@@ -1,7 +1,7 @@
 package tables;
 
 /**
- * 剑指Offer 24 & leetcode 206 easy
+ * 剑指Offer 24 & lc 206 easy
  *
  * Analysis:
  * 时间复杂度：O(n)

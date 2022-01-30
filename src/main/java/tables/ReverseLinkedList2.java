@@ -1,7 +1,7 @@
 package tables;
 
 /**
- * leetcode 92 medium
+ * lc 92 medium
  *
  * Analysis:
  *  区间链表反转，主要还是三个指针反转，多加些边界判断。第一步记录下m-1的节点，它要和反转后的新链表头连接。
