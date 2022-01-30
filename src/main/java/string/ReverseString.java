@@ -4,7 +4,7 @@ package string;
  * @author Joseph
  * @since 2019/8/31 20:04
  *
- * leetcode 334 easy
+ * lc 334 easy
  *
  * Question Description:
  * Write a function that reverses a string. The input string is given as an array of characters char[].

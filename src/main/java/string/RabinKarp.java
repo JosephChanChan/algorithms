@@ -1,7 +1,7 @@
 package string;
 
 /**
- * leetcode 28 easy
+ * lc 28 easy
  *
  * Question Description:
  *  参见 lc 28

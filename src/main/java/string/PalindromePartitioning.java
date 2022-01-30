@@ -7,7 +7,7 @@ import java.util.*;
  * @since 2020-05-24 10:30
  *
  * Question Description:
- *  参见 leetcode 131
+ *  参见 lc 131
  *
  * Analysis:
  *  个人理解 递归 + 回溯 = dfs，递归 + 回溯 + 剪枝 = good dfs
