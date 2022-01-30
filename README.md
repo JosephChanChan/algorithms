@@ -91,7 +91,21 @@
   
   * [RabinKarp (leetcode 28)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/string/RabinKarp.java)
   
-  * [PalindromePartitioning (leetcode 131)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/string/PalindromePartitioning.java)
+  * [EncodeAndDecodeStrings (leetcode 271)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/string/EncodeAndDecodeStrings.java)
+
+  * [IntegerToRoman (leetcode 12)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/string/IntegerToRoman.java)
+
+  * [LongestAbsoluteFilePath (leetcode 288)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/string/LongestAbsoluteFilePath.java)
+
+  * [LongestValidBracket (leetcode 32)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/string/LongestValidBracket.java)
+
+  * [OneEditDistance (leetcode 161)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/string/OneEditDistance.java)
+
+  * [PalindromicSubstrings (leetcode 647)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/string/PalindromicSubstrings.java)
+
+  * [RomanToInteger (leetcode 13)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/string/RomanToInteger.java)
+
+  * [ZigZagConversion (leetcode 6)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/string/ZigZagConversion.java)
 
 
 ### 并查集：
@@ -355,8 +369,14 @@
   * [ReverseWordsInString (leetcode 151)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/pointers/ReverseWordsInString.java)
   
   * [MinimumSizeSubArray (leetcode 209)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/pointers/MinimumSizeSubArray.java)
+ 
+  * [ShortestWordsDistance (leetcode 243)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/pointers/ShortestWordsDistance.java)
+
+  * [ShortestWordsDistance2 (leetcode 244)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/pointers/ShortestWordsDistance2.java)
   
   * [MoveZeros (leetcode 283)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/pointers/MoveZeros.java)
+
+  * [LongestSubstringWithMostKDiffChars (leetcode 340)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/pointers/LongestSubstringWithMostKDiffChars.java)
 
   * [FindAllAnagramsInString (leetcode 438)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/pointers/FindAllAnagramsInString.java)
 
