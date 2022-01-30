@@ -659,7 +659,7 @@
 * [LowestCommonAncestorBinaryTree (剑指Offer 68)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/trees/LowestCommonAncestorBinaryTree.java)
 
 
-### 积累：
+### 未分类：
 
   * [RedPacketGen 红包生成](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/RedPacketGen.java)
   
@@ -667,5 +667,39 @@
   
   * [MissingPositiveSmallestNum 消失的最小正整数](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/MissingPositiveSmallestNum.java) 
   
-  * [PrimeNumCountInArray 数组中最多的质数](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/PrimeNumCountInArray.java) 
+  * [PrimeNumCountInArray 数组中最多的质数](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/PrimeNumCountInArray.java)
+
+  * [AliLazadaInterview 权重模拟器](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/AliLazadaInterview.java)
+
+  * [AllCharSentence (leetcode ?)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/AllCharSentence.java)
+
+  * [CountPrimes (leetcode 204)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/CountPrimes.java)
+
+  * [FindTheCelebrity (leetcode 277)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/FindTheCelebrity.java)
+
+  * [FirstMissingPositiveNum (leetcode 41)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/FirstMissingPositiveNum.java)
+
+  * [FractionToDecimal (leetcode 166)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/FractionToDecimal.java)
+
+  * [HammingDistance (leetcode 461)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/HammingDistance.java)
+
+  * [ImplementRand10UsingRand7 (leetcode 470)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/ImplementRand10UsingRand7.java)
+
+  * [MajorityElement (leetcode 169)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/MajorityElement.java)
+
+  * [NextPermutation (leetcode 31)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/NextPermutation.java)
+
+  * [NthDigit (leetcode 400)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/NthDigit.java)
+
+  * [ReadNCharsGivenRead4 (leetcode 157)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/ReadNCharsGivenRead4.java)
+
+  * [ReadNCharsGivenRead4Multi (leetcode 158)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/ReadNCharsGivenRead4Multi.java)
+
+  * [ReverseInt (leetcode 7)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/ReverseInt.java)
+
+  * [RobLuckMoney 抢红包](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/RobLuckMoney.java)
+
+  * [SumOfDigitsInBaseK (leetcode ?)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/SumOfDigitsInBaseK.java)
+
+  * [UniqueIntInArray (leetcode 136)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/UniqueIntInArray.java)
 
