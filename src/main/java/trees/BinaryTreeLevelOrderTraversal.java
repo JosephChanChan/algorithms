@@ -7,7 +7,7 @@ import java.util.List;
  * @author Joseph
  * @since 2020-02-03 12:19
  *
- * leetcode 102 medium
+ * lc 102 medium
  *
  * Question Description:
  *  Given a binary tree, return the level order traversal of its nodes' values.

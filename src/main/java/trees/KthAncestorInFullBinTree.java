@@ -3,9 +3,6 @@ package trees;
 import java.util.Scanner;
 
 /**
- * @author Joseph
- * @since 2020-04-26 21:13
- *
  * 腾讯实习笔试
  *
  * Question Description:
@@ -26,8 +23,12 @@ import java.util.Scanner;
  * -1
  *
  * Analysis:
- *  时间复杂度：
- *  空间复杂度：
+ *
+ * 时间复杂度：
+ * 空间复杂度：
+ *
+ * @author Joseph
+ * @since 2020-04-26 21:13
  */
 public class KthAncestorInFullBinTree {
 

@@ -3,7 +3,7 @@ package trees;
 import java.util.*;
 
 /**
- * leetcode 347 medium
+ * lc 347 medium
  *
  * Analysis:
  *  堆排序思想

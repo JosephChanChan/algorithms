@@ -4,7 +4,7 @@ package trees;
  * @author Joseph
  * @since 2019-09-22 14:34
  *
- * leetcode 104 easy
+ * lc 104 easy
  *
  * Question Description:
  *  Given a binary tree, find its maximum depth.

@@ -3,7 +3,7 @@ package trees;
 import java.util.*;
 
 /**
- * leetcode 105 & 剑指Offer 7 medium
+ * lc 105 & 剑指Offer 7 medium
  *
  * Question Description:
  *  输入某二叉树的前序遍历和中序遍历的结果，请重建该二叉树。假设输入的前序遍历和中序遍历的结果中都不含重复的数字。
@@ -58,10 +58,10 @@ public class RestructureBinaryTree {
             indexM.put(inorder[i], i);
         }
 
-        return doBuild(preorder, inorder, 0, n-1);
+        return doBuild(inorder, 0, n-1);
     }
 
-    private TreeNode doBuild(int[] preorder, int[] inorder, int l, int r) {
+    private TreeNode doBuild(int[] inorder, int l, int r) {
         if (l > r) return null;
         if (l == r) {
             q.poll();
@@ -73,8 +73,8 @@ public class RestructureBinaryTree {
 
         TreeNode node = new TreeNode(root);
 
-        node.left = doBuild(preorder, inorder, l, rx-1);
-        node.right = doBuild(preorder, inorder, rx+1, r);
+        node.left = doBuild(inorder, l, rx-1);
+        node.right = doBuild(inorder, rx+1, r);
         return node;
     }
 }

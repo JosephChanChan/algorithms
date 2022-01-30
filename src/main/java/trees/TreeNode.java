@@ -6,11 +6,11 @@ package trees;
  */
 public class TreeNode {
 
-    protected int val;
+    public int val;
 
-    protected TreeNode left;
+    public TreeNode left;
 
-    protected TreeNode right;
+    public TreeNode right;
 
 
     /* Constructor method */

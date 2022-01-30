@@ -4,7 +4,7 @@ import java.util.LinkedList;
 import java.util.Queue;
 
 /**
- * leetcode 100 easy
+ * lc 100 easy
  *
  * Question Description:
  *  Given two binary trees, write a function to check if they are the same or not.
