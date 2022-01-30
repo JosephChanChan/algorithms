@@ -23,6 +23,30 @@
 
 * [MinimumIncrement2MakeArrayUnique (leetcode 945)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/tables/RearrangeLinkedList.java)
 
+* [ContainsDuplicate2 (leetcode 219)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/tables/ContainsDuplicate2.java)
+
+* [DecodeString (leetcode 394)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/tables/DecodeString.java)
+
+* [LFUCache (leetcode 460)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/tables/LFUCache.java)
+
+* [PalindromeList (leetcode 234)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/tables/PalindromeList.java)
+
+* [Pattern132 (leetcode 456)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/tables/Pattern132.java)
+
+* [SameCharInDifferPlaces (leetcode ?)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/tables/SameCharInDifferPlaces.java)
+
+* [SimplifyPath (leetcode 71)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/tables/SimplifyPath.java)
+
+* [SortLinkedList (leetcode 148)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/tables/SortLinkedList.java)
+
+* [SparseMatrixMultiplication (leetcode 311)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/tables/SparseMatrixMultiplication.java)
+
+* [SpinningMatrix (leetcode 48)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/tables/SpinningMatrix.java)
+
+* [SubarraySumEqualsK (leetcode 560)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/tables/SubarraySumEqualsK.java)
+
+* [TopKFrequencyWords (leetcode 692)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/tables/TopKFrequencyWords.java)
+
 * [BitSet 位图](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/tables/BitSet.java)
 
 * [RearrangeLinkedList 链表原地逆置](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/tables/RearrangeLinkedList.java)
