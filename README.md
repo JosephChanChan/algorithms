@@ -55,6 +55,14 @@
 
 * [AvgInIntArray int数组求平均数](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/tables/AvgInIntArray.java)
 
+* [ConsistentHash (lintcode 519)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/tables/ConsistentHash.java)
+
+* [ConsistentHash2 (lintcode 520)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/tables/ConsistentHash2.java)
+
+* [DesignTweet (lintcode 355)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/tables/DesignTweet.java)
+
+* [RangeSumQuery (leetcode 303)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/tables/RangeSumQuery.java)
+
 
 ### 栈相关：
 
