@@ -482,6 +482,25 @@
 * [QueueReconstructionByHeight (leetcode 406)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/greedy/algorithm/QueueReconstructionByHeight.java)
 
 * [TaskScheduler (leetcode 621)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/greedy/algorithm/TaskScheduler.java)
+
+
+### 前缀和
+
+  * [BinaryBitArray (leetcode 525)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/prefix/sum/hash/BinaryBitArray.java)
+  
+  * [BinarySubarrayWithSum (leetcode 930)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/prefix/sum/hash/BinarySubarrayWithSum.java)
+  
+  * [EatFavoriteCandyOnFavoriteDay (leetcode 1744)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/prefix/sum/hash/EatFavoriteCandyOnFavoriteDay.java)
+  
+  * [IJKMakeTwoSubarrayXorEquals (leetcode 1442)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/prefix/sum/hash/IJKMakeTwoSubarrayXorEquals.java)
+  
+  * [RandomPickWithWeight (leetcode 528)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/prefix/sum/hash/RandomPickWithWeight.java)
+  
+  * [RepeatedDNASubstring (leetcode 187)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/prefix/sum/hash/RepeatedDNASubstring.java)
+  
+  * [RepeatedStringMatch (leetcode 686)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/prefix/sum/hash/RepeatedStringMatch.java)
+  
+  * [XORQuerySubarray (leetcode 1310)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/prefix/sum/hash/XORQuerySubarray.java)
   
  
 ### 模拟法：
