@@ -4,7 +4,7 @@ package tables.component;
  * @author Joseph
  * @since 2020-03-28 14:38
  */
-public abstract class ListNode {
+public class ListNode {
 
     public long data;
 
@@ -16,6 +16,10 @@ public abstract class ListNode {
     public ListNode() {}
 
     public ListNode(long data) {
+        this.data = data;
+    }
+
+    public ListNode(int data) {
         this.data = data;
     }
 
