@@ -82,6 +82,12 @@
 
   * [BasicCalculator3 (leetcode 772)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/stack/BasicCalculator3.java)
 
+  * [AsteroidCollision (leetcode 735)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/stack/AsteroidCollision.java)
+
+  * [CheckWordsValidAfterReplaced (leetcode 1003)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/stack/CheckWordsValidAfterReplaced.java)
+
+  * [OnlineStockSpan (leetcode 901)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/stack/OnlineStockSpan.java)
+
 
 ### 树相关：
 
