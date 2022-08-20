@@ -765,3 +765,11 @@
 
   * [UniqueIntInArray (leetcode 136)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/UniqueIntInArray.java)
 
+  * [CalcRectangleOverlapSpace (leetcode 223)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/CalcRectangleOverlapSpace.java)
+
+  * [ContinuousSubSum (leetcode 523)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/ContinuousSubSum.java)
+
+  * [NumberArithmeticTriplets (leetcode 2367)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/NumberArithmeticTriplets.java)
+
+  * [SetMatrixZeros (leetcode 73)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/SetMatrixZeros.java)
+
