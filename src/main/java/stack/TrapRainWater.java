@@ -24,29 +24,33 @@ public class TrapRainWater {
         宽度就是左右边界宽度。
      */
     int decreaseStack(int[] height) {
-        if (height.length == 0) return 0;
-        int area = 0, n = height.length;
-
-        // 存下标
+        int ans = 0;
         Stack<Integer> s = new Stack<>();
 
+        int n = height.length;
+        if (n == 1) {
+            return ans;
+        }
+        // 遍历每个位置，计算该位置接的水
         for (int i = 0; i < n; i++) {
             int h = height[i];
-            if (s.isEmpty()) {
-                s.push(i); continue;
+            if (s.isEmpty() || height[s.peek()] > h) {
+                s.push(i);
+                continue;
             }
             while (!s.isEmpty() && height[s.peek()] <= h) {
-                int cur = s.pop();
+                int low = s.pop();
+                // 当前低位没有左边界
                 if (s.isEmpty()) {
                     break;
                 }
-                int min = height[s.peek()] > h ? i : s.peek();
-                int width = Math.abs(s.peek()-i)-1;
-                area += (height[min]-height[cur])*width;
+                int min = height[s.peek()] > h ? h : height[s.peek()];
+                int width = i - s.peek() - 1;
+                ans += ((min - height[low]) * width);
             }
             s.push(i);
         }
-        return area;
+        return ans;
     }
 
     /*
