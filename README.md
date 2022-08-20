@@ -125,6 +125,14 @@
 
   * [WordSearch2 (leetcode 212)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/trees/WordSearch2.java)
 
+  * [BinaryTreePruning (leetcode 814)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/trees/BinaryTreePruning.java)
+
+  * [MaxBinaryTree (leetcode 654)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/trees/MaxBinaryTree.java)
+
+  * [ReplaceTerms (leetcode 648)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/trees/ReplaceTerms.java)
+
+  * [PalindromePairs](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/trees/PalindromePairs.java)
+
   
 
 ### 图相关：
