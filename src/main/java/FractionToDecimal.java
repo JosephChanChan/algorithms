@@ -51,6 +51,7 @@ public class FractionToDecimal {
         a *= 10;
 
         while (a > 0) {
+            // 余数和商一一对应起来
             ans.append(a/b);
             a = a%b;
 

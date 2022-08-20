@@ -1,87 +1,37 @@
-import java.util.HashMap;
-import java.util.Map;
+import depth.first.search.Permutation2;
+import tables.DesignTweet;
 
-/**
- * @author Joseph
- * @since 2021-07-05 16:21
- */
+import java.util.*;
+
 public class MainTest {
 
+    /*
+        ["getNewsFeed","unfollow","getNewsFeed","getNewsFeed","unfollow","getNewsFeed","getNewsFeed"]
+        [[2],[2,1],[1],[2],[1,2],[1],[2]]
+     */
+
     public static void main(String[] args) {
-        MainTest m = new MainTest();
-        Node o1 = new Node(1);
-        Node o2 = new Node(2);
-        Node o3 = new Node(3);
-        Node o4 = new Node(4);
-        Node o5 = new Node(5);
-        Node o6 = new Node(6);
-        Node o7 = new Node(7);
-        o1.next = o2;
-        o2.next = o3;
-        o3.next = o4;
-        o4.next = o5;
-        o5.next = o6;
-        o6.next = o7;
-
-        Node o8 = new Node(8);
-        o8.next = o3;
-
-        final Node node = m.check(o1, o8);
-        System.out.println(node.value);
+        Permutation2 m = new Permutation2();
+        m.permuteUnique(new int[]{1,1,2});
     }
 
-    Node check(Node a, Node b) {
-        int n = length(a);
-        int m = length(b);
+    static int[] calcSpace(int[] a, int[] b) {
+        int x = a[0];
+        int y = a[1];
+        int x1 = a[0] + a[2];
+        int y1 = a[1] - a[3];
 
-        if (n == 0 || m == 0) return null;
+        int j = b[0];
+        int i = b[1];
+        int j1 = b[0] + b[2];
+        int i1 = b[1] - b[3];
 
-        int k = Math.abs(n-m);
-        Node max, min ;
-        if (n >= m) {
-            max = a;
-            min = b;
-        }
-        else {
-            max = b;
-            min = a;
-        }
-
-        // 先对比max的k节点
-        while (k-- > 0) {
-            if (max == min) return max;
-            max = max.next;
-        }
-
-        while (null != max && null != min) {
-            if (max == min) return max;
-            max = max.next;
-            min = min.next;
-        }
-        return null;
+        int lx = Math.max(x, j);
+        int ly = Math.min(y, i);
+        int rx = Math.min(x1, j1);
+        int ry = Math.max(y1, i1);
+        return new int[]{lx, ly, Math.abs(lx-rx), Math.abs(ly-ry)};
     }
-
-    int length(Node a) {
-        int count = 0;
-        Node n = a;
-        while (null != n) {
-            count++;
-            n = n.next;
-        }
-        return count;
-    }
-
-    static class Node {
-        int value;
-
-        Node next;
-        public Node(int v) {
-            this.value = v;
-        }
-    }
-
-
-
 
 
 
