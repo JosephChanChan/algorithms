@@ -125,6 +125,14 @@
 
   * [WordSearch2 (leetcode 212)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/trees/WordSearch2.java)
 
+  * [BinaryTreePruning (leetcode 814)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/trees/BinaryTreePruning.java)
+
+  * [MaxBinaryTree (leetcode 654)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/trees/MaxBinaryTree.java)
+
+  * [ReplaceTerms (leetcode 648)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/trees/ReplaceTerms.java)
+
+  * [PalindromePairs](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/trees/PalindromePairs.java)
+
   
 
 ### 图相关：
@@ -136,6 +144,27 @@
   * [SwimmingCrossSea 漂洋过海](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/graphs/SwimmingCrossSea.java)
   
   * [CloneGraph (leetcode 133)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/graphs/CloneGraph.java)
+
+  * [AllNodesDistanceKInTree (leetcode 863)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/graphs/AllNodesDistanceKInTree.java)
+
+  * [ColoringBorder (leetcode 1034)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/graphs/ColoringBorder.java)
+
+  * [HighestPeekOfMap (leetcode 1765)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/graphs/HighestPeekOfMap.java)
+
+  * [MapAnalysis (leetcode 1162)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/graphs/MapAnalysis.java)
+
+  * [MinGeneticMutation (leetcode 433)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/graphs/MinGeneticMutation.java)
+
+  * [MinOperationConvertNum (leetcode 2059)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/graphs/MinOperationConvertNum.java)
+
+  * [OpenTheLock (leetcode 752)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/graphs/OpenTheLock.java)
+
+  * [ReachableNodesWithRestriction (leetcode 2368)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/graphs/ReachableNodesWithRestriction.java)
+
+  * [TheTimeNetworkIdle (leetcode 2039)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/graphs/TheTimeNetworkIdle.java)
+
+  * [RebuildSequence (leetcode 444)](https://github.com/JosephChanChan/algorithms/blob/master/src/main/java/graphs/RebuildSequence.java)
+
 
   
 ### 字符串相关：
