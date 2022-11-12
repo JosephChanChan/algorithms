@@ -12,7 +12,7 @@ public class BinarySearchTemplate {
         int[] nums = {1, 2, 3, 4, 5, 6, 7, 8, 10};
         BinarySearchTemplate template = new BinarySearchTemplate();
         int i = template.binarySearch(nums, 9);
-        System.out.println(i);
+        System.out.println(i+"   test confilcts");
     }
 
     private int binarySearch(int[] nums, int target) {
