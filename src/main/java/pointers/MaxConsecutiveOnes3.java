@@ -1,18 +1,59 @@
 package pointers;
 
+import java.util.HashMap;
+import java.util.Map;
+
 /**
  * lc 1004 medium
  *
- * 时间复杂度：O(n)
+ * 时间复杂度：滑动窗口O(n)，哈希前缀O(n)，二分O(n*log(n))
  * 空间复杂度：O(1)
  *
  * @author Joseph
- * @since 2021-08-28 23:42
+ * @since 2021-08-28
  */
 public class MaxConsecutiveOnes3 {
 
     public int longestOnes(int[] nums, int k) {
         return sliding(nums, k);
+    }
+
+    public int hashPrefix(int[] nums, int k) {
+        /*
+             连续的一段区间，窗口。求符合条件的最大的窗口，每个窗口内的0的个数可以通过预处理得到
+             s(i)为0~i区间内0的数量，如果0数量<=k则这个区间全都是1
+             如果0数量>k，s(i)-k=d，看看是否有s(j)=d，舍弃s(j)这段，j+1~i的区间都是1
+             如此计算得到最大的区间
+         */
+        int ans = 0;
+        int n = nums.length;
+        int[] s = new int[n];
+        s[0] = nums[0] == 1 ? 0 : 1;
+
+        for (int i = 1; i < n; i++) {
+            s[i] = s[i-1] + (nums[i] == 1 ? 0 : 1);
+        }
+
+        // 0的前缀数量和 -> 区间右边界
+        Map<Integer, Integer> map = new HashMap<>();
+        for (int i = 0; i < n; i++) {
+            if (s[i] <= k) {
+                ans = Math.max(ans, i + 1);
+            }
+            else {
+                int d = s[i] - k;
+                //System.out.println("i="+i+" d="+d);
+                // 多了d个0，前面的区间如果有d个0，舍弃
+                if (map.containsKey(d)) {
+                    ans = Math.max(ans, i - map.get(d));
+                    //System.out.println("i="+i+" d="+d+" 右边界="+map.get(d));
+                }
+            }
+            if (!map.containsKey(s[i])) {
+                map.put(s[i], i);
+            }
+        }
+        return ans;
     }
 
     private int sliding(int[] nums, int k) {

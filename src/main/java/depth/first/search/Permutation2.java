@@ -20,51 +20,41 @@ import java.util.*;
  */
 public class Permutation2 {
 
-    boolean[] used ;
-    List<Character> list ;
-    Queue<String> q = new LinkedList<>();
+    boolean[] vis ;
+    List<List<Integer>> ans = new ArrayList();
 
-    public String[] permutation(String s) {
-        if (null == s) return new String[0];
-        if (s.length() == 1) return new String[]{s};
+    public List<List<Integer>> permuteUnique(int[] nums) {
+        /*
+            1 1' 2
+            会发现根据题目要求，同层级间不能重复选之前选过的数
+        */
+        if (nums.length == 0) return ans;
 
-        char[] c = s.toCharArray();
-        used = new boolean[c.length];
-        list = new ArrayList<>(c.length);
+        Arrays.sort(nums);
 
-        Arrays.sort(c);
-        dfs(0, c);
+        vis = new boolean[nums.length];
 
-        int n = q.size();
-        String[] ans = new String[q.size()];
-        for (int i = 0; i < n; i++) {
-            ans[i] = q.poll();
-        }
+        dfs(nums, new ArrayList());
         return ans;
     }
 
-    private void dfs(int len, char[] c) {
-        if (len == c.length) {
-            q.add(string());
+    void dfs(int[] a, List<Integer> mem) {
+        if (mem.size() == a.length) {
+            ans.add(new ArrayList(mem));
             return;
         }
-        for (int i = 0; i < c.length; i++) {
-            if (!used[i]) {
-                if (i > 0 && c[i-1] == c[i] && !used[i-1]) continue;
-                used[i] = true;
-                list.add(c[i]);
-                dfs(len+1, c);
-                used[i] = false;
-                list.remove(list.size()-1);
+
+        for (int i = 0; i < a.length; i++) {
+            if (i > 0 && a[i-1] == a[i] && !vis[i-1]) {
+                continue;
             }
+
+            vis[i] = true;
+            mem.add(a[i]);
+            dfs(a, mem);
+            vis[i] = false;
+            mem.remove(mem.size()-1);
         }
     }
 
-    private String string() {
-        char[] c = new char[list.size()];
-        for (int i = 0; i < list.size(); i++) {
-            c[i] = list.get(i);
-        }
-        return new String(c);
-    }
 }

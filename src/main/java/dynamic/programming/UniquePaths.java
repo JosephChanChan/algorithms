@@ -1,7 +1,7 @@
 package dynamic.programming;
 
 /**
- * leetcode 62 medium
+ * lc 62 medium
  *
  * Question Description:
  *  参见 lc 62

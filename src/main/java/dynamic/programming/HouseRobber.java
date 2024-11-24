@@ -4,7 +4,7 @@ package dynamic.programming;
  * @author Joseph
  * @since 2019/8/27 14:44
  *
- * leetcode 198 easy
+ * lc 198 easy
  *
  * Question Description:
  * You are a professional robber planning to rob houses along a street.
@@ -39,7 +39,7 @@ package dynamic.programming;
  * 因为如果决定偷i，那么只能跳过i+1，去偷i+2，所以能影响到i后面的，只有当前对i的决策。
  *
  * 时间复杂度：O(n)，空间复杂度 O(1)
- * 有趣的是，在leetcode提交时，这个算法测了很多次都只是消耗 0ms 就AC了，比100%的提交都要快
+ * 有趣的是，在lc提交时，这个算法测了很多次都只是消耗 0ms 就AC了，比100%的提交都要快
  * 内存的使用是 34mb，也比 100% 的提交消耗内存都要少。
  * 所以可以看做是 双百提交，最优解法
  *

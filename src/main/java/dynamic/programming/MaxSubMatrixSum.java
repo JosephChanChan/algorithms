@@ -3,7 +3,7 @@ package dynamic.programming;
 import java.io.*;
 
 /**
- * leetcode-cn 17.24 hard
+ * lc-cn 17.24 hard
  *
  * Question Description:
  *  参见 lc-cn 17.24

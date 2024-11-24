@@ -1,36 +1,61 @@
-import depth.first.search.Permutation2;
-import tables.DesignTweet;
 
 import java.util.*;
+import java.util.concurrent.Semaphore;
+import java.util.concurrent.atomic.AtomicInteger;
 
 public class MainTest {
 
-    /*
-        ["getNewsFeed","unfollow","getNewsFeed","getNewsFeed","unfollow","getNewsFeed","getNewsFeed"]
-        [[2],[2,1],[1],[2],[1,2],[1],[2]]
-     */
+
+
+    static int vis = 1000;
+    static int[] ans ;
+    // 右下左上
+    static int[][] d = new int[][]{{1, 0}, {0, 1}, {-1, 0}, {0, -1}};
 
     public static void main(String[] args) {
-        Permutation2 m = new Permutation2();
-        m.permuteUnique(new int[]{1,1,2});
+        // Scanner input=new Scanner(System.in);
+        // String str=input.next();
+        System.out.println("hello world");
+        MainTest m = new MainTest();
+        int[] p = m.calc(new int[][]{{1,2,3}, {4,5,6}, {7,8,9}});
+        for (int i = 0; i < p.length; i++) {
+            System.out.println(p[i]);
+        }
     }
 
-    static int[] calcSpace(int[] a, int[] b) {
-        int x = a[0];
-        int y = a[1];
-        int x1 = a[0] + a[2];
-        int y1 = a[1] - a[3];
+    int[] calc(int[][] a) {
+        int n = a.length;
+        int m = a[0].length;
+        ans = new int[n*m];
+        System.out.println("calc begin");
 
-        int j = b[0];
-        int i = b[1];
-        int j1 = b[0] + b[2];
-        int i1 = b[1] - b[3];
+        int done = 0, dirIndex = 0;
+        int x = 0, y = 0;
+        ans[0] = a[0][0];
+        a[0][0] = 1000;
+        done++;
 
-        int lx = Math.max(x, j);
-        int ly = Math.min(y, i);
-        int rx = Math.min(x1, j1);
-        int ry = Math.max(y1, i1);
-        return new int[]{lx, ly, Math.abs(lx-rx), Math.abs(ly-ry)};
+        while (done < ans.length) {
+            int[] dir = d[dirIndex];
+            // 向一个方向遍历，直到遇到边界或者已访问过的格子
+            while (true) {
+                int i = y + dir[1];
+                int j = x + dir[0];
+                System.out.println("i="+i+" j="+j);
+                // 到达边界或已访问过的格子
+                if ((i < 0 || i >= n) || (j < 0 || j >= m) || a[i][j] == 1000) {
+                    break;
+                }
+                ans[done++] = a[i][j];
+                a[y][x] = 1000;
+                // 更新坐标
+                y = i;
+                x = j;
+            }
+            // 更新方向
+            dirIndex = dirIndex + 1 == 4 ? 0 : dirIndex + 1;
+        }
+        return ans;
     }
 
 

@@ -1,7 +1,7 @@
 package greedy.algorithm;
 
 /**
- * lc 122 easy
+ * lc 122 medium
  *
  * Analysis:
  *  可以买卖多次，那当然是交易越多获利越多。
@@ -44,5 +44,29 @@ public class BuyAndSellStocks2 {
             max = Math.max(max, sum);
         }
         return max;
+    }
+
+    /*
+        第二次写
+        f(i,j)为第i天结束后处于j状态的最大获利，j=0为空仓，j=1为持有
+        按照题意分析状态转换，空仓 -> 持有，空仓 -> 空仓，持有 -> 持有，持有 -> 空仓
+            f(i,0)=max{f(i-1,0), f(i-1,1)+(Pi-Pi-1) }
+            f(i,1)=max{f(i-1,0), f(i-1,1)+(Pi-Pi-1) }
+        会发现空仓和持有的状态转移是一样的，并且按照这个方程去写代码提交，也可以AC
+        然后我把方程改成了：
+            f(i)=max{f(i-1), f(i-1)+(Pi-Pi-1) }
+        去掉了冗余的一维，一样可以AC，其实这个方程就变成了贪心的思想，只要第i天价格比i-1要高，就立即在i-1买入，i天卖出
+     */
+    int[] f ;
+    public int maxProfit2(int[] prices) {
+        int n = prices.length;
+        f = new int[n+1];
+
+        for (int i = 1; i <= n; i++) {
+            int diff = i-2 < 0 ? 0 : prices[i-1]-prices[i-2];
+            f[i] = Math.max(f[i-1], f[i-1] + diff);
+            //System.out.println(String.format("第%s天，空仓获利=%s，持有获利=%s", i, f[i][0], f[i][1]));
+        }
+        return f[n];
     }
 }

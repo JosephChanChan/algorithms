@@ -1,7 +1,7 @@
 package dynamic.programming;
 
 /**
- * leetcode 940 hard
+ * lc 940 hard
  *
  * Question Description:
  *  参见 lc 940

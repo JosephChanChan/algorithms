@@ -44,6 +44,8 @@ public class FrequencyOfMostFrequentElement {
         int l = 1, r = n;
         while (l + 1 < r) {
             int count = (l+r)>>1;
+            // check函数可以继续优化成log(n)
+            // 对于数组存在单调性，一定有一个点p，0~p区间可以将所有元素统一成Ap，p+1~n区间无法用k完成
             if (check(count, k)) {
                 l = count;
             }

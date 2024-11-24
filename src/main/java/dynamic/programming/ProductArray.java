@@ -1,7 +1,7 @@
 package dynamic.programming;
 
 /**
- * 剑指Offer 66 medium
+ * 剑指Offer 66 medium & lc 238
  *
  * Analysis:
  *  b(i)按题意应该是 a0*a1*...*ai-1 * ai+1*...*an-1

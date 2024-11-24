@@ -1,0 +1,97 @@
+
+lc 二刷列表：
+题号      一刷AC时间             二刷AC时间         三刷AC时间
+494      30min dfs暴力解        58min
+400                            77min
+212      52min                 38min
+233      50min                 看题解AC
+151      30min                 26min
+692                            看题解AC
+1423                           36min
+394      60min                 44min
+543      40min                 14min
+581      60min                 38min
+739      50min                 13min
+309      看题解AC               看题解AC
+4        看题解AC               60min
+3                              22min
+312      看题解AC               25min
+72       看题解AC               20min
+42       看题解AC               50min              20min
+43       86min                 35min              47min
+10       60min                 看题解AC
+115      50min                 31min
+97       70min                 30min
+215      50min                 30min              看九章AC
+295      看题解AC               38min              19min
+438                            20min
+128                            30min
+57       45min                 27min
+254      70min                 看题解AC
+50                             28min              40min
+625      39min                 看题解AC
+425      81min                 71min
+887      看题解AC               看题解AC
+93       35min                 22min
+772      看题解AC               20min
+169                            7min
+22       看题解AC               18min
+146      看题解AC               28min
+460      看题解AC               60min
+213      34min                 18min
+361      看题解AC               24min
+256      看题解AC               25min
+279      看题解AC               40min
+1834     看题解AC               55min
+490      45min
+25       看题解AC               30min
+41       看题解AC               25min
+47                             看题解AC
+48       看题解AC               45min
+166      看题解AC               看题解AC
+1838     看题解AC               看题解AC
+204      看题解AC               看题解AC
+460      看题解AC
+505      50min                 45min
+783      30min                 19min
+1682     看题解AC               55min
+224      看题解AC               40min
+227      看题解AC
+772      看题解AC               21min
+152                            看题解AC
+1482     46min
+
+1818     60min
+1208     60min
+1438     60min
+1011     60min
+378      看题解AC
+456      看题解AC
+611      看题解AC
+1488     看题解AC
+523      看题解AC
+1744     70min
+1749     60min
+1942     53min
+2074     45min
+2233     看题解AC
+767      看题解AC
+1031     75min
+2182     53min
+792
+2074
+138
+172
+1759
+334      看题解AC
+371      看题解AC
+
+剑指Offer
+26                             60min              20min
+103      35min                 26min
+62       数学法看题解AC          看题解AC
+
+lint code
+285      看题解AC
+79       120min                30min
+476      看题解AC

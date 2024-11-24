@@ -1,5 +1,8 @@
 package binary.search;
 
+import java.util.Map;
+import java.util.TreeMap;
+
 /**
  * lc 1208 medium
  *
@@ -9,7 +12,14 @@ package binary.search;
  * 小于等于k的长度s子串都能转为t子串，大于k的长度则不能，具有二分性。
  * 那么如果有一个函数能判断，给定cost和长度k，判断将s子串转为t子串的长度k的p<=cost
  *
- * 时间复杂度：O(N*logN)
+ *  哈希前缀和(用的是TreeMap)
+ * s(i)为a和b 0~i子串的差值前缀和
+ * 对于一个区间，如果s(i)<=cost，则0~i可以全部转化，
+ * 如果s(i)>cost，s(i)-cost=d，则看前面是否有s(j)>=d，舍弃min{s(j)>=d}，即前面有一段区间字符差大于等于d，舍弃它
+ * j+1~i的区间的字符差就可以全部转化
+ * 记录最大的区间
+ *
+ * 时间复杂度：前缀和二分 O(N*logN)，哈希前缀和 O(n*log(n))
  * 空间复杂度：O(n)
  *
  * @author Joseph
@@ -58,5 +68,41 @@ public class MakeTwoStringEqualInBudget {
 
     int calc(int i, int j, int[] d) {
         return d[j] - (i > 0 ? d[i-1] : 0);
+    }
+
+    public int hashPrefix(String s, String t, int maxCost) {
+        // 哈希前缀和
+        int n = s.length();
+        char[] a = s.toCharArray();
+        char[] b = t.toCharArray();
+
+        int[] f = new int[n];
+        f[0] = Math.abs(a[0]-b[0]);
+
+        for (int i = 1; i < n; i++) {
+            f[i] = f[i-1] + Math.abs(a[i]-b[i]);
+        }
+
+        int ans = 0;
+        // 字符差前缀和 -> 右边界
+        TreeMap<Integer, Integer> m = new TreeMap<>();
+        for (int i = 0; i < n; i++) {
+            if (f[i] <= maxCost) {
+                ans = Math.max(ans, i+1);
+            }
+            else {
+                int d = f[i] - maxCost;
+                // 还差d，找前面的字符差前缀和大于等于d的最靠右的一个，舍弃
+                Map.Entry<Integer, Integer> e = m.ceilingEntry(d);
+                if (null != e) {
+                    ans = Math.max(ans, i - e.getValue());
+                }
+            }
+            // 前面已有相同字符差前缀和的子区间，只要更靠左的
+            if (!m.containsKey(f[i])) {
+                m.put(f[i], i);
+            }
+        }
+        return ans;
     }
 }

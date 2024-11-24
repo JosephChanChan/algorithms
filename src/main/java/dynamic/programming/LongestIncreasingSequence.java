@@ -1,7 +1,7 @@
 package dynamic.programming;
 
 /**
- * leetcode 300 medium
+ * lc 300 medium
  *
  * Question Description:
  *  参见 lc 300

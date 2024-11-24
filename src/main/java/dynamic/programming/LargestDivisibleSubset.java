@@ -3,7 +3,7 @@ package dynamic.programming;
 import java.util.*;
 
 /**
- * leetcode 368 medium
+ * lc 368 medium
  *
  * Analysis:
  *  先排序，使得数组按升序 a1<a2<a3<...<an

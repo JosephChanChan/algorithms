@@ -3,7 +3,7 @@ package dynamic.programming;
 import java.util.*;
 
 /**
- * leetcode 354 hard
+ * lc 354 hard
  *
  * Analysis:
  *  在宽度有序的情况下，只要按照高度选择一个最长的可以套在一起的子序列，

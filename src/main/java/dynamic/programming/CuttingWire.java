@@ -1,7 +1,7 @@
 package dynamic.programming;
 
 /**
- * 剑指Offer 14 medium & leetcode 343
+ * 剑指Offer 14 medium & lc 343
  *
  * Analysis:
  *  f(n, m) 前n长度被分成m段的最大乘积

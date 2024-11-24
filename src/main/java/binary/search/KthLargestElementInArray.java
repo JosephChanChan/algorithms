@@ -6,13 +6,6 @@ import java.util.Random;
  * lc 215 medium
  *
  * Analysis:
- * 直接将数组按大到小排序，每次分区完后看看k在左边还是右边。
- * 有几点要注意的：
- * 1.快排的模板分区后，r必定小于等于l，r<l，有可能r和l相邻，也有可能r+1<l
- * r和l之间差了一个数，这个数恰好可能是第k大的数，所以如果 r+1<l 时要把空位补上 r++
- *
- * 之后再判断k<=r 去搜索左边，否则肯定k>=l 搜索右边
- *
  * 时间复杂度：O(n)
  * 空间复杂度：O(n)
  *
@@ -21,28 +14,45 @@ import java.util.Random;
  */
 public class KthLargestElementInArray {
 
+    int t = 0;
+
     public int findKthLargest(int[] nums, int k) {
-        return quickSelect(nums, 0, nums.length-1, k);
+        // 大到小排序，第1大在数组中下标就是第0元素
+        this.t = k-1;
+        return quickSel(0, nums.length-1, nums);
     }
 
-    int quickSelect(int[] a, int start, int end, int k) {
-        // 大 -> 小
-        if (start >= end) return a[end];
-
-        int l = start, r = end, p = a[(l+r)>>1];
+    int quickSel(int i, int j, int[] a) {
+        if (i == j) {
+            //System.out.println("i==j "+i);
+            return a[i];
+        }
+        int l = i, r = j, baseVal = a[(l+r) >> 1];
         while (l <= r) {
-            while (l <= r && a[l] > p) l++;
-            while (l <= r && a[r] < p) r--;
+            // 左边 >= baseVal
+            while (l <= r && a[l] > baseVal) l++;
+            while (l <= r && a[r] < baseVal) r--;
             if (l <= r) {
                 int t = a[l];
                 a[l] = a[r];
                 a[r] = t;
-                l++; r--;
+                l++;
+                r--;
             }
         }
-        // r+1 < l 时把空位补上
-        if (r+1 < l) r++;
-        if (k-1 <= r) return quickSelect(a, start, r, k);
-        return quickSelect(a, l, end, k);
+        /*for (int p = 0; p < a.length; p++) {
+            System.out.print(a[p]+" ");
+        }
+        System.out.println("base="+baseVal+" l="+l+" r="+r);*/
+        // 快排模板，可能会将数组分为3端，i~r，r+1，l~j
+        // t是第几大元素，就看t落在哪一段
+        if (t <= r) {
+            return quickSel(i, r, a);
+        }
+        if (t >= l) {
+            return quickSel(l, j, a);
+        }
+        //System.out.println("a[r+1]= "+(r+1));
+        return a[r+1];
     }
 }

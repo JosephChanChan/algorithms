@@ -1,7 +1,7 @@
 package dynamic.programming;
 
 /**
- * leetcode 322 medium
+ * lc 322 medium
  *
  * Question Description:
  *  参见 lc 322

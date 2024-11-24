@@ -2,7 +2,9 @@ package depth.first.search;
 
 import trees.TreeNode;
 
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 /**
@@ -87,5 +89,51 @@ public class PathSum3 {
 
         if (null != node.left) dfsEnd(node.left, sum + node.val);
         if (null != node.right) dfsEnd(node.right, sum + node.val);
+    }
+
+    // 2022-02-13第二次写，完全忘记曾经做过这题... AC 13ms
+    int ans = 0;
+    List<Integer> ps = new ArrayList<>();
+    /**
+     传递前缀和数组到子节点下去，子节点先加上整条分支的前缀和得到从根节点到当前节点的整体和，
+     再去减前缀和数组中的每个值，可以分别得到分支上以当前节点为终点的任意起点的区域和，如果等于t，则记录
+     */
+    public int pathSum2(TreeNode root, int targetSum) {
+        if (null == root) {
+            return ans;
+        }
+        if (root.val == targetSum) {
+            ans++;
+        }
+        ps.add(root.val);
+        if (null != root.left) {
+            dfs(root.left, targetSum);
+        }
+        if (null != root.right) {
+            dfs(root.right, targetSum);
+        }
+        return ans;
+    }
+
+    void dfs(TreeNode p, int t) {
+        int sum = ps.get(ps.size()-1);
+        sum += p.val;
+        if (sum == t) {
+            ans++;
+        }
+        // 这里可以加缓存优化，subSum做成map，s-t=d，查map中是否有d，因为s包含了d，s-d=t，所以记录d的出现次数
+        for (Integer subSum : ps) {
+            if (sum - subSum == t) {
+                ans++;
+            }
+        }
+        ps.add(sum);
+        if (null != p.left) {
+            dfs(p.left, t);
+        }
+        if (null != p.right) {
+            dfs(p.right, t);
+        }
+        ps.remove(ps.size()-1);
     }
 }

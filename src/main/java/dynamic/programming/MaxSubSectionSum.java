@@ -1,7 +1,7 @@
 package dynamic.programming;
 
 /**
- * 剑指Offer 42 & leetcode 53
+ * 剑指Offer 42 & lc 53
  *
  * Analysis:
  *    令f[i]表示以位置 i 为终点的所有子区间中和最大的一个(必须包含a[i])

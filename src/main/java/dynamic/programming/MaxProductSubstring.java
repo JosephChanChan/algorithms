@@ -1,21 +1,7 @@
 package dynamic.programming;
 
 /**
- * @author Joseph
- * @since 2020-05-02 00:19
- *
- * leetcode 152 medium
- *
- * Question Description:
- *  Given an integer array nums, find the contiguous subarray within an array (containing at least one number) which has the largest product.
- * Example 1:
- * Input: [2,3,-2,4]
- * Output: 6
- * Explanation: [2,3] has the largest product 6.
- * Example 2:
- * Input: [-2,0,-1]
- * Output: 0
- * Explanation: The result cannot be 2, because [-2,-1] is not a subarray.
+ * lc 152 medium
  *
  * Analysis:
  *  f(j)为以aj结尾的最大子串积
@@ -42,37 +28,43 @@ package dynamic.programming;
  *
  * 边界：f(0)=0 f(1)=a1
  *
- *  时间复杂度：O(n)
- *  空间复杂度：O(n)可优化成O(1)
+ * 时间复杂度：O(n)
+ * 空间复杂度：O(n)可优化成O(1)
+ *
+ * @author Joseph
+ * @since 2020-05-02 00:19
  */
 public class MaxProductSubstring {
 
     public int maxProduct(int[] nums) {
-        int max = 0;
-        // 对于每个f(j)，f[j][0]是j结尾的子串中最小的积，f[j][1]是j结尾的子串中最大的积
-        int[][] products = new int[nums.length][2];
-        if (nums.length == 0) return 0;
-        if (nums.length == 1) return nums[0];
+        /*
+             f(i,0)为以ai结尾的最大子数组乘积
+             f(i,1)为以ai结尾的最小子数组乘积
+             if ai > 0 期望i-1结尾的子数组乘积越大越好
+             if ai < 0 期望i-1结尾的子数组乘积越小越好
+             if ai = 0 则f(i,0)&f(i,1)=0
+         */
+        int n = nums.length;
+        int[][] f = new int[n][2];
+        f[0][0] = nums[0];
+        f[0][1] = nums[0];
+        int[] a = nums;
 
-        products[0][0] = nums[0];
-        products[0][1] = nums[0];
-
-        max = Math.max(max, products[0][1]);
-
-        for (int j = 1; j < nums.length; j++) {
-            int aj = nums[j];
-            if (aj > 0) {
-                products[j][1] = Math.max(products[j-1][1] * aj, aj);
-                products[j][0] = Math.min(products[j-1][0] * aj, aj);
+        int max = Math.max(Integer.MIN_VALUE, f[0][0]);
+        for (int i = 1; i < n; i++) {
+            if (a[i] == 0) {
+                f[i][0] = 0;
+                f[i][1] = 0;
             }
-            else if (aj < 0) {
-                products[j][1] = Math.max(products[j-1][0] * aj, aj);
-                products[j][0] = Math.min(products[j-1][1] * aj, aj);
+            else if (a[i] > 0) {
+                f[i][0] = Math.max(f[i-1][0]*a[i], a[i]);
+                f[i][1] = Math.min(f[i-1][1]*a[i], a[i]);
             }
             else {
-                products[j][1] = products[j][0] = 0;
+                f[i][0] = Math.max(f[i-1][1]*a[i], a[i]);
+                f[i][1] = Math.min(f[i-1][0]*a[i], a[i]);
             }
-            max = Math.max(max, products[j][1]);
+            max = Math.max(max, f[i][0]);
         }
         return max;
     }
